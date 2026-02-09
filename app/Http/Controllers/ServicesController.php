@@ -43,7 +43,7 @@ class ServicesController extends Controller
                 ]
             ]
         ];
-        
+
         $nonConstructionServices = [
             [
                 'title' => 'Jasa Survey & Penelitian',
@@ -79,10 +79,10 @@ class ServicesController extends Controller
                 ]
             ]
         ];
-        
+
         return view('services.index', compact('constructionServices', 'nonConstructionServices'));
     }
-    
+
     public function constructionConsultancy()
     {
         $services = [
@@ -125,10 +125,10 @@ class ServicesController extends Controller
                 ]
             ]
         ];
-        
-        return view('services.construction-consultancy', compact('services'));
+
+        return view('services.construction_consultancy', compact('services'));
     }
-    
+
     public function nonConstructionConsultancy()
     {
         $services = [
@@ -185,10 +185,10 @@ class ServicesController extends Controller
                 ]
             ]
         ];
-        
-        return view('services.non-construction-consultancy', compact('services'));
+
+        return view('services.non_construction_consultancy', compact('services'));
     }
-    
+
     public function architectural()
     {
         $services = [
@@ -226,10 +226,10 @@ class ServicesController extends Controller
                 ]
             ]
         ];
-        
+
         return view('services.architectural', compact('services'));
     }
-    
+
     public function engineering()
     {
         $services = [
@@ -265,7 +265,7 @@ class ServicesController extends Controller
                 ]
             ]
         ];
-        
+
         return view('services.engineering', compact('services'));
     }
 }

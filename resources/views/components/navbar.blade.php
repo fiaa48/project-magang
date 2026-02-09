@@ -69,7 +69,7 @@
                         Sertifikasi
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('certifications') }}">Semua</a></li>
+                        <li><a class="dropdown-item" href="{{ route('certifications.index') }}">Semua</a>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{ route('certifications.sbu') }}">SBU</a></li>
                         <li><a class="dropdown-item" href="{{ route('certifications.iso') }}">ISO</a></li>

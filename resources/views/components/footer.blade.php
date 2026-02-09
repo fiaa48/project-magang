@@ -39,7 +39,7 @@
                     <li><a href="{{ route('about') }}">Tentang Kami</a></li>
                     <li><a href="{{ route('services') }}">Layanan</a></li>
                     <li><a href="{{ route('portfolio') }}">Portfolio</a></li>
-                    <li><a href="{{ route('certifications') }}">Sertifikasi</a></li>
+                    <li><a href="{{ route('certifications.index') }}">Sertifikasi</a></li>
                 </ul>
             </div>
             

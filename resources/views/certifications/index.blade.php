@@ -206,16 +206,19 @@
 
 @push('styles')
 <style>
+    /* HEADER */
     .page-header {
-        background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+        background: linear-gradient(135deg, #8B5E3C 0%, #D8C3A5 100%);
     }
-    
+
+    /* JUDUL SECTION */
     .section-title {
         position: relative;
         padding-bottom: 15px;
         margin-bottom: 30px;
+        color: #6B4226;
     }
-    
+
     .section-title:after {
         content: '';
         position: absolute;
@@ -224,24 +227,82 @@
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
-        background-color: #1a73e8;
+        background-color: #C19A6B;
     }
-    
+
+    /* CARD KATEGORI */
     .certification-category {
         transition: transform 0.3s ease;
-        border: 1px solid #e0e0e0;
+        border: 1px solid #E6D5C3;
+        background-color: #FFF9F3;
     }
-    
+
     .certification-category:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 20px rgba(107, 66, 38, 0.15);
     }
-    
-    .category-icon {
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+    .category-icon i {
+        color: #8B5E3C !important;
+    }
+
+    /* BUTTON */
+    .btn-primary {
+        background-color: #8B5E3C;
+        border-color: #8B5E3C;
+    }
+
+    .btn-primary:hover {
+        background-color: #6B4226;
+        border-color: #6B4226;
+    }
+
+    .btn-outline-primary {
+        color: #8B5E3C;
+        border-color: #8B5E3C;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #8B5E3C;
+        color: #fff;
+    }
+
+    .btn-outline-success {
+        color: #6B4226;
+        border-color: #C19A6B;
+    }
+
+    .btn-outline-success:hover {
+        background-color: #C19A6B;
+        color: #fff;
+    }
+
+    /* TABLE */
+    .table-light {
+        background-color: #F5EFE8;
+    }
+
+    .badge.bg-success {
+        background-color: #8B5E3C !important;
+    }
+
+    .badge.bg-info {
+        background-color: #C19A6B !important;
+        color: #4A2E1B;
+    }
+
+    .badge.bg-warning {
+        background-color: #E0B084 !important;
+        color: #4A2E1B;
+    }
+
+    /* ICON */
+    .fa-eye, .fa-download {
+        color: #8B5E3C;
+    }
+
+    .fa-eye:hover, .fa-download:hover {
+        color: #6B4226;
     }
 </style>
 @endpush

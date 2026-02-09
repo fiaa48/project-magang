@@ -36,13 +36,27 @@ Route::prefix('portfolio')->group(function () {
     Route::get('/{id}', [PortfolioController::class, 'show'])->name('portfolio.details');
 });
 
-// Certifications
+// Certification
 Route::prefix('certifications')->group(function () {
-    Route::get('/', [CertificationController::class, 'index'])->name('certifications');
-    Route::get('/sbu', [CertificationController::class, 'sbu'])->name('certifications.sbu');
-    Route::get('/iso', [CertificationController::class, 'iso'])->name('certifications.iso');
-    Route::get('/legal', [CertificationController::class, 'legal'])->name('certifications.legal');
+    Route::get('/', [CertificationController::class, 'index'])
+        ->name('certifications.index');
+    Route::get('/sbu', [CertificationController::class, 'sbu'])
+        ->name('certifications.sbu');
+    Route::get('/iso', [CertificationController::class, 'iso'])
+        ->name('certifications.iso');
+    Route::get('/legal', [CertificationController::class, 'legal'])
+        ->name('certifications.legal');
+    // PDF VIEW
+    Route::get('/pdf/{slug}', [CertificationController::class, 'viewPdf'])
+        ->name('certifications.view');
+    // PDF DOWNLOAD
+    Route::get('/download/{slug}', [CertificationController::class, 'downloadPdf'])
+        ->name('certifications.download');
+    // SHARE (optional)
+    Route::get('/share/{slug}', [CertificationController::class, 'share'])
+        ->name('certifications.share');
 });
+
 
 // Company Data
 Route::prefix('company-data')->group(function () {
