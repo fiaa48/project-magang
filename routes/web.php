@@ -4,11 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ServicesController;
-use App\Http\Controllers\PortfolioController;
+use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\CertificationController;
 use App\Http\Controllers\ManagementController;
 use App\Http\Controllers\CompanyDataController;
+use App\Http\Controllers\ProjectController;
 
 // Home
 Route::get('/', [HomeController::class, 'index'])->name('home');
@@ -30,10 +31,10 @@ Route::prefix('services')->group(function () {
     Route::get('/engineering', [ServicesController::class, 'engineering'])->name('services.engineering');
 });
 
-// Portfolio
-Route::prefix('portfolio')->group(function () {
-    Route::get('/', [PortfolioController::class, 'index'])->name('portfolio');
-    Route::get('/{id}', [PortfolioController::class, 'show'])->name('portfolio.details');
+// Portofolio
+Route::prefix('portofolio')->group(function () {
+    Route::get('/', [PortofolioController::class, 'index'])->name('portofolio');
+    Route::get('/{id}', [PortofolioController::class, 'show'])->name('portofolio.details');
 });
 
 // Certifications
@@ -57,3 +58,6 @@ Route::get('/management', [ManagementController::class, 'index'])->name('managem
 // Contact
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
+
+//Project
+Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'index'])->name('projects');
