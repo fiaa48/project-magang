@@ -27,11 +27,7 @@
                             <span class="text-gradient-brown">Jejak Langkah</span> Perusahaan
                         </h1>
                         <p class="lead text-brown-medium mb-5">
-<<<<<<< HEAD
                             Menelusuri perjalanan inspiratif PT Mitra Nusa Konsulindo dari awal berdiri
-=======
-                            Menelusuri perjalanan inspiratif PT Mitra Nusa Konsulindo dari awal berdiri 
->>>>>>> origin/main
                             hingga tumbuh menjadi mitra konsultan terpercaya di Indonesia.
                         </p>
 
@@ -134,11 +130,7 @@
                             </div>
                             <h3 class="card-title">Pendirian Perusahaan</h3>
                             <p class="card-text">
-<<<<<<< HEAD
                                 PT Mitra Nusa Konsulindo secara resmi berdiri dengan visi menjadi
-=======
-                                PT Mitra Nusa Konsulindo secara resmi berdiri dengan visi menjadi 
->>>>>>> origin/main
                                 perusahaan konsultan terpercaya di bidang konstruksi dan non-konstruksi.
                             </p>
                             <div class="card-milestones">
@@ -190,11 +182,7 @@
                             </div>
                             <h3 class="card-title">Pengembangan Jasa & Sertifikasi</h3>
                             <p class="card-text">
-<<<<<<< HEAD
                                 Tahun pertama operasional diisi dengan pengembangan layanan dan
-=======
-                                Tahun pertama operasional diisi dengan pengembangan layanan dan 
->>>>>>> origin/main
                                 perolehan sertifikasi yang diperlukan untuk operasional profesional.
                             </p>
                             <div class="card-milestones">
@@ -246,11 +234,7 @@
                             </div>
                             <h3 class="card-title">Konsolidasi & Pengembangan</h3>
                             <p class="card-text">
-<<<<<<< HEAD
                                 Periode pertumbuhan signifikan dengan penguatan tim profesional
-=======
-                                Periode pertumbuhan signifikan dengan penguatan tim profesional 
->>>>>>> origin/main
                                 dan perluasan basis klien di berbagai sektor.
                             </p>
                             <div class="card-milestones">
@@ -302,11 +286,7 @@
                             </div>
                             <h3 class="card-title">Pengakuan & Ekspansi Regional</h3>
                             <p class="card-text">
-<<<<<<< HEAD
                                 Tahun pencapaian dengan pengakuan profesional dan ekspansi
-=======
-                                Tahun pencapaian dengan pengakuan profesional dan ekspansi 
->>>>>>> origin/main
                                 layanan ke wilayah regional di Indonesia.
                             </p>
                             <div class="card-milestones">
@@ -358,11 +338,7 @@
                             </div>
                             <h3 class="card-title">Inovasi & Masa Depan</h3>
                             <p class="card-text">
-<<<<<<< HEAD
                                 Fokus pada pengembangan solusi inovatif dan persiapan
-=======
-                                Fokus pada pengembangan solusi inovatif dan persiapan 
->>>>>>> origin/main
                                 untuk tantangan masa depan dalam industri konsultansi.
                             </p>
                             <div class="card-milestones">
@@ -415,7 +391,6 @@
 
                         <div class="story-content">
                             <p class="story-text">
-<<<<<<< HEAD
                                 <span class="dropcap">D</span>idirikan oleh sekelompok profesional dengan visi yang sama,
                                 PT Mitra Nusa Konsulindo lahir dari keinginan untuk menciptakan perusahaan
                                 konsultan yang tidak hanya berorientasi pada profit, tetapi juga memberikan
@@ -425,17 +400,6 @@
                             <p class="story-text">
                                 Dengan latar belakang pengalaman yang beragam di bidang konstruksi, manajemen proyek,
                                 dan konsultansi kelembagaan, para pendiri melihat potensi besar dalam memberikan
-=======
-                                <span class="dropcap">D</span>idirikan oleh sekelompok profesional dengan visi yang sama, 
-                                PT Mitra Nusa Konsulindo lahir dari keinginan untuk menciptakan perusahaan 
-                                konsultan yang tidak hanya berorientasi pada profit, tetapi juga memberikan 
-                                kontribusi nyata bagi pembangunan Indonesia.
-                            </p>
-                            
-                            <p class="story-text">
-                                Dengan latar belakang pengalaman yang beragam di bidang konstruksi, manajemen proyek, 
-                                dan konsultansi kelembagaan, para pendiri melihat potensi besar dalam memberikan 
->>>>>>> origin/main
                                 solusi terintegrasi yang mengedepankan profesionalisme dan inovasi.
                             </p>
 
@@ -444,11 +408,7 @@
                                     <i class="fas fa-quote-left"></i>
                                 </div>
                                 <blockquote class="quote-text">
-<<<<<<< HEAD
                                     "Kami percaya bahwa setiap proyek adalah kesempatan untuk menciptakan
-=======
-                                    "Kami percaya bahwa setiap proyek adalah kesempatan untuk menciptakan 
->>>>>>> origin/main
                                     nilai tambah dan memberikan dampak positif yang berkelanjutan."
                                 </blockquote>
                                 <div class="quote-author">
@@ -470,11 +430,7 @@
                             <div class="card-body">
                                 <h4 class="card-title">Visi Pendirian</h4>
                                 <p class="card-text">
-<<<<<<< HEAD
                                     Menciptakan perusahaan konsultan yang menjadi mitra terpercaya dalam
-=======
-                                    Menciptakan perusahaan konsultan yang menjadi mitra terpercaya dalam 
->>>>>>> origin/main
                                     pembangunan infrastruktur dan kelembagaan di Indonesia.
                                 </p>
                             </div>
@@ -542,11 +498,7 @@
                         </div>
                         <h4 class="value-title">Kemitraan</h4>
                         <p class="value-description">
-<<<<<<< HEAD
                             Membangun hubungan jangka panjang yang saling menguntungkan dengan semua
-=======
-                            Membangun hubungan jangka panjang yang saling menguntungkan dengan semua 
->>>>>>> origin/main
                             pemangku kepentingan berdasarkan kepercayaan dan transparansi.
                         </p>
                     </div>
@@ -559,11 +511,7 @@
                         </div>
                         <h4 class="value-title">Kualitas</h4>
                         <p class="value-description">
-<<<<<<< HEAD
                             Tidak pernah berkompromi dengan kualitas layanan dalam setiap proyek
-=======
-                            Tidak pernah berkompromi dengan kualitas layanan dalam setiap proyek 
->>>>>>> origin/main
                             yang kami tangani, dengan standar tertinggi dan perhatian pada detail.
                         </p>
                     </div>
@@ -576,11 +524,7 @@
                         </div>
                         <h4 class="value-title">Inovasi</h4>
                         <p class="value-description">
-<<<<<<< HEAD
                             Terus mengembangkan solusi kreatif dan teknologi terkini untuk menjawab
-=======
-                            Terus mengembangkan solusi kreatif dan teknologi terkini untuk menjawab 
->>>>>>> origin/main
                             tantangan masa kini dan mempersiapkan masa depan.
                         </p>
                     </div>
@@ -882,17 +826,10 @@
         top: 0;
         bottom: 0;
         width: 2px;
-<<<<<<< HEAD
         background: linear-gradient(to bottom,
             transparent 0%,
             var(--brown-light) 10%,
             var(--brown-light) 90%,
-=======
-        background: linear-gradient(to bottom, 
-            transparent 0%, 
-            var(--brown-light) 10%, 
-            var(--brown-light) 90%, 
->>>>>>> origin/main
             transparent 100%);
     }
 
@@ -1392,11 +1329,7 @@
     document.addEventListener('DOMContentLoaded', function() {
         // Add animation to timeline cards on scroll
         const timelineCards = document.querySelectorAll('.timeline-card');
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/main
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry, index) => {
                 if (entry.isIntersecting) {
@@ -1443,19 +1376,11 @@
             marker.addEventListener('click', function() {
                 const year = this.querySelector('.year').textContent;
                 const card = this.closest('.timeline-item').querySelector('.timeline-card');
-<<<<<<< HEAD
 
                 // Add active class
                 timelineMarkers.forEach(m => m.classList.remove('active'));
                 this.classList.add('active');
 
-=======
-                
-                // Add active class
-                timelineMarkers.forEach(m => m.classList.remove('active'));
-                this.classList.add('active');
-                
->>>>>>> origin/main
                 // Scroll to card
                 card.scrollIntoView({
                     behavior: 'smooth',
@@ -1465,8 +1390,4 @@
         });
     });
 </script>
-<<<<<<< HEAD
 @endpush
-=======
-@endpush
->>>>>>> origin/main

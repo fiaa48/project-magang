@@ -1,6 +1,5 @@
 @extends('layouts.app')
 
-<<<<<<< HEAD
 @section('title', 'Kontak Kami | PT Mitra Nusa Konsulindo')
 @section('description', 'Hubungi PT Mitra Nusa Konsulindo untuk konsultasi, kerja sama proyek, dan informasi lebih lanjut. Kami siap membantu Anda.')
 
@@ -59,7 +58,7 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION – PREMIUM CARDS WITH GLASSMORPHISM -->
+    <!-- CONTACT SECTION – 3D CARDS WITH GLASSMORPHISM -->
     <section id="contact-section" class="py-6 bg-white position-relative">
         <!-- Subtle background decoration -->
         <div class="section-bg-decoration">
@@ -69,242 +68,264 @@
 
         <div class="container position-relative z-2">
             <div class="row g-5">
-                <!-- LEFT COLUMN – CONTACT INFORMATION & COMPANY DETAILS -->
+                <!-- LEFT COLUMN – CONTACT INFORMATION & COMPANY DETAILS (3D CARD) -->
                 <div class="col-lg-5">
-                    <div class="contact-info-card h-100 animate-on-scroll">
-                        <div class="contact-info-header mb-4">
-                            <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-4 py-2 mb-3">
-                                <i class="fas fa-building me-2"></i>INFORMASI PERUSAHAAN
-                            </span>
-                            <h3 class="display-6 fw-bold text-brown-dark mb-3">PT Mitra Nusa Konsulindo</h3>
-                            <p class="text-brown-medium">
-                                Terdaftar dan berpengalaman sejak 2020, melayani berbagai proyek konsultansi konstruksi dan non-konstruksi.
-                            </p>
-                        </div>
-
-                        <!-- Company Details List – sesuai PDF -->
-                        <div class="company-details mb-5">
-                            <div class="detail-item d-flex align-items-start mb-4">
-                                <div class="detail-icon bg-brown-light-subtle rounded-circle p-3 me-3">
-                                    <i class="fas fa-map-marker-alt text-brown-dark"></i>
-                                </div>
-                                <div class="detail-text">
-                                    <h6 class="fw-bold text-brown-dark mb-1">Domisili & Kantor</h6>
-                                    <p class="text-brown-medium mb-0">
-                                        Gedung Graha Mulia Sejahtera<br>
-                                        Jl. Terusan Jakarta No. 175A<br>
-                                        Antapani – Bandung 40291<br>
-                                        Jawa Barat, Indonesia
-                                    </p>
-                                </div>
+                    <div class="contact-info-card-3d h-100 animate-on-scroll">
+                        <div class="contact-info-inner">
+                            <div class="contact-info-header mb-4">
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-4 py-2 mb-3">
+                                    <i class="fas fa-building me-2"></i>INFORMASI PERUSAHAAN
+                                </span>
+                                <h3 class="display-6 fw-bold text-brown-dark mb-3">PT Mitra Nusa Konsulindo</h3>
+                                <p class="text-brown-medium">
+                                    Terdaftar dan berpengalaman sejak 2020, melayani berbagai proyek konsultansi konstruksi dan non-konstruksi.
+                                </p>
                             </div>
 
-                            <div class="detail-item d-flex align-items-start mb-4">
-                                <div class="detail-icon bg-brown-light-subtle rounded-circle p-3 me-3">
-                                    <i class="fas fa-phone-alt text-brown-dark"></i>
-                                </div>
-                                <div class="detail-text">
-                                    <h6 class="fw-bold text-brown-dark mb-1">Telepon</h6>
-                                    <p class="text-brown-medium mb-0">
-                                        <a href="tel:+622220502071" class="contact-link">(022) 20502071</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="detail-item d-flex align-items-start mb-4">
-                                <div class="detail-icon bg-brown-light-subtle rounded-circle p-3 me-3">
-                                    <i class="fas fa-envelope text-brown-dark"></i>
-                                </div>
-                                <div class="detail-text">
-                                    <h6 class="fw-bold text-brown-dark mb-1">Email</h6>
-                                    <p class="text-brown-medium mb-0">
-                                        <a href="mailto:mitranusa.kons@gmail.com" class="contact-link">mitranusa.kons@gmail.com</a>
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div class="detail-item d-flex align-items-start mb-4">
-                                <div class="detail-icon bg-brown-light-subtle rounded-circle p-3 me-3">
-                                    <i class="fas fa-globe text-brown-dark"></i>
-                                </div>
-                                <div class="detail-text">
-                                    <h6 class="fw-bold text-brown-dark mb-1">Website</h6>
-                                    <p class="text-brown-medium mb-0">
-                                        <a href="{{ url('/') }}" class="contact-link">{{ url('/') }}</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Legal & Certification Information – sesuai PDF -->
-                        <div class="legal-info">
-                            <div class="row g-3">
-                                <div class="col-md-6">
-                                    <div class="legal-badge">
-                                        <span class="badge bg-brown-dark text-white rounded-pill px-3 py-2 mb-2">
-                                            <i class="fas fa-certificate me-1"></i> NIB
-                                        </span>
-                                        <p class="text-brown-medium small mb-0">0257011100093</p>
+                            <!-- Company Details List – sesuai PDF -->
+                            <div class="company-details mb-5">
+                                <div class="detail-item d-flex align-items-start mb-4">
+                                    <div class="detail-icon bg-brown-light-subtle rounded-circle p-3 me-3">
+                                        <i class="fas fa-map-marker-alt text-brown-dark"></i>
                                     </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="legal-badge">
-                                        <span class="badge bg-brown-dark text-white rounded-pill px-3 py-2 mb-2">
-                                            <i class="fas fa-id-card me-1"></i> NPWP
-                                        </span>
-                                        <p class="text-brown-medium small mb-0">96.431.796.0-429.000</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="legal-badge">
-                                        <span class="badge bg-brown-dark text-white rounded-pill px-3 py-2 mb-2">
-                                            <i class="fas fa-users me-1"></i> INKINDO
-                                        </span>
-                                        <p class="text-brown-medium small mb-0">17744/P/1304.JB</p>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="legal-badge">
-                                        <span class="badge bg-brown-dark text-white rounded-pill px-3 py-2 mb-2">
-                                            <i class="fas fa-building me-1"></i> KADIN
-                                        </span>
-                                        <p class="text-brown-medium small mb-0">20112-2026270629</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Social Media (optional, bisa ditambahkan) -->
-                        <div class="social-media mt-5 pt-4 border-top border-brown-light-subtle">
-                            <h6 class="fw-bold text-brown-dark mb-3">Ikuti Kami</h6>
-                            <div class="d-flex gap-3">
-                                <a href="#" class="social-icon bg-brown-light-subtle rounded-circle p-3">
-                                    <i class="fab fa-linkedin-in text-brown-dark"></i>
-                                </a>
-                                <a href="#" class="social-icon bg-brown-light-subtle rounded-circle p-3">
-                                    <i class="fab fa-instagram text-brown-dark"></i>
-                                </a>
-                                <a href="#" class="social-icon bg-brown-light-subtle rounded-circle p-3">
-                                    <i class="fab fa-facebook-f text-brown-dark"></i>
-                                </a>
-                                <a href="#" class="social-icon bg-brown-light-subtle rounded-circle p-3">
-                                    <i class="fab fa-twitter text-brown-dark"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- RIGHT COLUMN – CONTACT FORM & MAP -->
-                <div class="col-lg-7">
-                    <div class="row g-4">
-                        <!-- Contact Form Card -->
-                        <div class="col-12">
-                            <div class="contact-form-card animate-on-scroll">
-                                <div class="form-header mb-4">
-                                    <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
-                                        <i class="fas fa-paper-plane me-2"></i>KIRIM PESAN
-                                    </span>
-                                    <h3 class="h3 fw-bold text-brown-dark mb-2">Ada pertanyaan?</h3>
-                                    <p class="text-brown-medium">
-                                        Isi formulir di bawah ini, tim kami akan segera merespon Anda dalam 1x24 jam.
-                                    </p>
-                                </div>
-
-                                <form action="{{ route('contact.send') }}" method="POST" class="contact-form">
-                                    @csrf
-                                    <div class="row g-4">
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="name" name="name" placeholder="Nama Lengkap" required>
-                                                <label for="name" class="text-brown-medium">Nama Lengkap <span class="text-danger">*</span></label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
-                                                <label for="email" class="text-brown-medium">Email <span class="text-danger">*</span></label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <input type="text" class="form-control" id="phone" name="phone" placeholder="No. Telepon (opsional)">
-                                                <label for="phone" class="text-brown-medium">No. Telepon</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="form-floating">
-                                                <select class="form-select" id="subject" name="subject">
-                                                    <option value="Konsultasi" selected>Konsultasi Proyek</option>
-                                                    <option value="Kerja Sama">Kerja Sama</option>
-                                                    <option value="Informasi">Informasi Layanan</option>
-                                                    <option value="Lainnya">Lainnya</option>
-                                                </select>
-                                                <label for="subject" class="text-brown-medium">Perihal</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <div class="form-floating">
-                                                <textarea class="form-control" id="message" name="message" style="height: 150px" placeholder="Pesan" required></textarea>
-                                                <label for="message" class="text-brown-medium">Pesan <span class="text-danger">*</span></label>
-                                            </div>
-                                        </div>
-                                        <div class="col-12">
-                                            <button type="submit" class="btn btn-brown-dark btn-lg rounded-pill px-5 py-3 w-100 btn-submit">
-                                                <span>Kirim Pesan</span>
-                                                <i class="fas fa-arrow-right ms-2"></i>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </form>
-
-                                @if(session('success'))
-                                    <div class="alert alert-success mt-4 mb-0 rounded-pill">
-                                        <i class="fas fa-check-circle me-2"></i>
-                                        {{ session('success') }}
-                                    </div>
-                                @endif
-                            </div>
-                        </div>
-
-                        <!-- Map Card -->
-                        <div class="col-12">
-                            <div class="map-card animate-on-scroll">
-                                <div class="map-header d-flex align-items-center mb-4">
-                                    <div class="map-icon bg-brown-light-subtle rounded-circle p-3 me-3">
-                                        <i class="fas fa-map-marked-alt text-brown-dark"></i>
-                                    </div>
-                                    <div>
-                                        <h4 class="h5 fw-bold text-brown-dark mb-1">Lokasi Kantor</h4>
-                                        <p class="text-brown-medium small mb-0">
-                                            Gedung Graha Mulia Sejahtera, Jl. Terusan Jakarta No. 175A, Antapani
+                                    <div class="detail-text">
+                                        <h6 class="fw-bold text-brown-dark mb-1">Domisili & Kantor</h6>
+                                        <p class="text-brown-medium mb-0">
+                                            Gedung Graha Mulia Sejahtera<br>
+                                            Jl. Terusan Jakarta No. 175A<br>
+                                            Antapani – Bandung 40291<br>
+                                            Jawa Barat, Indonesia
                                         </p>
                                     </div>
                                 </div>
 
-                                <div class="map-wrapper rounded-4 overflow-hidden mb-4">
-                                    <iframe
-                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.626254123456!2d107.659876!3d-6.912345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7a8e7a8e7a9%3A0x123456789abcdef!2sGraha%20Mulia%20Sejahtera!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
-                                        width="100%"
-                                        height="280"
-                                        style="border:0;"
-                                        allowfullscreen=""
-                                        loading="lazy"
-                                        referrerpolicy="no-referrer-when-downgrade"
-                                        title="Peta Lokasi PT Mitra Nusa Konsulindo">
-                                    </iframe>
+                                <div class="detail-item d-flex align-items-start mb-4">
+                                    <div class="detail-icon bg-brown-light-subtle rounded-circle p-3 me-3">
+                                        <i class="fas fa-phone-alt text-brown-dark"></i>
+                                    </div>
+                                    <div class="detail-text">
+                                        <h6 class="fw-bold text-brown-dark mb-1">Telepon</h6>
+                                        <p class="text-brown-medium mb-0">
+                                            <a href="tel:+622220502071" class="contact-link">(022) 20502071</a>
+                                        </p>
+                                    </div>
                                 </div>
 
-                                <div class="map-footer d-flex justify-content-between align-items-center">
-                                    <span class="text-brown-medium small">
-                                        <i class="fas fa-check-circle text-success me-1"></i> Akurat & Siap dikunjungi
-                                    </span>
-                                    <a href="https://www.google.com/maps/dir/?api=1&destination=-6.912345,107.659876"
-                                       target="_blank"
-                                       rel="noopener noreferrer"
-                                       class="btn btn-outline-brown-dark rounded-pill px-4 py-2">
-                                        <i class="fas fa-location-arrow me-2"></i>Mulai Navigasi
+                                <div class="detail-item d-flex align-items-start mb-4">
+                                    <div class="detail-icon bg-brown-light-subtle rounded-circle p-3 me-3">
+                                        <i class="fas fa-envelope text-brown-dark"></i>
+                                    </div>
+                                    <div class="detail-text">
+                                        <h6 class="fw-bold text-brown-dark mb-1">Email</h6>
+                                        <p class="text-brown-medium mb-0">
+                                            <a href="mailto:mitranusa.kons@gmail.com" class="contact-link">mitranusa.kons@gmail.com</a>
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="detail-item d-flex align-items-start mb-4">
+                                    <div class="detail-icon bg-brown-light-subtle rounded-circle p-3 me-3">
+                                        <i class="fas fa-globe text-brown-dark"></i>
+                                    </div>
+                                    <div class="detail-text">
+                                        <h6 class="fw-bold text-brown-dark mb-1">Website</h6>
+                                        <p class="text-brown-medium mb-0">
+                                            <a href="{{ url('/') }}" class="contact-link">{{ url('/') }}</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Legal & Certification Information – sesuai PDF -->
+                            <div class="legal-info">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <div class="legal-badge">
+                                            <span class="badge bg-brown-dark text-white rounded-pill px-3 py-2 mb-2">
+                                                <i class="fas fa-certificate me-1"></i> NIB
+                                            </span>
+                                            <p class="text-brown-medium small mb-0">0257011100093</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="legal-badge">
+                                            <span class="badge bg-brown-dark text-white rounded-pill px-3 py-2 mb-2">
+                                                <i class="fas fa-id-card me-1"></i> NPWP
+                                            </span>
+                                            <p class="text-brown-medium small mb-0">96.431.796.0-429.000</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="legal-badge">
+                                            <span class="badge bg-brown-dark text-white rounded-pill px-3 py-2 mb-2">
+                                                <i class="fas fa-users me-1"></i> INKINDO
+                                            </span>
+                                            <p class="text-brown-medium small mb-0">17744/P/1304.JB</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="legal-badge">
+                                            <span class="badge bg-brown-dark text-white rounded-pill px-3 py-2 mb-2">
+                                                <i class="fas fa-building me-1"></i> KADIN
+                                            </span>
+                                            <p class="text-brown-medium small mb-0">20112-2026270629</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Social Media (optional, bisa ditambahkan) -->
+                            <div class="social-media mt-5 pt-4 border-top border-brown-light-subtle">
+                                <h6 class="fw-bold text-brown-dark mb-3">Ikuti Kami</h6>
+                                <div class="d-flex gap-3">
+                                    <a href="#" class="social-icon-3d bg-brown-light-subtle rounded-circle p-3">
+                                        <i class="fab fa-linkedin-in text-brown-dark"></i>
                                     </a>
+                                    <a href="#" class="social-icon-3d bg-brown-light-subtle rounded-circle p-3">
+                                        <i class="fab fa-instagram text-brown-dark"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-3d bg-brown-light-subtle rounded-circle p-3">
+                                        <i class="fab fa-facebook-f text-brown-dark"></i>
+                                    </a>
+                                    <a href="#" class="social-icon-3d bg-brown-light-subtle rounded-circle p-3">
+                                        <i class="fab fa-twitter text-brown-dark"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- 3D decorative corners -->
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- RIGHT COLUMN – CONTACT FORM & MAP (3D CARDS) -->
+                <div class="col-lg-7">
+                    <div class="row g-4">
+<!-- Contact Form Card (3D) -->
+<div class="col-12">
+    <div class="contact-form-card-3d animate-on-scroll">
+        <div class="contact-form-inner">
+            <div class="form-header mb-4">
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-paper-plane me-2"></i>KIRIM PESAN
+                </span>
+                <h3 class="h3 fw-bold text-brown-dark mb-2">Ada pertanyaan?</h3>
+                <p class="text-brown-medium">
+                    Isi formulir di bawah ini, tim kami akan segera merespon Anda dalam 1x24 jam.
+                </p>
+            </div>
+
+            <form action="{{ route('contact.send') }}" method="POST" class="contact-form">
+                @csrf
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Nama Lengkap" required>
+                            <label for="name" class="text-brown-medium">Nama Lengkap <span class="text-danger">*</span></label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                            <label for="email" class="text-brown-medium">Email <span class="text-danger">*</span></label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input type="text" class="form-control" id="phone" name="phone" placeholder="No. Telepon (opsional)">
+                            <label for="phone" class="text-brown-medium">No. Telepon</label>
+                        </div>
+                    </div>
+
+                    {{-- PERBAIKAN: Field Perihal dengan lebar penuh dan CSS khusus --}}
+                    <div class="col-12 mb-3">
+                        <div class="form-floating">
+                            <select class="form-select" id="subject" name="subject">
+                                <option value="Konsultasi" selected>Konsultasi Proyek</option>
+                                <option value="Kerja Sama">Kerja Sama</option>
+                                <option value="Informasi">Informasi Layanan</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </select>
+                            <label for="subject" class="text-brown-medium">Perihal</label>
+                        </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-floating">
+                            <textarea class="form-control" id="message" name="message" style="height: 150px" placeholder="Pesan" required></textarea>
+                            <label for="message" class="text-brown-medium">Pesan <span class="text-danger">*</span></label>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-brown-3d btn-lg rounded-pill px-5 py-3 w-100">
+                            <span>Kirim Pesan</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
+                            <span class="btn-shine"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
+            @if(session('success'))
+                <div class="alert alert-success mt-4 mb-0 rounded-pill">
+                    <i class="fas fa-check-circle me-2"></i>
+                    {{ session('success') }}
+                </div>
+            @endif
+
+            <!-- 3D decorative corners -->
+            <div class="card-corner corner-1"></div>
+            <div class="card-corner corner-2"></div>
+        </div>
+    </div>
+</div>
+
+                        <!-- Map Card (3D) -->
+                        <div class="col-12">
+                            <div class="map-card-3d animate-on-scroll">
+                                <div class="map-card-inner">
+                                    <div class="map-header d-flex align-items-center mb-4">
+                                        <div class="map-icon bg-brown-light-subtle rounded-circle p-3 me-3">
+                                            <i class="fas fa-map-marked-alt text-brown-dark"></i>
+                                        </div>
+                                        <div>
+                                            <h4 class="h5 fw-bold text-brown-dark mb-1">Lokasi Kantor</h4>
+                                            <p class="text-brown-medium small mb-0">
+                                                Gedung Graha Mulia Sejahtera, Jl. Terusan Jakarta No. 175A, Antapani
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div class="map-wrapper rounded-4 overflow-hidden mb-4">
+                                        <iframe
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.626254123456!2d107.659876!3d-6.912345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e7a8e7a8e7a9%3A0x123456789abcdef!2sGraha%20Mulia%20Sejahtera!5e0!3m2!1sen!2sid!4v1234567890123!5m2!1sen!2sid"
+                                            width="100%"
+                                            height="280"
+                                            style="border:0;"
+                                            allowfullscreen=""
+                                            loading="lazy"
+                                            referrerpolicy="no-referrer-when-downgrade"
+                                            title="Peta Lokasi PT Mitra Nusa Konsulindo">
+                                        </iframe>
+                                    </div>
+
+                                    <div class="map-footer d-flex justify-content-between align-items-center">
+                                        <span class="text-brown-medium small">
+                                            <i class="fas fa-check-circle text-success me-1"></i> Akurat & Siap dikunjungi
+                                        </span>
+                                        <a href="https://www.google.com/maps/dir/?api=1&destination=-6.912345,107.659876"
+                                           target="_blank"
+                                           rel="noopener noreferrer"
+                                           class="btn btn-outline-brown-3d rounded-pill px-4 py-2">
+                                            <i class="fas fa-location-arrow me-2"></i>Mulai Navigasi
+                                        </a>
+                                    </div>
+
+                                    <!-- 3D decorative corners -->
+                                    <div class="card-corner corner-1"></div>
+                                    <div class="card-corner corner-2"></div>
                                 </div>
                             </div>
                         </div>
@@ -314,118 +335,120 @@
         </div>
     </section>
 
-<!-- BUSINESS HOURS & QUICK CONTACT – PREMIUM CARD -->
-<section class="py-6 bg-cream-light position-relative overflow-hidden">
-    <div class="cert-pattern">
-        <div class="pattern-line"></div>
-        <div class="pattern-line"></div>
-    </div>
+    <!-- BUSINESS HOURS & QUICK CONTACT – 3D PREMIUM CARD (IKON JAM DIHAPUS) -->
+    <section class="py-6 bg-cream-light position-relative overflow-hidden">
+        <div class="cert-pattern">
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
+        </div>
 
-    <div class="container position-relative z-2">
-        <div class="row justify-content-center">
-            <div class="col-lg-10">
-                <div class="quick-contact-card animate-on-scroll">
-                    <div class="row g-4 align-items-start"> <!-- ✅ align-items-start agar konten kiri rata atas -->
-                        <!-- JAM OPERASIONAL -->
-                        <div class="col-lg-4 text-center text-lg-start pt-0">
-                            <div class="hours-icon-wrapper mb-2">
-                                <div class="hours-icon bg-brown-dark rounded-circle mx-auto mx-lg-0">
-                                    <i class="fas fa-clock text-white fa-2x"></i>
+        <div class="container position-relative z-2">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="quick-contact-card-3d animate-on-scroll">
+                        <div class="quick-contact-inner">
+                            <div class="row g-4 align-items-start">
+                                <!-- JAM OPERASIONAL (IKON DIHAPUS) -->
+                                <div class="col-lg-4 text-center text-lg-start pt-0">
+                                    {{-- Ikon jam dihapus sesuai permintaan --}}
+                                    <h4 class="fw-bold text-brown-dark mb-2 mt-0">Jam Operasional</h4>
+                                    <p class="text-brown-medium mb-1">Senin – Jumat</p>
+                                    <p class="text-brown-dark fw-semibold mb-2">08.00 – 17.00 WIB</p>
+                                    <p class="text-brown-medium mb-1">Sabtu – Minggu</p>
+                                    <p class="text-brown-dark fw-semibold mb-0">Tutup (kecuali janjian)</p>
+                                </div>
+
+                                <!-- KOLOM KANAN: QUICK CONTACT ITEMS -->
+                                <div class="col-lg-8">
+                                    <div class="row g-3">
+                                        <!-- Telepon -->
+                                        <div class="col-md-6">
+                                            <div class="quick-contact-item-3d d-flex align-items-center p-3 bg-white rounded-4">
+                                                <div class="quick-icon bg-brown-light-subtle rounded-circle p-3 me-3">
+                                                    <i class="fas fa-phone-alt text-brown-dark"></i>
+                                                </div>
+                                                <div class="quick-detail">
+                                                    <span class="text-brown-medium small">Telepon</span>
+                                                    <a href="tel:+622220502071" class="quick-link d-block fw-bold text-brown-dark">(022) 20502071</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Email -->
+                                        <div class="col-md-6">
+                                            <div class="quick-contact-item-3d d-flex align-items-center p-3 bg-white rounded-4">
+                                                <div class="quick-icon bg-brown-light-subtle rounded-circle p-3 me-3">
+                                                    <i class="fas fa-envelope text-brown-dark"></i>
+                                                </div>
+                                                <div class="quick-detail">
+                                                    <span class="text-brown-medium small">Email</span>
+                                                    <a href="mailto:mitranusa.kons@gmail.com" class="quick-link d-block fw-bold text-brown-dark">mitranusa.kons</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- Alamat -->
+                                        <div class="col-md-6">
+                                            <div class="quick-contact-item-3d d-flex align-items-center p-3 bg-white rounded-4">
+                                                <div class="quick-icon bg-brown-light-subtle rounded-circle p-3 me-3">
+                                                    <i class="fas fa-map-marker-alt text-brown-dark"></i>
+                                                </div>
+                                                <div class="quick-detail">
+                                                    <span class="text-brown-medium small">Alamat</span>
+                                                    <span class="d-block fw-bold text-brown-dark">Bandung, Jawa Barat</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- WhatsApp – PREMIUM ICON -->
+                                        <div class="col-md-6">
+                                            <div class="quick-contact-item-3d d-flex align-items-center p-3 bg-white rounded-4">
+                                                <div class="quick-icon bg-whatsapp rounded-circle p-3 me-3">
+                                                    <i class="fab fa-whatsapp text-white"></i>
+                                                </div>
+                                                <div class="quick-detail">
+                                                    <span class="text-brown-medium small">WhatsApp</span>
+                                                    <a href="https://wa.me/6281222052071" class="quick-link d-block fw-bold text-brown-dark">+62 812-2205-2071</a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <h4 class="fw-bold text-brown-dark mb-2 mt-0">Jam Operasional</h4>
-                            <p class="text-brown-medium mb-1">Senin – Jumat</p>
-                            <p class="text-brown-dark fw-semibold mb-2">08.00 – 17.00 WIB</p>
-                            <p class="text-brown-medium mb-1">Sabtu – Minggu</p>
-                            <p class="text-brown-dark fw-semibold mb-0">Tutup (kecuali janjian)</p>
-                        </div>
-
-                        <!-- KOLOM KANAN: QUICK CONTACT ITEMS -->
-                        <div class="col-lg-8">
-                            <div class="row g-3">
-                                <!-- Telepon -->
-                                <div class="col-md-6">
-                                    <div class="quick-contact-item d-flex align-items-center p-3 bg-white rounded-4">
-                                        <div class="quick-icon bg-brown-light-subtle rounded-circle p-3 me-3">
-                                            <i class="fas fa-phone-alt text-brown-dark"></i>
-                                        </div>
-                                        <div class="quick-detail">
-                                            <span class="text-brown-medium small">Telepon</span>
-                                            <a href="tel:+622220502071" class="quick-link d-block fw-bold text-brown-dark">(022) 20502071</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Email -->
-                                <div class="col-md-6">
-                                    <div class="quick-contact-item d-flex align-items-center p-3 bg-white rounded-4">
-                                        <div class="quick-icon bg-brown-light-subtle rounded-circle p-3 me-3">
-                                            <i class="fas fa-envelope text-brown-dark"></i>
-                                        </div>
-                                        <div class="quick-detail">
-                                            <span class="text-brown-medium small">Email</span>
-                                            <a href="mailto:mitranusa.kons@gmail.com" class="quick-link d-block fw-bold text-brown-dark">mitranusa.kons</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Alamat -->
-                                <div class="col-md-6">
-                                    <div class="quick-contact-item d-flex align-items-center p-3 bg-white rounded-4">
-                                        <div class="quick-icon bg-brown-light-subtle rounded-circle p-3 me-3">
-                                            <i class="fas fa-map-marker-alt text-brown-dark"></i>
-                                        </div>
-                                        <div class="quick-detail">
-                                            <span class="text-brown-medium small">Alamat</span>
-                                            <span class="d-block fw-bold text-brown-dark">Bandung, Jawa Barat</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- WhatsApp – PREMIUM ICON -->
-                                <div class="col-md-6">
-                                    <div class="quick-contact-item d-flex align-items-center p-3 bg-white rounded-4">
-                                        <div class="quick-icon bg-whatsapp rounded-circle p-3 me-3"> <!-- ✅ background hijau khas WA -->
-                                            <i class="fab fa-whatsapp text-white"></i> <!-- ✅ ikon putih di atas hijau -->
-                                        </div>
-                                        <div class="quick-detail">
-                                            <span class="text-brown-medium small">WhatsApp</span>
-                                            <a href="https://wa.me/6281222052071" class="quick-link d-block fw-bold text-brown-dark">+62 812-2205-2071</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            <!-- 3D decorative corners -->
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- CTA SECTION – BUTTONS DENGAN JARAK IDEAL -->
-<section class="py-6 cta-elegant">
-    <div class="container">
-        <div class="cta-content-wrapper">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="display-6 fw-bold mb-3">Butuh Bantuan Segera?</h2>
-                    <p class="lead mb-0">
-                        Tim kami siap memberikan respon cepat melalui telepon atau WhatsApp.
-                    </p>
-                </div>
-                <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                    <!-- FLEX WRAPPER DENGAN GAP -->
-                    <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3">
-                        <a href="tel:+622220502071" class="btn btn-brown btn-lg px-5 py-3 rounded-pill">
-                            <i class="fas fa-phone-alt me-2"></i>Telepon
-                        </a>
-                        <a href="https://wa.me/6281222052071" class="btn btn-outline-brown-dark btn-lg px-5 py-3 rounded-pill">
-                            <i class="fab fa-whatsapp me-2"></i>WhatsApp
-                        </a>
+    <!-- CTA SECTION – BUTTONS DENGAN JARAK IDEAL -->
+    <section class="py-6 cta-elegant">
+        <div class="container">
+            <div class="cta-content-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-6 fw-bold mb-3">Butuh Bantuan Segera?</h2>
+                        <p class="lead mb-0">
+                            Tim kami siap memberikan respon cepat melalui telepon atau WhatsApp.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3">
+                            <a href="tel:+622220502071" class="btn btn-brown-3d btn-lg px-5 py-3 rounded-pill">
+                                <i class="fas fa-phone-alt me-2"></i>Telepon
+                                <span class="btn-shine"></span>
+                            </a>
+                            <a href="https://wa.me/6281222052071" class="btn btn-outline-brown-3d btn-lg px-5 py-3 rounded-pill">
+                                <i class="fab fa-whatsapp me-2"></i>WhatsApp
+                                <span class="btn-shine"></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 @endsection
 
 @push('styles')
@@ -443,6 +466,7 @@
         --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
         --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
         --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+        --shadow-3d: 0 20px 40px rgba(93,64,55,0.2), 0 10px 20px rgba(0,0,0,0.1);
     }
 
     /* ----- Hero Section (same as home) ----- */
@@ -614,39 +638,29 @@
         60% { transform: translateY(-5px); }
     }
 
-    /* ----- Contact Info Card (Premium Glassmorphism) ----- */
-    .contact-info-card {
+    /* ===== 3D CONTACT INFO CARD ===== */
+    .contact-info-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .contact-info-inner {
         background: white;
         border-radius: 2rem;
         padding: 2.5rem;
-        border: 1px solid rgba(93,64,55,0.06);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.02);
-        transition: all 0.4s ease;
-        height: 100%;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
         position: relative;
         overflow: hidden;
+        height: 100%;
     }
 
-    .contact-info-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 5px;
-        background: linear-gradient(90deg, var(--cream-gold), var(--brown-light));
-        opacity: 0;
-        transition: opacity 0.3s;
-    }
-
-    .contact-info-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 25px 45px rgba(93,64,55,0.08);
-        border-color: rgba(212,175,55,0.2);
-    }
-
-    .contact-info-card:hover::before {
-        opacity: 1;
+    .contact-info-card-3d:hover .contact-info-inner {
+        transform: rotateY(-2deg) rotateX(1deg) translateY(-8px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.25);
     }
 
     .detail-icon {
@@ -658,7 +672,7 @@
         transition: all 0.3s;
     }
 
-    .contact-info-card:hover .detail-icon {
+    .contact-info-card-3d:hover .detail-icon {
         background-color: rgba(212,175,55,0.15) !important;
         transform: scale(1.05);
     }
@@ -687,49 +701,59 @@
         transform: translateY(-3px);
     }
 
-    .social-icon {
+    .social-icon-3d {
         width: 48px;
         height: 48px;
         display: flex;
         align-items: center;
         justify-content: center;
         transition: all 0.3s;
+        border: 1px solid transparent;
     }
 
-    .social-icon:hover {
+    .social-icon-3d:hover {
         background-color: var(--brown-dark) !important;
-        transform: translateY(-5px);
+        transform: translateY(-5px) scale(1.1);
+        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
     }
 
-    .social-icon:hover i {
+    .social-icon-3d:hover i {
         color: white !important;
     }
 
-    /* ----- Contact Form Card (Premium) ----- */
-    .contact-form-card {
+    /* ===== 3D CONTACT FORM CARD ===== */
+    .contact-form-card-3d {
+        perspective: 1000px;
+    }
+
+    .contact-form-inner {
         background: white;
         border-radius: 2rem;
         padding: 2.5rem;
-        border: 1px solid rgba(93,64,55,0.06);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.02);
-        transition: all 0.4s ease;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
     }
 
-    .contact-form-card:hover {
-        border-color: rgba(212,175,55,0.2);
-        box-shadow: 0 25px 45px rgba(93,64,55,0.05);
+    .contact-form-card-3d:hover .contact-form-inner {
+        transform: rotateY(1deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
     }
 
     /* Form Floating Labels */
-    .form-floating > .form-control,
-    .form-floating > .form-select {
-        border: 1px solid rgba(93,64,55,0.15);
-        border-radius: 1rem;
-        padding: 1.2rem 1rem;
-        height: auto;
-        background: white;
-        transition: all 0.3s;
-    }
+.form-floating > .form-select {
+    height: auto !important;
+    min-height: calc(3.75rem + 2px) !important; /* Tinggi lebih lega */
+    padding-top: 1.2rem !important;
+    padding-bottom: 0.6rem !important;
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+}
 
     .form-floating > .form-control:focus,
     .form-floating > .form-select:focus {
@@ -742,17 +766,169 @@
         color: var(--brown-medium);
     }
 
-    .btn-brown-dark {
-        background: var(--brown-dark);
-        border-color: var(--brown-dark);
+    /* ✅ Perbaikan: agar teks dalam select tidak terpotong */
+.form-select {
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow: visible !important;
+}
+
+.form-select option {
+    padding: 0.5rem 1rem;
+    white-space: normal;
+}
+
+    /* ===== 3D MAP CARD ===== */
+    .map-card-3d {
+        perspective: 1000px;
+    }
+
+    .map-card-inner {
+        background: white;
+        border-radius: 2rem;
+        padding: 2rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .map-card-3d:hover .map-card-inner {
+        transform: rotateY(1deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
+    }
+
+    .map-wrapper {
+        border-radius: 1.5rem !important;
+        overflow: hidden;
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.3s;
+    }
+
+    .map-card-3d:hover .map-wrapper {
+        border-color: var(--cream-gold);
+    }
+
+    .map-wrapper iframe {
+        display: block;
+        transition: transform 0.3s;
+    }
+
+    .map-card-3d:hover .map-wrapper iframe {
+        transform: scale(1.02);
+    }
+
+    /* ===== 3D QUICK CONTACT CARD ===== */
+    .quick-contact-card-3d {
+        perspective: 1000px;
+    }
+
+    .quick-contact-inner {
+        background: white;
+        border-radius: 2rem;
+        padding: 2.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.05);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .quick-contact-card-3d:hover .quick-contact-inner {
+        transform: rotateY(1deg) rotateX(1deg) translateY(-8px);
+        box-shadow: 0 35px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
+    }
+
+    .quick-contact-item-3d {
+        transition: all 0.3s ease;
+        border: 1px solid rgba(93,64,55,0.05);
+        border-radius: 1rem;
+    }
+
+    .quick-contact-item-3d:hover {
+        transform: translateY(-5px) scale(1.02);
+        box-shadow: 0 15px 25px rgba(93,64,55,0.1);
+        border-color: var(--cream-gold) !important;
+    }
+
+    .quick-contact-item-3d:hover .quick-icon {
+        transform: scale(1.1);
+        background-color: rgba(212,175,55,0.2) !important;
+    }
+
+    .quick-icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+
+    .bg-whatsapp {
+        background: linear-gradient(145deg, #25D366, #20B858) !important;
+    }
+
+    .quick-detail {
+        line-height: 1.3;
+    }
+
+    .quick-link {
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .quick-link:hover {
+        color: var(--cream-gold) !important;
+    }
+
+    /* ===== 3D BUTTONS (same as home) ===== */
+    .btn-brown-3d {
+        background: linear-gradient(145deg, var(--brown-dark), #4A342E);
+        border: none;
         color: white;
         font-weight: 600;
         transition: all 0.3s;
         position: relative;
         overflow: hidden;
+        box-shadow: 0 8px 16px rgba(93,64,55,0.2);
+        transform-style: preserve-3d;
+        transform: translateY(0) rotateX(0deg);
     }
 
-    .btn-brown-dark::before {
+    .btn-brown-3d:hover {
+        transform: translateY(-3px) rotateX(2deg);
+        box-shadow: 0 15px 30px rgba(93,64,55,0.3);
+        background: linear-gradient(145deg, #4A342E, var(--brown-dark));
+    }
+
+    .btn-outline-brown-3d {
+        border: 2px solid var(--brown-dark);
+        color: var(--brown-dark);
+        background: transparent;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-outline-brown-3d:hover {
+        background: var(--brown-dark);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
+    }
+
+    .btn-brown-3d::before,
+    .btn-outline-brown-3d::before {
         content: '';
         position: absolute;
         top: 0;
@@ -763,68 +939,66 @@
         transition: left 0.6s;
     }
 
-    .btn-brown-dark:hover {
-        background: #4A342E;
-        border-color: #4A342E;
-        transform: translateY(-3px);
-        box-shadow: 0 12px 25px rgba(93,64,55,0.2);
-    }
-
-    .btn-brown-dark:hover::before {
+    .btn-brown-3d:hover::before,
+    .btn-outline-brown-3d:hover::before {
         left: 100%;
     }
 
-    .btn-outline-brown-dark {
-        border: 2px solid var(--brown-dark);
-        color: var(--brown-dark);
-        font-weight: 600;
-        transition: all 0.3s;
+    /* 3D decorative corners */
+    .card-corner {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, transparent 50%, rgba(212,175,55,0.1) 50%);
+        z-index: 1;
     }
 
-    .btn-outline-brown-dark:hover {
-        background: var(--brown-dark);
-        border-color: var(--brown-dark);
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 12px 25px rgba(93,64,55,0.15);
+    .card-corner.corner-1 {
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
     }
 
-    /* ----- Map Card ----- */
-    .map-card {
-        background: white;
-        border-radius: 2rem;
-        padding: 2rem;
-        border: 1px solid rgba(93,64,55,0.06);
-        box-shadow: 0 15px 35px rgba(0,0,0,0.02);
-        transition: all 0.4s;
+    .card-corner.corner-2 {
+        bottom: 0;
+        left: 0;
+        transform: rotate(270deg);
     }
 
-    .map-card:hover {
-        border-color: rgba(212,175,55,0.2);
-        box-shadow: 0 25px 45px rgba(93,64,55,0.05);
+    /* ----- Background decorations ----- */
+    .section-bg-decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
     }
 
-    .map-wrapper {
-        border-radius: 1.5rem !important;
-        overflow: hidden;
-        border: 1px solid rgba(93,64,55,0.1);
-        transition: all 0.3s;
+    .decoration-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.03);
+        width: 300px;
+        height: 300px;
     }
 
-    .map-card:hover .map-wrapper {
-        border-color: var(--cream-gold);
+    .decoration-circle:nth-child(1) {
+        top: -100px;
+        right: -100px;
+        background: rgba(93,64,55,0.02);
+        animation: float 25s infinite;
     }
 
-    .map-wrapper iframe {
-        display: block;
-        transition: transform 0.3s;
+    .decoration-circle:nth-child(2) {
+        bottom: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: rgba(212,175,55,0.02);
+        animation: float 20s infinite reverse;
     }
 
-    .map-card:hover .map-wrapper iframe {
-        transform: scale(1.02);
-    }
-
-    /* ----- Quick Contact Card ----- */
     .bg-cream-light {
         background-color: var(--cream-light) !important;
         position: relative;
@@ -850,106 +1024,6 @@
     .pattern-line:nth-child(1) { top: 20%; left: -50%; width: 200%; transform: rotate(2deg); }
     .pattern-line:nth-child(2) { bottom: 30%; right: -50%; width: 200%; transform: rotate(-3deg); }
 
-    .quick-contact-card {
-    background: white;
-    border-radius: 2rem;
-    padding: 2.5rem;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.03);
-    transition: all 0.4s ease;
-    border: 1px solid rgba(93,64,55,0.05);
-    }
-
-
-    .quick-contact-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 30px 50px rgba(93,64,55,0.08);
-    }
-
-    .hours-icon-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
-
-    .hours-icon {
-        width: 80px;
-        height: 80px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        transition: transform 0.3s;
-    }
-
-    .quick-contact-card:hover .hours-icon {
-    transform: scale(1.05);
-    }
-
-
-
-    .quick-contact-item {
-    transition: all 0.3s ease;
-    border: 1px solid rgba(93,64,55,0.05);
-    }
-
-    .quick-contact-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
-    border-color: var(--cream-gold) !important;
-    }
-
-    .quick-contact-item:hover .quick-icon {
-    transform: scale(1.1);
-    }
-
-    .bg-whatsapp {
-    background: linear-gradient(145deg, #25D366, #20B858) !important; /* ✅ gradien hijau WA */
-    }
-
-    .quick-detail {
-    line-height: 1.3;
-    }
-
-    .quick-icon {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s;
-    }
-
-    .quick-link {
-    text-decoration: none;
-    transition: color 0.3s;
-    }
-
-    .quick-link:hover {
-        color: var(--cream-gold) !important;
-    }
-
-@media (max-width: 768px) {
-    .quick-contact-card {
-        padding: 1.5rem;
-    }
-
-    .hours-icon {
-        width: 70px;
-        height: 70px;
-    }
-}
-
-@media (max-width: 576px) {
-    .quick-contact-item {
-        padding: 0.75rem !important;
-    }
-
-    .quick-icon {
-        width: 45px;
-        height: 45px;
-        padding: 0.75rem !important;
-    }
-}
     /* ----- CTA Section (same as home) ----- */
     .cta-elegant {
         background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
@@ -990,56 +1064,6 @@
 
     .cta-elegant .lead {
         color: #795548;
-    }
-
-    .btn-brown {
-        background-color: var(--brown-dark);
-        border-color: var(--brown-dark);
-        color: white;
-        font-weight: 600;
-        transition: all 0.3s;
-    }
-
-    .btn-brown:hover {
-        background-color: #4A342E;
-        border-color: #4A342E;
-        color: white;
-        transform: translateY(-2px);
-        box-shadow: var(--shadow-md);
-    }
-
-    /* ----- Background decoration ----- */
-    .section-bg-decoration {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        pointer-events: none;
-    }
-
-    .decoration-circle {
-        position: absolute;
-        border-radius: 50%;
-        background: rgba(212, 175, 55, 0.03);
-        width: 300px;
-        height: 300px;
-    }
-
-    .decoration-circle:nth-child(1) {
-        top: -100px;
-        right: -100px;
-        background: rgba(93,64,55,0.02);
-        animation: float 25s infinite;
-    }
-
-    .decoration-circle:nth-child(2) {
-        bottom: -50px;
-        left: -50px;
-        width: 200px;
-        height: 200px;
-        background: rgba(212,175,55,0.02);
-        animation: float 20s infinite reverse;
     }
 
     /* ----- Animations ----- */
@@ -1096,9 +1120,10 @@
     @media (max-width: 992px) {
         .display-2 { font-size: 3rem !important; }
         .contact-hero { padding: 5rem 0 3rem; }
-        .contact-info-card { padding: 2rem; }
-        .contact-form-card { padding: 2rem; }
-        .quick-contact-card { padding: 2rem; }
+        .contact-info-inner { padding: 2rem; }
+        .contact-form-inner { padding: 2rem; }
+        .map-card-inner { padding: 1.5rem; }
+        .quick-contact-inner { padding: 2rem; }
         .cta-content-wrapper { padding: 2rem 1.5rem; }
     }
 
@@ -1112,8 +1137,11 @@
     @media (max-width: 576px) {
         .display-2 { font-size: 2rem !important; }
         .badge { font-size: 0.8rem !important; }
-        .contact-info-card { padding: 1.5rem; }
-        .contact-form-card { padding: 1.5rem; }
+        .contact-info-inner { padding: 1.5rem; }
+        .contact-form-inner { padding: 1.5rem; }
+        .quick-contact-inner { padding: 1.5rem; }
+        .quick-contact-item-3d { padding: 0.75rem !important; }
+        .quick-icon { width: 45px; height: 45px; }
     }
 </style>
 @endpush
@@ -1184,45 +1212,29 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.contact-info-card, .contact-form-card, .map-card, .quick-contact-card').forEach(el => {
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
             observer.observe(el);
+        });
+
+        // ----- 3D HOVER EFFECT ENHANCEMENT -----
+        const cards = document.querySelectorAll('.contact-info-inner, .contact-form-inner, .map-card-inner, .quick-contact-inner');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+
+                card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateY(-5px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(1deg)';
+            });
         });
     });
 </script>
 @endpush
-=======
-@section('title', 'Contact Us')
-
-@section('content')
-<div class="container py-5">
-    <h1>Contact Us</h1>
-
-    @if(session('success'))
-        <div class="alert alert-success">
-            {{ session('success') }}
-        </div>
-    @endif
-
-    <form action="{{ route('contact.send') }}" method="POST">
-        @csrf
-
-        <div class="mb-3">
-            <label>Name</label>
-            <input type="text" name="name" class="form-control">
-        </div>
-
-        <div class="mb-3">
-            <label>Email</label>
-            <input type="email" name="email" class="form-control">
-        </div>
-
-        <div class="mb-3">
-            <label>Message</label>
-            <textarea name="message" class="form-control"></textarea>
-        </div>
-
-        <button class="btn btn-primary">Send</button>
-    </form>
-</div>
-@endsection
->>>>>>> origin/main

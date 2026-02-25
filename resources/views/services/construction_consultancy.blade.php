@@ -1,56 +1,86 @@
 @extends('layouts.app')
 
-@section('title', 'Konsultansi Konstruksi')
+@section('title', 'Konsultansi Konstruksi | PT Mitra Nusa Konsulindo')
+@section('description', 'Layanan konsultansi konstruksi profesional untuk pengembangan tata ruang dan lingkungan yang berkelanjutan.')
 
 @section('content')
-<div class="container-fluid px-0">
-    <!-- Hero Banner -->
-    <div class="consulting-hero position-relative overflow-hidden">
-        <div class="container py-6 py-lg-7 position-relative z-2">
-            <div class="row align-items-center min-vh-60">
+    <!-- HERO SECTION – SAME STYLE AS HOME -->
+    <section class="construction-hero position-relative overflow-hidden">
+        <!-- Background Pattern (same as home) -->
+        <div class="hero-bg-pattern">
+            <div class="pattern-circle circle-1"></div>
+            <div class="pattern-circle circle-2"></div>
+            <div class="pattern-square square-1"></div>
+            <div class="pattern-square square-2"></div>
+        </div>
+
+        <div class="container position-relative z-3">
+            <div class="row min-vh-60 align-items-center">
                 <div class="col-lg-8 mx-auto text-center">
-                    <span class="badge bg-brown-100 text-brown-700 px-4 py-2 mb-4 rounded-pill fw-medium">
-                        <i class="fas fa-hard-hat me-2"></i>Layanan Profesional
-                    </span>
-                    <h1 class="display-3 fw-bold text-white mb-4 animate__animated animate__fadeInDown">
-                        Konsultansi <span class="text-cream-300">Konstruksi</span>
-                    </h1>
-                    <p class="lead text-white mb-5 animate__animated animate__fadeInUp">
-                        Solusi terpadu untuk pengembangan tata ruang dan lingkungan yang berkelanjutan
-                    </p>
-                    <div class="d-flex flex-wrap justify-content-center gap-3 animate__animated animate__fadeIn">
-                        <a href="#services" class="btn btn-lg btn-cream-300 text-brown-800 px-5 py-3 rounded-pill fw-semibold">
-                            <i class="fas fa-list-check me-2"></i>Lihat Layanan
-                        </a>
-                        <a href="{{ route('contact') }}" class="btn btn-lg btn-outline-cream-300 text-white px-5 py-3 rounded-pill fw-semibold">
-                            <i class="fas fa-phone-alt me-2"></i>Konsultasi Gratis
-                        </a>
+                    <!-- Animated Badge – glassmorphism -->
+                    <div class="company-badge mb-5 animate-fade-in-down">
+                        <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal">
+                            <i class="fas fa-hard-hat me-2"></i>LAYANAN PROFESIONAL
+                        </span>
                     </div>
+
+                    <!-- Main Heading with Gradient -->
+                    <h1 class="display-2 fw-bold mb-4 text-brown-dark animate-fade-in-up">
+                        Konsultansi <span class="text-gradient-brown">Konstruksi</span>
+                    </h1>
+
+                    <!-- Subtitle with Typewriter Effect (like home) -->
+                    <div class="subtitle-wrapper mb-5 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <h2 class="h3 fw-light text-brown-medium mb-3">
+                            Solusi Terpadu untuk
+                        </h2>
+                        <div class="typewriter-wrapper">
+                            <span class="typewriter-text text-brown-dark fw-semibold fs-3">
+                                Tata Ruang & Lingkungan
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Breadcrumb with glassmorphism -->
+                    <nav aria-label="breadcrumb" class="breadcrumb-nav mt-5 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('home') }}" class="text-brown-medium">Beranda</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('services') }}" class="text-brown-medium">Layanan</a>
+                            </li>
+                            <li class="breadcrumb-item active text-brown-dark" aria-current="page">Konsultansi Konstruksi</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
-        <!-- Background Pattern -->
-        <div class="hero-pattern"></div>
-        <div class="hero-overlay"></div>
-    </div>
 
-    <!-- Services Section -->
-    <section id="services" class="py-6 py-lg-7 bg-cream-50 position-relative">
-        <!-- Decorative Elements -->
-        <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
-            <div class="deco-circle deco-1"></div>
-            <div class="deco-circle deco-2"></div>
-            <div class="deco-circle deco-3"></div>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <a href="#services" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- SERVICES SECTION – 3D CARDS -->
+    <section id="services" class="py-6 bg-white position-relative">
+        <!-- Subtle background decoration -->
+        <div class="section-bg-decoration">
+            <div class="decoration-circle"></div>
+            <div class="decoration-circle"></div>
         </div>
 
         <div class="container position-relative z-2">
-            <!-- Section Header -->
-            <div class="text-center mb-6">
-                <h2 class="display-5 fw-bold text-brown-800 mb-4">
-                    Layanan <span class="text-brown-600">Kami</span>
-                </h2>
-                <p class="lead text-brown-600 mb-0 mx-auto" style="max-width: 700px;">
-                    Menyediakan berbagai solusi konsultansi konstruksi dengan pendekatan holistik dan berkelanjutan
+            <div class="section-header text-center mb-6">
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-list-check me-2"></i>LAYANAN KAMI
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Layanan Konsultansi Konstruksi</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Menyediakan berbagai solusi dengan pendekatan holistik dan berkelanjutan.
                 </p>
             </div>
 
@@ -94,59 +124,52 @@
                 ];
             @endphp
 
-            <!-- Services Grid -->
             <div class="row g-4">
                 @foreach($services as $service)
                     <div class="col-md-6 col-lg-4">
-                        <div class="service-card-wrapper h-100">
-                            <div class="service-card h-100 position-relative">
+                        <div class="service-card-3d animate-on-scroll">
+                            <div class="service-card-inner">
                                 <!-- Service Badge -->
-                                <div class="service-badge position-absolute">
-                                    <span class="badge bg-brown-700 text-white px-3 py-2">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="service-icon-wrapper">
+                                        <i class="{{ $service['icon'] }} fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">
                                         {{ $service['code'] }}
                                     </span>
                                 </div>
 
-                                <!-- Card Content -->
-                                <div class="service-content p-4 h-100 d-flex flex-column">
-                                    <!-- Icon -->
-                                    <div class="service-icon-wrapper mb-4">
-                                        <div class="service-icon-circle bg-brown-100">
-                                            <i class="{{ $service['icon'] }} fa-2x text-brown-700"></i>
+                                <!-- Title & Description -->
+                                <h3 class="fw-bold text-brown-dark mb-3">{{ $service['title'] }}</h3>
+                                <p class="text-brown-medium mb-4">{{ $service['description'] }}</p>
+
+                                <!-- Features -->
+                                <div class="service-features mb-4">
+                                    @foreach($service['features'] as $feature)
+                                        <div class="d-flex align-items-center mb-2">
+                                            <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                            <span class="text-brown-medium">{{ $feature }}</span>
                                         </div>
-                                    </div>
-
-                                    <!-- Title & Description -->
-                                    <h3 class="h4 fw-bold text-brown-800 mb-3">{{ $service['title'] }}</h3>
-                                    <p class="text-brown-600 mb-4 flex-grow-1">{{ $service['description'] }}</p>
-
-                                    <!-- Features -->
-                                    <div class="mb-4">
-                                        @foreach($service['features'] as $feature)
-                                            <div class="d-flex align-items-center mb-2">
-                                                <i class="fas fa-check-circle text-brown-600 me-2"></i>
-                                                <span class="text-brown-700">{{ $feature }}</span>
-                                            </div>
-                                        @endforeach
-                                    </div>
-
-                                    <!-- Card Footer -->
-                                    <div class="mt-auto pt-3 border-top border-brown-200">
-                                        <div class="d-flex justify-content-between align-items-center">
-                                            <div class="availability-status">
-                                                <span class="text-success fw-medium">
-                                                    <i class="fas fa-circle-check me-1"></i>Tersedia
-                                                </span>
-                                            </div>
-                                            <button type="button" class="btn btn-brown-700 px-4 py-2 rounded-pill detail-btn"
-                                                    data-code="{{ $service['code'] }}"
-                                                    data-title="{{ $service['title'] }}"
-                                                    data-description="{{ $service['description'] }}">
-                                                Detail <i class="fas fa-arrow-right ms-2"></i>
-                                            </button>
-                                        </div>
-                                    </div>
+                                    @endforeach
                                 </div>
+
+                                <!-- Card Footer -->
+                                <div class="card-footer d-flex justify-content-between align-items-center pt-3">
+                                    <div class="availability-status">
+                                        <i class="fas fa-circle text-success me-1" style="font-size: 0.6rem;"></i>
+                                        <span class="text-brown-medium small">Tersedia</span>
+                                    </div>
+                                    <button type="button" class="btn btn-outline-brown-3d rounded-pill px-4 py-2 detail-btn"
+                                            data-code="{{ $service['code'] }}"
+                                            data-title="{{ $service['title'] }}"
+                                            data-description="{{ $service['description'] }}">
+                                        Detail <i class="fas fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+
+                                <!-- 3D decorative corners -->
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
                             </div>
                         </div>
                     </div>
@@ -155,132 +178,116 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-6 py-lg-7 bg-brown-800 position-relative overflow-hidden">
-        <div class="container position-relative z-2">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h2 class="display-5 fw-bold text-white mb-3">
-                        Siap Mewujudkan Proyek Impian Anda?
-                    </h2>
-                    <p class="lead text-cream-300 mb-4">
-                        Konsultasikan kebutuhan Anda dengan tim ahli kami. Dapatkan solusi terbaik untuk pengembangan tata ruang dan konstruksi.
-                    </p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="{{ route('contact') }}" class="btn btn-lg btn-cream-300 text-brown-800 px-5 py-3 rounded-pill fw-semibold">
-                            <i class="fas fa-calendar-check me-2"></i>Jadwalkan Konsultasi
-                        </a>
-                        <a href="tel:+622112345678" class="btn btn-lg btn-outline-cream-300 text-white px-5 py-3 rounded-pill fw-semibold">
-                            <i class="fas fa-phone me-2"></i>+62 21 1234 5678
-                        </a>
+    <!-- CTA SECTION – SAME ELEGANT STYLE AS HOME -->
+    <section class="py-6 cta-elegant">
+        <div class="container">
+            <div class="cta-content-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-6 fw-bold mb-3">Siap Mewujudkan Proyek Impian Anda?</h2>
+                        <p class="lead mb-0">
+                            Konsultasikan kebutuhan Anda dengan tim ahli kami. Dapatkan solusi terbaik untuk pengembangan tata ruang dan konstruksi.
+                        </p>
                     </div>
-                </div>
-                <div class="col-lg-4 text-center text-lg-end mt-5 mt-lg-0">
-                    <div class="cta-illustration position-relative d-inline-block">
-                        <div class="illustration-circle bg-brown-700"></div>
-                        <i class="fas fa-handshake fa-5x text-cream-300"></i>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3">
+                            <a href="{{ route('contact') }}" class="btn btn-brown-3d btn-lg px-5 py-3 rounded-pill">
+                                <i class="fas fa-calendar-check me-2"></i>Jadwalkan Konsultasi
+                                <span class="btn-shine"></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Background Pattern -->
-        <div class="cta-pattern"></div>
     </section>
-</div>
+@endsection
 
 <!-- Modal for Service Details -->
 <div class="modal fade" id="serviceDetailModal" tabindex="-1" aria-labelledby="serviceDetailModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
         <div class="modal-content border-0 overflow-hidden">
-            <div class="modal-header bg-brown-700 text-white py-4">
+            <div class="modal-header bg-brown-dark text-white py-4">
                 <h5 class="modal-title fw-bold" id="serviceDetailModalLabel">
                     <i class="fas fa-info-circle me-2"></i>Detail Layanan
                 </h5>
                 <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body bg-cream-50 p-0">
+            <div class="modal-body p-0">
                 <div class="row g-0">
                     <div class="col-lg-8 p-5">
                         <div class="mb-4">
-                            <span class="badge bg-brown-100 text-brown-700 px-3 py-2" id="modal-service-code"></span>
+                            <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2" id="modal-service-code"></span>
                         </div>
-                        <h3 class="fw-bold text-brown-800 mb-4" id="modal-service-title"></h3>
-                        <p class="text-brown-700 mb-5" id="modal-service-description"></p>
+                        <h3 class="fw-bold text-brown-dark mb-4" id="modal-service-title"></h3>
+                        <p class="text-brown-medium mb-5" id="modal-service-description"></p>
 
                         <div class="service-details">
-                            <h5 class="text-brown-800 mb-3 fw-semibold">
+                            <h5 class="fw-bold text-brown-dark mb-3">
                                 <i class="fas fa-list-check me-2"></i>Cakupan Layanan
                             </h5>
                             <ul class="list-unstyled">
-                                <li class="mb-3">
-                                    <div class="d-flex">
-                                        <i class="fas fa-check text-brown-600 me-3 mt-1"></i>
-                                        <span class="text-brown-700">Analisis dan studi kelayakan mendalam</span>
-                                    </div>
+                                <li class="d-flex mb-3">
+                                    <i class="fas fa-check text-cream-gold me-3 mt-1"></i>
+                                    <span class="text-brown-medium">Analisis dan studi kelayakan mendalam</span>
                                 </li>
-                                <li class="mb-3">
-                                    <div class="d-flex">
-                                        <i class="fas fa-check text-brown-600 me-3 mt-1"></i>
-                                        <span class="text-brown-700">Perencanaan strategis dan implementasi</span>
-                                    </div>
+                                <li class="d-flex mb-3">
+                                    <i class="fas fa-check text-cream-gold me-3 mt-1"></i>
+                                    <span class="text-brown-medium">Perencanaan strategis dan implementasi</span>
                                 </li>
-                                <li class="mb-3">
-                                    <div class="d-flex">
-                                        <i class="fas fa-check text-brown-600 me-3 mt-1"></i>
-                                        <span class="text-brown-700">Monitoring dan evaluasi berkelanjutan</span>
-                                    </div>
+                                <li class="d-flex mb-3">
+                                    <i class="fas fa-check text-cream-gold me-3 mt-1"></i>
+                                    <span class="text-brown-medium">Monitoring dan evaluasi berkelanjutan</span>
                                 </li>
-                                <li>
-                                    <div class="d-flex">
-                                        <i class="fas fa-check text-brown-600 me-3 mt-1"></i>
-                                        <span class="text-brown-700">Dokumentasi dan laporan komprehensif</span>
-                                    </div>
+                                <li class="d-flex">
+                                    <i class="fas fa-check text-cream-gold me-3 mt-1"></i>
+                                    <span class="text-brown-medium">Dokumentasi dan laporan komprehensif</span>
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    <div class="col-lg-4 bg-brown-100 p-5">
-                        <h5 class="text-brown-800 mb-4 fw-semibold">
+                    <div class="col-lg-4 bg-cream-light p-5">
+                        <h5 class="fw-bold text-brown-dark mb-4">
                             <i class="fas fa-clock me-2"></i>Proses Kerja
                         </h5>
                         <div class="timeline">
-                            <div class="timeline-step mb-4">
-                                <div class="step-number bg-brown-700 text-white">1</div>
+                            <div class="timeline-step d-flex mb-4">
+                                <div class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 32px; height: 32px;">1</div>
                                 <div class="step-content">
-                                    <h6 class="text-brown-800 fw-semibold">Konsultasi Awal</h6>
-                                    <p class="text-brown-600 small">Identifikasi kebutuhan dan tujuan proyek</p>
+                                    <h6 class="fw-bold text-brown-dark mb-1">Konsultasi Awal</h6>
+                                    <p class="text-brown-medium small">Identifikasi kebutuhan dan tujuan proyek</p>
                                 </div>
                             </div>
-                            <div class="timeline-step mb-4">
-                                <div class="step-number bg-brown-700 text-white">2</div>
+                            <div class="timeline-step d-flex mb-4">
+                                <div class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 32px; height: 32px;">2</div>
                                 <div class="step-content">
-                                    <h6 class="text-brown-800 fw-semibold">Analisis Mendalam</h6>
-                                    <p class="text-brown-600 small">Studi kelayakan dan analisis komprehensif</p>
+                                    <h6 class="fw-bold text-brown-dark mb-1">Analisis Mendalam</h6>
+                                    <p class="text-brown-medium small">Studi kelayakan dan analisis komprehensif</p>
                                 </div>
                             </div>
-                            <div class="timeline-step mb-4">
-                                <div class="step-number bg-brown-700 text-white">3</div>
+                            <div class="timeline-step d-flex mb-4">
+                                <div class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 32px; height: 32px;">3</div>
                                 <div class="step-content">
-                                    <h6 class="text-brown-800 fw-semibold">Perencanaan</h6>
-                                    <p class="text-brown-600 small">Penyusunan rencana dan strategi implementasi</p>
+                                    <h6 class="fw-bold text-brown-dark mb-1">Perencanaan</h6>
+                                    <p class="text-brown-medium small">Penyusunan rencana dan strategi implementasi</p>
                                 </div>
                             </div>
-                            <div class="timeline-step">
-                                <div class="step-number bg-brown-700 text-white">4</div>
+                            <div class="timeline-step d-flex">
+                                <div class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center me-3" style="width: 32px; height: 32px;">4</div>
                                 <div class="step-content">
-                                    <h6 class="text-brown-800 fw-semibold">Implementasi & Review</h6>
-                                    <p class="text-brown-600 small">Pelaksanaan dan evaluasi hasil</p>
+                                    <h6 class="fw-bold text-brown-dark mb-1">Implementasi & Review</h6>
+                                    <p class="text-brown-medium small">Pelaksanaan dan evaluasi hasil</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer bg-cream-100 px-5 py-4">
-                <button type="button" class="btn btn-outline-brown-700 px-4 py-2 rounded-pill" data-bs-dismiss="modal">
+            <div class="modal-footer bg-cream-light px-5 py-4">
+                <button type="button" class="btn btn-outline-brown-3d px-4 py-2 rounded-pill" data-bs-dismiss="modal">
                     <i class="fas fa-times me-2"></i>Tutup
                 </button>
-                <a href="{{ route('contact') }}" class="btn btn-brown-700 px-5 py-2 rounded-pill" id="modal-contact-btn">
+                <a href="{{ route('contact') }}" class="btn btn-brown-3d px-5 py-2 rounded-pill" id="modal-contact-btn">
                     <i class="fas fa-calendar-alt me-2"></i>Jadwalkan Konsultasi
                 </a>
             </div>
@@ -288,360 +295,630 @@
     </div>
 </div>
 
-<!-- Custom CSS -->
+@push('styles')
 <style>
-    /* Color System */
-    .text-brown-800 { color: #3E2723; }
-    .text-brown-700 { color: #5D4037; }
-    .text-brown-600 { color: #795548; }
-    .text-brown-500 { color: #8D6E63; }
-
-    .bg-brown-800 { background-color: #3E2723; }
-    .bg-brown-700 { background-color: #5D4037; }
-    .bg-brown-600 { background-color: #795548; }
-    .bg-brown-500 { background-color: #8D6E63; }
-    .bg-brown-400 { background-color: #A1887F; }
-    .bg-brown-300 { background-color: #BCAAA4; }
-    .bg-brown-200 { background-color: #D7CCC8; }
-    .bg-brown-100 { background-color: #EFEBE9; }
-
-    .text-cream-300 { color: #FFF8E1; }
-    .text-cream-200 { color: #FFECB3; }
-
-    .bg-cream-300 { background-color: #FFF8E1; }
-    .bg-cream-200 { background-color: #FFECB3; }
-    .bg-cream-100 { background-color: #FFFDE7; }
-    .bg-cream-50 { background-color: #FFFEF5; }
-
-    .btn-cream-300 {
-        background-color: #FFF8E1;
-        border-color: #FFF8E1;
-        color: #3E2723;
+    /* ===== INHERIT FULL STYLE FROM HOME PAGE ===== */
+    :root {
+        --brown-dark: #5D4037;
+        --brown-medium: #8B6B61;
+        --brown-light: #A1887F;
+        --cream-gold: #D4AF37;
+        --cream-dark: #D7CCC8;
+        --cream-medium: #EFEBE9;
+        --cream-light: #F5F0ED;
+        --white: #ffffff;
+        --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+        --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+        --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+        --shadow-3d: 0 20px 40px rgba(93,64,55,0.2), 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    .btn-cream-300:hover {
-        background-color: #FFECB3;
-        border-color: #FFECB3;
-        color: #3E2723;
-    }
-
-    .btn-outline-cream-300 {
-        color: #FFF8E1;
-        border-color: #FFF8E1;
-    }
-
-    .btn-outline-cream-300:hover {
-        background-color: #FFF8E1;
-        border-color: #FFF8E1;
-        color: #3E2723;
-    }
-
-    .btn-brown-700 {
-        background-color: #5D4037;
-        border-color: #5D4037;
-        color: white;
-    }
-
-    .btn-brown-700:hover {
-        background-color: #3E2723;
-        border-color: #3E2723;
-        color: white;
-    }
-
-    .btn-outline-brown-700 {
-        color: #5D4037;
-        border-color: #5D4037;
-    }
-
-    .btn-outline-brown-700:hover {
-        background-color: #5D4037;
-        border-color: #5D4037;
-        color: white;
-    }
-
-    /* Hero Section */
-    .consulting-hero {
-        background: linear-gradient(135deg, #5D4037 0%, #3E2723 100%);
-        color: white;
+    /* ----- Hero Section (same as home) ----- */
+    .construction-hero {
+        background: linear-gradient(135deg, var(--cream-light) 0%, var(--white) 100%);
+        padding: 6rem 0 4rem;
         position: relative;
         overflow: hidden;
     }
 
-    .min-vh-60 {
-        min-height: 60vh;
-    }
-
-    .hero-overlay {
+    .hero-bg-pattern {
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(30, 30, 30, 0.4);
-        z-index: 1;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
     }
 
-    .hero-pattern {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.05' fill-rule='evenodd'/%3E%3C/svg%3E");
-        z-index: 1;
-    }
-
-    /* Service Cards */
-    .service-card-wrapper {
-        perspective: 1000px;
-    }
-
-    .service-card {
-        background: white;
-        border-radius: 20px;
-        box-shadow: 0 10px 30px rgba(62, 39, 35, 0.08);
-        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        border: 1px solid #EFEBE9;
-        overflow: hidden;
-    }
-
-    .service-card:hover {
-        transform: translateY(-15px) scale(1.02);
-        box-shadow: 0 20px 40px rgba(62, 39, 35, 0.15);
-    }
-
-    .service-badge {
-        top: 20px;
-        right: 20px;
-        z-index: 2;
-    }
-
-    .service-icon-wrapper {
-        display: flex;
-        justify-content: center;
-    }
-
-    .service-icon-circle {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-    }
-
-    .service-card:hover .service-icon-circle {
-        transform: scale(1.1) rotate(5deg);
-        background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
-    }
-
-    .availability-status {
-        font-size: 0.9rem;
-    }
-
-    /* Decorative Elements */
-    .deco-circle {
+    .pattern-circle {
         position: absolute;
         border-radius: 50%;
-        background: rgba(93, 64, 55, 0.03);
+        background: rgba(93, 64, 55, 0.05);
+        animation: float 20s ease-in-out infinite;
     }
 
-    .deco-1 {
+    .pattern-circle.circle-1 {
         width: 300px;
         height: 300px;
         top: -150px;
-        right: -150px;
+        right: -100px;
+        animation-delay: 0s;
     }
 
-    .deco-2 {
+    .pattern-circle.circle-2 {
         width: 200px;
         height: 200px;
-        bottom: 50px;
-        left: -100px;
-        background: rgba(255, 248, 225, 0.1);
+        bottom: -80px;
+        left: -80px;
+        background: rgba(212, 175, 55, 0.05);
+        animation-delay: 10s;
     }
 
-    .deco-3 {
+    .pattern-square {
+        position: absolute;
+        background: rgba(161, 136, 127, 0.03);
+        animation: rotate 30s linear infinite;
+    }
+
+    .pattern-square.square-1 {
         width: 150px;
         height: 150px;
-        bottom: 100px;
-        right: 50px;
-        background: rgba(93, 64, 55, 0.05);
+        top: 30%;
+        right: 15%;
+        transform: rotate(45deg);
     }
 
-    /* CTA Section */
-    .cta-pattern {
+    .pattern-square.square-2 {
+        width: 100px;
+        height: 100px;
+        bottom: 20%;
+        left: 10%;
+        transform: rotate(15deg);
+        background: rgba(212, 175, 55, 0.03);
+        animation-delay: -15s;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .min-vh-60 { min-height: 60vh; }
+
+    /* ----- Typography & Badges (same as home) ----- */
+    .display-2 {
+        font-weight: 800 !important;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+    }
+
+    .text-gradient-brown {
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .company-badge {
+        animation: fadeInDown 0.8s ease-out;
+    }
+
+    .badge.bg-brown-dark {
+        background-color: rgba(93, 64, 55, 0.9) !important;
+        border: 1px solid rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
+    }
+
+    .badge.bg-brown-light-subtle {
+        background-color: rgba(161,136,127,0.1) !important;
+        color: var(--brown-dark);
+    }
+
+    /* ----- Typewriter Effect (same as home) ----- */
+    .typewriter-wrapper {
+        display: inline-block;
+        position: relative;
+    }
+
+    .typewriter-text {
+        position: relative;
+        display: inline-block;
+        color: var(--brown-dark) !important;
+    }
+
+    .typewriter-text::after {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 1.2em;
+        background-color: var(--brown-dark);
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    /* ----- Scroll Indicator (same as home) ----- */
+    .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .scroll-down {
+        color: var(--brown-dark);
+        font-size: 1.5rem;
+        animation: bounce 2s infinite;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s;
+    }
+
+    .scroll-down:hover {
+        background: white;
+        transform: scale(1.1);
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+    }
+
+    /* ----- Breadcrumb (glassmorphism) ----- */
+    .breadcrumb-nav .breadcrumb {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid rgba(93,64,55,0.1);
+        display: inline-flex;
+    }
+
+    .breadcrumb-item a {
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .breadcrumb-item a:hover {
+        color: var(--brown-dark) !important;
+    }
+
+    /* ===== 3D SERVICE CARD ===== */
+    .service-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .service-card-inner {
+        background: white;
+        border-radius: 2rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .service-card-3d:hover .service-card-inner {
+        transform: rotateY(-2deg) rotateX(1deg) translateY(-8px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.25);
+    }
+
+    .service-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s;
+    }
+
+    .service-card-3d:hover .service-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .service-features i {
+        color: var(--cream-gold);
+    }
+
+    .availability-status i {
+        font-size: 0.6rem;
+    }
+
+    /* ===== 3D BUTTONS (same as home) ===== */
+    .btn-brown-3d {
+        background: linear-gradient(145deg, var(--brown-dark), #4A342E);
+        border: none;
+        color: white;
+        font-weight: 600;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(93,64,55,0.2);
+        transform-style: preserve-3d;
+        transform: translateY(0) rotateX(0deg);
+    }
+
+    .btn-brown-3d:hover {
+        transform: translateY(-3px) rotateX(2deg);
+        box-shadow: 0 15px 30px rgba(93,64,55,0.3);
+        background: linear-gradient(145deg, #4A342E, var(--brown-dark));
+    }
+
+    .btn-outline-brown-3d {
+        border: 2px solid var(--brown-dark);
+        color: var(--brown-dark);
+        background: transparent;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-outline-brown-3d:hover {
+        background: var(--brown-dark);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
+    }
+
+    .btn-brown-3d::before,
+    .btn-outline-brown-3d::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.6s;
+    }
+
+    .btn-brown-3d:hover::before,
+    .btn-outline-brown-3d:hover::before {
+        left: 100%;
+    }
+
+    /* 3D decorative corners */
+    .card-corner {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, transparent 50%, rgba(212,175,55,0.1) 50%);
+        z-index: 1;
+    }
+
+    .card-corner.corner-1 {
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+
+    .card-corner.corner-2 {
+        bottom: 0;
+        left: 0;
+        transform: rotate(270deg);
+    }
+
+    /* ----- Background decorations ----- */
+    .section-bg-decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .decoration-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.03);
+        width: 300px;
+        height: 300px;
+    }
+
+    .decoration-circle:nth-child(1) {
+        top: -100px;
+        right: -100px;
+        background: rgba(93,64,55,0.02);
+        animation: float 25s infinite;
+    }
+
+    .decoration-circle:nth-child(2) {
+        bottom: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: rgba(212,175,55,0.02);
+        animation: float 20s infinite reverse;
+    }
+
+    /* ----- CTA Section (same as home) ----- */
+    .cta-elegant {
+        background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-elegant::before {
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-        z-index: 1;
+        background:
+            radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.1) 0%, transparent 50%);
     }
 
-    .cta-illustration {
-        padding: 40px;
-    }
-
-    .illustration-circle {
-        position: absolute;
-        width: 200px;
-        height: 200px;
-        border-radius: 50%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        z-index: 1;
-    }
-
-    .cta-illustration i {
+    .cta-content-wrapper {
         position: relative;
         z-index: 2;
-        filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
     }
 
-    /* Timeline in Modal */
-    .timeline-step {
-        display: flex;
-        align-items: flex-start;
+    .cta-elegant h2 {
+        color: #5D4037;
+        background: linear-gradient(135deg, #5D4037, #8B6B61);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .cta-elegant .lead {
+        color: #795548;
+    }
+
+    /* ----- Animations ----- */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-down {
+        animation: fadeInDown 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-on-scroll {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* ----- Utilities ----- */
+    .py-6 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+
+    .mb-6 {
+        margin-bottom: 5rem !important;
+    }
+
+    .mt-6 {
+        margin-top: 5rem !important;
+    }
+
+    /* ----- Modal Customization (to match premium theme) ----- */
+    .modal-content {
+        border-radius: 2rem;
+        overflow: hidden;
+    }
+
+    .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-footer {
+        border-top: none;
+    }
+
+    .bg-cream-light {
+        background-color: var(--cream-light) !important;
     }
 
     .step-number {
         width: 32px;
         height: 32px;
+        background: var(--brown-dark);
+        color: white;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
         font-weight: bold;
-        margin-right: 15px;
-        flex-shrink: 0;
     }
 
-    .step-content {
-        flex-grow: 1;
+    .timeline-step p {
+        font-size: 0.9rem;
     }
 
-    /* Modal Customization */
-    .modal-content {
-        border-radius: 20px;
-        box-shadow: 0 25px 50px rgba(62, 39, 35, 0.2);
+    /* ----- Responsive ----- */
+    @media (max-width: 992px) {
+        .display-2 { font-size: 3rem !important; }
+        .construction-hero { padding: 5rem 0 3rem; }
+        .service-card-inner { padding: 1.25rem; }
+        .cta-content-wrapper { padding: 2rem 1.5rem; }
     }
 
-    /* Responsive Adjustments */
     @media (max-width: 768px) {
-        .display-3 {
-            font-size: 2.5rem;
-        }
-
-        .display-5 {
-            font-size: 2rem;
-        }
-
-        .consulting-hero .container {
-            padding-top: 4rem !important;
-            padding-bottom: 4rem !important;
-        }
-
-        .cta-illustration {
-            padding: 30px;
-        }
-
-        .illustration-circle {
-            width: 150px;
-            height: 150px;
-        }
-
-        .cta-illustration i {
-            font-size: 3.5rem !important;
-        }
+        .display-2 { font-size: 2.5rem !important; }
+        .typewriter-text { font-size: 1.5rem !important; }
+        .service-icon-wrapper { width: 50px; height: 50px; }
     }
 
     @media (max-width: 576px) {
-        .display-3 {
-            font-size: 2rem;
-        }
-
-        .display-5 {
-            font-size: 1.75rem;
-        }
-
-        .btn-lg {
-            padding: 0.75rem 1.5rem;
-            font-size: 1rem;
-        }
+        .display-2 { font-size: 2rem !important; }
+        .badge { font-size: 0.8rem !important; }
     }
 </style>
 
-<!-- JavaScript -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Initialize Bootstrap Modal
-    const serviceModal = new bootstrap.Modal(document.getElementById('serviceDetailModal'));
-
-    // Handle detail button clicks
-    document.querySelectorAll('.detail-btn').forEach(button => {
-        button.addEventListener('click', function() {
-            const code = this.getAttribute('data-code');
-            const title = this.getAttribute('data-title');
-            const description = this.getAttribute('data-description');
-
-            // Update modal content
-            document.getElementById('modal-service-code').textContent = code;
-            document.getElementById('modal-service-title').textContent = title;
-            document.getElementById('modal-service-description').textContent = description;
-
-            // Update consultation link
-            const contactBtn = document.getElementById('modal-contact-btn');
-            const baseUrl = contactBtn.getAttribute('href').split('?')[0];
-            contactBtn.setAttribute('href', `${baseUrl}?service=${encodeURIComponent(title)}&code=${code}`);
-
-            // Show modal
-            serviceModal.show();
-        });
-    });
-
-    // Smooth scrolling for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop - 80,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-
-    // Add animation to cards on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-            }
-        });
-    }, observerOptions);
-
-    // Observe service cards
-    document.querySelectorAll('.service-card').forEach(card => {
-        observer.observe(card);
-    });
-});
-</script>
-
-<!-- Animate.css for animations -->
+<!-- Animate.css for additional animations (optional) -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+@endpush
 
-@endsection
+@push('scripts')
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // ----- TYPEWRITER EFFECT (like home) -----
+        const textElement = document.querySelector('.typewriter-text');
+        if (textElement) {
+            const originalText = textElement.textContent.trim();
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+
+            function typeWriter() {
+                const currentText = originalText.substring(0, charIndex);
+                textElement.textContent = currentText;
+
+                if (!isDeleting && charIndex < originalText.length) {
+                    charIndex++;
+                    typingSpeed = 100;
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    typingSpeed = 50;
+                }
+
+                if (!isDeleting && charIndex === originalText.length) {
+                    isDeleting = true;
+                    typingSpeed = 1500;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    typingSpeed = 500;
+                }
+
+                setTimeout(typeWriter, typingSpeed);
+            }
+
+            setTimeout(typeWriter, 1000);
+        }
+
+        // ----- SMOOTH SCROLL FOR ANCHOR -----
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ----- OBSERVER FOR SCROLL ANIMATIONS -----
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ----- 3D HOVER EFFECT ENHANCEMENT -----
+        const cards = document.querySelectorAll('.service-card-inner');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+
+                card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateY(-5px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(1deg)';
+            });
+        });
+
+        // ----- MODAL HANDLER -----
+        const serviceModal = new bootstrap.Modal(document.getElementById('serviceDetailModal'));
+
+        document.querySelectorAll('.detail-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const code = this.getAttribute('data-code');
+                const title = this.getAttribute('data-title');
+                const description = this.getAttribute('data-description');
+
+                document.getElementById('modal-service-code').textContent = code;
+                document.getElementById('modal-service-title').textContent = title;
+                document.getElementById('modal-service-description').textContent = description;
+
+                const contactBtn = document.getElementById('modal-contact-btn');
+                const baseUrl = contactBtn.getAttribute('href').split('?')[0];
+                contactBtn.setAttribute('href', `${baseUrl}?service=${encodeURIComponent(title)}&code=${code}`);
+
+                serviceModal.show();
+            });
+        });
+    });
+</script>
+@endpush

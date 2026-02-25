@@ -1,100 +1,87 @@
 @extends('layouts.app')
 
-@section('title', 'Jasa Arsitektural - PT Mitra Nusa Konsulindo')
+@section('title', 'Jasa Arsitektural | PT Mitra Nusa Konsulindo')
+@section('description', 'Layanan jasa arsitektural profesional: desain bangunan hunian, non-hunian, interior, dan konsultasi arsitektur.')
 
 @section('content')
-<div class="container-fluid p-0">
-    <!-- Hero Section -->
-    <section class="architectural-hero py-6">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb breadcrumb-custom">
-                            <li class="breadcrumb-item"><a href="{{ route('home') }}">Beranda</a></li>
-                            <li class="breadcrumb-item"><a href="{{ route('services') }}">Layanan</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">Jasa Arsitektural</li>
+    <!-- HERO SECTION – SAME STYLE AS HOME -->
+    <section class="architectural-hero position-relative overflow-hidden">
+        <!-- Background Pattern (same as home) -->
+        <div class="hero-bg-pattern">
+            <div class="pattern-circle circle-1"></div>
+            <div class="pattern-circle circle-2"></div>
+            <div class="pattern-square square-1"></div>
+            <div class="pattern-square square-2"></div>
+        </div>
+
+        <div class="container position-relative z-3">
+            <div class="row min-vh-60 align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <!-- Animated Badge – glassmorphism -->
+                    <div class="company-badge mb-5 animate-fade-in-down">
+                        <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal">
+                            <i class="fas fa-drafting-compass me-2"></i>DESAIN & ARSITEKTUR
+                        </span>
+                    </div>
+
+                    <!-- Main Heading with Gradient -->
+                    <h1 class="display-2 fw-bold mb-4 text-brown-dark animate-fade-in-up">
+                        Jasa <span class="text-gradient-brown">Arsitektural</span>
+                    </h1>
+
+                    <!-- Subtitle with Typewriter Effect (like home) -->
+                    <div class="subtitle-wrapper mb-5 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <h2 class="h3 fw-light text-brown-medium mb-3">
+                            Solusi Desain Inovatif untuk
+                        </h2>
+                        <div class="typewriter-wrapper">
+                            <span class="typewriter-text text-brown-dark fw-semibold fs-3">
+                                Bangunan Hunian · Komersial · Interior
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Breadcrumb with glassmorphism -->
+                    <nav aria-label="breadcrumb" class="breadcrumb-nav mt-5 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('home') }}" class="text-brown-medium">Beranda</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('services') }}" class="text-brown-medium">Layanan</a>
+                            </li>
+                            <li class="breadcrumb-item active text-brown-dark" aria-current="page">Jasa Arsitektural</li>
                         </ol>
                     </nav>
-<<<<<<< HEAD
-
-=======
-                    
->>>>>>> origin/main
-                    <div class="hero-content mt-4">
-                        <div class="service-badge mb-3">
-                            <span>DESAIN & ARSITEKTUR</span>
-                        </div>
-                        <h1 class="display-4 fw-bold text-cream-light mb-4">
-                            Jasa <span class="text-accent-gold">Arsitektural</span>
-                        </h1>
-                        <p class="lead text-cream-medium mb-5">
-<<<<<<< HEAD
-                            Solusi desain arsitektural yang inovatif dan berkelanjutan,
-                            menggabungkan estetika, fungsionalitas, dan keberlanjutan
-                            untuk mewujudkan ruang yang inspiratif.
-                        </p>
-
-=======
-                            Solusi desain arsitektural yang inovatif dan berkelanjutan, 
-                            menggabungkan estetika, fungsionalitas, dan keberlanjutan 
-                            untuk mewujudkan ruang yang inspiratif.
-                        </p>
-                        
->>>>>>> origin/main
-                        <div class="hero-stats d-flex flex-wrap gap-4">
-                            <div class="stat-item">
-                                <div class="stat-number">15+</div>
-                                <div class="stat-label">Tahun Pengalaman</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">50+</div>
-                                <div class="stat-label">Proyek Selesai</div>
-                            </div>
-                            <div class="stat-item">
-                                <div class="stat-number">100%</div>
-                                <div class="stat-label">Kepuasan Klien</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <div class="hero-icon">
-                        <div class="icon-wrapper">
-                            <i class="fas fa-drafting-compass"></i>
-                        </div>
-                        <div class="icon-rings">
-                            <div class="ring ring-1"></div>
-                            <div class="ring ring-2"></div>
-                            <div class="ring ring-3"></div>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <a href="#services" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-section py-7">
-        <div class="container">
+    <!-- SERVICES SECTION – 3D CARDS -->
+    <section id="services" class="py-6 bg-white position-relative">
+        <!-- Subtle background decoration -->
+        <div class="section-bg-decoration">
+            <div class="decoration-circle"></div>
+            <div class="decoration-circle"></div>
+        </div>
+
+        <div class="container position-relative z-2">
             <div class="section-header text-center mb-6">
-                <div class="section-badge">
-                    <span>LAYANAN KAMI</span>
-                </div>
-                <h2 class="section-title fw-bold text-brown-dark mb-3">Jasa Arsitektural Profesional</h2>
-                <p class="section-subtitle text-brown-medium">
-<<<<<<< HEAD
-                    Menyediakan solusi desain arsitektural komprehensif untuk berbagai
-=======
-                    Menyediakan solusi desain arsitektural komprehensif untuk berbagai 
->>>>>>> origin/main
-                    jenis bangunan dengan pendekatan yang kreatif dan berkelanjutan.
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-cogs me-2"></i>LAYANAN KAMI
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Jasa Arsitektural Profesional</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Menyediakan solusi desain arsitektural komprehensif untuk berbagai jenis bangunan dengan pendekatan kreatif dan berkelanjutan.
                 </p>
-                <div class="section-ornament">
-                    <div class="ornament-line"></div>
-                    <div class="ornament-diamond"></div>
-                    <div class="ornament-line"></div>
-                </div>
             </div>
 
             @php
@@ -149,204 +136,139 @@
 
             <div class="row g-4">
                 @foreach($services as $service)
-                <div class="col-lg-4 col-md-6">
-                    <div class="service-card animate-on-scroll" data-delay="{{ $loop->index * 100 }}">
-                        <div class="service-header">
-                            <div class="service-code">{{ $service['code'] }}</div>
-                            <div class="service-icon service-{{ $service['color'] }}">
-                                <i class="{{ $service['icon'] }}"></i>
-                            </div>
-                        </div>
-                        <div class="service-body">
-                            <h3 class="service-title">{{ $service['title'] }}</h3>
-                            <p class="service-description">{{ $service['description'] }}</p>
-<<<<<<< HEAD
-
-=======
-                            
->>>>>>> origin/main
-                            <div class="service-features">
-                                <h6>Fitur Layanan:</h6>
-                                <div class="features-list">
-                                    @foreach($service['features'] as $feature)
-                                    <div class="feature-item">
-                                        <div class="feature-dot"></div>
-                                        <span class="feature-text">{{ $feature }}</span>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="service-card-3d animate-on-scroll">
+                            <div class="service-card-inner">
+                                <!-- Header -->
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="service-icon-wrapper service-{{ $service['color'] }}">
+                                        <i class="{{ $service['icon'] }} fa-2x text-white"></i>
                                     </div>
-                                    @endforeach
+                                    <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">{{ $service['code'] }}</span>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="service-footer">
-                            <button type="button" class="btn-service-detail" data-bs-toggle="modal" data-bs-target="#serviceModal{{ $loop->index + 1 }}">
-                                <span>Detail Layanan</span>
-                                <i class="fas fa-arrow-right"></i>
-                            </button>
-                            <div class="service-timeline">
-                                <i class="fas fa-clock me-1"></i>
-                                <span>Estimasi: 4-8 minggu</span>
+
+                                <!-- Title & Description -->
+                                <h3 class="fw-bold text-brown-dark mb-3">{{ $service['title'] }}</h3>
+                                <p class="text-brown-medium small mb-4">{{ $service['description'] }}</p>
+
+                                <!-- Features -->
+                                <div class="service-features mb-4">
+                                    @foreach(array_slice($service['features'], 0, 4) as $feature)
+                                        <div class="d-flex mb-2">
+                                            <i class="fas fa-check-circle text-cream-gold me-2 mt-1"></i>
+                                            <span class="text-brown-medium small">{{ $feature }}</span>
+                                        </div>
+                                    @endforeach
+                                    @if(count($service['features']) > 4)
+                                        <div class="text-brown-dark small mt-2 fw-semibold">
+                                            + {{ count($service['features']) - 4 }} fitur lainnya
+                                        </div>
+                                    @endif
+                                </div>
+
+                                <!-- Footer -->
+                                <div class="card-footer d-flex justify-content-between align-items-center pt-3">
+                                    <span class="text-brown-light small">
+                                        <i class="fas fa-clock me-1"></i> Estimasi: 4-8 minggu
+                                    </span>
+                                    <button type="button" class="btn btn-outline-brown-3d rounded-pill px-4 py-2 detail-btn"
+                                            data-bs-toggle="modal" data-bs-target="#serviceModal{{ $loop->index + 1 }}">
+                                        Detail <i class="fas fa-arrow-right ms-2"></i>
+                                    </button>
+                                </div>
+
+                                <!-- 3D decorative corners -->
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
                             </div>
                         </div>
                     </div>
-                </div>
                 @endforeach
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section class="process-section py-7">
-        <div class="container">
-            <div class="section-header text-center mb-6">
-                <div class="section-badge">
-                    <span>PROSES KERJA</span>
-                </div>
-                <h2 class="section-title fw-bold text-cream-light mb-3">Proses Desain Arsitektural</h2>
-                <p class="section-subtitle text-cream-medium">
-<<<<<<< HEAD
-                    Langkah-langkah sistematis yang kami terapkan untuk memastikan
-=======
-                    Langkah-langkah sistematis yang kami terapkan untuk memastikan 
->>>>>>> origin/main
-                    hasil desain yang optimal sesuai dengan kebutuhan Anda.
-                </p>
-                <div class="section-ornament">
-                    <div class="ornament-line"></div>
-                    <div class="ornament-diamond"></div>
-                    <div class="ornament-line"></div>
-                </div>
-            </div>
-
-            <div class="process-timeline">
-                <div class="process-item animate-on-scroll" data-delay="0">
-                    <div class="process-number">01</div>
-                    <div class="process-content">
-                        <div class="process-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h4>Konsultasi Awal</h4>
-                        <p>Diskusi mendalam tentang kebutuhan, anggaran, dan konsep yang diinginkan</p>
-                    </div>
-                </div>
-
-                <div class="process-item animate-on-scroll" data-delay="100">
-                    <div class="process-number">02</div>
-                    <div class="process-content">
-                        <div class="process-icon">
-                            <i class="fas fa-search-location"></i>
-                        </div>
-                        <h4>Analisis Site</h4>
-                        <p>Survey lokasi, analisis kondisi tapak, dan studi lingkungan sekitar</p>
-                    </div>
-                </div>
-
-                <div class="process-item animate-on-scroll" data-delay="200">
-                    <div class="process-number">03</div>
-                    <div class="process-content">
-                        <div class="process-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h4>Konsep Desain</h4>
-                        <p>Pengembangan konsep desain dan studi skematik awal</p>
-                    </div>
-                </div>
-
-                <div class="process-item animate-on-scroll" data-delay="300">
-                    <div class="process-number">04</div>
-                    <div class="process-content">
-                        <div class="process-icon">
-                            <i class="fas fa-pencil-ruler"></i>
-                        </div>
-                        <h4>Perencanaan Detail</h4>
-                        <p>Pengembangan desain detail, gambar kerja, dan spesifikasi teknis</p>
-                    </div>
-                </div>
-
-                <div class="process-item animate-on-scroll" data-delay="400">
-                    <div class="process-number">05</div>
-                    <div class="process-content">
-                        <div class="process-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
-                        <h4>Review & Approval</h4>
-                        <p>Presentasi final, revisi, dan persetujuan dokumen desain lengkap</p>
-                    </div>
-                </div>
-            </div>
+    <!-- PROCESS SECTION – 3D STEPS -->
+    <section class="py-6 bg-cream-light position-relative overflow-hidden">
+        <div class="cert-pattern">
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
         </div>
-    </section>
 
-    <!-- Portfolio Section -->
-    <section class="portfolio-section py-7">
-        <div class="container">
+        <div class="container position-relative z-2">
             <div class="section-header text-center mb-6">
-                <div class="section-badge">
-                    <span>PORTOFOLIO</span>
-                </div>
-                <h2 class="section-title fw-bold text-brown-dark mb-3">Proyek Terbaru Kami</h2>
-                <p class="section-subtitle text-brown-medium">
-<<<<<<< HEAD
-                    Beberapa hasil karya desain arsitektural yang telah kami selesaikan
-=======
-                    Beberapa hasil karya desain arsitektural yang telah kami selesaikan 
->>>>>>> origin/main
-                    untuk berbagai klien dengan beragam kebutuhan.
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-project-diagram me-2"></i>PROSES KERJA
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Proses Desain Arsitektural</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Langkah-langkah sistematis yang kami terapkan untuk memastikan hasil desain yang optimal sesuai dengan kebutuhan Anda.
                 </p>
-                <div class="section-ornament">
-                    <div class="ornament-line"></div>
-                    <div class="ornament-hexagon"></div>
-                    <div class="ornament-line"></div>
-                </div>
             </div>
 
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="portfolio-card animate-on-scroll" data-delay="0">
-                        <div class="portfolio-image">
-                            <div class="image-overlay"></div>
-                            <div class="portfolio-category">Komersial</div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h5>Gedung Perkantoran Modern</h5>
-                            <p>Desain arsitektural untuk gedung perkantoran 12 lantai dengan konsep sustainable building</p>
-                            <div class="portfolio-meta">
-                                <span><i class="fas fa-calendar-alt me-1"></i> 2024</span>
-                                <span><i class="fas fa-expand-arrows-alt me-1"></i> 15,000 m²</span>
+                <!-- Step 1 -->
+                <div class="col-lg-2-4 col-md-6">
+                    <div class="process-step-3d animate-on-scroll">
+                        <div class="process-step-inner">
+                            <div class="step-number-wrapper">01</div>
+                            <div class="step-icon">
+                                <i class="fas fa-comments fa-3x"></i>
                             </div>
+                            <h5 class="step-title">Konsultasi Awal</h5>
+                            <p class="step-desc">Diskusi mendalam tentang kebutuhan, anggaran, dan konsep yang diinginkan</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="portfolio-card animate-on-scroll" data-delay="100">
-                        <div class="portfolio-image">
-                            <div class="image-overlay"></div>
-                            <div class="portfolio-category">Hunian</div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h5>Perumahan Cluster Eksklusif</h5>
-                            <p>Masterplan dan desain rumah tipe 200-400 m² dengan konsep modern tropical</p>
-                            <div class="portfolio-meta">
-                                <span><i class="fas fa-calendar-alt me-1"></i> 2023</span>
-                                <span><i class="fas fa-home me-1"></i> 50 Unit</span>
+                <!-- Step 2 -->
+                <div class="col-lg-2-4 col-md-6">
+                    <div class="process-step-3d animate-on-scroll">
+                        <div class="process-step-inner">
+                            <div class="step-number-wrapper">02</div>
+                            <div class="step-icon">
+                                <i class="fas fa-search-location fa-3x"></i>
                             </div>
+                            <h5 class="step-title">Analisis Site</h5>
+                            <p class="step-desc">Survey lokasi, analisis kondisi tapak, dan studi lingkungan sekitar</p>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-lg-4 col-md-6">
-                    <div class="portfolio-card animate-on-scroll" data-delay="200">
-                        <div class="portfolio-image">
-                            <div class="image-overlay"></div>
-                            <div class="portfolio-category">Institusi</div>
-                        </div>
-                        <div class="portfolio-content">
-                            <h5>Kampus Universitas</h5>
-                            <p>Desain bangunan fakultas dan perpustakaan dengan pendekatan arsitektur kontemporer</p>
-                            <div class="portfolio-meta">
-                                <span><i class="fas fa-calendar-alt me-1"></i> 2024</span>
-                                <span><i class="fas fa-expand-arrows-alt me-1"></i> 8,500 m²</span>
+                <!-- Step 3 -->
+                <div class="col-lg-2-4 col-md-6">
+                    <div class="process-step-3d animate-on-scroll">
+                        <div class="process-step-inner">
+                            <div class="step-number-wrapper">03</div>
+                            <div class="step-icon">
+                                <i class="fas fa-lightbulb fa-3x"></i>
                             </div>
+                            <h5 class="step-title">Konsep Desain</h5>
+                            <p class="step-desc">Pengembangan konsep desain dan studi skematik awal</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 4 -->
+                <div class="col-lg-2-4 col-md-6">
+                    <div class="process-step-3d animate-on-scroll">
+                        <div class="process-step-inner">
+                            <div class="step-number-wrapper">04</div>
+                            <div class="step-icon">
+                                <i class="fas fa-pencil-ruler fa-3x"></i>
+                            </div>
+                            <h5 class="step-title">Perencanaan Detail</h5>
+                            <p class="step-desc">Pengembangan desain detail, gambar kerja, dan spesifikasi teknis</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Step 5 -->
+                <div class="col-lg-2-4 col-md-6">
+                    <div class="process-step-3d animate-on-scroll">
+                        <div class="process-step-inner">
+                            <div class="step-number-wrapper">05</div>
+                            <div class="step-icon">
+                                <i class="fas fa-check-circle fa-3x"></i>
+                            </div>
+                            <h5 class="step-title">Review & Approval</h5>
+                            <p class="step-desc">Presentasi final, revisi, dan persetujuan dokumen desain lengkap</p>
                         </div>
                     </div>
                 </div>
@@ -354,136 +276,187 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta-section py-7">
+    <!-- PORTFOLIO SECTION – 3D CARDS -->
+    <section class="py-6 bg-white position-relative">
         <div class="container">
-            <div class="cta-card">
+            <div class="section-header text-center mb-6">
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-images me-2"></i>PORTOFOLIO
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Proyek Terbaru Kami</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Beberapa hasil karya desain arsitektural yang telah kami selesaikan untuk berbagai klien dengan beragam kebutuhan.
+                </p>
+            </div>
+
+            <div class="row g-4">
+                <!-- Portfolio 1 -->
+                <div class="col-md-4">
+                    <div class="portfolio-card-3d animate-on-scroll">
+                        <div class="portfolio-inner">
+                            <div class="portfolio-image mb-3">
+                                <span class="portfolio-category bg-brown-dark text-white rounded-pill px-3 py-1">Komersial</span>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-2">Gedung Perkantoran Modern</h5>
+                            <p class="text-brown-medium small mb-3">Desain arsitektural untuk gedung perkantoran 12 lantai dengan konsep sustainable building</p>
+                            <div class="d-flex justify-content-between text-brown-light small">
+                                <span><i class="fas fa-calendar-alt me-1"></i>2024</span>
+                                <span><i class="fas fa-expand-arrows-alt me-1"></i>15.000 m²</span>
+                            </div>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio 2 -->
+                <div class="col-md-4">
+                    <div class="portfolio-card-3d animate-on-scroll">
+                        <div class="portfolio-inner">
+                            <div class="portfolio-image mb-3">
+                                <span class="portfolio-category bg-brown-dark text-white rounded-pill px-3 py-1">Hunian</span>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-2">Perumahan Cluster Eksklusif</h5>
+                            <p class="text-brown-medium small mb-3">Masterplan dan desain rumah tipe 200-400 m² dengan konsep modern tropical</p>
+                            <div class="d-flex justify-content-between text-brown-light small">
+                                <span><i class="fas fa-calendar-alt me-1"></i>2023</span>
+                                <span><i class="fas fa-home me-1"></i>50 Unit</span>
+                            </div>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Portfolio 3 -->
+                <div class="col-md-4">
+                    <div class="portfolio-card-3d animate-on-scroll">
+                        <div class="portfolio-inner">
+                            <div class="portfolio-image mb-3">
+                                <span class="portfolio-category bg-brown-dark text-white rounded-pill px-3 py-1">Institusi</span>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-2">Kampus Universitas</h5>
+                            <p class="text-brown-medium small mb-3">Desain bangunan fakultas dan perpustakaan dengan pendekatan arsitektur kontemporer</p>
+                            <div class="d-flex justify-content-between text-brown-light small">
+                                <span><i class="fas fa-calendar-alt me-1"></i>2024</span>
+                                <span><i class="fas fa-expand-arrows-alt me-1"></i>8.500 m²</span>
+                            </div>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION – SAME ELEGANT STYLE AS HOME -->
+    <section class="py-6 cta-elegant">
+        <div class="container">
+            <div class="cta-content-wrapper">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
-                        <h3 class="cta-title text-cream-light mb-3">
-                            Siap Wujudkan Desain Arsitektural Impian Anda?
-                        </h3>
-                        <p class="cta-description text-cream-medium mb-0">
-<<<<<<< HEAD
-                            Konsultasikan kebutuhan desain Anda dengan tim arsitek profesional
-=======
-                            Konsultasikan kebutuhan desain Anda dengan tim arsitek profesional 
->>>>>>> origin/main
-                            kami dan dapatkan solusi terbaik untuk proyek Anda.
+                        <h2 class="display-6 fw-bold mb-3">Siap Wujudkan Desain Arsitektural Impian Anda?</h2>
+                        <p class="lead mb-0">
+                            Konsultasikan kebutuhan desain Anda dengan tim arsitek profesional kami dan dapatkan solusi terbaik untuk proyek Anda.
                         </p>
                     </div>
-                    <div class="col-lg-4 text-lg-end">
-                        <a href="{{ route('contact') }}" class="btn btn-cream btn-lg rounded-pill px-5">
-                            <i class="fas fa-pencil-ruler me-2"></i>Konsultasi Desain
-                        </a>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3">
+                            <a href="{{ route('contact') }}" class="btn btn-brown-3d btn-lg px-5 py-3 rounded-pill">
+                                <i class="fas fa-pencil-ruler me-2"></i>Konsultasi Desain
+                                <span class="btn-shine"></span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-</div>
+@endsection
 
-<!-- Modals for Service Details -->
+<!-- MODALS FOR SERVICE DETAILS (3D PREMIUM) -->
 @foreach($services as $index => $service)
-<div class="modal fade" id="serviceModal{{ $index + 1 }}" tabindex="-1" aria-labelledby="serviceModalLabel{{ $index + 1 }}" aria-hidden="true">
+<div class="modal fade" id="serviceModal{{ $loop->index + 1 }}" tabindex="-1" aria-labelledby="serviceModalLabel{{ $loop->index + 1 }}" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content service-modal">
-            <div class="modal-header">
-                <div class="modal-icon service-{{ $service['color'] }}">
-                    <i class="{{ $service['icon'] }}"></i>
+        <div class="modal-content service-modal overflow-hidden">
+            <div class="modal-header bg-brown-dark text-white py-4">
+                <div class="d-flex align-items-center gap-3">
+                    <div class="modal-icon-wrapper service-{{ $service['color'] }}">
+                        <i class="{{ $service['icon'] }} fa-2x text-white"></i>
+                    </div>
+                    <div>
+                        <h5 class="modal-title fw-bold" id="serviceModalLabel{{ $loop->index + 1 }}">
+                            {{ $service['code'] }} - {{ $service['title'] }}
+                        </h5>
+                        <p class="small text-cream-gold mb-0">Jasa Arsitektural</p>
+                    </div>
                 </div>
-                <div class="modal-title-container">
-                    <h5 class="modal-title" id="serviceModalLabel{{ $index + 1 }}">
-                        {{ $service['code'] }} - {{ $service['title'] }}
-                    </h5>
-                    <div class="modal-subtitle">Jasa Arsitektural</div>
-                </div>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body">
-                <div class="modal-description">
-                    <p>{{ $service['description'] }}</p>
-                </div>
-<<<<<<< HEAD
+            <div class="modal-body p-5">
+                <p class="text-brown-medium mb-4">{{ $service['description'] }}</p>
 
-=======
-                
->>>>>>> origin/main
-                <div class="modal-features">
-                    <h6>Detail Layanan:</h6>
-                    <div class="features-grid">
-                        @foreach($service['features'] as $feature)
-                        <div class="feature-item-modal">
-                            <div class="feature-icon-modal">
-                                <i class="fas fa-check"></i>
+                <h6 class="fw-bold text-brown-dark mb-3"><i class="fas fa-list-check me-2"></i>Detail Layanan:</h6>
+                <div class="row g-3 mb-4">
+                    @foreach($service['features'] as $feature)
+                        <div class="col-md-6">
+                            <div class="d-flex">
+                                <i class="fas fa-check-circle text-cream-gold me-2 mt-1"></i>
+                                <span class="text-brown-medium small">{{ $feature }}</span>
                             </div>
-                            <div class="feature-text">{{ $feature }}</div>
                         </div>
-                        @endforeach
-                    </div>
+                    @endforeach
                 </div>
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> origin/main
-                <div class="modal-process">
-                    <h6>Tahapan Pengerjaan:</h6>
-                    <div class="process-steps">
-                        <div class="process-step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h6>Konsultasi & Brief</h6>
-                                <p>Diskusi kebutuhan dan pengumpulan data</p>
+                <div class="modal-process bg-cream-light p-4 rounded-4 mb-4">
+                    <h6 class="fw-bold text-brown-dark mb-3"><i class="fas fa-clock me-2"></i>Tahapan Pengerjaan</h6>
+                    <div class="row g-3">
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">1</span>
+                                <span class="text-brown-dark small fw-semibold">Konsultasi</span>
                             </div>
                         </div>
-                        <div class="process-step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h6>Desain Konseptual</h6>
-                                <p>Pengembangan konsep dan skematik</p>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">2</span>
+                                <span class="text-brown-dark small fw-semibold">Desain Konseptual</span>
                             </div>
                         </div>
-                        <div class="process-step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h6>Desain Detail</h6>
-                                <p>Pengembangan desain detail dan gambar kerja</p>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-center gap-2">
+                                <span class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">3</span>
+                                <span class="text-brown-dark small fw-semibold">Desain Detail</span>
                             </div>
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
 
-=======
-                
->>>>>>> origin/main
-                <div class="modal-quote">
-                    <h6>Request Quotation:</h6>
-                    <div class="quote-form">
-                        <div class="row g-3">
-                            <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="Nama Lengkap">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" class="form-control" placeholder="Email">
-                            </div>
-                            <div class="col-md-12">
-                                <input type="text" class="form-control" placeholder="Jenis Proyek">
-                            </div>
-                            <div class="col-md-12">
-                                <textarea class="form-control" rows="3" placeholder="Deskripsi Proyek"></textarea>
-                            </div>
+                <div class="quote-form bg-cream-light p-4 rounded-4">
+                    <h6 class="fw-bold text-brown-dark mb-3"><i class="fas fa-file-invoice me-2"></i>Request Quotation</h6>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <input type="text" class="form-control border-brown-light" placeholder="Nama Lengkap">
+                        </div>
+                        <div class="col-md-6">
+                            <input type="email" class="form-control border-brown-light" placeholder="Email">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control border-brown-light" placeholder="Jenis Proyek">
+                        </div>
+                        <div class="col-12">
+                            <textarea class="form-control border-brown-light" rows="3" placeholder="Deskripsi Proyek"></textarea>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-outline-brown" data-bs-dismiss="modal">Tutup</button>
-                <button type="button" class="btn btn-brown">
+            <div class="modal-footer bg-cream-light px-5 py-4">
+                <button type="button" class="btn btn-outline-brown-3d px-4 py-2 rounded-pill" data-bs-dismiss="modal">
+                    <i class="fas fa-times me-2"></i>Tutup
+                </button>
+                <button type="button" class="btn btn-brown-3d px-4 py-2 rounded-pill">
                     <i class="fas fa-file-download me-2"></i>Download Brosur
                 </button>
-                <button type="button" class="btn btn-accent-gold">
+                <button type="button" class="btn btn-brown-3d px-4 py-2 rounded-pill">
                     <i class="fas fa-paper-plane me-2"></i>Kirim Permintaan
                 </button>
             </div>
@@ -491,1168 +464,667 @@
     </div>
 </div>
 @endforeach
-@endsection
 
 @push('styles')
 <style>
-    /* Color Variables */
+    /* ===== INHERIT FULL STYLE FROM HOME PAGE ===== */
     :root {
-        /* Brown Shades */
-        --brown-50: #EFEBE9;
-        --brown-100: #D7CCC8;
-        --brown-200: #BCAAA4;
-        --brown-300: #A1887F;
-        --brown-400: #8D6E63;
-        --brown-500: #795548;
-        --brown-600: #6D4C41;
-        --brown-700: #5D4037;
-        --brown-800: #4E342E;
-        --brown-900: #3E2723;
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/main
-        /* Cream Shades */
-        --cream-50: #FFFDF7;
-        --cream-100: #F9F5EB;
-        --cream-200: #F5F0E6;
-        --cream-300: #EEE6D9;
-        --cream-400: #E8DCCE;
-        --cream-500: #E3D6C6;
-        --cream-600: #DDCFBD;
-        --cream-700: #D7C8B4;
-        --cream-800: #D2C1AB;
-        --cream-900: #CCBAA2;
-<<<<<<< HEAD
-
-        /* Accent Colors */
-        --accent-gold: #D4AF37;
-        --accent-gold-light: #F0E68C;
-
-=======
-        
-        /* Accent Colors */
-        --accent-gold: #D4AF37;
-        --accent-gold-light: #F0E68C;
-        
->>>>>>> origin/main
-        /* Theme Colors */
-        --brown-light: var(--brown-300);
-        --brown-medium: var(--brown-500);
-        --brown-dark: var(--brown-700);
-        --cream-light: var(--cream-100);
-        --cream-medium: var(--cream-300);
-        --cream-dark: var(--cream-500);
+        --brown-dark: #5D4037;
+        --brown-medium: #8B6B61;
+        --brown-light: #A1887F;
+        --cream-gold: #D4AF37;
+        --cream-dark: #D7CCC8;
+        --cream-medium: #EFEBE9;
+        --cream-light: #F5F0ED;
+        --white: #ffffff;
+        --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+        --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+        --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+        --shadow-3d: 0 20px 40px rgba(93,64,55,0.2), 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    /* Hero Section */
+    /* ----- Hero Section (same as home) ----- */
     .architectural-hero {
-<<<<<<< HEAD
-        background: linear-gradient(135deg,
-            rgba(62, 39, 35, 0.95) 0%,
-            rgba(93, 64, 55, 0.9) 50%,
-=======
-        background: linear-gradient(135deg, 
-            rgba(62, 39, 35, 0.95) 0%, 
-            rgba(93, 64, 55, 0.9) 50%, 
->>>>>>> origin/main
-            rgba(121, 85, 72, 0.85) 100%);
-        color: var(--cream-light);
+        background: linear-gradient(135deg, var(--cream-light) 0%, var(--white) 100%);
         padding: 6rem 0 4rem;
         position: relative;
         overflow: hidden;
     }
 
-    .architectural-hero::before {
-        content: '';
+    .hero-bg-pattern {
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+        width: 100%;
+        height: 100%;
         pointer-events: none;
     }
 
-    .breadcrumb-custom {
-        background: transparent;
-        padding: 0;
-        margin: 0;
-    }
-
-    .breadcrumb-custom .breadcrumb-item a {
-        color: var(--cream-medium);
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: color 0.3s ease;
-    }
-
-    .breadcrumb-custom .breadcrumb-item a:hover {
-        color: var(--accent-gold-light);
-    }
-
-    .breadcrumb-custom .breadcrumb-item.active {
-        color: var(--accent-gold-light);
-        font-weight: 500;
-    }
-
-    .service-badge {
-        display: inline-block;
-        background: linear-gradient(135deg, var(--accent-gold), var(--brown-light));
-        color: var(--cream-light);
-        padding: 0.5rem 1.5rem;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
-    }
-
-    .hero-content h1 {
-        font-size: 3rem;
-        line-height: 1.2;
-    }
-
-    .hero-content .lead {
-        font-size: 1.25rem;
-        line-height: 1.6;
-        max-width: 600px;
-    }
-
-    .hero-stats {
-        margin-top: 2rem;
-    }
-
-    .stat-item {
-        text-align: center;
-    }
-
-    .stat-number {
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--accent-gold);
-        line-height: 1;
-    }
-
-    .stat-label {
-        font-size: 0.9rem;
-        color: var(--cream-medium);
-        margin-top: 0.25rem;
-    }
-
-    .hero-icon {
-        position: relative;
-        width: 200px;
-        height: 200px;
-        margin: 0 auto;
-    }
-
-    .icon-wrapper {
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, var(--accent-gold), var(--brown-medium));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 5rem;
-        position: relative;
-        z-index: 2;
-        box-shadow: 0 20px 40px rgba(62, 39, 35, 0.3);
-    }
-
-    .icon-rings {
+    .pattern-circle {
         position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 240px;
-        height: 240px;
-    }
-
-    .ring {
-        position: absolute;
-        border: 2px solid rgba(212, 175, 55, 0.3);
         border-radius: 50%;
-        animation: pulse 3s ease-in-out infinite;
+        background: rgba(93, 64, 55, 0.05);
+        animation: float 20s ease-in-out infinite;
     }
 
-    .ring-1 {
-        width: 100%;
-        height: 100%;
+    .pattern-circle.circle-1 {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+        right: -100px;
         animation-delay: 0s;
     }
 
-    .ring-2 {
-        width: 120%;
-        height: 120%;
-        top: -10%;
-        left: -10%;
-        animation-delay: 1s;
+    .pattern-circle.circle-2 {
+        width: 200px;
+        height: 200px;
+        bottom: -80px;
+        left: -80px;
+        background: rgba(212, 175, 55, 0.05);
+        animation-delay: 10s;
     }
 
-    .ring-3 {
-        width: 140%;
-        height: 140%;
-        top: -20%;
-        left: -20%;
-        animation-delay: 2s;
+    .pattern-square {
+        position: absolute;
+        background: rgba(161, 136, 127, 0.03);
+        animation: rotate 30s linear infinite;
     }
 
-    /* Services Section */
-    .services-section {
-        background: var(--cream-light);
-    }
-
-    .section-header {
-        position: relative;
-        padding-bottom: 2rem;
-    }
-
-    .section-badge {
-        display: inline-block;
-        background: linear-gradient(135deg, var(--accent-gold), var(--brown-light));
-        color: var(--cream-light);
-        padding: 0.5rem 1.5rem;
-        border-radius: 20px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        box-shadow: 0 4px 12px rgba(212, 175, 55, 0.2);
-    }
-
-    .section-title {
-        font-size: 2.5rem;
-        background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-        margin-bottom: 0.5rem;
-    }
-
-    .section-subtitle {
-        color: var(--brown-medium);
-        font-size: 1.1rem;
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .section-ornament {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.75rem;
-        margin-top: 1.5rem;
-    }
-
-    .ornament-line {
-        width: 60px;
-        height: 2px;
-        background: linear-gradient(90deg, var(--brown-light), var(--accent-gold), var(--brown-light));
-    }
-
-    .ornament-diamond {
-        width: 12px;
-        height: 12px;
-        background: var(--accent-gold);
+    .pattern-square.square-1 {
+        width: 150px;
+        height: 150px;
+        top: 30%;
+        right: 15%;
         transform: rotate(45deg);
     }
 
-    .ornament-hexagon {
-        width: 12px;
-        height: 12px;
-        background: var(--accent-gold);
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    .pattern-square.square-2 {
+        width: 100px;
+        height: 100px;
+        bottom: 20%;
+        left: 10%;
+        transform: rotate(15deg);
+        background: rgba(212, 175, 55, 0.03);
+        animation-delay: -15s;
     }
 
-    /* Service Cards */
-    .service-card {
-        background: var(--cream-light);
-        border-radius: 15px;
-        overflow: hidden;
-        box-shadow: 0 10px 30px rgba(62, 39, 35, 0.1);
-        border: 1px solid var(--cream-dark);
-        transition: all 0.4s ease;
-        height: 100%;
-        opacity: 0;
-        transform: translateY(20px);
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
     }
 
-    .service-card.visible {
-        opacity: 1;
-        transform: translateY(0);
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
     }
 
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(62, 39, 35, 0.15);
-        border-color: var(--brown-light);
+    .min-vh-60 { min-height: 60vh; }
+
+    /* ----- Typography & Badges (same as home) ----- */
+    .display-2 {
+        font-weight: 800 !important;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
     }
 
-    .service-header {
-        padding: 1.5rem 1.5rem 0;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
+    .text-gradient-brown {
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
-    .service-code {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--accent-gold);
-        background: rgba(212, 175, 55, 0.1);
-        padding: 0.25rem 0.75rem;
-        border-radius: 12px;
+    .company-badge {
+        animation: fadeInDown 0.8s ease-out;
     }
 
-    .service-icon {
-        width: 60px;
-        height: 60px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 1.5rem;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    .badge.bg-brown-dark {
+        background-color: rgba(93, 64, 55, 0.9) !important;
+        border: 1px solid rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
     }
 
-    .service-primary {
-        background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
-    }
-
-    .service-secondary {
-        background: linear-gradient(135deg, var(--accent-gold), #E6B800);
-    }
-
-    .service-tertiary {
-        background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
-    }
-
-    .service-body {
-        padding: 1.5rem;
-    }
-
-    .service-title {
+    .badge.bg-brown-light-subtle {
+        background-color: rgba(161,136,127,0.1) !important;
         color: var(--brown-dark);
-        font-weight: 600;
-        margin-bottom: 1rem;
-        font-size: 1.25rem;
-        line-height: 1.3;
     }
 
-    .service-description {
-        color: var(--brown-medium);
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        font-size: 0.95rem;
-    }
-
-    .service-features h6 {
-        color: var(--brown-dark);
-        font-weight: 600;
-        margin-bottom: 0.75rem;
-        font-size: 0.95rem;
-    }
-
-    .features-list {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .feature-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-
-    .feature-dot {
-        width: 6px;
-        height: 6px;
-        background: var(--accent-gold);
-        border-radius: 50%;
-        margin-top: 0.5rem;
-        flex-shrink: 0;
-    }
-
-    .feature-text {
-        color: var(--brown-medium);
-        font-size: 0.85rem;
-        line-height: 1.4;
-        flex: 1;
-    }
-
-    .service-footer {
-        padding: 1.5rem;
-        padding-top: 0;
-        border-top: 1px solid var(--cream-dark);
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .btn-service-detail {
-        background: none;
-        border: none;
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        color: var(--brown-medium);
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 0.9rem;
-        transition: all 0.3s ease;
-        cursor: pointer;
-        padding: 0;
-    }
-
-    .btn-service-detail:hover {
-        color: var(--accent-gold);
-        gap: 0.75rem;
-    }
-
-    .service-timeline {
-        color: var(--brown-light);
-        font-size: 0.85rem;
-        display: flex;
-        align-items: center;
-    }
-
-    /* Process Section */
-    .process-section {
-<<<<<<< HEAD
-        background: linear-gradient(135deg,
-            rgba(62, 39, 35, 0.95) 0%,
-=======
-        background: linear-gradient(135deg, 
-            rgba(62, 39, 35, 0.95) 0%, 
->>>>>>> origin/main
-            rgba(93, 64, 55, 0.9) 100%);
-        color: var(--cream-light);
+    /* ----- Typewriter Effect (same as home) ----- */
+    .typewriter-wrapper {
+        display: inline-block;
         position: relative;
-        overflow: hidden;
     }
 
-    .process-section::before {
+    .typewriter-text {
+        position: relative;
+        display: inline-block;
+        color: var(--brown-dark) !important;
+    }
+
+    .typewriter-text::after {
         content: '';
         position: absolute;
-        top: 0;
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 1.2em;
+        background-color: var(--brown-dark);
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    /* ----- Scroll Indicator (same as home) ----- */
+    .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
         left: 0;
         right: 0;
-        bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M20,20 Q40,10 60,20 T100,20" stroke="rgba(255,255,255,0.05)" stroke-width="1" fill="none"/></svg>');
-        background-size: 200px;
-        opacity: 0.3;
-    }
-
-    .process-timeline {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 2rem;
-        position: relative;
-        z-index: 2;
-    }
-
-    .process-item {
-        flex: 1;
-        min-width: 200px;
         text-align: center;
-        opacity: 0;
-        transform: translateY(20px);
     }
 
-    .process-item.visible {
-        opacity: 1;
-        transform: translateY(0);
+    .scroll-down {
+        color: var(--brown-dark);
+        font-size: 1.5rem;
+        animation: bounce 2s infinite;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s;
     }
 
-    .process-number {
-        font-size: 2rem;
-        font-weight: 700;
-        color: var(--accent-gold);
-        margin-bottom: 1rem;
-        line-height: 1;
+    .scroll-down:hover {
+        background: white;
+        transform: scale(1.1);
     }
 
-    .process-content {
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+    }
+
+    /* ----- Breadcrumb (glassmorphism) ----- */
+    .breadcrumb-nav .breadcrumb {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid rgba(93,64,55,0.1);
+        display: inline-flex;
+    }
+
+    .breadcrumb-item a {
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .breadcrumb-item a:hover {
+        color: var(--brown-dark) !important;
+    }
+
+    /* ===== 3D SERVICE CARD ===== */
+    .service-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .service-card-inner {
+        background: white;
+        border-radius: 2rem;
         padding: 1.5rem;
-        background: rgba(255, 255, 255, 0.05);
-        border-radius: 12px;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        transition: all 0.3s ease;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
     }
 
-    .process-item:hover .process-content {
-        background: rgba(255, 255, 255, 0.1);
-        border-color: var(--accent-gold);
-        transform: translateY(-5px);
+    .service-card-3d:hover .service-card-inner {
+        transform: rotateY(-2deg) rotateX(1deg) translateY(-8px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.25);
     }
 
-    .process-icon {
+    .service-icon-wrapper {
         width: 60px;
         height: 60px;
-        margin: 0 auto 1rem;
-        background: linear-gradient(135deg, var(--accent-gold), var(--brown-light));
-        border-radius: 50%;
+        border-radius: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
-        color: var(--cream-light);
+        transition: all 0.3s;
     }
 
-    .process-content h4 {
-        color: var(--cream-light);
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        font-size: 1.1rem;
+    .service-card-3d:hover .service-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
     }
 
-    .process-content p {
-        color: var(--cream-medium);
-        font-size: 0.9rem;
-        margin: 0;
-        line-height: 1.4;
+    .service-primary { background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium)); }
+    .service-secondary { background: linear-gradient(135deg, var(--cream-gold), #E6B800); }
+    .service-tertiary { background: linear-gradient(135deg, var(--brown-light), var(--brown-medium)); }
+
+    .service-features i {
+        color: var(--cream-gold);
     }
 
-    /* Portfolio Section */
-    .portfolio-section {
-        background: var(--cream-light);
+    /* ===== 3D PROCESS STEP ===== */
+    .col-lg-2-4 {
+        flex: 0 0 20%;
+        max-width: 20%;
+        padding: 0 0.5rem;
     }
 
-    .portfolio-card {
-        background: var(--cream-light);
-        border-radius: 15px;
+    .process-step-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .process-step-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 2rem 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
         overflow: hidden;
-        box-shadow: 0 10px 30px rgba(62, 39, 35, 0.1);
-        border: 1px solid var(--cream-dark);
-        transition: all 0.4s ease;
-        opacity: 0;
-        transform: translateY(20px);
+        height: 100%;
+        text-align: center;
     }
 
-    .portfolio-card.visible {
-        opacity: 1;
-        transform: translateY(0);
+    .process-step-3d:hover .process-step-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
     }
 
-    .portfolio-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(62, 39, 35, 0.15);
-        border-color: var(--brown-light);
+    .step-number-wrapper {
+        position: absolute;
+        top: 1rem;
+        left: 1rem;
+        font-size: 1.2rem;
+        font-weight: 800;
+        color: rgba(212,175,55,0.2);
+    }
+
+    .step-icon {
+        margin: 1.5rem 0;
+        color: var(--brown-dark);
+        transition: transform 0.3s;
+    }
+
+    .process-step-3d:hover .step-icon {
+        transform: scale(1.1);
+        color: var(--cream-gold);
+    }
+
+    .step-title {
+        font-weight: 700;
+        color: var(--brown-dark);
+        margin-bottom: 0.5rem;
+    }
+
+    .step-desc {
+        color: var(--brown-medium);
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    /* ===== 3D PORTFOLIO CARD ===== */
+    .portfolio-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .portfolio-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .portfolio-card-3d:hover .portfolio-inner {
+        transform: rotateY(1deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
     }
 
     .portfolio-image {
-        height: 200px;
+        height: 150px;
         background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
+        border-radius: 1rem;
         position: relative;
-    }
-
-    .image-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, rgba(62, 39, 35, 0.2), rgba(62, 39, 35, 0.7));
     }
 
     .portfolio-category {
         position: absolute;
-        top: 1rem;
-        left: 1rem;
-        background: var(--accent-gold);
-        color: var(--cream-light);
-        padding: 0.25rem 0.75rem;
-        border-radius: 12px;
-        font-size: 0.8rem;
+        top: 0.5rem;
+        left: 0.5rem;
+        font-size: 0.75rem;
+    }
+
+    /* ===== 3D BUTTONS (same as home) ===== */
+    .btn-brown-3d {
+        background: linear-gradient(145deg, var(--brown-dark), #4A342E);
+        border: none;
+        color: white;
         font-weight: 600;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(93,64,55,0.2);
+        transform-style: preserve-3d;
+        transform: translateY(0) rotateX(0deg);
     }
 
-    .portfolio-content {
-        padding: 1.5rem;
+    .btn-brown-3d:hover {
+        transform: translateY(-3px) rotateX(2deg);
+        box-shadow: 0 15px 30px rgba(93,64,55,0.3);
+        background: linear-gradient(145deg, #4A342E, var(--brown-dark));
     }
 
-    .portfolio-content h5 {
+    .btn-outline-brown-3d {
+        border: 2px solid var(--brown-dark);
         color: var(--brown-dark);
+        background: transparent;
         font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
-
-    .portfolio-content p {
-        color: var(--brown-medium);
-        font-size: 0.9rem;
-        line-height: 1.4;
-        margin-bottom: 1rem;
-    }
-
-    .portfolio-meta {
-        display: flex;
-        justify-content: space-between;
-        color: var(--brown-light);
-        font-size: 0.85rem;
-    }
-
-    /* CTA Section */
-    .cta-section {
-        background: var(--cream-light);
-    }
-
-    .cta-card {
-<<<<<<< HEAD
-        background: linear-gradient(135deg,
-            rgba(93, 64, 55, 0.95) 0%,
-=======
-        background: linear-gradient(135deg, 
-            rgba(93, 64, 55, 0.95) 0%, 
->>>>>>> origin/main
-            rgba(121, 85, 72, 0.9) 100%);
-        border-radius: 20px;
-        padding: 3rem;
+        transition: all 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
         position: relative;
         overflow: hidden;
     }
 
-    .cta-card::before {
+    .btn-outline-brown-3d:hover {
+        background: var(--brown-dark);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
+    }
+
+    .btn-brown-3d::before,
+    .btn-outline-brown-3d::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.6s;
+    }
+
+    .btn-brown-3d:hover::before,
+    .btn-outline-brown-3d:hover::before {
+        left: 100%;
+    }
+
+    /* 3D decorative corners */
+    .card-corner {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, transparent 50%, rgba(212,175,55,0.1) 50%);
+        z-index: 1;
+    }
+
+    .card-corner.corner-1 {
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+
+    .card-corner.corner-2 {
+        bottom: 0;
+        left: 0;
+        transform: rotate(270deg);
+    }
+
+    /* ----- Background decorations ----- */
+    .section-bg-decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .decoration-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.03);
+        width: 300px;
+        height: 300px;
+    }
+
+    .decoration-circle:nth-child(1) {
+        top: -100px;
+        right: -100px;
+        background: rgba(93,64,55,0.02);
+        animation: float 25s infinite;
+    }
+
+    .decoration-circle:nth-child(2) {
+        bottom: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: rgba(212,175,55,0.02);
+        animation: float 20s infinite reverse;
+    }
+
+    .bg-cream-light {
+        background-color: var(--cream-light) !important;
+        position: relative;
+    }
+
+    .cert-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .pattern-line {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--cream-gold), transparent);
+        opacity: 0.2;
+    }
+
+    .pattern-line:nth-child(1) { top: 20%; left: -50%; width: 200%; transform: rotate(2deg); }
+    .pattern-line:nth-child(2) { bottom: 30%; right: -50%; width: 200%; transform: rotate(-3deg); }
+
+    /* ----- CTA Section (same as home) ----- */
+    .cta-elegant {
+        background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-elegant::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
-        background-size: 200px;
-        opacity: 0.5;
+        background:
+            radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.1) 0%, transparent 50%);
     }
 
-    .cta-title {
-        font-size: 1.75rem;
-        font-weight: 600;
+    .cta-content-wrapper {
         position: relative;
         z-index: 2;
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
     }
 
-    .cta-description {
-        font-size: 1.1rem;
-        position: relative;
-        z-index: 2;
+    .cta-elegant h2 {
+        color: #5D4037;
+        background: linear-gradient(135deg, #5D4037, #8B6B61);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
-    .btn-cream {
-        background: linear-gradient(135deg, var(--cream-light), var(--cream-medium));
-        color: var(--brown-dark);
-        border: 2px solid var(--cream-dark);
-        font-weight: 600;
-        padding: 0.75rem 2rem;
-        transition: all 0.3s ease;
-        position: relative;
-        z-index: 2;
+    .cta-elegant .lead {
+        color: #795548;
     }
 
-    .btn-cream:hover {
-        background: linear-gradient(135deg, var(--cream-light), var(--accent-gold-light));
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(62, 39, 35, 0.2);
-        border-color: var(--accent-gold);
-    }
-
-    /* Modal Styles */
-    .service-modal {
-        border-radius: 15px;
-        border: 2px solid var(--cream-dark);
+    /* ----- Modal Customization ----- */
+    .service-modal .modal-content {
+        border-radius: 2rem;
         overflow: hidden;
+        border: none;
+        box-shadow: var(--shadow-3d);
     }
 
     .service-modal .modal-header {
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        color: var(--cream-light);
-        border-bottom: 2px solid var(--cream-dark);
-        padding: 1.5rem 2rem;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+        border-bottom: none;
     }
 
-    .service-modal .modal-icon {
+    .modal-icon-wrapper {
         width: 60px;
         height: 60px;
-        border-radius: 12px;
+        border-radius: 16px;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.5rem;
-        flex-shrink: 0;
     }
 
-    .modal-title-container {
-        flex: 1;
+    .btn-close-white {
+        filter: brightness(0) invert(1);
     }
 
-    .service-modal .modal-title {
-        color: var(--cream-light);
-        font-weight: 600;
-        margin: 0;
-        font-size: 1.5rem;
-        line-height: 1.3;
-    }
-
-    .modal-subtitle {
-        color: var(--accent-gold-light);
-        font-size: 0.9rem;
-        margin-top: 0.25rem;
-    }
-
-    .service-modal .btn-close {
-        background: transparent;
-        border: none;
-        font-size: 1.25rem;
-        color: var(--cream-light);
-        opacity: 0.8;
-    }
-
-    .service-modal .btn-close:hover {
-        opacity: 1;
-    }
-
-    .service-modal .modal-body {
-        padding: 2rem;
-        background: var(--cream-light);
-    }
-
-    .modal-description {
-        margin-bottom: 2rem;
-        padding-bottom: 2rem;
-        border-bottom: 1px solid var(--cream-dark);
-    }
-
-    .modal-description p {
-        color: var(--brown-medium);
-        line-height: 1.6;
-        margin: 0;
-        font-size: 1rem;
-    }
-
-    .modal-features h6,
-    .modal-process h6,
-    .modal-quote h6 {
-        color: var(--brown-dark);
-        font-weight: 600;
-        margin-bottom: 1rem;
-        font-size: 1.1rem;
-    }
-
-    .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-        gap: 0.75rem;
-        margin-bottom: 2rem;
-    }
-
-    .feature-item-modal {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.5rem;
-        background: var(--cream-light);
-        border: 1px solid var(--cream-dark);
-        border-radius: 8px;
-    }
-
-    .feature-icon-modal {
-        color: var(--accent-gold);
-        font-size: 0.9rem;
-        flex-shrink: 0;
-    }
-
-    .feature-text {
-        color: var(--brown-medium);
-        font-size: 0.9rem;
-        line-height: 1.4;
-    }
-
-    .process-steps {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-bottom: 2rem;
-    }
-
-    .process-step {
-        display: flex;
-        gap: 1rem;
-        align-items: flex-start;
-    }
-
-    .step-number {
-        width: 30px;
-        height: 30px;
-        background: linear-gradient(135deg, var(--accent-gold), var(--brown-light));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-weight: 600;
-        font-size: 0.9rem;
-        flex-shrink: 0;
-    }
-
-    .step-content h6 {
-        color: var(--brown-dark);
-        font-weight: 600;
-        margin-bottom: 0.25rem;
-        font-size: 0.95rem;
-    }
-
-    .step-content p {
-        color: var(--brown-medium);
-        font-size: 0.85rem;
-        margin: 0;
+    .text-cream-gold {
+        color: var(--cream-gold);
     }
 
     .quote-form .form-control {
-        border: 1px solid var(--cream-dark);
-        border-radius: 8px;
-        padding: 0.75rem 1rem;
-        color: var(--brown-medium);
-        background: var(--cream-light);
+        border-radius: 50rem;
+        height: 48px;
+        background: white;
     }
 
-    .quote-form .form-control:focus {
-        border-color: var(--accent-gold);
-        box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+    .quote-form textarea.form-control {
+        border-radius: 1rem;
+        height: auto;
     }
 
-    .service-modal .modal-footer {
-        background: var(--cream-light);
-        border-top: 1px solid var(--cream-dark);
-        padding: 1.5rem 2rem;
-        gap: 1rem;
-    }
-
-    .btn-outline-brown {
-        background: transparent;
-        border: 2px solid var(--brown-medium);
-        color: var(--brown-medium);
-        padding: 0.5rem 1.5rem;
-        border-radius: 8px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .btn-outline-brown:hover {
-        background: var(--brown-medium);
-        color: var(--cream-light);
-    }
-
-    .btn-brown {
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        border: 2px solid var(--brown-medium);
-        color: var(--cream-light);
-        padding: 0.5rem 1.5rem;
-        border-radius: 8px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .btn-brown:hover {
-        background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
-        color: var(--cream-light);
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(62, 39, 35, 0.2);
-    }
-
-    .btn-accent-gold {
-        background: linear-gradient(135deg, var(--accent-gold), #E6B800);
-        border: 2px solid var(--accent-gold);
-        color: var(--brown-dark);
-        padding: 0.5rem 1.5rem;
-        border-radius: 8px;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .btn-accent-gold:hover {
-        background: linear-gradient(135deg, #E6B800, var(--accent-gold));
-        color: var(--brown-dark);
-        transform: translateY(-2px);
-        box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
-    }
-
-    /* Animations */
-    @keyframes float {
-        0%, 100% {
+    /* ----- Animations ----- */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
             transform: translateY(0);
         }
-        50% {
-            transform: translateY(-20px);
-        }
     }
 
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(1.2);
+    @keyframes fadeInUp {
+        from {
             opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
-    /* Responsive Design */
+    .animate-fade-in-down {
+        animation: fadeInDown 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-on-scroll {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* ----- Utilities ----- */
+    .py-6 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+
+    .mb-6 {
+        margin-bottom: 5rem !important;
+    }
+
+    .mt-6 {
+        margin-top: 5rem !important;
+    }
+
+    /* ----- Responsive ----- */
     @media (max-width: 1200px) {
-        .hero-content h1 {
-            font-size: 2.5rem;
-        }
-<<<<<<< HEAD
-
-        .section-title {
-            font-size: 2.2rem;
-        }
-
-=======
-        
-        .section-title {
-            font-size: 2.2rem;
-        }
-        
->>>>>>> origin/main
-        .process-timeline {
-            gap: 1.5rem;
+        .col-lg-2-4 {
+            flex: 0 0 20%;
+            max-width: 20%;
         }
     }
 
     @media (max-width: 992px) {
-        .architectural-hero {
-            padding: 4rem 0 2.5rem;
+        .col-lg-2-4 {
+            flex: 0 0 33.333%;
+            max-width: 33.333%;
         }
-<<<<<<< HEAD
-
-        .hero-content h1 {
-            font-size: 2.2rem;
-        }
-
-        .hero-content .lead {
-            font-size: 1.1rem;
-        }
-
-=======
-        
-        .hero-content h1 {
-            font-size: 2.2rem;
-        }
-        
-        .hero-content .lead {
-            font-size: 1.1rem;
-        }
-        
->>>>>>> origin/main
-        .hero-icon {
-            width: 150px;
-            height: 150px;
-            margin-top: 2rem;
-        }
-<<<<<<< HEAD
-
-        .icon-wrapper {
-            font-size: 4rem;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-        }
-
-        .service-card {
-            margin-bottom: 1.5rem;
-        }
-
-=======
-        
-        .icon-wrapper {
-            font-size: 4rem;
-        }
-        
-        .section-title {
-            font-size: 1.8rem;
-        }
-        
-        .service-card {
-            margin-bottom: 1.5rem;
-        }
-        
->>>>>>> origin/main
-        .process-timeline {
-            flex-direction: column;
-            gap: 1.5rem;
-        }
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/main
-        .process-item {
-            min-width: 100%;
-        }
+        .display-2 { font-size: 3rem !important; }
+        .architectural-hero { padding: 5rem 0 3rem; }
+        .cta-content-wrapper { padding: 2rem 1.5rem; }
     }
 
     @media (max-width: 768px) {
-        .hero-content h1 {
-            font-size: 1.8rem;
+        .col-lg-2-4 {
+            flex: 0 0 50%;
+            max-width: 50%;
         }
-<<<<<<< HEAD
-
-        .hero-stats {
-            gap: 2rem;
-        }
-
-        .stat-number {
-            font-size: 1.5rem;
-        }
-
-        .section-title {
-            font-size: 1.6rem;
-        }
-
-        .cta-card {
-            padding: 2rem;
-        }
-
-        .cta-title {
-            font-size: 1.5rem;
-        }
-
-=======
-        
-        .hero-stats {
-            gap: 2rem;
-        }
-        
-        .stat-number {
-            font-size: 1.5rem;
-        }
-        
-        .section-title {
-            font-size: 1.6rem;
-        }
-        
-        .cta-card {
-            padding: 2rem;
-        }
-        
-        .cta-title {
-            font-size: 1.5rem;
-        }
-        
->>>>>>> origin/main
-        .btn-cream {
-            width: 100%;
-            max-width: 250px;
-            margin: 0 auto;
-        }
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/main
-        .features-grid {
-            grid-template-columns: 1fr;
-        }
+        .display-2 { font-size: 2.5rem !important; }
+        .typewriter-text { font-size: 1.5rem !important; }
+        .service-icon-wrapper { width: 50px; height: 50px; }
     }
 
     @media (max-width: 576px) {
-        .hero-content h1 {
-            font-size: 1.6rem;
+        .col-lg-2-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
         }
-<<<<<<< HEAD
-
-=======
-        
->>>>>>> origin/main
-        .service-badge {
-            font-size: 0.7rem;
-            padding: 0.4rem 1rem;
-        }
-<<<<<<< HEAD
-
-        .hero-content .lead {
-            font-size: 1rem;
-        }
-
-        .section-title {
-            font-size: 1.4rem;
-        }
-
-        .section-subtitle {
-            font-size: 0.95rem;
-        }
-
-        .cta-card .row {
-            text-align: center;
-        }
-
-        .cta-card .col-lg-4 {
-            margin-top: 1.5rem;
-        }
-
-        .service-modal .modal-body {
-            padding: 1.5rem;
-        }
-
-        .service-modal .modal-header {
-            padding: 1rem 1.5rem;
-        }
-
-        .service-modal .modal-footer {
-            flex-direction: column;
-        }
-
-=======
-        
-        .hero-content .lead {
-            font-size: 1rem;
-        }
-        
-        .section-title {
-            font-size: 1.4rem;
-        }
-        
-        .section-subtitle {
-            font-size: 0.95rem;
-        }
-        
-        .cta-card .row {
-            text-align: center;
-        }
-        
-        .cta-card .col-lg-4 {
-            margin-top: 1.5rem;
-        }
-        
-        .service-modal .modal-body {
-            padding: 1.5rem;
-        }
-        
-        .service-modal .modal-header {
-            padding: 1rem 1.5rem;
-        }
-        
-        .service-modal .modal-footer {
-            flex-direction: column;
-        }
-        
->>>>>>> origin/main
-        .service-modal .modal-footer .btn {
-            width: 100%;
-        }
+        .display-2 { font-size: 2rem !important; }
+        .badge { font-size: 0.8rem !important; }
     }
 </style>
 @endpush
@@ -1660,85 +1132,92 @@
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Animation on scroll
+        // ----- TYPEWRITER EFFECT (like home) -----
+        const textElement = document.querySelector('.typewriter-text');
+        if (textElement) {
+            const originalText = textElement.textContent.trim();
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+
+            function typeWriter() {
+                const currentText = originalText.substring(0, charIndex);
+                textElement.textContent = currentText;
+
+                if (!isDeleting && charIndex < originalText.length) {
+                    charIndex++;
+                    typingSpeed = 100;
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    typingSpeed = 50;
+                }
+
+                if (!isDeleting && charIndex === originalText.length) {
+                    isDeleting = true;
+                    typingSpeed = 1500;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    typingSpeed = 500;
+                }
+
+                setTimeout(typeWriter, typingSpeed);
+            }
+
+            setTimeout(typeWriter, 1000);
+        }
+
+        // ----- SMOOTH SCROLL FOR ANCHOR -----
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ----- OBSERVER FOR SCROLL ANIMATIONS -----
         const observerOptions = {
-            threshold: 0.1,
+            threshold: 0.2,
             rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const element = entry.target;
-                    const delay = element.getAttribute('data-delay') || 0;
-<<<<<<< HEAD
-
-=======
-                    
->>>>>>> origin/main
-                    setTimeout(() => {
-                        element.classList.add('visible');
-                    }, parseInt(delay));
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe all elements with animation class
-        document.querySelectorAll('.animate-on-scroll').forEach(element => {
-            observer.observe(element);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
         });
 
-        // Hover effects for service cards
-        const serviceCards = document.querySelectorAll('.service-card');
-        serviceCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                const icon = this.querySelector('.service-icon');
-                if (icon) {
-                    icon.style.transform = 'scale(1.1) rotate(5deg)';
-                    icon.style.transition = 'transform 0.3s ease';
-                }
+        // ----- 3D HOVER EFFECT ENHANCEMENT -----
+        const cards = document.querySelectorAll('.service-card-inner, .process-step-inner, .portfolio-inner');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+
+                card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateY(-5px)`;
             });
 
-            card.addEventListener('mouseleave', function() {
-                const icon = this.querySelector('.service-icon');
-                if (icon) {
-                    icon.style.transform = 'scale(1) rotate(0)';
-                }
-            });
-        });
-
-        // Portfolio card hover effects
-        const portfolioCards = document.querySelectorAll('.portfolio-card');
-        portfolioCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                const category = this.querySelector('.portfolio-category');
-                if (category) {
-                    category.style.transform = 'translateY(-2px)';
-                    category.style.boxShadow = '0 5px 15px rgba(0,0,0,0.2)';
-                }
-            });
-
-            card.addEventListener('mouseleave', function() {
-                const category = this.querySelector('.portfolio-category');
-                if (category) {
-                    category.style.transform = 'translateY(0)';
-                    category.style.boxShadow = 'none';
-                }
-            });
-        });
-
-        // Initialize modals
-        const serviceModals = document.querySelectorAll('.service-modal');
-        serviceModals.forEach(modal => {
-            modal.addEventListener('shown.bs.modal', function() {
-                const modalTitle = this.querySelector('.modal-title');
-                console.log('Service modal opened:', modalTitle.textContent);
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(1deg)';
             });
         });
     });
 </script>
-<<<<<<< HEAD
 @endpush
-=======
-@endpush
->>>>>>> origin/main

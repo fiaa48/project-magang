@@ -84,11 +84,7 @@
                                 Visi kami mencerminkan aspirasi jangka panjang untuk menjadi pemimpin
                                 dalam industri konsultansi, dengan fokus pada inovasi dan keberlanjutan.
                             </p>
-<<<<<<< HEAD
 
-=======
-                            
->>>>>>> origin/main
                             <div class="vision-components">
                                 <div class="vision-component mb-4">
                                     <div class="component-card">
@@ -521,11 +517,7 @@
         --brown-700: #5D4037;
         --brown-800: #4E342E;
         --brown-900: #3E2723;
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/main
         --cream-50: #FFFDF7;
         --cream-100: #F9F5EB;
         --cream-200: #F5F0E6;
@@ -536,17 +528,10 @@
         --cream-700: #D7C8B4;
         --cream-800: #D2C1AB;
         --cream-900: #CCBAA2;
-<<<<<<< HEAD
 
         --accent-gold: #D4AF37;
         --accent-gold-light: #F0E68C;
 
-=======
-        
-        --accent-gold: #D4AF37;
-        --accent-gold-light: #F0E68C;
-        
->>>>>>> origin/main
         --brown-light: var(--brown-300);
         --brown-medium: var(--brown-500);
         --brown-dark: var(--brown-700);
@@ -557,17 +542,10 @@
 
     /* Page Header */
     .page-header {
-<<<<<<< HEAD
         background: linear-gradient(135deg,
             rgba(62, 39, 35, 0.95) 0%,
             rgba(93, 64, 55, 0.9) 50%,
             rgba(121, 85, 72, 0.85) 100%),
-=======
-        background: linear-gradient(135deg, 
-            rgba(62, 39, 35, 0.95) 0%, 
-            rgba(93, 64, 55, 0.9) 50%, 
-            rgba(121, 85, 72, 0.85) 100%), 
->>>>>>> origin/main
             url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
         color: var(--cream-light);
         padding: 6rem 0 4rem;
@@ -655,13 +633,8 @@
     /* Vision Section */
     .vision-hero {
         padding: 2rem;
-<<<<<<< HEAD
         background: linear-gradient(135deg,
             rgba(249, 245, 235, 0.95) 0%,
-=======
-        background: linear-gradient(135deg, 
-            rgba(249, 245, 235, 0.95) 0%, 
->>>>>>> origin/main
             rgba(242, 237, 226, 0.9) 100%);
         border-radius: 20px;
         border: 1px solid var(--cream-dark);
@@ -1187,13 +1160,8 @@
 
     /* CTA Banner */
     .cta-banner {
-<<<<<<< HEAD
         background: linear-gradient(135deg,
             rgba(93, 64, 55, 0.95) 0%,
-=======
-        background: linear-gradient(135deg, 
-            rgba(93, 64, 55, 0.95) 0%, 
->>>>>>> origin/main
             rgba(121, 85, 72, 0.9) 100%);
         border-radius: 15px;
         padding: 2rem;
@@ -1287,11 +1255,7 @@
         .mission-scroll-item {
             width: 300px;
         }
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/main
         .value-item {
             width: 240px;
         }
@@ -1313,19 +1277,11 @@
         .vision-statement {
             font-size: 1.2rem;
         }
-<<<<<<< HEAD
 
         .mission-scroll-item {
             width: 280px;
         }
 
-=======
-        
-        .mission-scroll-item {
-            width: 280px;
-        }
-        
->>>>>>> origin/main
         .value-item {
             width: 220px;
         }
@@ -1364,19 +1320,11 @@
         .vision-statement {
             font-size: 1.1rem;
         }
-<<<<<<< HEAD
 
         .mission-scroll-item {
             width: 260px;
         }
 
-=======
-        
-        .mission-scroll-item {
-            width: 260px;
-        }
-        
->>>>>>> origin/main
         .value-item {
             width: 200px;
         }
@@ -1420,7 +1368,6 @@
             padding-left: 0;
             padding-top: 0.75rem;
         }
-<<<<<<< HEAD
 
         .mission-scroll-item {
             width: 220px;
@@ -1438,25 +1385,6 @@
             margin-top: 1rem;
         }
 
-=======
-        
-        .mission-scroll-item {
-            width: 220px;
-        }
-        
-        .value-item {
-            width: 180px;
-        }
-        
-        .cta-banner .row {
-            text-align: center;
-        }
-        
-        .cta-banner .col-lg-4 {
-            margin-top: 1rem;
-        }
-        
->>>>>>> origin/main
         .btn-cream {
             width: 100%;
             max-width: 250px;
@@ -1468,11 +1396,7 @@
         .mission-scroll-item {
             width: 200px;
         }
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/main
         .value-item {
             width: 160px;
         }
@@ -1494,11 +1418,7 @@
                 if (entry.isIntersecting) {
                     const element = entry.target;
                     const delay = element.getAttribute('data-delay') || 0;
-<<<<<<< HEAD
 
-=======
-                    
->>>>>>> origin/main
                     setTimeout(() => {
                         element.classList.add('visible');
                     }, parseInt(delay));
@@ -1545,8 +1465,4 @@
         });
     });
 </script>
-<<<<<<< HEAD
 @endpush
-=======
-@endpush
->>>>>>> origin/main

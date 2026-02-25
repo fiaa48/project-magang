@@ -12,13 +12,8 @@
                     <div class="header-content">
                         <h1 class="display-5 fw-bold text-brown-dark mb-3">Struktur Organisasi</h1>
                         <p class="lead text-brown-medium mb-4">
-<<<<<<< HEAD
                             PT Mitra Nusa Konsulindo memiliki struktur organisasi yang jelas dengan pembagian
                             tugas dan tanggung jawab yang terdefinisi dengan baik untuk mendukung efektivitas
-=======
-                            PT Mitra Nusa Konsulindo memiliki struktur organisasi yang jelas dengan pembagian 
-                            tugas dan tanggung jawab yang terdefinisi dengan baik untuk mendukung efektivitas 
->>>>>>> origin/main
                             operasional dan kualitas pelayanan.
                         </p>
                         <div class="org-meta d-flex flex-wrap gap-3">
@@ -1494,14 +1489,6 @@
         color: var(--brown-medium);
         border: none;
         background: transparent;
-<<<<<<< HEAD
-        padding: 0.75r
-        .divisions-tabs .nav-link {
-        color: var(--brown-medium);
-        border: none;
-        background: transparent;
-=======
->>>>>>> origin/main
         padding: 0.75rem 1.5rem;
         font-weight: 500;
         position: relative;
@@ -1670,11 +1657,7 @@
         .division-card {
             width: 160px;
         }
-<<<<<<< HEAD
 
-=======
-        
->>>>>>> origin/main
         .division-row {
             gap: 1.5rem;
         }
@@ -1684,7 +1667,6 @@
         .chart-container {
             min-height: 850px;
         }
-<<<<<<< HEAD
 
         .division-card {
             width: 140px;
@@ -1698,21 +1680,6 @@
             font-size: 0.75rem;
         }
 
-=======
-        
-        .division-card {
-            width: 140px;
-        }
-        
-        .division-name {
-            font-size: 0.85rem;
-        }
-        
-        .division-desc {
-            font-size: 0.75rem;
-        }
-        
->>>>>>> origin/main
         .position-card {
             width: 250px;
         }
@@ -1732,19 +1699,11 @@
             padding: 2rem 1rem;
             min-height: 800px;
         }
-<<<<<<< HEAD
 
         .division-row {
             flex-wrap: wrap;
         }
 
-=======
-        
-        .division-row {
-            flex-wrap: wrap;
-        }
-        
->>>>>>> origin/main
         .division-card {
             width: 180px;
             margin-bottom: 1rem;
@@ -1855,8 +1814,4 @@
         });
     });
 </script>
-<<<<<<< HEAD
 @endpush
-=======
-@endpush
->>>>>>> origin/main
