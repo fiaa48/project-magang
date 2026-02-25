@@ -3,11 +3,7 @@
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
             <div class="logo-wrapper">
-<<<<<<< HEAD
                 <img src="{{ asset('images/logopt.png') }}" alt="PT Mitra Nusa Konsulindo">
-=======
-                <img src="{{ asset('images/logopt.jpeg') }}" alt="PT Mitra Nusa Konsulindo">
->>>>>>> origin/main
             </div>
             <div class="brand-text d-none d-md-block">
                 <div class="brand-title">PT Mitra Nusa Konsultan</div>
