@@ -39,7 +39,7 @@
 
                             <div class="d-flex flex-wrap gap-3">
                                 <a href="{{ asset('documents/company-profile/Company-Profile-Mitra-Nusa-Konsulindo.pdf') }}"
-                                   class="btn btn-brown px-4 py-3 rounded-pill" target="_blank">
+                                class="btn btn-brown px-4 py-3 rounded-pill" target="_blank">
                                     <i class="fas fa-download me-2"></i>Download Profil
                                 </a>
                                 <a href="{{ route('contact') }}" class="btn btn-outline-brown px-4 py-3 rounded-pill">

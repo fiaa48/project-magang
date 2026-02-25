@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'PT Mitra Nusa Konsulindo - Konsultan Profesional')
+@section('title', 'PT Mitra Nusa Konsultan - Konsultan Profesional')
 @section('description', 'Perusahaan Konsultan Konstruksi dan Non-Konstruksi dengan pengalaman luas di bidang arsitektur, teknik sipil, dan manajemen proyek.')
 
 @section('content')
@@ -227,7 +227,7 @@
             </div>
 
             <div class="text-center mt-6">
-                <a href="{{ route('certifications') }}" class="btn btn-outline-brown-dark btn-lg px-5 rounded-pill">
+                <a href="{{ route('certifications.index') }}" class="btn btn-outline-brown-dark btn-lg px-5 rounded-pill">
                     <i class="fas fa-certificate me-2"></i>Detail Sertifikasi
                 </a>
             </div>

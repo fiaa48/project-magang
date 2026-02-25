@@ -16,7 +16,11 @@
                             <li class="breadcrumb-item active" aria-current="page">Jasa Arsitektural</li>
                         </ol>
                     </nav>
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> origin/main
                     <div class="hero-content mt-4">
                         <div class="service-badge mb-3">
                             <span>DESAIN & ARSITEKTUR</span>
@@ -25,11 +29,19 @@
                             Jasa <span class="text-accent-gold">Arsitektural</span>
                         </h1>
                         <p class="lead text-cream-medium mb-5">
+<<<<<<< HEAD
                             Solusi desain arsitektural yang inovatif dan berkelanjutan,
                             menggabungkan estetika, fungsionalitas, dan keberlanjutan
                             untuk mewujudkan ruang yang inspiratif.
                         </p>
 
+=======
+                            Solusi desain arsitektural yang inovatif dan berkelanjutan, 
+                            menggabungkan estetika, fungsionalitas, dan keberlanjutan 
+                            untuk mewujudkan ruang yang inspiratif.
+                        </p>
+                        
+>>>>>>> origin/main
                         <div class="hero-stats d-flex flex-wrap gap-4">
                             <div class="stat-item">
                                 <div class="stat-number">15+</div>
@@ -71,7 +83,11 @@
                 </div>
                 <h2 class="section-title fw-bold text-brown-dark mb-3">Jasa Arsitektural Profesional</h2>
                 <p class="section-subtitle text-brown-medium">
+<<<<<<< HEAD
                     Menyediakan solusi desain arsitektural komprehensif untuk berbagai
+=======
+                    Menyediakan solusi desain arsitektural komprehensif untuk berbagai 
+>>>>>>> origin/main
                     jenis bangunan dengan pendekatan yang kreatif dan berkelanjutan.
                 </p>
                 <div class="section-ornament">
@@ -144,7 +160,11 @@
                         <div class="service-body">
                             <h3 class="service-title">{{ $service['title'] }}</h3>
                             <p class="service-description">{{ $service['description'] }}</p>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="service-features">
                                 <h6>Fitur Layanan:</h6>
                                 <div class="features-list">
@@ -183,7 +203,11 @@
                 </div>
                 <h2 class="section-title fw-bold text-cream-light mb-3">Proses Desain Arsitektural</h2>
                 <p class="section-subtitle text-cream-medium">
+<<<<<<< HEAD
                     Langkah-langkah sistematis yang kami terapkan untuk memastikan
+=======
+                    Langkah-langkah sistematis yang kami terapkan untuk memastikan 
+>>>>>>> origin/main
                     hasil desain yang optimal sesuai dengan kebutuhan Anda.
                 </p>
                 <div class="section-ornament">
@@ -261,7 +285,11 @@
                 </div>
                 <h2 class="section-title fw-bold text-brown-dark mb-3">Proyek Terbaru Kami</h2>
                 <p class="section-subtitle text-brown-medium">
+<<<<<<< HEAD
                     Beberapa hasil karya desain arsitektural yang telah kami selesaikan
+=======
+                    Beberapa hasil karya desain arsitektural yang telah kami selesaikan 
+>>>>>>> origin/main
                     untuk berbagai klien dengan beragam kebutuhan.
                 </p>
                 <div class="section-ornament">
@@ -336,7 +364,11 @@
                             Siap Wujudkan Desain Arsitektural Impian Anda?
                         </h3>
                         <p class="cta-description text-cream-medium mb-0">
+<<<<<<< HEAD
                             Konsultasikan kebutuhan desain Anda dengan tim arsitek profesional
+=======
+                            Konsultasikan kebutuhan desain Anda dengan tim arsitek profesional 
+>>>>>>> origin/main
                             kami dan dapatkan solusi terbaik untuk proyek Anda.
                         </p>
                     </div>
@@ -372,7 +404,11 @@
                 <div class="modal-description">
                     <p>{{ $service['description'] }}</p>
                 </div>
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 <div class="modal-features">
                     <h6>Detail Layanan:</h6>
                     <div class="features-grid">
@@ -386,7 +422,11 @@
                         @endforeach
                     </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 <div class="modal-process">
                     <h6>Tahapan Pengerjaan:</h6>
                     <div class="process-steps">
@@ -413,7 +453,11 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 <div class="modal-quote">
                     <h6>Request Quotation:</h6>
                     <div class="quote-form">
@@ -464,7 +508,11 @@
         --brown-700: #5D4037;
         --brown-800: #4E342E;
         --brown-900: #3E2723;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         /* Cream Shades */
         --cream-50: #FFFDF7;
         --cream-100: #F9F5EB;
@@ -476,11 +524,19 @@
         --cream-700: #D7C8B4;
         --cream-800: #D2C1AB;
         --cream-900: #CCBAA2;
+<<<<<<< HEAD
 
         /* Accent Colors */
         --accent-gold: #D4AF37;
         --accent-gold-light: #F0E68C;
 
+=======
+        
+        /* Accent Colors */
+        --accent-gold: #D4AF37;
+        --accent-gold-light: #F0E68C;
+        
+>>>>>>> origin/main
         /* Theme Colors */
         --brown-light: var(--brown-300);
         --brown-medium: var(--brown-500);
@@ -492,9 +548,15 @@
 
     /* Hero Section */
     .architectural-hero {
+<<<<<<< HEAD
         background: linear-gradient(135deg,
             rgba(62, 39, 35, 0.95) 0%,
             rgba(93, 64, 55, 0.9) 50%,
+=======
+        background: linear-gradient(135deg, 
+            rgba(62, 39, 35, 0.95) 0%, 
+            rgba(93, 64, 55, 0.9) 50%, 
+>>>>>>> origin/main
             rgba(121, 85, 72, 0.85) 100%);
         color: var(--cream-light);
         padding: 6rem 0 4rem;
@@ -865,8 +927,13 @@
 
     /* Process Section */
     .process-section {
+<<<<<<< HEAD
         background: linear-gradient(135deg,
             rgba(62, 39, 35, 0.95) 0%,
+=======
+        background: linear-gradient(135deg, 
+            rgba(62, 39, 35, 0.95) 0%, 
+>>>>>>> origin/main
             rgba(93, 64, 55, 0.9) 100%);
         color: var(--cream-light);
         position: relative;
@@ -1040,8 +1107,13 @@
     }
 
     .cta-card {
+<<<<<<< HEAD
         background: linear-gradient(135deg,
             rgba(93, 64, 55, 0.95) 0%,
+=======
+        background: linear-gradient(135deg, 
+            rgba(93, 64, 55, 0.95) 0%, 
+>>>>>>> origin/main
             rgba(121, 85, 72, 0.9) 100%);
         border-radius: 20px;
         padding: 3rem;
@@ -1341,11 +1413,19 @@
         .hero-content h1 {
             font-size: 2.5rem;
         }
+<<<<<<< HEAD
 
         .section-title {
             font-size: 2.2rem;
         }
 
+=======
+        
+        .section-title {
+            font-size: 2.2rem;
+        }
+        
+>>>>>>> origin/main
         .process-timeline {
             gap: 1.5rem;
         }
@@ -1355,6 +1435,7 @@
         .architectural-hero {
             padding: 4rem 0 2.5rem;
         }
+<<<<<<< HEAD
 
         .hero-content h1 {
             font-size: 2.2rem;
@@ -1364,11 +1445,23 @@
             font-size: 1.1rem;
         }
 
+=======
+        
+        .hero-content h1 {
+            font-size: 2.2rem;
+        }
+        
+        .hero-content .lead {
+            font-size: 1.1rem;
+        }
+        
+>>>>>>> origin/main
         .hero-icon {
             width: 150px;
             height: 150px;
             margin-top: 2rem;
         }
+<<<<<<< HEAD
 
         .icon-wrapper {
             font-size: 4rem;
@@ -1382,11 +1475,30 @@
             margin-bottom: 1.5rem;
         }
 
+=======
+        
+        .icon-wrapper {
+            font-size: 4rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+        }
+        
+        .service-card {
+            margin-bottom: 1.5rem;
+        }
+        
+>>>>>>> origin/main
         .process-timeline {
             flex-direction: column;
             gap: 1.5rem;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         .process-item {
             min-width: 100%;
         }
@@ -1396,6 +1508,7 @@
         .hero-content h1 {
             font-size: 1.8rem;
         }
+<<<<<<< HEAD
 
         .hero-stats {
             gap: 2rem;
@@ -1417,12 +1530,39 @@
             font-size: 1.5rem;
         }
 
+=======
+        
+        .hero-stats {
+            gap: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.6rem;
+        }
+        
+        .cta-card {
+            padding: 2rem;
+        }
+        
+        .cta-title {
+            font-size: 1.5rem;
+        }
+        
+>>>>>>> origin/main
         .btn-cream {
             width: 100%;
             max-width: 250px;
             margin: 0 auto;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         .features-grid {
             grid-template-columns: 1fr;
         }
@@ -1432,11 +1572,16 @@
         .hero-content h1 {
             font-size: 1.6rem;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         .service-badge {
             font-size: 0.7rem;
             padding: 0.4rem 1rem;
         }
+<<<<<<< HEAD
 
         .hero-content .lead {
             font-size: 1rem;
@@ -1470,6 +1615,41 @@
             flex-direction: column;
         }
 
+=======
+        
+        .hero-content .lead {
+            font-size: 1rem;
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+        }
+        
+        .section-subtitle {
+            font-size: 0.95rem;
+        }
+        
+        .cta-card .row {
+            text-align: center;
+        }
+        
+        .cta-card .col-lg-4 {
+            margin-top: 1.5rem;
+        }
+        
+        .service-modal .modal-body {
+            padding: 1.5rem;
+        }
+        
+        .service-modal .modal-header {
+            padding: 1rem 1.5rem;
+        }
+        
+        .service-modal .modal-footer {
+            flex-direction: column;
+        }
+        
+>>>>>>> origin/main
         .service-modal .modal-footer .btn {
             width: 100%;
         }
@@ -1491,7 +1671,11 @@
                 if (entry.isIntersecting) {
                     const element = entry.target;
                     const delay = element.getAttribute('data-delay') || 0;
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> origin/main
                     setTimeout(() => {
                         element.classList.add('visible');
                     }, parseInt(delay));
@@ -1553,4 +1737,8 @@
         });
     });
 </script>
+<<<<<<< HEAD
 @endpush
+=======
+@endpush
+>>>>>>> origin/main

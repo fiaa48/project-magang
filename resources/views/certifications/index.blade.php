@@ -106,6 +106,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+<<<<<<< HEAD
                                         @foreach($activeCertifications as $cert)
                                         <tr>
                                             <td>
@@ -153,6 +154,62 @@
                                         </tr>
                                         @endforeach
                                     </tbody>
+=======
+@foreach($activeCertifications as $cert)
+<tr>
+    <td>
+        <strong>{{ $cert['type'] }}</strong>
+        <br>
+        <small class="text-muted">{{ $cert['description'] }}</small>
+    </td>
+
+    <td>{{ $cert['number'] }}</td>
+
+    <td>{{ $cert['issuer'] }}</td>
+
+    <td>
+        {{ $cert['valid_from'] }}
+        @if($cert['valid_until'])
+            - {{ $cert['valid_until'] }}
+            <br>
+            <small class="text-muted">
+                {{ \Carbon\Carbon::parse($cert['valid_until'])->diffForHumans() }}
+            </small>
+        @else
+            - Tanpa Batas
+            <br>
+            <small class="text-muted">Selamanya</small>
+        @endif
+    </td>
+
+    <td>
+        @if($cert['status'] === 'active')
+            <span class="badge bg-success">Aktif</span>
+        @elseif($cert['status'] === 'expiring')
+            <span class="badge bg-warning">Berakhir</span>
+        @else
+            <span class="badge bg-secondary">{{ $cert['status'] }}</span>
+        @endif
+    </td>
+
+    <td>
+        <!-- VIEW PDF -->
+        <a href="{{ route('certifications.view', $cert['slug']) }}"
+           class="btn btn-sm btn-outline-primary"
+           target="_blank">
+            <i class="fas fa-eye"></i>
+        </a>
+
+        <!-- DOWNLOAD PDF -->
+        <a href="{{ route('certifications.download', $cert['slug']) }}"
+        class="btn btn-sm btn-outline-success">
+            <i class="fas fa-download"></i>
+        </a>
+    </td>
+</tr>
+@endforeach
+</tbody>
+>>>>>>> origin/main
                                 </table>
                             </div>
                         </div>

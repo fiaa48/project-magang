@@ -12,11 +12,19 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb breadcrumb-light">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Beranda</a></li>
+<<<<<<< HEAD
                             <li class="breadcrumb-item"><a href="{{ route('certifications') }}">Sertifikasi</a></li>
                             <li class="breadcrumb-item active" aria-current="page">Dokumen Legal</li>
                         </ol>
                     </nav>
 
+=======
+                            <li class="breadcrumb-item"><a href="{{ route('certifications.index') }}">Sertifikasi</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">Dokumen Legal</li>
+                        </ol>
+                    </nav>
+                    
+>>>>>>> origin/main
                     <div class="header-content mt-4">
                         <div class="badge-certification mb-3">
                             <span>DOKUMEN LEGALITAS</span>
@@ -38,7 +46,11 @@
                         <div class="card-body p-5">
                             <h2 class="card-title mb-4">Dokumen Legal Perusahaan</h2>
                             <p class="text-muted mb-4">Berikut adalah dokumen-dokumen legal yang dimiliki PT Mitra Nusa Konsulindo</p>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead class="table-light">
@@ -67,7 +79,11 @@
                                                 </button>
                                             </td>
                                         </tr>
+<<<<<<< HEAD
 
+=======
+                                        
+>>>>>>> origin/main
                                         <tr>
                                             <td>
                                                 <strong>Surat Pengesahan Kemenkumham</strong>
@@ -83,7 +99,11 @@
                                                 </button>
                                             </td>
                                         </tr>
+<<<<<<< HEAD
 
+=======
+                                        
+>>>>>>> origin/main
                                         <tr>
                                             <td>
                                                 <strong>Nomor Induk Berusaha (NIB)</strong>
@@ -99,7 +119,11 @@
                                                 </button>
                                             </td>
                                         </tr>
+<<<<<<< HEAD
 
+=======
+                                        
+>>>>>>> origin/main
                                         <tr>
                                             <td>
                                                 <strong>NPWP Perusahaan</strong>
@@ -115,7 +139,11 @@
                                                 </button>
                                             </td>
                                         </tr>
+<<<<<<< HEAD
 
+=======
+                                        
+>>>>>>> origin/main
                                         <tr>
                                             <td>
                                                 <strong>Surat Izin Usaha Perdagangan (SIUP)</strong>
@@ -131,7 +159,11 @@
                                                 </button>
                                             </td>
                                         </tr>
+<<<<<<< HEAD
 
+=======
+                                        
+>>>>>>> origin/main
                                         <tr>
                                             <td>
                                                 <strong>Tanda Daftar Perusahaan (TDP)</strong>
@@ -147,7 +179,11 @@
                                                 </button>
                                             </td>
                                         </tr>
+<<<<<<< HEAD
 
+=======
+                                        
+>>>>>>> origin/main
                                         <tr>
                                             <td>
                                                 <strong>Surat Keterangan Domisili Perusahaan (SKDP)</strong>
@@ -169,7 +205,11 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 <div class="col-lg-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body p-5">
@@ -178,6 +218,7 @@
                                     <i class="fas fa-balance-scale fa-4x text-primary"></i>
                                 </div>
                             </div>
+<<<<<<< HEAD
 
                             <h5 class="card-title mb-3">Legalitas Perusahaan</h5>
                             <p class="card-text">
@@ -185,6 +226,15 @@
                                 sebagai perusahaan konsultan yang terdaftar dan berbadan hukum di Indonesia.
                             </p>
 
+=======
+                            
+                            <h5 class="card-title mb-3">Legalitas Perusahaan</h5>
+                            <p class="card-text">
+                                PT Mitra Nusa Konsulindo telah memenuhi semua persyaratan legal untuk beroperasi 
+                                sebagai perusahaan konsultan yang terdaftar dan berbadan hukum di Indonesia.
+                            </p>
+                            
+>>>>>>> origin/main
                             <div class="legal-status mt-4">
                                 <div class="status-item d-flex align-items-center mb-3">
                                     <div class="status-icon me-3">
@@ -195,7 +245,11 @@
                                         <p class="text-muted small mb-0">Perseroan Terbatas</p>
                                     </div>
                                 </div>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> origin/main
                                 <div class="status-item d-flex align-items-center mb-3">
                                     <div class="status-icon me-3">
                                         <i class="fas fa-check-circle text-success fa-lg"></i>
@@ -205,7 +259,11 @@
                                         <p class="text-muted small mb-0">Online Single Submission</p>
                                     </div>
                                 </div>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> origin/main
                                 <div class="status-item d-flex align-items-center mb-3">
                                     <div class="status-icon me-3">
                                         <i class="fas fa-check-circle text-success fa-lg"></i>
@@ -216,7 +274,11 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="alert alert-info mt-4">
                                 <i class="fas fa-info-circle me-2"></i>
                                 <strong>Informasi:</strong> Semua dokumen legal telah diverifikasi dan terdaftar di instansi terkait.
@@ -225,14 +287,22 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             <!-- Document Categories -->
             <div class="row mb-6">
                 <div class="col-12">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-5">
                             <h3 class="card-title mb-4">Kategori Dokumen Legal</h3>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="row g-4">
                                 <!-- Company Establishment -->
                                 <div class="col-md-4">
@@ -249,7 +319,11 @@
                                         </ul>
                                     </div>
                                 </div>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> origin/main
                                 <!-- Business License -->
                                 <div class="col-md-4">
                                     <div class="doc-category h-100">
@@ -266,7 +340,11 @@
                                         </ul>
                                     </div>
                                 </div>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> origin/main
                                 <!-- Tax Documents -->
                                 <div class="col-md-4">
                                     <div class="doc-category h-100">
@@ -288,19 +366,28 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             <!-- Verification Information -->
             <div class="row">
                 <div class="col-12">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-5">
                             <h3 class="card-title mb-4">Verifikasi Legalitas</h3>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="verification-item mb-4">
                                         <h5 class="mb-3">Verifikasi Online</h5>
                                         <p class="text-muted mb-3">Dokumen legal dapat diverifikasi melalui sistem online berikut:</p>
+<<<<<<< HEAD
 
                                         <div class="verification-links">
                                             <a href="https://oss.go.id"
@@ -315,18 +402,42 @@
                                             </a>
                                             <a href="https://ahu.go.id"
                                                class="btn btn-outline-primary btn-sm mb-2"
+=======
+                                        
+                                        <div class="verification-links">
+                                            <a href="https://oss.go.id" 
+                                               class="btn btn-outline-primary btn-sm mb-2" 
+                                               target="_blank">
+                                                <i class="fas fa-external-link-alt me-2"></i>OSS RBA
+                                            </a>
+                                            <a href="https://www.pajak.go.id" 
+                                               class="btn btn-outline-primary btn-sm mb-2" 
+                                               target="_blank">
+                                                <i class="fas fa-external-link-alt me-2"></i>Direktorat Jenderal Pajak
+                                            </a>
+                                            <a href="https://ahu.go.id" 
+                                               class="btn btn-outline-primary btn-sm mb-2" 
+>>>>>>> origin/main
                                                target="_blank">
                                                 <i class="fas fa-external-link-alt me-2"></i>Kemenkumham
                                             </a>
                                         </div>
                                     </div>
                                 </div>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> origin/main
                                 <div class="col-md-6">
                                     <div class="verification-item mb-4">
                                         <h5 class="mb-3">Kontak Verifikasi</h5>
                                         <p class="text-muted mb-3">Untuk verifikasi langsung, hubungi:</p>
+<<<<<<< HEAD
 
+=======
+                                        
+>>>>>>> origin/main
                                         <div class="contact-info">
                                             <p class="mb-2">
                                                 <i class="fas fa-envelope me-2 text-primary"></i>
@@ -341,7 +452,11 @@
                                                 <strong>Alamat:</strong> Jl. Setiabudi No. 123, Jakarta Selatan
                                             </p>
                                         </div>
+<<<<<<< HEAD
 
+=======
+                                        
+>>>>>>> origin/main
                                         <div class="alert alert-light mt-3">
                                             <small>
                                                 <i class="fas fa-clock me-1"></i>

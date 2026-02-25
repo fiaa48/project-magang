@@ -12,11 +12,19 @@
                     <nav aria-label="breadcrumb">
                         <ol class="breadcrumb breadcrumb-light">
                             <li class="breadcrumb-item"><a href="{{ route('home') }}">Beranda</a></li>
+<<<<<<< HEAD
                             <li class="breadcrumb-item"><a href="{{ route('certifications') }}">Sertifikasi</a></li>
                             <li class="breadcrumb-item active" aria-current="page">SBU Konstruksi</li>
                         </ol>
                     </nav>
 
+=======
+                            <li class="breadcrumb-item"><a href="{{ route('certifications.index') }}">Sertifikasi</a></li>
+                            <li class="breadcrumb-item active" aria-current="page">SBU Konstruksi</li>
+                        </ol>
+                    </nav>
+                    
+>>>>>>> origin/main
                     <div class="header-content mt-4">
                         <div class="badge-certification mb-3">
                             <span>SBU KONSTRUKSI</span>
@@ -37,7 +45,11 @@
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body p-5">
                             <h2 class="card-title mb-4">Informasi SBU Konstruksi</h2>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="row mb-4">
                                 <div class="col-md-6">
                                     <div class="info-item mb-3">
@@ -70,6 +82,7 @@
                                     </div>
                                 </div>
                             </div>
+<<<<<<< HEAD
 
                             <div class="certificate-actions mt-4">
                                 <a href="{{ asset('documents/certificates/sbu-konstruksi.pdf') }}"
@@ -79,6 +92,17 @@
                                 </a>
                                 <a href="{{ asset('documents/certificates/sbu-konstruksi.pdf') }}"
                                 class="btn btn-outline-primary"
+=======
+                            
+                            <div class="certificate-actions mt-4">
+                                <a href="{{ asset('documents/certificates/sbu-konstruksi.pdf') }}" 
+                                class="btn btn-primary me-2" 
+                                target="_blank">
+                                    <i class="fas fa-eye me-2"></i>Lihat Sertifikat
+                                </a>
+                                <a href="{{ asset('documents/certificates/sbu-konstruksi.pdf') }}" 
+                                class="btn btn-outline-primary" 
+>>>>>>> origin/main
                                 download>
                                     <i class="fas fa-download me-2"></i>Download PDF
                                 </a>
@@ -86,7 +110,11 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 <div class="col-lg-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body p-5">
@@ -95,6 +123,7 @@
                                     <i class="fas fa-hard-hat fa-4x text-primary"></i>
                                 </div>
                             </div>
+<<<<<<< HEAD
 
                             <h5 class="card-title mb-3">Tentang SBU Konstruksi</h5>
                             <p class="card-text">
@@ -103,6 +132,16 @@
                                 dan sub bidang yang telah ditetapkan.
                             </p>
 
+=======
+                            
+                            <h5 class="card-title mb-3">Tentang SBU Konstruksi</h5>
+                            <p class="card-text">
+                                Sertifikasi Badan Usaha (SBU) adalah bukti pengakuan formal terhadap kemampuan 
+                                perusahaan dalam melaksanakan pekerjaan jasa konstruksi sesuai dengan bidang 
+                                dan sub bidang yang telah ditetapkan.
+                            </p>
+                            
+>>>>>>> origin/main
                             <div class="alert alert-info mt-4">
                                 <i class="fas fa-info-circle me-2"></i>
                                 <strong>Informasi:</strong> SBU ini berlaku untuk seluruh wilayah Indonesia
@@ -111,7 +150,11 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             <!-- Klasifikasi SBU -->
             <div class="row mb-6">
                 <div class="col-12">
@@ -119,7 +162,11 @@
                         <div class="card-body p-5">
                             <h3 class="card-title mb-4">Klasifikasi Jasa Konstruksi</h3>
                             <p class="text-muted mb-4">Bidang dan sub-bidang jasa konstruksi yang tercakup dalam sertifikat SBU</p>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead class="table-light">
@@ -188,30 +235,50 @@
                     </div>
                 </div>
             </div>
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> origin/main
             <!-- Legal Basis -->
             <div class="row">
                 <div class="col-12">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body p-5">
                             <h3 class="card-title mb-4">Dasar Hukum dan Regulasi</h3>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="legal-basis">
                                 <div class="legal-item mb-3">
                                     <h6 class="text-primary mb-2">Peraturan Pemerintah No. 28 Tahun 2000</h6>
                                     <p class="mb-0">Tentang Usaha Jasa Konstruksi</p>
                                 </div>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> origin/main
                                 <div class="legal-item mb-3">
                                     <h6 class="text-primary mb-2">Peraturan LPJK No. 10 Tahun 2018</h6>
                                     <p class="mb-0">Tentang Tata Cara Sertifikasi Badan Usaha Jasa Konstruksi</p>
                                 </div>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> origin/main
                                 <div class="legal-item mb-3">
                                     <h6 class="text-primary mb-2">Peraturan Menteri PUPR No. 22/PRT/M/2018</h6>
                                     <p class="mb-0">Tentang Penyedia Jasa Konstruksi</p>
                                 </div>
+<<<<<<< HEAD
 
+=======
+                                
+>>>>>>> origin/main
                                 <div class="alert alert-light mt-4">
                                     <i class="fas fa-gavel me-2"></i>
                                     <strong>Ketentuan:</strong> Sertifikat SBU ini diterbitkan berdasarkan ketentuan peraturan perundang-undangan yang berlaku dan dapat digunakan untuk mengikuti proses tender sesuai bidang dan kualifikasi yang tercantum.

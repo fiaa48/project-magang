@@ -31,18 +31,6 @@
                 </div>
             </div>
 
-            <!-- Quick Links -->
-            <div class="col-lg-2 col-md-6 mb-3">
-                <h5 class="footer-heading mb-2" style="font-size: 0.95rem;">Navigasi</h5>
-                <ul class="footer-links">
-                    <li><a href="{{ route('home') }}">Beranda</a></li>
-                    <li><a href="{{ route('about') }}">Tentang Kami</a></li>
-                    <li><a href="{{ route('services') }}">Layanan</a></li>
-                    <li><a href="{{ route('portofolio') }}">Portofolio</a></li>
-                    <li><a href="{{ route('certifications') }}">Sertifikasi</a></li>
-                </ul>
-            </div>
-
             <!-- Contact Info -->
             <div class="col-lg-3 col-md-6 mb-3">
                 <h5 class="footer-heading mb-2" style="font-size: 0.95rem;">Kontak Kami</h5>
@@ -77,10 +65,36 @@
                             <i class="fab fa-whatsapp"></i>
                         </div>
                         <div class="contact-text" style="font-size: 0.83rem;">
-                            <a href="https://wa.me/6281220202020" target="_blank">0812-2020-2020</a>
+                            <a href="https://wa.me/6283148140002" target="_blank">0812-2020-2020</a>
                         </div>
                     </li>
                 </ul>
+            </div>
+
+            <!-- Map Section -->
+            <div class="col-lg-2 col-md-6 mb-3">
+                <h5 class="footer-heading mb-2" style="font-size: 0.95rem;">Lokasi Kami</h5>
+                <div class="footer-map-container">
+                    <div class="map-placeholder" id="map-placeholder" style="height: 160px; border-radius: 6px; overflow: hidden; background-color: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);">
+                        <!-- Google Maps akan dimuat di sini -->
+                        <div id="footer-map" style="width: 100%; height: 100%;"></div>
+                        <div class="map-loading" style="display: flex; align-items: center; justify-content: center; height: 100%; color: var(--coffee-cream); font-size: 0.8rem;">
+                            <div class="text-center">
+                                <i class="fas fa-map-marker-alt mb-1" style="font-size: 1.2rem;"></i>
+                                <div>Memuat peta...</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <a href="https://www.google.com/maps/place/Gedung+Graha+Mulia+Sejahtera,+Jl.+Terusan+Jakarta+No.175A,+Antapani,+Kec.+Antapani,+Kota+Bandung,+Jawa+Barat+40291/@-6.917,107.666,17z/data=!3m1!4b1!4m6!3m5!1s0x2e68e7b9f8e6e6e7:0x1c3e3e3e3e3e3e3e!8m2!3d-6.917!4d107.666!16s%2Fg%2F11b8z8z8z8?entry=ttu"
+                           target="_blank"
+                           class="map-link"
+                           style="font-size: 0.75rem; color: var(--cream-gold); text-decoration: none; display: inline-flex; align-items: center; gap: 4px;">
+                            <i class="fas fa-external-link-alt"></i>
+                            <span>Buka di Google Maps</span>
+                        </a>
+                    </div>
+                </div>
             </div>
 
             <!-- Business Hours -->
@@ -301,6 +315,22 @@
         text-decoration: underline;
     }
 
+    /* Map Styles */
+    .footer-map-container {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .map-link {
+        transition: color 0.2s ease;
+    }
+
+    .map-link:hover {
+        color: var(--cream-white) !important;
+        text-decoration: underline !important;
+    }
+
     /* Business Hours */
     .business-hours {
         background: rgba(255, 255, 255, 0.05);
@@ -410,6 +440,10 @@
             margin-bottom: 20px !important;
         }
 
+        .footer-map-container {
+            height: 180px;
+        }
+
         .back-to-top {
             position: static;
             margin-top: 15px;
@@ -428,6 +462,10 @@
 
         .footer-heading::after {
             width: 20px;
+        }
+
+        .footer-map-container {
+            height: 200px;
         }
 
         .business-hours {
@@ -452,6 +490,10 @@
     @media (max-width: 576px) {
         .footer-section {
             padding: 18px 0 10px;
+        }
+
+        .footer-map-container {
+            height: 180px;
         }
 
         .hours-item {
@@ -500,5 +542,46 @@
         });
 
         window.dispatchEvent(new Event('scroll'));
+
+        // Load Google Maps
+        loadGoogleMap();
     });
+
+    function loadGoogleMap() {
+        // Koordinat untuk Gedung Graha Mulia Sejahtera, Bandung
+        const address = "Gedung Graha Mulia Sejahtera, Jl. Terusan Jakarta No. 175A, Antapani-Bandung 40291";
+        const latitude = -6.917;
+        const longitude = 107.666;
+
+        // Membuat peta sederhana menggunakan Google Maps Embed API
+        const mapElement = document.getElementById('footer-map');
+        const loadingElement = document.querySelector('.map-loading');
+
+        if (mapElement) {
+            // Gunakan Google Maps Embed API (tidak memerlukan API key untuk penggunaan dasar)
+            const mapUrl = `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8&q=${encodeURIComponent(address)}&center=${latitude},${longitude}&zoom=15&maptype=roadmap`;
+
+            // Buak iframe untuk peta
+            const iframe = document.createElement('iframe');
+            iframe.setAttribute('src', mapUrl);
+            iframe.setAttribute('width', '100%');
+            iframe.setAttribute('height', '100%');
+            iframe.setAttribute('style', 'border:0;');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.setAttribute('loading', 'lazy');
+            iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+            iframe.setAttribute('title', 'Lokasi PT Mitra Nusa Konsultan');
+
+            // Sembunyikan loading dan tampilkan peta
+            iframe.onload = function() {
+                if (loadingElement) {
+                    loadingElement.style.display = 'none';
+                }
+            };
+
+            // Tambahkan iframe ke dalam container peta
+            mapElement.innerHTML = '';
+            mapElement.appendChild(iframe);
+        }
+    }
 </script>

@@ -3,7 +3,11 @@
         <!-- Logo -->
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
             <div class="logo-wrapper">
+<<<<<<< HEAD
                 <img src="{{ asset('images/logopt.png') }}" alt="PT Mitra Nusa Konsulindo">
+=======
+                <img src="{{ asset('images/logopt.jpeg') }}" alt="PT Mitra Nusa Konsulindo">
+>>>>>>> origin/main
             </div>
             <div class="brand-text d-none d-md-block">
                 <div class="brand-title">PT Mitra Nusa Konsultan</div>
@@ -70,7 +74,7 @@
                         Sertifikasi
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('certifications') }}">Semua</a></li>
+                        <li><a class="dropdown-item" href="{{ route('certifications.index') }}">Semua</a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item" href="{{ route('certifications.sbu') }}">SBU</a></li>
                         <li><a class="dropdown-item" href="{{ route('certifications.iso') }}">ISO</a></li>
@@ -93,9 +97,9 @@
 
             <!-- CTA Button -->
             <div class="ms-lg-3">
-                <a href="https://wa.me/6281220202020" class="btn btn-primary btn-cta rounded-pill px-3" target="_blank">
-                    <i class="fab fa-whatsapp me-1"></i>
-                    <span>Konsultasi</span>
+                <a href="{{ route('admin.login') }}" class="btn btn-primary btn-cta rounded-pill px-3">
+                    <i class="fas fa-user-shield me-1"></i>
+                    <span>Dashboard</span>
                 </a>
             </div>
         </div>

@@ -16,7 +16,11 @@
                             <li class="breadcrumb-item active" aria-current="page">Konsultansi Non-Konstruksi</li>
                         </ol>
                     </nav>
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> origin/main
                     <div class="hero-content mt-4">
                         <div class="service-badge mb-3">
                             <span>KONSULTANSI SPESIALIS</span>
@@ -25,10 +29,17 @@
                             Konsultansi <span class="text-accent-gold">Non-Konstruksi</span>
                         </h1>
                         <p class="lead text-cream-medium mb-5">
+<<<<<<< HEAD
                             Solusi komprehensif untuk berbagai kebutuhan konsultansi di luar bidang konstruksi,
                             memberikan nilai tambah melalui pendekatan inovatif dan berkelanjutan.
                         </p>
 
+=======
+                            Solusi komprehensif untuk berbagai kebutuhan konsultansi di luar bidang konstruksi, 
+                            memberikan nilai tambah melalui pendekatan inovatif dan berkelanjutan.
+                        </p>
+                        
+>>>>>>> origin/main
                         <div class="hero-stats d-flex flex-wrap gap-4">
                             <div class="stat-item">
                                 <div class="stat-number">7+</div>
@@ -70,7 +81,11 @@
                 </div>
                 <h2 class="section-title fw-bold text-brown-dark mb-3">Layanan Konsultansi Non-Konstruksi</h2>
                 <p class="section-subtitle text-brown-medium">
+<<<<<<< HEAD
                     Kami menyediakan berbagai layanan konsultansi profesional untuk mendukung
+=======
+                    Kami menyediakan berbagai layanan konsultansi profesional untuk mendukung 
+>>>>>>> origin/main
                     pengembangan dan optimasi bisnis Anda di berbagai sektor.
                 </p>
                 <div class="section-ornament">
@@ -280,11 +295,19 @@
                             Mengapa Memilih Layanan Konsultansi Kami?
                         </h2>
                         <p class="text-cream-medium mb-5">
+<<<<<<< HEAD
                             Dengan pengalaman bertahun-tahun dan tim ahli yang berdedikasi,
                             kami memberikan solusi konsultansi yang tepat dan efektif untuk
                             kebutuhan bisnis Anda.
                         </p>
 
+=======
+                            Dengan pengalaman bertahun-tahun dan tim ahli yang berdedikasi, 
+                            kami memberikan solusi konsultansi yang tepat dan efektif untuk 
+                            kebutuhan bisnis Anda.
+                        </p>
+                        
+>>>>>>> origin/main
                         <div class="features-grid">
                             <div class="feature-item">
                                 <div class="feature-icon">
@@ -295,7 +318,11 @@
                                     <p>Didukung oleh profesional dengan pengalaman di berbagai sektor industri</p>
                                 </div>
                             </div>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-lightbulb"></i>
@@ -305,7 +332,11 @@
                                     <p>Pendekatan kreatif dan solusi yang sesuai dengan perkembangan zaman</p>
                                 </div>
                             </div>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-handshake"></i>
@@ -315,7 +346,11 @@
                                     <p>Setiap klien mendapatkan perhatian khusus dan solusi yang disesuaikan</p>
                                 </div>
                             </div>
+<<<<<<< HEAD
 
+=======
+                            
+>>>>>>> origin/main
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-clock"></i>
@@ -328,7 +363,11 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< HEAD
 
+=======
+                
+>>>>>>> origin/main
                 <div class="col-lg-6">
                     <div class="why-choose-image text-center">
                         <div class="image-wrapper">
@@ -361,7 +400,11 @@
                             Siap Mengembangkan Bisnis Anda?
                         </h3>
                         <p class="cta-description text-cream-medium mb-0">
+<<<<<<< HEAD
                             Konsultasikan kebutuhan Anda dengan tim ahli kami dan
+=======
+                            Konsultasikan kebutuhan Anda dengan tim ahli kami dan 
+>>>>>>> origin/main
                             dapatkan solusi terbaik untuk pengembangan bisnis Anda.
                         </p>
                     </div>
@@ -447,7 +490,11 @@
         --brown-700: #5D4037;
         --brown-800: #4E342E;
         --brown-900: #3E2723;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         /* Cream Shades */
         --cream-50: #FFFDF7;
         --cream-100: #F9F5EB;
@@ -459,7 +506,11 @@
         --cream-700: #D7C8B4;
         --cream-800: #D2C1AB;
         --cream-900: #CCBAA2;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         /* Accent Colors */
         --accent-gold: #D4AF37;
         --accent-gold-light: #F0E68C;
@@ -469,7 +520,11 @@
         --accent-orange: #EF6C00;
         --accent-teal: #00695C;
         --accent-red: #C62828;
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         /* Theme Colors */
         --brown-light: var(--brown-300);
         --brown-medium: var(--brown-500);
@@ -481,9 +536,15 @@
 
     /* Hero Section */
     .non-construction-hero {
+<<<<<<< HEAD
         background: linear-gradient(135deg,
             rgba(62, 39, 35, 0.95) 0%,
             rgba(93, 64, 55, 0.9) 50%,
+=======
+        background: linear-gradient(135deg, 
+            rgba(62, 39, 35, 0.95) 0%, 
+            rgba(93, 64, 55, 0.9) 50%, 
+>>>>>>> origin/main
             rgba(121, 85, 72, 0.85) 100%);
         color: var(--cream-light);
         padding: 6rem 0 4rem;
@@ -1020,8 +1081,13 @@
 
     /* Why Choose Us Section */
     .why-choose-section {
+<<<<<<< HEAD
         background: linear-gradient(135deg,
             rgba(62, 39, 35, 0.95) 0%,
+=======
+        background: linear-gradient(135deg, 
+            rgba(62, 39, 35, 0.95) 0%, 
+>>>>>>> origin/main
             rgba(93, 64, 55, 0.9) 100%);
         color: var(--cream-light);
         position: relative;
@@ -1152,8 +1218,13 @@
     }
 
     .cta-card {
+<<<<<<< HEAD
         background: linear-gradient(135deg,
             rgba(93, 64, 55, 0.95) 0%,
+=======
+        background: linear-gradient(135deg, 
+            rgba(93, 64, 55, 0.95) 0%, 
+>>>>>>> origin/main
             rgba(121, 85, 72, 0.9) 100%);
         border-radius: 20px;
         padding: 3rem;
@@ -1230,11 +1301,19 @@
         .hero-content h1 {
             font-size: 2.5rem;
         }
+<<<<<<< HEAD
 
         .section-title {
             font-size: 2.2rem;
         }
 
+=======
+        
+        .section-title {
+            font-size: 2.2rem;
+        }
+        
+>>>>>>> origin/main
         .category-card .col-lg-3 {
             flex: 0 0 50%;
             max-width: 50%;
@@ -1245,6 +1324,7 @@
         .non-construction-hero {
             padding: 4rem 0 2.5rem;
         }
+<<<<<<< HEAD
 
         .hero-content h1 {
             font-size: 2.2rem;
@@ -1254,11 +1334,23 @@
             font-size: 1.1rem;
         }
 
+=======
+        
+        .hero-content h1 {
+            font-size: 2.2rem;
+        }
+        
+        .hero-content .lead {
+            font-size: 1.1rem;
+        }
+        
+>>>>>>> origin/main
         .hero-icon {
             width: 150px;
             height: 150px;
             margin-top: 2rem;
         }
+<<<<<<< HEAD
 
         .icon-wrapper {
             font-size: 4rem;
@@ -1272,11 +1364,30 @@
             margin-bottom: 1rem;
         }
 
+=======
+        
+        .icon-wrapper {
+            font-size: 4rem;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+        }
+        
+        .category-card {
+            margin-bottom: 1rem;
+        }
+        
+>>>>>>> origin/main
         .category-card .col-lg-3 {
             flex: 0 0 50%;
             max-width: 50%;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         .category-card .col-lg-4 {
             flex: 0 0 100%;
             max-width: 100%;
@@ -1287,6 +1398,7 @@
         .hero-content h1 {
             font-size: 1.8rem;
         }
+<<<<<<< HEAD
 
         .hero-stats {
             gap: 2rem;
@@ -1308,12 +1420,39 @@
             font-size: 1.5rem;
         }
 
+=======
+        
+        .hero-stats {
+            gap: 2rem;
+        }
+        
+        .stat-number {
+            font-size: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.6rem;
+        }
+        
+        .cta-card {
+            padding: 2rem;
+        }
+        
+        .cta-title {
+            font-size: 1.5rem;
+        }
+        
+>>>>>>> origin/main
         .btn-cream {
             width: 100%;
             max-width: 250px;
             margin: 0 auto;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         .category-card .col-lg-3 {
             flex: 0 0 100%;
             max-width: 100%;
@@ -1324,11 +1463,16 @@
         .hero-content h1 {
             font-size: 1.6rem;
         }
+<<<<<<< HEAD
 
+=======
+        
+>>>>>>> origin/main
         .service-badge {
             font-size: 0.7rem;
             padding: 0.4rem 1rem;
         }
+<<<<<<< HEAD
 
         .hero-content .lead {
             font-size: 1rem;
@@ -1354,6 +1498,33 @@
             padding: 1.5rem;
         }
 
+=======
+        
+        .hero-content .lead {
+            font-size: 1rem;
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+        }
+        
+        .section-subtitle {
+            font-size: 0.95rem;
+        }
+        
+        .cta-card .row {
+            text-align: center;
+        }
+        
+        .cta-card .col-lg-4 {
+            margin-top: 1.5rem;
+        }
+        
+        .category-modal .modal-body {
+            padding: 1.5rem;
+        }
+        
+>>>>>>> origin/main
         .services-grid {
             grid-template-columns: 1fr;
         }
@@ -1375,7 +1546,11 @@
                 if (entry.isIntersecting) {
                     const element = entry.target;
                     const delay = element.getAttribute('data-delay') || 0;
+<<<<<<< HEAD
 
+=======
+                    
+>>>>>>> origin/main
                     setTimeout(() => {
                         element.classList.add('visible');
                     }, parseInt(delay));
@@ -1417,4 +1592,8 @@
         });
     });
 </script>
+<<<<<<< HEAD
 @endpush
+=======
+@endpush
+>>>>>>> origin/main
