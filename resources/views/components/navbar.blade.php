@@ -1,11 +1,12 @@
 <nav class="navbar navbar-expand-lg navbar-light fixed-top">
     <div class="container">
         <!-- Logo -->
-        <a class="navbar-brand" href="{{ route('home') }}">
-            <div class="d-flex align-items-center">
-                <div class="logo-wrapper">
-                    <img src="{{ asset('images/logo/logo.png') }}" alt="PT Mitra Nusa Konsulindo" height="35">
-                </div>
+        <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
+            <div class="logo-wrapper">
+                <img src="{{ asset('images/logopt.png') }}" alt="PT Mitra Nusa Konsulindo">
+            </div>
+            <div class="brand-text d-none d-md-block">
+                <div class="brand-title">PT Mitra Nusa Konsultan</div>
             </div>
         </a>
 

@@ -31,7 +31,7 @@
                     <p class="text-muted">Kami memiliki berbagai sertifikasi yang menjamin kualitas layanan kami</p>
                 </div>
             </div>
-            
+
             <!-- Certification Categories -->
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="card certification-category h-100">
                         <div class="card-body text-center p-5">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="card certification-category h-100">
                         <div class="card-body text-center p-5">
@@ -85,14 +85,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Active Certifications Table -->
             <div class="row">
                 <div class="col-12">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
                             <h4 class="card-title mb-4">Sertifikasi Aktif</h4>
-                            
+
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead class="table-light">
@@ -117,9 +117,15 @@
                                             <td>
                                                 {{ $cert['valid_from'] }} - {{ $cert['valid_until'] }}
                                                 <br>
+                                                @if($cert['valid_until'] !== 'Tidak Terbatas')
                                                 <small class="text-muted">
                                                     {{ \Carbon\Carbon::parse($cert['valid_until'])->diffForHumans() }}
                                                 </small>
+                                                @else
+                                                <small class="text-muted fst-italic">
+                                                    Berlaku selamanya
+                                                </small>
+                                                @endif
                                             </td>
                                             <td>
                                                 @if($cert['status'] === 'active')
@@ -132,13 +138,13 @@
                                             </td>
                                             <td>
                                                 @if($cert['document'])
-                                                <a href="{{ asset($cert['document']) }}" 
-                                                   class="btn btn-sm btn-outline-primary" 
+                                                <a href="{{ asset($cert['document']) }}"
+                                                   class="btn btn-sm btn-outline-primary"
                                                    target="_blank">
                                                     <i class="fas fa-eye"></i>
                                                 </a>
-                                                <a href="{{ asset($cert['document']) }}" 
-                                                   class="btn btn-sm btn-outline-success" 
+                                                <a href="{{ asset($cert['document']) }}"
+                                                   class="btn btn-sm btn-outline-success"
                                                    download>
                                                     <i class="fas fa-download"></i>
                                                 </a>
@@ -164,14 +170,14 @@
                     <h2 class="section-title">Asosiasi & Keanggotaan</h2>
                 </div>
             </div>
-            
+
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body text-center p-4">
-                            <img src="{{ asset('images/certificates/inkindo-logo.png') }}" 
-                                 alt="INKINDO" 
-                                 class="img-fluid mb-3" 
+                            <img src="{{ asset('images/certificates/inkindo-logo.png') }}"
+                                 alt="INKINDO"
+                                 class="img-fluid mb-3"
                                  style="max-height: 80px;">
                             <h5>Ikatan Nasional Konsultan Indonesia</h5>
                             <p class="text-muted">Anggota aktif sejak 2020</p>
@@ -182,13 +188,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body text-center p-4">
-                            <img src="{{ asset('images/certificates/kadin-logo.png') }}" 
-                                 alt="KADIN" 
-                                 class="img-fluid mb-3" 
+                            <img src="{{ asset('images/certificates/kadin-logo.png') }}"
+                                 alt="KADIN"
+                                 class="img-fluid mb-3"
                                  style="max-height: 80px;">
                             <h5>Kamar Dagang dan Industri Indonesia</h5>
                             <p class="text-muted">Anggota terdaftar</p>
@@ -206,16 +212,19 @@
 
 @push('styles')
 <style>
+    /* HEADER */
     .page-header {
-        background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
+        background: linear-gradient(135deg, #8B5E3C 0%, #D8C3A5 100%);
     }
-    
+
+    /* JUDUL SECTION */
     .section-title {
         position: relative;
         padding-bottom: 15px;
         margin-bottom: 30px;
+        color: #6B4226;
     }
-    
+
     .section-title:after {
         content: '';
         position: absolute;
@@ -224,24 +233,82 @@
         transform: translateX(-50%);
         width: 60px;
         height: 3px;
-        background-color: #1a73e8;
+        background-color: #C19A6B;
     }
-    
+
+    /* CARD KATEGORI */
     .certification-category {
         transition: transform 0.3s ease;
-        border: 1px solid #e0e0e0;
+        border: 1px solid #E6D5C3;
+        background-color: #FFF9F3;
     }
-    
+
     .certification-category:hover {
         transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        box-shadow: 0 10px 20px rgba(107, 66, 38, 0.15);
     }
-    
-    .category-icon {
-        height: 100px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+    .category-icon i {
+        color: #8B5E3C !important;
+    }
+
+    /* BUTTON */
+    .btn-primary {
+        background-color: #8B5E3C;
+        border-color: #8B5E3C;
+    }
+
+    .btn-primary:hover {
+        background-color: #6B4226;
+        border-color: #6B4226;
+    }
+
+    .btn-outline-primary {
+        color: #8B5E3C;
+        border-color: #8B5E3C;
+    }
+
+    .btn-outline-primary:hover {
+        background-color: #8B5E3C;
+        color: #fff;
+    }
+
+    .btn-outline-success {
+        color: #6B4226;
+        border-color: #C19A6B;
+    }
+
+    .btn-outline-success:hover {
+        background-color: #C19A6B;
+        color: #fff;
+    }
+
+    /* TABLE */
+    .table-light {
+        background-color: #F5EFE8;
+    }
+
+    .badge.bg-success {
+        background-color: #8B5E3C !important;
+    }
+
+    .badge.bg-info {
+        background-color: #C19A6B !important;
+        color: #4A2E1B;
+    }
+
+    .badge.bg-warning {
+        background-color: #E0B084 !important;
+        color: #4A2E1B;
+    }
+
+    /* ICON */
+    .fa-eye, .fa-download {
+        color: #8B5E3C;
+    }
+
+    .fa-eye:hover, .fa-download:hover {
+        color: #6B4226;
     }
 </style>
 @endpush

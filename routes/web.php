@@ -37,6 +37,9 @@ Route::prefix('portofolio')->group(function () {
     Route::get('/{id}', [PortofolioController::class, 'show'])->name('portofolio.details');
 });
 
+//Project
+Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
+
 // Certifications
 Route::prefix('certifications')->group(function () {
     Route::get('/', [CertificationController::class, 'index'])->name('certifications');
@@ -59,5 +62,4 @@ Route::get('/management', [ManagementController::class, 'index'])->name('managem
 Route::get('/contact', [ContactController::class, 'index'])->name('contact');
 Route::post('/contact/send', [ContactController::class, 'send'])->name('contact.send');
 
-//Project
-Route::get('/projects', [App\Http\Controllers\ProjectController::class, 'index'])->name('projects');
+

@@ -5,7 +5,7 @@
             <!-- Company Info -->
             <div class="col-lg-4 mb-3">
                 <div class="footer-brand mb-2">
-                    <h3 class="text-cream mb-1" style="font-size: 1.4rem;">PT Mitra Nusa Konsulindo</h3>
+                    <h3 class="text-cream mb-1" style="font-size: 1.4rem;">PT Mitra Nusa Konsultan</h3>
                     <div class="accent-line"></div>
                 </div>
                 <p class="text-light-cream mb-2" style="font-size: 0.85rem; line-height: 1.4;">
@@ -117,7 +117,7 @@
         <div class="row align-items-center py-2">
             <div class="col-md-6 mb-1 mb-md-0">
                 <p class="copyright-text mb-0" style="font-size: 0.8rem;">
-                    &copy; {{ date('Y') }} PT Mitra Nusa Konsulindo. Semua Hak Dilindungi.
+                    &copy; {{ date('Y') }} PT Mitra Nusa Konsultan. Semua Hak Dilindungi.
                 </p>
             </div>
             <div class="col-md-6">
