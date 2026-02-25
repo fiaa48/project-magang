@@ -15,7 +15,8 @@
         <p><strong>Jenis:</strong> {{ $cert['type'] }}</p>
         <p><strong>Nomor:</strong> {{ $cert['number'] }}</p>
         <p><strong>Penerbit:</strong> {{ $cert['issuer'] }}</p>
-        <p><strong>Berlaku:</strong>
+        <p>
+            <strong>Berlaku:</strong>
             {{ $cert['valid_from'] }}
             @if($cert['valid_until'])
                 - {{ $cert['valid_until'] }}

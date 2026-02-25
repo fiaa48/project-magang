@@ -3,15 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade\Pdf;
-use Illuminate\Support\Facades\Mail;
-use Illuminate\Support\Facades\Storage;
 
 class CertificationController extends Controller
 {
-    /**
-     * DATA SERTIFIKAT (dipusatkan biar bisa dipakai semua fungsi)
-     */
     private function certifications()
     {
         return [
@@ -24,7 +18,7 @@ class CertificationController extends Controller
                 'valid_from' => '2025-10-06',
                 'valid_until' => '2028-10-05',
                 'status' => 'active',
-                'document' => 'documents/certificates/sbu-al001.pdf'
+                'document' => 'documents/certificates/sbu-al001.pdf',
             ],
             [
                 'slug' => 'iso-9001',
@@ -35,7 +29,7 @@ class CertificationController extends Controller
                 'valid_from' => '2025-01-04',
                 'valid_until' => '2028-01-03',
                 'status' => 'active',
-                'document' => 'documents/certificates/iso-9001.pdf'
+                'document' => 'documents/certificates/iso-9001.pdf',
             ],
             [
                 'slug' => 'nib',
@@ -46,60 +40,38 @@ class CertificationController extends Controller
                 'valid_from' => '2020-11-09',
                 'valid_until' => null,
                 'status' => 'active',
-                'document' => 'documents/legal/nib.pdf'
+                'document' => 'documents/legal/nib.pdf',
             ],
         ];
     }
 
-    /**
-     * HALAMAN UTAMA SERTIFIKASI
-     */
     public function index()
     {
         $activeCertifications = $this->certifications();
         return view('certifications.index', compact('activeCertifications'));
     }
 
-    /**
-     * LIHAT PDF DI BROWSER
-     */
     public function viewPdf($slug)
     {
         $cert = collect($this->certifications())->firstWhere('slug', $slug);
-
         abort_if(!$cert, 404);
 
-        $pdf = Pdf::loadView('certifications.pdf', compact('cert'));
-        return $pdf->stream($slug . '.pdf');
+        return response()->file(
+            storage_path('app/public/' . $cert['document'])
+        );
     }
 
-    /**
-     * DOWNLOAD PDF
-     */
     public function downloadPdf($slug)
     {
         $cert = collect($this->certifications())->firstWhere('slug', $slug);
-
         abort_if(!$cert, 404);
 
-        $pdf = Pdf::loadView('certifications.pdf', compact('cert'));
-        return $pdf->download($slug . '.pdf');
+        return response()->download(
+            storage_path('app/public/' . $cert['document']),
+            $slug . '.pdf'
+        );
     }
 
-    /**
-     * SHARE LINK (WhatsApp / Email)
-     */
-    public function share($slug)
-    {
-        $url = route('certifications.view', $slug);
-
-        return response()->json([
-            'whatsapp' => 'https://wa.me/?text=' . urlencode($url),
-            'email' => 'mailto:?subject=Sertifikat&body=' . urlencode($url),
-        ]);
-    }
-
-    // ===== HALAMAN KATEGORI =====
     public function sbu()
     {
         return view('certifications.sbu');

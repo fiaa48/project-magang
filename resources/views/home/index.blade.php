@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', 'PT Mitra Nusa Konsulindo - Konsultan Profesional')
+@section('title', 'PT Mitra Nusa Konsultan - Konsultan Profesional')
 @section('description', 'Perusahaan Konsultan Konstruksi dan Non-Konstruksi dengan pengalaman luas di bidang arsitektur, teknik sipil, dan manajemen proyek.')
 
 @section('content')
@@ -81,7 +81,7 @@
                     <!-- Main Heading -->
                     <h1 class="display-1 fw-bold mb-4 text-white">
                         PT Mitra Nusa<br>
-                        <span class="text-gradient-brown">Konsulindo</span>
+                        <span class="text-gradient-brown">Konsultan</span>
                     </h1>
 
                     <!-- Subtitle -->

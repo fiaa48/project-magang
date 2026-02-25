@@ -31,7 +31,7 @@
                     <p class="text-muted">Kami memiliki berbagai sertifikasi yang menjamin kualitas layanan kami</p>
                 </div>
             </div>
-            
+
             <!-- Certification Categories -->
             <div class="row g-4 mb-5">
                 <div class="col-md-4">
@@ -50,7 +50,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="card certification-category h-100">
                         <div class="card-body text-center p-5">
@@ -67,7 +67,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="card certification-category h-100">
                         <div class="card-body text-center p-5">
@@ -85,14 +85,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Active Certifications Table -->
             <div class="row">
                 <div class="col-12">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body">
                             <h4 class="card-title mb-4">Sertifikasi Aktif</h4>
-                            
+
                             <div class="table-responsive">
                                 <table class="table table-hover">
                                     <thead class="table-light">
@@ -106,47 +106,60 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        @foreach($activeCertifications as $cert)
-                                        <tr>
-                                            <td>
-                                                <strong>{{ $cert['type'] }}</strong>
-                                                <br><small class="text-muted">{{ $cert['description'] }}</small>
-                                            </td>
-                                            <td>{{ $cert['number'] }}</td>
-                                            <td>{{ $cert['issuer'] }}</td>
-                                            <td>
-                                                {{ $cert['valid_from'] }} - {{ $cert['valid_until'] }}
-                                                <br>
-                                                <small class="text-muted">
-                                                    {{ \Carbon\Carbon::parse($cert['valid_until'])->diffForHumans() }}
-                                                </small>
-                                            </td>
-                                            <td>
-                                                @if($cert['status'] === 'active')
-                                                <span class="badge bg-success">Aktif</span>
-                                                @elseif($cert['status'] === 'expiring')
-                                                <span class="badge bg-warning">Berakhir</span>
-                                                @else
-                                                <span class="badge bg-secondary">{{ $cert['status'] }}</span>
-                                                @endif
-                                            </td>
-                                            <td>
-                                                @if($cert['document'])
-                                                <a href="{{ asset($cert['document']) }}" 
-                                                   class="btn btn-sm btn-outline-primary" 
-                                                   target="_blank">
-                                                    <i class="fas fa-eye"></i>
-                                                </a>
-                                                <a href="{{ asset($cert['document']) }}" 
-                                                   class="btn btn-sm btn-outline-success" 
-                                                   download>
-                                                    <i class="fas fa-download"></i>
-                                                </a>
-                                                @endif
-                                            </td>
-                                        </tr>
-                                        @endforeach
-                                    </tbody>
+@foreach($activeCertifications as $cert)
+<tr>
+    <td>
+        <strong>{{ $cert['type'] }}</strong>
+        <br>
+        <small class="text-muted">{{ $cert['description'] }}</small>
+    </td>
+
+    <td>{{ $cert['number'] }}</td>
+
+    <td>{{ $cert['issuer'] }}</td>
+
+    <td>
+        {{ $cert['valid_from'] }}
+        @if($cert['valid_until'])
+            - {{ $cert['valid_until'] }}
+            <br>
+            <small class="text-muted">
+                {{ \Carbon\Carbon::parse($cert['valid_until'])->diffForHumans() }}
+            </small>
+        @else
+            - Tanpa Batas
+            <br>
+            <small class="text-muted">Selamanya</small>
+        @endif
+    </td>
+
+    <td>
+        @if($cert['status'] === 'active')
+            <span class="badge bg-success">Aktif</span>
+        @elseif($cert['status'] === 'expiring')
+            <span class="badge bg-warning">Berakhir</span>
+        @else
+            <span class="badge bg-secondary">{{ $cert['status'] }}</span>
+        @endif
+    </td>
+
+    <td>
+        <!-- VIEW PDF -->
+        <a href="{{ route('certifications.view', $cert['slug']) }}"
+           class="btn btn-sm btn-outline-primary"
+           target="_blank">
+            <i class="fas fa-eye"></i>
+        </a>
+
+        <!-- DOWNLOAD PDF -->
+        <a href="{{ route('certifications.download', $cert['slug']) }}"
+        class="btn btn-sm btn-outline-success">
+            <i class="fas fa-download"></i>
+        </a>
+    </td>
+</tr>
+@endforeach
+</tbody>
                                 </table>
                             </div>
                         </div>
@@ -164,14 +177,14 @@
                     <h2 class="section-title">Asosiasi & Keanggotaan</h2>
                 </div>
             </div>
-            
+
             <div class="row g-4 justify-content-center">
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body text-center p-4">
-                            <img src="{{ asset('images/certificates/inkindo-logo.png') }}" 
-                                 alt="INKINDO" 
-                                 class="img-fluid mb-3" 
+                            <img src="{{ asset('images/certificates/inkindo-logo.png') }}"
+                                 alt="INKINDO"
+                                 class="img-fluid mb-3"
                                  style="max-height: 80px;">
                             <h5>Ikatan Nasional Konsultan Indonesia</h5>
                             <p class="text-muted">Anggota aktif sejak 2020</p>
@@ -182,13 +195,13 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-4">
                     <div class="card border-0 shadow-sm h-100">
                         <div class="card-body text-center p-4">
-                            <img src="{{ asset('images/certificates/kadin-logo.png') }}" 
-                                 alt="KADIN" 
-                                 class="img-fluid mb-3" 
+                            <img src="{{ asset('images/certificates/kadin-logo.png') }}"
+                                 alt="KADIN"
+                                 class="img-fluid mb-3"
                                  style="max-height: 80px;">
                             <h5>Kamar Dagang dan Industri Indonesia</h5>
                             <p class="text-muted">Anggota terdaftar</p>
