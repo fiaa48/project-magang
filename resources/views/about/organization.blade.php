@@ -4,38 +4,123 @@
 @section('description', 'Struktur organisasi PT Mitra Nusa Konsulindo - Tim profesional dan sistem kerja yang efektif untuk memberikan layanan terbaik.')
 
 @section('content')
-    <!-- Animated Page Header -->
-    <section class="page-header py-5">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <div class="header-content">
-                        <h1 class="display-5 fw-bold text-brown-dark mb-3">Struktur Organisasi</h1>
-                        <p class="lead text-brown-medium mb-4">
-                            PT Mitra Nusa Konsulindo memiliki struktur organisasi yang jelas dengan pembagian
-                            tugas dan tanggung jawab yang terdefinisi dengan baik untuk mendukung efektivitas
-                            operasional dan kualitas pelayanan.
-                        </p>
-                        <div class="org-meta d-flex flex-wrap gap-3">
-                            <div class="meta-item">
-                                <i class="fas fa-layer-group me-2"></i>
-                                <span>11 Divisi Khusus</span>
+    <!-- HERO SECTION – SAME STYLE AS HOME -->
+    <section class="org-hero position-relative overflow-hidden">
+        <!-- Background Pattern (same as home) -->
+        <div class="hero-bg-pattern">
+            <div class="pattern-circle circle-1"></div>
+            <div class="pattern-circle circle-2"></div>
+            <div class="pattern-square square-1"></div>
+            <div class="pattern-square square-2"></div>
+        </div>
+
+        <div class="container position-relative z-3">
+            <div class="row min-vh-60 align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <!-- Animated Badge – glassmorphism -->
+                    <div class="company-badge mb-5 animate-fade-in-down">
+                        <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal">
+                            <i class="fas fa-sitemap me-2"></i>STRUKTUR ORGANISASI
+                        </span>
+                    </div>
+
+                    <!-- Main Heading with Gradient -->
+                    <h1 class="display-2 fw-bold mb-4 text-brown-dark animate-fade-in-up">
+                        Struktur <span class="text-gradient-brown">Organisasi</span>
+                    </h1>
+
+                    <!-- Subtitle with Typewriter Effect (like home) -->
+                    <div class="subtitle-wrapper mb-5 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <h2 class="h3 fw-light text-brown-medium mb-3">
+                            Tim Profesional dan Sistem Kerja Efektif
+                        </h2>
+                        <div class="typewriter-wrapper">
+                            <span class="typewriter-text text-brown-dark fw-semibold fs-3">
+                                11 Divisi · 4 Tingkat · Bersertifikasi
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Breadcrumb with glassmorphism -->
+                    <nav aria-label="breadcrumb" class="breadcrumb-nav mt-5 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('home') }}" class="text-brown-medium">Beranda</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('about') }}" class="text-brown-medium">Profil Perusahaan</a>
+                            </li>
+                            <li class="breadcrumb-item active text-brown-dark" aria-current="page">Struktur Organisasi</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <a href="#org-overview" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- ORG OVERVIEW – 3D STAT CARDS -->
+    <section id="org-overview" class="py-6 bg-white position-relative">
+        <!-- Subtle background decoration -->
+        <div class="section-bg-decoration">
+            <div class="decoration-circle"></div>
+            <div class="decoration-circle"></div>
+        </div>
+
+        <div class="container position-relative z-2">
+            <div class="section-header text-center mb-6">
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-chart-pie me-2"></i>GAMBARAN UMUM
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Struktur Organisasi Kami</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Organisasi yang terstruktur untuk mendukung pelayanan konsultansi yang komprehensif.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-md-4">
+                    <div class="stat-card-3d animate-on-scroll">
+                        <div class="stat-card-inner">
+                            <div class="stat-icon-wrapper mb-3">
+                                <i class="fas fa-user-tie fa-2x text-brown-dark"></i>
                             </div>
-                            <div class="meta-item">
-                                <i class="fas fa-users me-2"></i>
-                                <span>Tim Profesional</span>
-                            </div>
-                            <div class="meta-item">
-                                <i class="fas fa-certificate me-2"></i>
-                                <span>Bersertifikasi</span>
-                            </div>
+                            <h3 class="fw-bold text-brown-dark mb-1">4</h3>
+                            <p class="text-brown-medium small">Tingkat Manajemen</p>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4">
-                    <div class="header-illustration text-center">
-                        <div class="org-diagram-preview">
-                            <i class="fas fa-sitemap fa-4x text-brown-light"></i>
+                <div class="col-md-4">
+                    <div class="stat-card-3d animate-on-scroll">
+                        <div class="stat-card-inner">
+                            <div class="stat-icon-wrapper mb-3">
+                                <i class="fas fa-layer-group fa-2x text-brown-dark"></i>
+                            </div>
+                            <h3 class="fw-bold text-brown-dark mb-1">9</h3>
+                            <p class="text-brown-medium small">Divisi Operasional</p>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card-3d animate-on-scroll">
+                        <div class="stat-card-inner">
+                            <div class="stat-icon-wrapper mb-3">
+                                <i class="fas fa-certificate fa-2x text-brown-dark"></i>
+                            </div>
+                            <h3 class="fw-bold text-brown-dark mb-1">100%</h3>
+                            <p class="text-brown-medium small">Bersertifikasi</p>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
@@ -43,1709 +128,1195 @@
         </div>
     </section>
 
-    <!-- Breadcrumb Navigation -->
-    <nav class="breadcrumb-container py-3">
-        <div class="container">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="{{ route('home') }}">Beranda</a></li>
-                <li class="breadcrumb-item"><a href="{{ route('about') }}">Profil Perusahaan</a></li>
-                <li class="breadcrumb-item active">Struktur Organisasi</li>
-            </ol>
+    <!-- ORGANIZATIONAL CHART – 3D DESKTOP VERSION -->
+    <section class="py-6 bg-cream-light position-relative overflow-hidden">
+        <div class="cert-pattern">
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
         </div>
-    </nav>
 
-    <!-- Main Content -->
-    <main class="main-content py-5">
-        <div class="container">
-            <!-- Organizational Overview -->
-            <section class="org-overview mb-6">
-                <div class="section-header text-center mb-5">
-                    <h2 class="section-title fw-bold text-brown-dark mb-3">Struktur Organisasi Kami</h2>
-                    <p class="section-subtitle text-brown-medium">
-                        Organisasi yang terstruktur untuk mendukung pelayanan konsultansi yang komprehensif
-                    </p>
-                    <div class="section-divider">
-                        <div class="divider-line"></div>
-                        <i class="fas fa-building divider-icon"></i>
-                        <div class="divider-line"></div>
-                    </div>
-                </div>
+        <div class="container position-relative z-2">
+            <div class="section-header text-center mb-6">
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-sitemap me-2"></i>BAGIAN ORGANISASI
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Struktur Perusahaan</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Visualisasi struktur organisasi berdasarkan data perusahaan.
+                </p>
+            </div>
 
-                <div class="org-stats-container mb-5">
-                    <div class="row g-4">
-                        <div class="col-md-4">
-                            <div class="stat-card text-center p-4">
-                                <div class="stat-icon mb-3">
-                                    <i class="fas fa-user-tie fa-2x"></i>
-                                </div>
-                                <h3 class="stat-number">4</h3>
-                                <p class="stat-label text-brown-medium">Tingkat Manajemen</p>
-                            </div>
+            <!-- Desktop Chart -->
+            <div class="org-chart-3d d-none d-lg-block animate-on-scroll">
+                <div class="org-chart-container">
+                    <!-- Level 1: Dewan Komisaris -->
+                    <div class="org-level level-1">
+                        <div class="level-label-wrapper">
+                            <span class="level-label">Pengawasan</span>
                         </div>
-                        <div class="col-md-4">
-                            <div class="stat-card text-center p-4">
-                                <div class="stat-icon mb-3">
-                                    <i class="fas fa-layer-group fa-2x"></i>
+                        <div class="org-card komisaris-card">
+                            <div class="org-card-inner">
+                                <div class="org-icon-wrapper mb-3">
+                                    <i class="fas fa-user-tie fa-2x text-white"></i>
                                 </div>
-                                <h3 class="stat-number">9</h3>
-                                <p class="stat-label text-brown-medium">Divisi Operasional</p>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="stat-card text-center p-4">
-                                <div class="stat-icon mb-3">
-                                    <i class="fas fa-certificate fa-2x"></i>
+                                <h4 class="fw-bold text-white mb-2">Dewan Komisaris</h4>
+                                <div class="org-members">
+                                    <div class="org-member">
+                                        <span class="member-name">Dede Samsul Muharrom</span>
+                                        <span class="member-role badge bg-gold text-brown-dark">Komisaris Utama</span>
+                                    </div>
+                                    <div class="org-member">
+                                        <span class="member-name">Endah Nuraeni</span>
+                                        <span class="member-role badge bg-gold text-brown-dark">Komisaris</span>
+                                    </div>
                                 </div>
-                                <h3 class="stat-number">100%</h3>
-                                <p class="stat-label text-brown-medium">Bersertifikasi</p>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
 
-            <!-- Organizational Chart - FIXED VERSION -->
-            <section class="org-chart-section mb-6">
-                <div class="section-header text-center mb-5">
-                    <h3 class="section-title fw-bold text-brown-dark mb-3">Bagan Organisasi</h3>
-                    <p class="section-subtitle text-brown-medium">
-                        Visualisasi struktur organisasi berdasarkan data perusahaan
-                    </p>
-                </div>
+                    <!-- Vertical Connector 1 -->
+                    <div class="org-connector"></div>
 
-                <!-- Desktop Organization Chart - FIXED -->
-                <div class="org-chart-desktop d-none d-lg-block">
-                    <div class="chart-container">
-                        <!-- Level 1: Dewan Komisaris -->
-                        <div class="chart-level level-1">
-                            <div class="level-label">
-                                <span class="label-text">Pengawasan</span>
-                            </div>
-                            <div class="level-content">
-                                <div class="position-card komisaris-card">
-                                    <div class="card-header">
-                                        <div class="position-icon">
-                                            <i class="fas fa-user-tie"></i>
-                                        </div>
-                                        <h5 class="position-title">Dewan Komisaris</h5>
-                                        <span class="position-type">Pengawas Perusahaan</span>
+                    <!-- Level 2: Direksi -->
+                    <div class="org-level level-2">
+                        <div class="level-label-wrapper">
+                            <span class="level-label">Pimpinan</span>
+                        </div>
+                        <div class="org-card direksi-card">
+                            <div class="org-card-inner">
+                                <div class="org-icon-wrapper mb-3">
+                                    <i class="fas fa-user-tie fa-2x text-white"></i>
+                                </div>
+                                <h4 class="fw-bold text-white mb-2">Direksi</h4>
+                                <div class="org-members">
+                                    <div class="org-member">
+                                        <span class="member-name">Muria Cipta, ST</span>
+                                        <span class="member-role badge bg-gold text-brown-dark">Direktur Utama</span>
                                     </div>
-                                    <div class="card-body">
-                                        <div class="position-members">
-                                            <div class="member">
-                                                <div class="member-name">Dede Samsul Muharrom</div>
-                                                <div class="member-role">Komisaris Utama</div>
+                                    <div class="org-member">
+                                        <span class="member-name">Andri Hendrawan</span>
+                                        <span class="member-role badge bg-gold text-brown-dark">Direktur Operasional</span>
+                                    </div>
+                                </div>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Vertical Connector 2 (to divisions) -->
+                    <div class="org-connector"></div>
+
+                    <!-- Level 3: Divisions (arranged in grid) -->
+                    <div class="org-level level-3">
+                        <div class="level-label-wrapper">
+                            <span class="level-label">Operasional</span>
+                        </div>
+                        <div class="divisions-grid-3d">
+                            <div class="row g-3 justify-content-center">
+                                <!-- Row 1 -->
+                                <div class="col-4">
+                                    <div class="division-card-3d">
+                                        <div class="division-inner">
+                                            <div class="division-icon-wrapper mb-2">
+                                                <i class="fas fa-map-marked-alt fa-2x text-brown-dark"></i>
                                             </div>
-                                            <div class="member">
-                                                <div class="member-name">Endah Nuraeni</div>
-                                                <div class="member-role">Komisaris</div>
-                                            </div>
+                                            <h6 class="fw-bold text-brown-dark mb-1">Tata Ruang</h6>
+                                            <p class="text-brown-light small">Perencanaan Wilayah</p>
+                                            <div class="card-corner corner-1"></div>
+                                            <div class="card-corner corner-2"></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Vertical Connector 1 -->
-                        <div class="vertical-connector connector-1"></div>
-
-                        <!-- Level 2: Direksi -->
-                        <div class="chart-level level-2">
-                            <div class="level-label">
-                                <span class="label-text">Pimpinan</span>
-                            </div>
-                            <div class="level-content">
-                                <div class="position-card direksi-card">
-                                    <div class="card-header">
-                                        <div class="position-icon">
-                                            <i class="fas fa-user-tie"></i>
-                                        </div>
-                                        <h5 class="position-title">Direksi</h5>
-                                        <span class="position-type">Operasional Perusahaan</span>
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="position-members">
-                                            <div class="member">
-                                                <div class="member-name">Muria Cipta, ST</div>
-                                                <div class="member-role">Direktur Utama</div>
+                                <div class="col-4">
+                                    <div class="division-card-3d">
+                                        <div class="division-inner">
+                                            <div class="division-icon-wrapper mb-2">
+                                                <i class="fas fa-drafting-compass fa-2x text-brown-dark"></i>
                                             </div>
-                                            <div class="member">
-                                                <div class="member-name">Andri Hendrawan</div>
-                                                <div class="member-role">Direktur Operasional</div>
-                                            </div>
+                                            <h6 class="fw-bold text-brown-dark mb-1">Arsitektur & Lanskap</h6>
+                                            <p class="text-brown-light small">Desain Arsitektural</p>
+                                            <div class="card-corner corner-1"></div>
+                                            <div class="card-corner corner-2"></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Vertical Connector 2 -->
-                        <div class="vertical-connector connector-2"></div>
-
-                        <!-- Level 3: Divisi -->
-                        <div class="chart-level level-3">
-                            <div class="level-label">
-                                <span class="label-text">Operasional</span>
-                            </div>
-                            <div class="level-content">
-                                <div class="divisions-container">
-                                    <div class="division-lines">
-                                        <!-- Connection lines from direksi to divisions -->
-                                        <div class="division-line line-1"></div>
-                                        <div class="division-line line-2"></div>
-                                        <div class="division-line line-3"></div>
-                                    </div>
-                                    <div class="divisions-grid">
-                                        <!-- Row 1 -->
-                                        <div class="division-row row-1">
-                                            <div class="division-card">
-                                                <div class="division-icon">
-                                                    <i class="fas fa-map-marked-alt"></i>
-                                                </div>
-                                                <div class="division-info">
-                                                    <h6 class="division-name">Tata Ruang</h6>
-                                                    <p class="division-desc">Perencanaan Wilayah</p>
-                                                </div>
+                                <div class="col-4">
+                                    <div class="division-card-3d">
+                                        <div class="division-inner">
+                                            <div class="division-icon-wrapper mb-2">
+                                                <i class="fas fa-hard-hat fa-2x text-brown-dark"></i>
                                             </div>
-                                            <div class="division-card">
-                                                <div class="division-icon">
-                                                    <i class="fas fa-drafting-compass"></i>
-                                                </div>
-                                                <div class="division-info">
-                                                    <h6 class="division-name">Arsitektur & Landscape</h6>
-                                                    <p class="division-desc">Desain Arsitektural</p>
-                                                </div>
-                                            </div>
-                                            <div class="division-card">
-                                                <div class="division-icon">
-                                                    <i class="fas fa-hard-hat"></i>
-                                                </div>
-                                                <div class="division-info">
-                                                    <h6 class="division-name">Sipil</h6>
-                                                    <p class="division-desc">Teknik Sipil</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Row 2 -->
-                                        <div class="division-row row-2">
-                                            <div class="division-card">
-                                                <div class="division-icon">
-                                                    <i class="fas fa-leaf"></i>
-                                                </div>
-                                                <div class="division-info">
-                                                    <h6 class="division-name">Lingkungan</h6>
-                                                    <p class="division-desc">Konsultasi Lingkungan</p>
-                                                </div>
-                                            </div>
-                                            <div class="division-card">
-                                                <div class="division-icon">
-                                                    <i class="fas fa-chart-line"></i>
-                                                </div>
-                                                <div class="division-info">
-                                                    <h6 class="division-name">Manajemen</h6>
-                                                    <p class="division-desc">Konsultansi Manajemen</p>
-                                                </div>
-                                            </div>
-                                            <div class="division-card">
-                                                <div class="division-icon">
-                                                    <i class="fas fa-cogs"></i>
-                                                </div>
-                                                <div class="division-info">
-                                                    <h6 class="division-name">Pengembangan</h6>
-                                                    <p class="division-desc">Inovasi & Riset</p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <!-- Row 3 -->
-                                        <div class="division-row row-3">
-                                            <div class="division-card">
-                                                <div class="division-icon">
-                                                    <i class="fas fa-users"></i>
-                                                </div>
-                                                <div class="division-info">
-                                                    <h6 class="division-name">SDM & Umum</h6>
-                                                    <p class="division-desc">Administrasi & Personalia</p>
-                                                </div>
-                                            </div>
-                                            <div class="division-card">
-                                                <div class="division-icon">
-                                                    <i class="fas fa-chart-bar"></i>
-                                                </div>
-                                                <div class="division-info">
-                                                    <h6 class="division-name">Pemasaran & Relasi</h6>
-                                                    <p class="division-desc">Marketing & Promosi</p>
-                                                </div>
-                                            </div>
-                                            <div class="division-card">
-                                                <div class="division-icon">
-                                                    <i class="fas fa-coins"></i>
-                                                </div>
-                                                <div class="division-info">
-                                                    <h6 class="division-name">Keuangan</h6>
-                                                    <p class="division-desc">Akuntansi & Keuangan</p>
-                                                </div>
-                                            </div>
+                                            <h6 class="fw-bold text-brown-dark mb-1">Sipil</h6>
+                                            <p class="text-brown-light small">Teknik Sipil</p>
+                                            <div class="card-corner corner-1"></div>
+                                            <div class="card-corner corner-2"></div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Vertical Connector 3 -->
-                        <div class="vertical-connector connector-3"></div>
-
-                        <!-- Level 4: Staff & Support -->
-                        <div class="chart-level level-4">
-                            <div class="level-label">
-                                <span class="label-text">Pelaksana</span>
-                            </div>
-                            <div class="level-content">
-                                <div class="staff-section">
-                                    <div class="staff-card">
-                                        <div class="card-header">
-                                            <div class="position-icon">
-                                                <i class="fas fa-users"></i>
+                                <!-- Row 2 -->
+                                <div class="col-4">
+                                    <div class="division-card-3d">
+                                        <div class="division-inner">
+                                            <div class="division-icon-wrapper mb-2">
+                                                <i class="fas fa-leaf fa-2x text-brown-dark"></i>
                                             </div>
-                                            <h5 class="position-title">Tenaga Ahli & Staf</h5>
+                                            <h6 class="fw-bold text-brown-dark mb-1">Lingkungan</h6>
+                                            <p class="text-brown-light small">Konsultasi Lingkungan</p>
+                                            <div class="card-corner corner-1"></div>
+                                            <div class="card-corner corner-2"></div>
                                         </div>
-                                        <div class="card-body">
-                                            <div class="staff-categories">
-                                                <div class="category">
-                                                    <span class="category-badge">Tenaga Ahli</span>
-                                                    <span class="category-badge">Staf Teknis</span>
-                                                    <span class="category-badge">Administrasi</span>
-                                                    <span class="category-badge">Pendukung</span>
-                                                </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="division-card-3d">
+                                        <div class="division-inner">
+                                            <div class="division-icon-wrapper mb-2">
+                                                <i class="fas fa-chart-line fa-2x text-brown-dark"></i>
                                             </div>
+                                            <h6 class="fw-bold text-brown-dark mb-1">Manajemen</h6>
+                                            <p class="text-brown-light small">Konsultansi Manajemen</p>
+                                            <div class="card-corner corner-1"></div>
+                                            <div class="card-corner corner-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="division-card-3d">
+                                        <div class="division-inner">
+                                            <div class="division-icon-wrapper mb-2">
+                                                <i class="fas fa-cogs fa-2x text-brown-dark"></i>
+                                            </div>
+                                            <h6 class="fw-bold text-brown-dark mb-1">Pengembangan</h6>
+                                            <p class="text-brown-light small">Inovasi & Riset</p>
+                                            <div class="card-corner corner-1"></div>
+                                            <div class="card-corner corner-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Row 3 -->
+                                <div class="col-4">
+                                    <div class="division-card-3d">
+                                        <div class="division-inner">
+                                            <div class="division-icon-wrapper mb-2">
+                                                <i class="fas fa-users fa-2x text-brown-dark"></i>
+                                            </div>
+                                            <h6 class="fw-bold text-brown-dark mb-1">SDM & Umum</h6>
+                                            <p class="text-brown-light small">Administrasi & Personalia</p>
+                                            <div class="card-corner corner-1"></div>
+                                            <div class="card-corner corner-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="division-card-3d">
+                                        <div class="division-inner">
+                                            <div class="division-icon-wrapper mb-2">
+                                                <i class="fas fa-chart-bar fa-2x text-brown-dark"></i>
+                                            </div>
+                                            <h6 class="fw-bold text-brown-dark mb-1">Pemasaran & Relasi</h6>
+                                            <p class="text-brown-light small">Marketing & Promosi</p>
+                                            <div class="card-corner corner-1"></div>
+                                            <div class="card-corner corner-2"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="division-card-3d">
+                                        <div class="division-inner">
+                                            <div class="division-icon-wrapper mb-2">
+                                                <i class="fas fa-coins fa-2x text-brown-dark"></i>
+                                            </div>
+                                            <h6 class="fw-bold text-brown-dark mb-1">Keuangan</h6>
+                                            <p class="text-brown-light small">Akuntansi & Keuangan</p>
+                                            <div class="card-corner corner-1"></div>
+                                            <div class="card-corner corner-2"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Mobile Organization Chart -->
-                <div class="org-chart-mobile d-block d-lg-none">
-                    <div class="accordion" id="orgAccordion">
-                        <!-- Dewan Komisaris -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#komisarisCollapse">
-                                    <div class="mobile-level-header">
-                                        <div class="level-icon">
-                                            <i class="fas fa-user-tie"></i>
-                                        </div>
-                                        <div class="level-info">
-                                            <h5 class="level-title">Dewan Komisaris</h5>
-                                            <p class="level-subtitle">Pengawas Perusahaan</p>
-                                        </div>
-                                    </div>
-                                </button>
-                            </h2>
-                            <div id="komisarisCollapse" class="accordion-collapse collapse show">
-                                <div class="accordion-body">
-                                    <div class="mobile-member-list">
-                                        <div class="mobile-member">
-                                            <div class="member-name">Dede Samsul Muharrom</div>
-                                            <div class="member-role badge bg-brown-medium">Komisaris Utama</div>
-                                        </div>
-                                        <div class="mobile-member">
-                                            <div class="member-name">Endah Nuraeni</div>
-                                            <div class="member-role badge bg-brown-light">Komisaris</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Vertical Connector 3 -->
+                    <div class="org-connector"></div>
+
+                    <!-- Level 4: Staff & Support -->
+                    <div class="org-level level-4">
+                        <div class="level-label-wrapper">
+                            <span class="level-label">Pelaksana</span>
                         </div>
-
-                        <!-- Direksi -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#direksiCollapse">
-                                    <div class="mobile-level-header">
-                                        <div class="level-icon">
-                                            <i class="fas fa-user-tie"></i>
-                                        </div>
-                                        <div class="level-info">
-                                            <h5 class="level-title">Direksi</h5>
-                                            <p class="level-subtitle">Pimpinan Operasional</p>
-                                        </div>
-                                    </div>
-                                </button>
-                            </h2>
-                            <div id="direksiCollapse" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <div class="mobile-member-list">
-                                        <div class="mobile-member">
-                                            <div class="member-name">Muria Cipta, ST</div>
-                                            <div class="member-role badge bg-brown-dark">Direktur Utama</div>
-                                        </div>
-                                        <div class="mobile-member">
-                                            <div class="member-name">Andri Hendrawan</div>
-                                            <div class="member-role badge bg-brown-medium">Direktur</div>
-                                        </div>
-                                    </div>
+                        <div class="staff-card-3d">
+                            <div class="staff-inner">
+                                <div class="org-icon-wrapper mb-3">
+                                    <i class="fas fa-users fa-2x text-white"></i>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Divisi -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#divisiCollapse">
-                                    <div class="mobile-level-header">
-                                        <div class="level-icon">
-                                            <i class="fas fa-layer-group"></i>
-                                        </div>
-                                        <div class="level-info">
-                                            <h5 class="level-title">Divisi Operasional</h5>
-                                            <p class="level-subtitle">11 Divisi Khusus</p>
-                                        </div>
-                                    </div>
-                                </button>
-                            </h2>
-                            <div id="divisiCollapse" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <div class="mobile-divisions">
-                                        <div class="mobile-division">
-                                            <i class="fas fa-map-marked-alt me-2"></i>
-                                            <span>Divisi Tata Ruang</span>
-                                        </div>
-                                        <div class="mobile-division">
-                                            <i class="fas fa-drafting-compass me-2"></i>
-                                            <span>Divisi Arsitektur & Landscape</span>
-                                        </div>
-                                        <div class="mobile-division">
-                                            <i class="fas fa-hard-hat me-2"></i>
-                                            <span>Divisi Sipil</span>
-                                        </div>
-                                        <div class="mobile-division">
-                                            <i class="fas fa-leaf me-2"></i>
-                                            <span>Divisi Lingkungan</span>
-                                        </div>
-                                        <div class="mobile-division">
-                                            <i class="fas fa-chart-line me-2"></i>
-                                            <span>Divisi Manajemen</span>
-                                        </div>
-                                        <div class="mobile-division">
-                                            <i class="fas fa-cogs me-2"></i>
-                                            <span>Divisi Pengembangan</span>
-                                        </div>
-                                        <div class="mobile-division">
-                                            <i class="fas fa-users me-2"></i>
-                                            <span>Divisi SDM & Umum</span>
-                                        </div>
-                                        <div class="mobile-division">
-                                            <i class="fas fa-chart-bar me-2"></i>
-                                            <span>Divisi Pemasaran & Relasi</span>
-                                        </div>
-                                        <div class="mobile-division">
-                                            <i class="fas fa-coins me-2"></i>
-                                            <span>Divisi Keuangan</span>
-                                        </div>
-                                    </div>
+                                <h4 class="fw-bold text-white mb-3">Tenaga Ahli & Staf</h4>
+                                <div class="staff-badges d-flex flex-wrap gap-2 justify-content-center">
+                                    <span class="badge bg-cream-light text-brown-dark">Tenaga Ahli</span>
+                                    <span class="badge bg-cream-light text-brown-dark">Staf Teknis</span>
+                                    <span class="badge bg-cream-light text-brown-dark">Administrasi</span>
+                                    <span class="badge bg-cream-light text-brown-dark">Pendukung</span>
                                 </div>
-                            </div>
-                        </div>
-
-                        <!-- Staff -->
-                        <div class="accordion-item">
-                            <h2 class="accordion-header">
-                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#staffCollapse">
-                                    <div class="mobile-level-header">
-                                        <div class="level-icon">
-                                            <i class="fas fa-users"></i>
-                                        </div>
-                                        <div class="level-info">
-                                            <h5 class="level-title">Tenaga Ahli & Staf</h5>
-                                            <p class="level-subtitle">Tim Pelaksana</p>
-                                        </div>
-                                    </div>
-                                </button>
-                            </h2>
-                            <div id="staffCollapse" class="accordion-collapse collapse">
-                                <div class="accordion-body">
-                                    <div class="staff-categories">
-                                        <div class="d-flex flex-wrap gap-2">
-                                            <span class="badge bg-cream-dark text-brown-dark">Tenaga Ahli</span>
-                                            <span class="badge bg-cream-dark text-brown-dark">Staf Teknis</span>
-                                            <span class="badge bg-cream-dark text-brown-dark">Administrasi</span>
-                                            <span class="badge bg-cream-dark text-brown-dark">Pendukung</span>
-                                        </div>
-                                    </div>
-                                </div>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
 
-            <!-- Divisions Details -->
-            <section class="divisions-details mb-6">
-                <div class="section-header text-center mb-5">
-                    <h3 class="section-title fw-bold text-brown-dark mb-3">Detail Divisi</h3>
-                    <p class="section-subtitle text-brown-medium">
-                        Rincian tugas dan tanggung jawab setiap divisi
-                    </p>
-                </div>
-
-                <div class="divisions-tabs">
-                    <ul class="nav nav-tabs justify-content-center mb-4" id="divisionsTab" role="tablist">
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link active" id="tata-ruang-tab" data-bs-toggle="tab" data-bs-target="#tata-ruang">
-                                Tata Ruang
+            <!-- Mobile Accordion with Improved Jabatan -->
+            <div class="org-chart-mobile d-block d-lg-none mt-4">
+                <div class="accordion" id="orgAccordion">
+                    <!-- Komisaris -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#komisaris">
+                                <i class="fas fa-user-tie me-3"></i>Dewan Komisaris
                             </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="arsitektur-tab" data-bs-toggle="tab" data-bs-target="#arsitektur">
-                                Arsitektur
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="sipil-tab" data-bs-toggle="tab" data-bs-target="#sipil">
-                                Sipil
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="lingkungan-tab" data-bs-toggle="tab" data-bs-target="#lingkungan">
-                                Lingkungan
-                            </button>
-                        </li>
-                        <li class="nav-item" role="presentation">
-                            <button class="nav-link" id="manajemen-tab" data-bs-toggle="tab" data-bs-target="#manajemen">
-                                Manajemen
-                            </button>
-                        </li>
-                    </ul>
-
-                    <div class="tab-content" id="divisionsTabContent">
-                        <!-- Tata Ruang -->
-                        <div class="tab-pane fade show active" id="tata-ruang">
-                            <div class="tab-content-card">
-                                <div class="row g-4">
-                                    <div class="col-lg-4">
-                                        <div class="division-highlight">
-                                            <div class="highlight-icon">
-                                                <i class="fas fa-map-marked-alt"></i>
-                                            </div>
-                                            <h4 class="highlight-title">Divisi Tata Ruang</h4>
-                                            <p class="highlight-desc">
-                                                Menangani perencanaan dan pengembangan tata ruang wilayah
-                                            </p>
-                                        </div>
+                        </h2>
+                        <div id="komisaris" class="accordion-collapse collapse show">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-column gap-3">
+                                    <div>
+                                        <strong>Dede Samsul Muharrom</strong>
+                                        <span class="badge bg-cream-light text-brown-dark ms-2">Komisaris Utama</span>
                                     </div>
-                                    <div class="col-lg-8">
-                                        <div class="division-details">
-                                            <h5 class="details-title">Layanan Utama</h5>
-                                            <div class="services-list">
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Perencanaan Tata Ruang Wilayah</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Pengembangan Perkotaan</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Studi Kelayakan Wilayah</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Kajian Lingkungan Strategis</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div>
+                                        <strong>Endah Nuraeni</strong>
+                                        <span class="badge bg-cream-light text-brown-dark ms-2">Komisaris</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Arsitektur -->
-                        <div class="tab-pane fade" id="arsitektur">
-                            <div class="tab-content-card">
-                                <div class="row g-4">
-                                    <div class="col-lg-4">
-                                        <div class="division-highlight">
-                                            <div class="highlight-icon">
-                                                <i class="fas fa-drafting-compass"></i>
-                                            </div>
-                                            <h4 class="highlight-title">Divisi Arsitektur & Landscape</h4>
-                                            <p class="highlight-desc">
-                                                Desain arsitektural dan lingkungan untuk berbagai jenis bangunan
-                                            </p>
-                                        </div>
+                    </div>
+                    <!-- Direksi -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#direksi">
+                                <i class="fas fa-user-tie me-3"></i>Direksi
+                            </button>
+                        </h2>
+                        <div id="direksi" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <div class="d-flex flex-column gap-3">
+                                    <div>
+                                        <strong>Muria Cipta, ST</strong>
+                                        <span class="badge bg-cream-light text-brown-dark ms-2">Direktur Utama</span>
                                     </div>
-                                    <div class="col-lg-8">
-                                        <div class="division-details">
-                                            <h5 class="details-title">Layanan Utama</h5>
-                                            <div class="services-list">
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Desain Arsitektural Bangunan</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Desain Interior & Eksterior</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Perencanaan Landscaping</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Konsultasi Teknis Arsitektur</span>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    <div>
+                                        <strong>Andri Hendrawan</strong>
+                                        <span class="badge bg-cream-light text-brown-dark ms-2">Direktur Operasional</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Sipil -->
-                        <div class="tab-pane fade" id="sipil">
-                            <div class="tab-content-card">
-                                <div class="row g-4">
-                                    <div class="col-lg-4">
-                                        <div class="division-highlight">
-                                            <div class="highlight-icon">
-                                                <i class="fas fa-hard-hat"></i>
-                                            </div>
-                                            <h4 class="highlight-title">Divisi Sipil</h4>
-                                            <p class="highlight-desc">
-                                                Rekayasa dan konstruksi untuk berbagai proyek teknik sipil
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="division-details">
-                                            <h5 class="details-title">Layanan Utama</h5>
-                                            <div class="services-list">
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Rekayasa Konstruksi Bangunan</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Teknik Sipil Sumber Daya Air</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Teknik Sipil Transportasi</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Structural Health Monitoring</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <!-- Divisi -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#divisi">
+                                <i class="fas fa-layer-group me-3"></i>Divisi Operasional (9)
+                            </button>
+                        </h2>
+                        <div id="divisi" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <ul class="list-unstyled">
+                                    <li><i class="fas fa-map-marked-alt me-2"></i>Tata Ruang</li>
+                                    <li><i class="fas fa-drafting-compass me-2"></i>Arsitektur & Landscape</li>
+                                    <li><i class="fas fa-hard-hat me-2"></i>Sipil</li>
+                                    <li><i class="fas fa-leaf me-2"></i>Lingkungan</li>
+                                    <li><i class="fas fa-chart-line me-2"></i>Manajemen</li>
+                                    <li><i class="fas fa-cogs me-2"></i>Pengembangan</li>
+                                    <li><i class="fas fa-users me-2"></i>SDM & Umum</li>
+                                    <li><i class="fas fa-chart-bar me-2"></i>Pemasaran & Relasi</li>
+                                    <li><i class="fas fa-coins me-2"></i>Keuangan</li>
+                                </ul>
                             </div>
                         </div>
-
-                        <!-- Lingkungan -->
-                        <div class="tab-pane fade" id="lingkungan">
-                            <div class="tab-content-card">
-                                <div class="row g-4">
-                                    <div class="col-lg-4">
-                                        <div class="division-highlight">
-                                            <div class="highlight-icon">
-                                                <i class="fas fa-leaf"></i>
-                                            </div>
-                                            <h4 class="highlight-title">Divisi Lingkungan</h4>
-                                            <p class="highlight-desc">
-                                                Konsultasi dan pengelolaan aspek lingkungan dalam proyek
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="division-details">
-                                            <h5 class="details-title">Layanan Utama</h5>
-                                            <div class="services-list">
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Analisis Dampak Lingkungan</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Pengelolaan Limbah & Persampahan</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Pengolahan Air Bersih</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Konservasi Lingkungan</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Manajemen -->
-                        <div class="tab-pane fade" id="manajemen">
-                            <div class="tab-content-card">
-                                <div class="row g-4">
-                                    <div class="col-lg-4">
-                                        <div class="division-highlight">
-                                            <div class="highlight-icon">
-                                                <i class="fas fa-chart-line"></i>
-                                            </div>
-                                            <h4 class="highlight-title">Divisi Manajemen</h4>
-                                            <p class="highlight-desc">
-                                                Konsultansi manajemen untuk efisiensi dan efektivitas organisasi
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-8">
-                                        <div class="division-details">
-                                            <h5 class="details-title">Layanan Utama</h5>
-                                            <div class="services-list">
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Perencanaan Sistem Akuntansi</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Konsultasi Manajemen Fungsional</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Pelatihan & Pengembangan SDM</span>
-                                                </div>
-                                                <div class="service-item">
-                                                    <i class="fas fa-check-circle text-success"></i>
-                                                    <span>Konsultasi Hukum Bisnis</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
+                    </div>
+                    <!-- Staff -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#staff">
+                                <i class="fas fa-users me-3"></i>Tenaga Ahli & Staf
+                            </button>
+                        </h2>
+                        <div id="staff" class="accordion-collapse collapse">
+                            <div class="accordion-body">
+                                <span class="badge bg-cream-dark me-1">Tenaga Ahli</span>
+                                <span class="badge bg-cream-dark me-1">Staf Teknis</span>
+                                <span class="badge bg-cream-dark me-1">Administrasi</span>
+                                <span class="badge bg-cream-dark">Pendukung</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <!-- Management Team -->
-            <section class="management-team mb-6">
-                <div class="section-header text-center mb-5">
-                    <h3 class="section-title fw-bold text-brown-dark mb-3">Tim Manajemen</h3>
-                    <p class="section-subtitle text-brown-medium">
-                        Pemimpin yang mengarahkan perusahaan menuju keunggulan
-                    </p>
-                </div>
-
-                <div class="row g-4 justify-content-center">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-card text-center">
-                            <div class="team-avatar">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                            <div class="team-info">
-                                <h5 class="team-name">Muria Cipta, ST</h5>
-                                <p class="team-position text-brown-dark">Direktur Utama</p>
-                                <div class="team-divider"></div>
-                                <p class="team-description">
-                                    Bertanggung jawab atas strategi dan pengembangan perusahaan
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-card text-center">
-                            <div class="team-avatar">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                            <div class="team-info">
-                                <h5 class="team-name">Andri Hendrawan</h5>
-                                <p class="team-position text-brown-dark">Direktur</p>
-                                <div class="team-divider"></div>
-                                <p class="team-description">
-                                    Menangani operasional dan pelaksanaan proyek konsultansi
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-card text-center">
-                            <div class="team-avatar">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                            <div class="team-info">
-                                <h5 class="team-name">Dede Samsul Muharrom</h5>
-                                <p class="team-position text-brown-dark">Komisaris Utama</p>
-                                <div class="team-divider"></div>
-                                <p class="team-description">
-                                    Memberikan pengawasan dan arahan strategis perusahaan
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="team-card text-center">
-                            <div class="team-avatar">
-                                <i class="fas fa-user-tie"></i>
-                            </div>
-                            <div class="team-info">
-                                <h5 class="team-name">Endah Nuraeni</h5>
-                                <p class="team-position text-brown-dark">Komisaris</p>
-                                <div class="team-divider"></div>
-                                <p class="team-description">
-                                    Mendukung pengawasan dan pengembangan kebijakan perusahaan
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Back Button -->
-            <div class="back-section text-center py-5">
-                <a href="{{ route('about') }}" class="btn btn-brown-outline px-5 py-3">
-                    <i class="fas fa-arrow-left me-2"></i>
-                    Kembali ke Profil Perusahaan
-                </a>
             </div>
         </div>
-    </main>
+    </section>
+
+    <!-- MANAGEMENT TEAM – 3D CARDS with Jabatan Badges -->
+    <section class="py-6 bg-white position-relative">
+        <div class="container">
+            <div class="section-header text-center mb-6">
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-crown me-2"></i>MANAJEMEN
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Tim Manajemen</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Pemimpin yang mengarahkan perusahaan menuju keunggulan.
+                </p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card-3d animate-on-scroll">
+                        <div class="team-card-inner">
+                            <div class="team-icon-wrapper mb-3">
+                                <i class="fas fa-user-tie fa-3x text-brown-dark"></i>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-1">Muria Cipta, ST</h5>
+                            <p class="text-brown-medium small mb-2">
+                                <span class="badge bg-cream-light text-brown-dark">Direktur Utama</span>
+                            </p>
+                            <div class="team-divider"></div>
+                            <p class="text-brown-light small">Bertanggung jawab atas strategi dan pengembangan perusahaan</p>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card-3d animate-on-scroll">
+                        <div class="team-card-inner">
+                            <div class="team-icon-wrapper mb-3">
+                                <i class="fas fa-user-tie fa-3x text-brown-dark"></i>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-1">Andri Hendrawan</h5>
+                            <p class="text-brown-medium small mb-2">
+                                <span class="badge bg-cream-light text-brown-dark">Direktur Operasional</span>
+                            </p>
+                            <div class="team-divider"></div>
+                            <p class="text-brown-light small">Menangani operasional dan pelaksanaan proyek</p>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card-3d animate-on-scroll">
+                        <div class="team-card-inner">
+                            <div class="team-icon-wrapper mb-3">
+                                <i class="fas fa-user-tie fa-3x text-brown-dark"></i>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-1">Dede Samsul Muharrom</h5>
+                            <p class="text-brown-medium small mb-2">
+                                <span class="badge bg-cream-light text-brown-dark">Komisaris Utama</span>
+                            </p>
+                            <div class="team-divider"></div>
+                            <p class="text-brown-light small">Pengawasan dan arahan strategis</p>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="team-card-3d animate-on-scroll">
+                        <div class="team-card-inner">
+                            <div class="team-icon-wrapper mb-3">
+                                <i class="fas fa-user-tie fa-3x text-brown-dark"></i>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-1">Endah Nuraeni</h5>
+                            <p class="text-brown-medium small mb-2">
+                                <span class="badge bg-cream-light text-brown-dark">Komisaris</span>
+                            </p>
+                            <div class="team-divider"></div>
+                            <p class="text-brown-light small">Pengembangan kebijakan perusahaan</p>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION – SAME ELEGANT STYLE AS HOME -->
+    <section class="py-6 cta-elegant">
+        <div class="container">
+            <div class="cta-content-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-6 fw-bold mb-3">Pelajari Lebih Lanjut</h2>
+                        <p class="lead mb-0">
+                            Ingin mengetahui detail tentang divisi atau tim kami? Hubungi kami untuk informasi lebih lanjut.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3">
+                            <a href="{{ route('contact') }}" class="btn btn-brown-3d btn-lg px-5 py-3 rounded-pill">
+                                <i class="fas fa-handshake me-2"></i>Hubungi Kami
+                                <span class="btn-shine"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Back Button -->
+    <div class="container text-center pb-6 mt-6">
+        <a href="{{ route('about') }}" class="btn btn-outline-brown-3d rounded-pill px-5 py-3">
+            <i class="fas fa-arrow-left me-2"></i>Kembali ke Profil Perusahaan
+        </a>
+    </div>
 @endsection
 
 @push('styles')
 <style>
+    /* ===== INHERIT FULL STYLE FROM HOME PAGE ===== */
     :root {
-        /* Brown Color Palette */
-        --brown-50: #EFEBE9;
-        --brown-100: #D7CCC8;
-        --brown-200: #BCAAA4;
-        --brown-300: #A1887F;
-        --brown-400: #8D6E63;
-        --brown-500: #795548;
-        --brown-600: #6D4C41;
-        --brown-700: #5D4037;
-        --brown-800: #4E342E;
-        --brown-900: #3E2723;
-
-        /* Cream Color Palette */
-        --cream-50: #FFFDF7;
-        --cream-100: #F9F5EB;
-        --cream-200: #F5F0E6;
-        --cream-300: #EEE6D9;
-        --cream-400: #E8DCCE;
-        --cream-500: #E3D6C6;
-        --cream-600: #DDCFBD;
-        --cream-700: #D7C8B4;
-        --cream-800: #D2C1AB;
-        --cream-900: #CCBAA2;
-
-        /* Main Colors */
-        --brown-light: var(--brown-300);
-        --brown-medium: var(--brown-500);
-        --brown-dark: var(--brown-700);
-        --cream-light: var(--cream-100);
-        --cream-medium: var(--cream-300);
-        --cream-dark: var(--cream-500);
+        --brown-dark: #5D4037;
+        --brown-medium: #8B6B61;
+        --brown-light: #A1887F;
+        --cream-gold: #D4AF37;
+        --cream-dark: #D7CCC8;
+        --cream-medium: #EFEBE9;
+        --cream-light: #F5F0ED;
+        --white: #ffffff;
+        --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+        --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+        --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+        --shadow-3d: 0 20px 40px rgba(93,64,55,0.2), 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    /* Base Styles */
-    body {
-        background: linear-gradient(135deg, var(--cream-light) 0%, var(--cream-medium) 100%);
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    }
-
-    .text-brown-light { color: var(--brown-light); }
-    .text-brown-medium { color: var(--brown-medium); }
-    .text-brown-dark { color: var(--brown-dark); }
-    .text-cream-light { color: var(--cream-light); }
-    .text-cream-medium { color: var(--cream-medium); }
-    .text-cream-dark { color: var(--cream-dark); }
-
-    .bg-brown-light { background-color: var(--brown-light); }
-    .bg-brown-medium { background-color: var(--brown-medium); }
-    .bg-brown-dark { background-color: var(--brown-dark); }
-    .bg-cream-light { background-color: var(--cream-light); }
-    .bg-cream-medium { background-color: var(--cream-medium); }
-    .bg-cream-dark { background-color: var(--cream-dark); }
-
-    /* Page Header */
-    .page-header {
-        background: linear-gradient(135deg, var(--brown-dark) 0%, var(--brown-medium) 100%);
-        color: var(--cream-light);
-        padding: 4rem 0;
-    }
-
-    .page-header .header-content h1 {
-        color: var(--cream-light);
-    }
-
-    .page-header .header-content .lead {
-        color: var(--cream-200);
-    }
-
-    .org-meta .meta-item {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-        color: var(--cream-light);
-        font-size: 0.9rem;
-    }
-
-    .org-meta .meta-item i {
-        color: var(--cream-300);
-    }
-
-    .org-diagram-preview {
-        background: rgba(255, 255, 255, 0.1);
-        border-radius: 1rem;
-        padding: 2rem;
-        display: inline-block;
-    }
-
-    /* Breadcrumb */
-    .breadcrumb-container {
-        background: var(--cream-light);
-        border-bottom: 1px solid var(--cream-dark);
-    }
-
-    .breadcrumb {
-        margin-bottom: 0;
-    }
-
-    .breadcrumb-item a {
-        color: var(--brown-medium);
-        text-decoration: none;
-    }
-
-    .breadcrumb-item.active {
-        color: var(--brown-dark);
-        font-weight: 500;
-    }
-
-    /* Section Header */
-    .section-header {
-        position: relative;
-        padding-bottom: 1.5rem;
-    }
-
-    .section-title {
-        position: relative;
-        display: inline-block;
-        padding-bottom: 0.5rem;
-    }
-
-    .section-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80px;
-        height: 3px;
-        background: linear-gradient(90deg, var(--brown-medium), var(--brown-light));
-        border-radius: 2px;
-    }
-
-    .section-subtitle {
-        font-size: 1.1rem;
-        max-width: 700px;
-        margin: 0 auto;
-    }
-
-    .section-divider {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-
-    .divider-line {
-        width: 100px;
-        height: 2px;
-        background: linear-gradient(90deg, var(--brown-light), transparent);
-    }
-
-    .divider-icon {
-        color: var(--brown-medium);
-        font-size: 1.2rem;
-    }
-
-    /* Stats Cards */
-    .stat-card {
-        background: var(--cream-light);
-        border: 2px solid var(--cream-dark);
-        border-radius: 1rem;
-        transition: all 0.3s ease;
-    }
-
-    .stat-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--brown-light);
-        box-shadow: 0 10px 20px rgba(121, 85, 72, 0.1);
-    }
-
-    .stat-icon {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-light));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        margin: 0 auto;
-    }
-
-    .stat-number {
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: var(--brown-dark);
-        line-height: 1;
-        margin: 0.5rem 0;
-    }
-
-    .stat-label {
-        font-size: 0.9rem;
-        font-weight: 500;
-    }
-
-    /* Organization Chart - Desktop - FIXED */
-    .org-chart-desktop {
-        background: var(--cream-light);
-        border: 2px solid var(--cream-dark);
-        border-radius: 1.5rem;
-        padding: 3rem 2rem;
+    /* ----- Hero Section (same as home) ----- */
+    .org-hero {
+        background: linear-gradient(135deg, var(--cream-light) 0%, var(--white) 100%);
+        padding: 6rem 0 4rem;
         position: relative;
         overflow: hidden;
-        min-height: 900px;
     }
 
-    .chart-container {
-        position: relative;
-        min-height: 800px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    .chart-level {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: relative;
+    .hero-bg-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
         width: 100%;
-        z-index: 2;
-        margin: 2rem 0;
+        height: 100%;
+        pointer-events: none;
     }
 
-    .level-1 { margin-top: 0; }
-    .level-2 { margin: 3rem 0; }
-    .level-3 { margin: 3rem 0; }
-    .level-4 { margin-bottom: 0; }
+    .pattern-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(93, 64, 55, 0.05);
+        animation: float 20s ease-in-out infinite;
+    }
 
-    .level-label {
-        margin-bottom: 1.5rem;
+    .pattern-circle.circle-1 {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+        right: -100px;
+        animation-delay: 0s;
+    }
+
+    .pattern-circle.circle-2 {
+        width: 200px;
+        height: 200px;
+        bottom: -80px;
+        left: -80px;
+        background: rgba(212, 175, 55, 0.05);
+        animation-delay: 10s;
+    }
+
+    .pattern-square {
+        position: absolute;
+        background: rgba(161, 136, 127, 0.03);
+        animation: rotate 30s linear infinite;
+    }
+
+    .pattern-square.square-1 {
+        width: 150px;
+        height: 150px;
+        top: 30%;
+        right: 15%;
+        transform: rotate(45deg);
+    }
+
+    .pattern-square.square-2 {
+        width: 100px;
+        height: 100px;
+        bottom: 20%;
+        left: 10%;
+        transform: rotate(15deg);
+        background: rgba(212, 175, 55, 0.03);
+        animation-delay: -15s;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .min-vh-60 { min-height: 60vh; }
+
+    /* ----- Typography & Badges (same as home) ----- */
+    .display-2 {
+        font-weight: 800 !important;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+    }
+
+    .text-gradient-brown {
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .company-badge {
+        animation: fadeInDown 0.8s ease-out;
+    }
+
+    .badge.bg-brown-dark {
+        background-color: rgba(93, 64, 55, 0.9) !important;
+        border: 1px solid rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
+    }
+
+    .badge.bg-brown-light-subtle {
+        background-color: rgba(161,136,127,0.1) !important;
+        color: var(--brown-dark);
+    }
+
+    /* ----- Typewriter Effect (same as home) ----- */
+    .typewriter-wrapper {
+        display: inline-block;
+        position: relative;
+    }
+
+    .typewriter-text {
+        position: relative;
+        display: inline-block;
+        color: var(--brown-dark) !important;
+    }
+
+    .typewriter-text::after {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 1.2em;
+        background-color: var(--brown-dark);
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    /* ----- Scroll Indicator (same as home) ----- */
+    .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
         text-align: center;
     }
 
-    .label-text {
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-light));
-        color: var(--cream-light);
-        padding: 0.6rem 2rem;
+    .scroll-down {
+        color: var(--brown-dark);
+        font-size: 1.5rem;
+        animation: bounce 2s infinite;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s;
+    }
+
+    .scroll-down:hover {
+        background: white;
+        transform: scale(1.1);
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+    }
+
+    /* ----- Breadcrumb (glassmorphism) ----- */
+    .breadcrumb-nav .breadcrumb {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid rgba(93,64,55,0.1);
+        display: inline-flex;
+    }
+
+    .breadcrumb-item a {
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .breadcrumb-item a:hover {
+        color: var(--brown-dark) !important;
+    }
+
+    /* ===== 3D STAT CARD ===== */
+    .stat-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .stat-card-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 2rem 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        text-align: center;
+    }
+
+    .stat-card-3d:hover .stat-card-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
+    }
+
+    .stat-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        transition: all 0.3s;
+    }
+
+    .stat-card-3d:hover .stat-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    /* ===== ORG CHART 3D ===== */
+    .org-chart-3d {
+        background: rgba(255,255,255,0.5);
+        backdrop-filter: blur(5px);
+        border-radius: 2rem;
+        padding: 3rem 2rem;
+        border: 1px solid rgba(93,64,55,0.1);
+        box-shadow: var(--shadow-3d);
+    }
+
+    .org-chart-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .org-level {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .level-label-wrapper {
+        margin-bottom: 1rem;
+    }
+
+    .level-label {
+        background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
+        color: white;
+        padding: 0.5rem 2rem;
         border-radius: 50px;
         font-size: 0.9rem;
         font-weight: 600;
         letter-spacing: 0.5px;
-        display: inline-block;
     }
 
-    .level-content {
+    .org-card {
+        perspective: 1000px;
         width: 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        max-width: 320px;
     }
 
-    /* Vertical Connectors */
-    .vertical-connector {
-        position: absolute;
-        background: linear-gradient(180deg, var(--brown-light), var(--brown-medium));
-        width: 3px;
-        z-index: 1;
-        left: 50%;
-        transform: translateX(-50%);
-    }
-
-    .connector-1 {
-        top: 200px;
-        height: 40px;
-    }
-
-    .connector-2 {
-        top: 380px;
-        height: 40px;
-    }
-
-    .connector-3 {
-        top: 720px;
-        height: 40px;
-    }
-
-    /* Division Container */
-    .divisions-container {
-        position: relative;
-        width: 100%;
-        max-width: 900px;
-        margin: 0 auto;
-        padding-top: 20px;
-    }
-
-    .division-lines {
-        position: absolute;
-        top: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 80%;
-        height: 20px;
-        display: flex;
-        justify-content: center;
-    }
-
-    .division-line {
-        position: absolute;
-        background: linear-gradient(180deg, var(--brown-light), var(--brown-medium));
-        height: 20px;
-        width: 2px;
-        top: -20px;
-    }
-
-    .line-1 { left: 17%; }
-    .line-2 { left: 50%; }
-    .line-3 { left: 83%; }
-
-    /* Divisions Grid */
-    .divisions-grid {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
-        width: 100%;
-    }
-
-    .division-row {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-    }
-
-    .division-row.row-1 { margin-bottom: 1.5rem; }
-    .division-row.row-2 { margin-bottom: 1.5rem; }
-    .division-row.row-3 { margin-bottom: 0; }
-
-    .division-card {
-        background: var(--cream-light);
-        border: 2px solid var(--cream-dark);
-        border-radius: 0.75rem;
-        padding: 1rem;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        width: 180px;
-        transition: all 0.3s ease;
-        box-shadow: 0 3px 10px rgba(121, 85, 72, 0.05);
-        position: relative;
-        z-index: 3;
-    }
-
-    .division-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--brown-light);
-        box-shadow: 0 10px 20px rgba(121, 85, 72, 0.15);
-    }
-
-    .division-icon {
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 1.2rem;
-        margin-bottom: 1rem;
-    }
-
-    .division-info {
-        width: 100%;
-    }
-
-    .division-name {
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--brown-dark);
-        margin-bottom: 0.25rem;
-        line-height: 1.2;
-    }
-
-    .division-desc {
-        font-size: 0.8rem;
-        color: var(--brown-medium);
-        margin: 0;
-        line-height: 1.3;
-    }
-
-    /* Position Cards - Improved */
-    .position-card {
-        background: var(--cream-light);
-        border: 3px solid var(--cream-dark);
-        border-radius: 1rem;
-        width: 280px;
-        transition: all 0.3s ease;
-        box-shadow: 0 5px 15px rgba(121, 85, 72, 0.1);
-        position: relative;
-        z-index: 3;
-    }
-
-    .komisaris-card {
-        border-color: var(--brown-dark);
-    }
-
-    .direksi-card {
-        border-color: var(--brown-medium);
-    }
-
-    .position-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(121, 85, 72, 0.2);
-    }
-
-    .position-card .card-header {
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-light));
-        color: var(--cream-light);
-        padding: 1.5rem;
-        border-radius: 0.8rem 0.8rem 0 0;
-        text-align: center;
-    }
-
-    .komisaris-card .card-header {
+    .org-card-inner {
         background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
-    }
-
-    .position-icon {
-        width: 60px;
-        height: 60px;
-        background: rgba(255, 255, 255, 0.2);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto 1rem;
-        font-size: 1.5rem;
-    }
-
-    .position-title {
-        font-size: 1.3rem;
-        font-weight: 700;
-        margin-bottom: 0.5rem;
-    }
-
-    .position-type {
-        font-size: 0.9rem;
-        opacity: 0.9;
-        font-weight: 500;
-    }
-
-    .position-card .card-body {
-        padding: 1.5rem;
-    }
-
-    .position-members {
+        border-radius: 2rem;
+        padding: 2rem;
+        box-shadow: var(--shadow-3d);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        color: white;
         text-align: center;
     }
 
-    .member {
-        margin-bottom: 1rem;
-        padding-bottom: 1rem;
-        border-bottom: 1px solid var(--cream-dark);
+    .org-card:hover .org-card-inner {
+        transform: rotateY(-2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.3);
     }
 
-    .member:last-child {
-        margin-bottom: 0;
-        padding-bottom: 0;
-        border-bottom: none;
+    .komisaris-card .org-card-inner { background: linear-gradient(135deg, #4A342E, var(--brown-dark)); }
+    .direksi-card .org-card-inner { background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark)); }
+
+    .org-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: rgba(255,255,255,0.2);
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        transition: all 0.3s;
+    }
+
+    .org-card:hover .org-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .org-members {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+
+    .org-member {
+        background: rgba(255,255,255,0.1);
+        border-radius: 1rem;
+        padding: 0.75rem;
     }
 
     .member-name {
+        display: block;
         font-weight: 600;
-        color: var(--brown-dark);
         margin-bottom: 0.25rem;
-        font-size: 1.1rem;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
     }
 
     .member-role {
-        font-size: 0.9rem;
-        color: var(--brown-medium);
-        font-weight: 500;
-        background: var(--cream-medium);
-        padding: 0.25rem 0.75rem;
-        border-radius: 50px;
-        display: inline-block;
+        font-size: 0.75rem;
+        padding: 0.25rem 0.5rem;
+        border: 1px solid #8B6B61; /* tambahan border */
     }
 
-    /* Staff Section */
-    .staff-section {
-        width: 100%;
-        max-width: 300px;
-    }
-
-    .staff-card {
-        background: var(--cream-light);
-        border: 3px solid var(--cream-dark);
-        border-radius: 1rem;
-        overflow: hidden;
-        box-shadow: 0 5px 15px rgba(121, 85, 72, 0.1);
-    }
-
-    .staff-card .card-header {
-        background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
-        color: var(--cream-light);
-        padding: 1.5rem;
-        text-align: center;
-    }
-
-    .staff-card .card-body {
-        padding: 1.5rem;
-        text-align: center;
-    }
-
-    .staff-categories {
-        display: flex;
-        justify-content: center;
-    }
-
-    .category {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-
-    .category-badge {
-        background: var(--cream-medium);
-        color: var(--brown-dark);
-        padding: 0.5rem 1rem;
-        border-radius: 50px;
-        font-size: 0.85rem;
-        font-weight: 500;
-        border: 1px solid var(--cream-dark);
-        white-space: nowrap;
-    }
-
-    /* Mobile Organization Chart */
-    .org-chart-mobile {
-        background: var(--cream-light);
-        border: 2px solid var(--cream-dark);
-        border-radius: 1rem;
-        overflow: hidden;
-    }
-
-    .accordion-item {
-        border: none;
-        border-bottom: 1px solid var(--cream-dark);
-    }
-
-    .accordion-item:last-child {
-        border-bottom: none;
-    }
-
-    .accordion-button {
-        background: var(--cream-light);
-        color: var(--brown-dark);
-        font-weight: 600;
-        padding: 1rem 1.5rem;
-        border: none;
-        box-shadow: none;
-    }
-
-    .accordion-button:not(.collapsed) {
-        background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
-        color: var(--cream-light);
-    }
-
-    .accordion-button:not(.collapsed) .level-icon {
-        color: var(--cream-light);
-    }
-
-    .accordion-button:not(.collapsed) .level-title,
-    .accordion-button:not(.collapsed) .level-subtitle {
-        color: var(--cream-light);
-    }
-
-    .mobile-level-header {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        width: 100%;
-    }
-
-    .level-icon {
-        width: 40px;
+    .org-connector {
+        width: 2px;
         height: 40px;
-        background: var(--cream-medium);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--brown-medium);
-        font-size: 1rem;
+        background: linear-gradient(to bottom, var(--cream-gold), var(--brown-light));
     }
 
-    .accordion-button:not(.collapsed) .level-icon {
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    .level-info {
-        flex: 1;
-        text-align: left;
-    }
-
-    .level-title {
-        font-size: 1rem;
-        font-weight: 600;
-        margin-bottom: 0.25rem;
-        color: var(--brown-dark);
-    }
-
-    .level-subtitle {
-        font-size: 0.85rem;
-        color: var(--brown-medium);
-        margin: 0;
-    }
-
-    .accordion-body {
-        padding: 1rem 1.5rem 1.5rem 1.5rem;
-        background: var(--cream-medium);
-    }
-
-    .mobile-member-list {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-
-    .mobile-member {
-        background: var(--cream-light);
-        border: 1px solid var(--cream-dark);
-        border-radius: 0.5rem;
-        padding: 0.75rem 1rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .member-name {
-        font-weight: 500;
-        color: var(--brown-dark);
-    }
-
-    .mobile-divisions {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .mobile-division {
-        background: var(--cream-light);
-        border: 1px solid var(--cream-dark);
-        border-radius: 0.5rem;
-        padding: 0.75rem 1rem;
-        color: var(--brown-dark);
-        font-weight: 500;
-    }
-
-    .mobile-division i {
-        color: var(--brown-medium);
-    }
-
-    /* Divisions Tabs */
-    .divisions-tabs .nav-tabs {
-        border-bottom: 2px solid var(--cream-dark);
-    }
-
-    .divisions-tabs .nav-link {
-        color: var(--brown-medium);
-        border: none;
-        background: transparent;
-        padding: 0.75rem 1.5rem;
-        font-weight: 500;
-        position: relative;
-        margin: 0 0.5rem;
-    }
-
-    .divisions-tabs .nav-link:hover {
-        color: var(--brown-dark);
-    }
-
-    .divisions-tabs .nav-link.active {
-        color: var(--brown-dark);
-        background: transparent;
-        border: none;
-    }
-
-    .divisions-tabs .nav-link.active::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
+    /* Divisions Grid 3D */
+    .divisions-grid-3d {
         width: 100%;
-        height: 2px;
-        background: linear-gradient(90deg, var(--brown-medium), var(--brown-light));
     }
 
-    .tab-content-card {
-        background: var(--cream-light);
-        border: 2px solid var(--cream-dark);
-        border-radius: 1rem;
-        padding: 2rem;
-    }
-
-    .division-highlight {
-        text-align: center;
-        padding: 1rem;
-    }
-
-    .highlight-icon {
-        width: 80px;
-        height: 80px;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-light));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 1.5rem;
-        margin: 0 auto 1rem;
-    }
-
-    .highlight-title {
-        color: var(--brown-dark);
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-    }
-
-    .highlight-desc {
-        color: var(--brown-medium);
-        font-size: 0.9rem;
-    }
-
-    .division-details .details-title {
-        color: var(--brown-dark);
-        font-weight: 600;
-        margin-bottom: 1rem;
-        font-size: 1.1rem;
-    }
-
-    .services-list {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-    }
-
-    .service-item {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-    }
-
-    .service-item i {
-        flex-shrink: 0;
-    }
-
-    .service-item span {
-        color: var(--brown-dark);
-        font-size: 0.95rem;
-    }
-
-    /* Team Cards */
-    .team-card {
-        background: var(--cream-light);
-        border: 2px solid var(--cream-dark);
-        border-radius: 1rem;
-        padding: 2rem;
-        transition: all 0.3s ease;
+    .division-card-3d {
+        perspective: 1000px;
         height: 100%;
     }
 
-    .team-card:hover {
-        transform: translateY(-5px);
-        border-color: var(--brown-light);
-        box-shadow: 0 10px 25px rgba(121, 85, 72, 0.1);
+    .division-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 1.5rem 1rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        text-align: center;
     }
 
-    .team-avatar {
-        width: 100px;
-        height: 100px;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-light));
+    .division-card-3d:hover .division-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
+    }
+
+    .division-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        transition: all 0.3s;
+    }
+
+    .division-card-3d:hover .division-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    /* Staff Card */
+    .staff-card-3d {
+        perspective: 1000px;
+        width: 100%;
+        max-width: 320px;
+    }
+
+    .staff-inner {
+        background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
+        border-radius: 2rem;
+        padding: 2rem;
+        box-shadow: var(--shadow-3d);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        color: white;
+        text-align: center;
+    }
+
+    .staff-card-3d:hover .staff-inner {
+        transform: rotateY(1deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.25);
+    }
+
+    .staff-badges .badge {
+        background: var(--cream-light) !important;
+        color: var(--brown-dark) !important;
+        font-weight: 500;
+        padding: 0.5rem 1rem;
+        border: 1px solid #8B6B61;
+    }
+
+    /* ===== TEAM CARD 3D ===== */
+    .team-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .team-card-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 2rem 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        text-align: center;
+    }
+
+    .team-card-3d:hover .team-card-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
+    }
+
+    .team-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--cream-light);
-        font-size: 2rem;
         margin: 0 auto 1.5rem;
+        transition: all 0.3s;
     }
 
-    .team-info {
-        text-align: center;
-    }
-
-    .team-name {
-        color: var(--brown-dark);
-        font-weight: 600;
-        margin-bottom: 0.25rem;
-    }
-
-    .team-position {
-        font-weight: 500;
-        margin-bottom: 1rem;
+    .team-card-3d:hover .team-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
     }
 
     .team-divider {
         width: 50px;
         height: 2px;
-        background: linear-gradient(90deg, var(--brown-light), transparent);
+        background: var(--cream-gold);
         margin: 1rem auto;
     }
 
-    .team-description {
-        color: var(--brown-medium);
-        font-size: 0.9rem;
-        line-height: 1.5;
+    /* ===== 3D BUTTONS (same as home) ===== */
+    .btn-brown-3d {
+        background: linear-gradient(145deg, var(--brown-dark), #4A342E);
+        border: none;
+        color: white;
+        font-weight: 600;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(93,64,55,0.2);
+        transform-style: preserve-3d;
+        transform: translateY(0) rotateX(0deg);
     }
 
-    /* Back Button */
-    .back-section .btn-brown-outline {
+    .btn-brown-3d:hover {
+        transform: translateY(-3px) rotateX(2deg);
+        box-shadow: 0 15px 30px rgba(93,64,55,0.3);
+        background: linear-gradient(145deg, #4A342E, var(--brown-dark));
+    }
+
+    .btn-outline-brown-3d {
+        border: 2px solid var(--brown-dark);
+        color: var(--brown-dark);
         background: transparent;
-        border: 2px solid var(--brown-medium);
-        color: var(--brown-medium);
-        font-weight: 500;
-        border-radius: 50px;
-        transition: all 0.3s ease;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
     }
 
-    .back-section .btn-brown-outline:hover {
-        background: var(--brown-medium);
-        color: var(--cream-light);
-        transform: translateY(-2px);
+    .btn-outline-brown-3d:hover {
+        background: var(--brown-dark);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
     }
 
-    /* Responsive Styles */
-    @media (max-width: 1200px) {
-        .division-card {
-            width: 160px;
+    .btn-brown-3d::before,
+    .btn-outline-brown-3d::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.6s;
+    }
+
+    .btn-brown-3d:hover::before,
+    .btn-outline-brown-3d:hover::before {
+        left: 100%;
+    }
+
+    /* 3D decorative corners */
+    .card-corner {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, transparent 50%, rgba(212,175,55,0.1) 50%);
+        z-index: 1;
+    }
+
+    .card-corner.corner-1 {
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+
+    .card-corner.corner-2 {
+        bottom: 0;
+        left: 0;
+        transform: rotate(270deg);
+    }
+
+    /* ----- Background decorations ----- */
+    .section-bg-decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .decoration-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.03);
+        width: 300px;
+        height: 300px;
+    }
+
+    .decoration-circle:nth-child(1) {
+        top: -100px;
+        right: -100px;
+        background: rgba(93,64,55,0.02);
+        animation: float 25s infinite;
+    }
+
+    .decoration-circle:nth-child(2) {
+        bottom: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: rgba(212,175,55,0.02);
+        animation: float 20s infinite reverse;
+    }
+
+    .bg-cream-light {
+        background-color: var(--cream-light) !important;
+        position: relative;
+    }
+
+    .cert-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .pattern-line {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--cream-gold), transparent);
+        opacity: 0.2;
+    }
+
+    .pattern-line:nth-child(1) { top: 20%; left: -50%; width: 200%; transform: rotate(2deg); }
+    .pattern-line:nth-child(2) { bottom: 30%; right: -50%; width: 200%; transform: rotate(-3deg); }
+
+    /* ----- CTA Section (same as home) ----- */
+    .cta-elegant {
+        background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-elegant::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+            radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.1) 0%, transparent 50%);
+    }
+
+    .cta-content-wrapper {
+        position: relative;
+        z-index: 2;
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+    }
+
+    .cta-elegant h2 {
+        color: #5D4037;
+        background: linear-gradient(135deg, #5D4037, #8B6B61);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .cta-elegant .lead {
+        color: #795548;
+    }
+
+    /* ----- Animations ----- */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
         }
-
-        .division-row {
-            gap: 1.5rem;
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-down {
+        animation: fadeInDown 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-on-scroll {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* ----- Utilities ----- */
+    .py-6 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+
+    .mb-6 {
+        margin-bottom: 5rem !important;
+    }
+
+    .mt-6 {
+        margin-top: 5rem !important;
+    }
+
+    .pb-6 {
+        padding-bottom: 5rem !important;
+    }
+
+    /* ----- Responsive ----- */
     @media (max-width: 992px) {
-        .chart-container {
-            min-height: 850px;
-        }
-
-        .division-card {
-            width: 140px;
-        }
-
-        .division-name {
-            font-size: 0.85rem;
-        }
-
-        .division-desc {
-            font-size: 0.75rem;
-        }
-
-        .position-card {
-            width: 250px;
-        }
+        .display-2 { font-size: 3rem !important; }
+        .org-hero { padding: 5rem 0 3rem; }
+        .org-chart-3d { padding: 2rem 1rem; }
+        .cta-content-wrapper { padding: 2rem 1.5rem; }
     }
 
     @media (max-width: 768px) {
-        .page-header {
-            padding: 3rem 0;
-            text-align: center;
-        }
-
-        .page-header .header-illustration {
-            margin-top: 2rem;
-        }
-
-        .org-chart-desktop {
-            padding: 2rem 1rem;
-            min-height: 800px;
-        }
-
-        .division-row {
-            flex-wrap: wrap;
-        }
-
-        .division-card {
-            width: 180px;
-            margin-bottom: 1rem;
-        }
-
-        .divisions-tabs .nav-link {
-            padding: 0.5rem 1rem;
-            font-size: 0.9rem;
-        }
-
-        .tab-content-card {
-            padding: 1.5rem;
-        }
+        .display-2 { font-size: 2.5rem !important; }
+        .typewriter-text { font-size: 1.5rem !important; }
     }
 
     @media (max-width: 576px) {
-        .stat-number {
-            font-size: 2rem;
-        }
-
-        .stat-card {
-            padding: 1.5rem;
-        }
-
-        .division-row {
-            gap: 1rem;
-        }
-
-        .division-card {
-            min-width: 100%;
-            max-width: 250px;
-        }
-
-        .team-card {
-            padding: 1.5rem;
-        }
-
-        .team-avatar {
-            width: 80px;
-            height: 80px;
-            font-size: 1.5rem;
-        }
+        .display-2 { font-size: 2rem !important; }
+        .badge { font-size: 0.8rem !important; }
     }
 </style>
 @endpush
@@ -1753,64 +1324,91 @@
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Initialize tooltips
-        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-            return new bootstrap.Tooltip(tooltipTriggerEl)
-        });
+        // ----- TYPEWRITER EFFECT (like home) -----
+        const textElement = document.querySelector('.typewriter-text');
+        if (textElement) {
+            const originalText = textElement.textContent.trim();
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
 
-        // Add hover effects to organization cards
-        const orgCards = document.querySelectorAll('.position-card, .division-card, .team-card');
-        orgCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                this.style.transform = 'translateY(-5px)';
-            });
+            function typeWriter() {
+                const currentText = originalText.substring(0, charIndex);
+                textElement.textContent = currentText;
 
-            card.addEventListener('mouseleave', function() {
-                this.style.transform = 'translateY(0)';
-            });
-        });
+                if (!isDeleting && charIndex < originalText.length) {
+                    charIndex++;
+                    typingSpeed = 100;
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    typingSpeed = 50;
+                }
 
-        // Smooth scroll for anchor links
+                if (!isDeleting && charIndex === originalText.length) {
+                    isDeleting = true;
+                    typingSpeed = 1500;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    typingSpeed = 500;
+                }
+
+                setTimeout(typeWriter, typingSpeed);
+            }
+
+            setTimeout(typeWriter, 1000);
+        }
+
+        // ----- SMOOTH SCROLL FOR ANCHOR -----
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
+            anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
                     });
                 }
             });
         });
 
-        // Initialize division tabs
-        const divisionTabs = document.querySelectorAll('#divisionsTab button');
-        divisionTabs.forEach(tab => {
-            tab.addEventListener('click', function() {
-                divisionTabs.forEach(t => t.classList.remove('active'));
-                this.classList.add('active');
-            });
-        });
-
-        // Animation on scroll
+        // ----- OBSERVER FOR SCROLL ANIMATIONS -----
         const observerOptions = {
-            threshold: 0.1,
+            threshold: 0.2,
             rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('animate-in');
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe elements for animation
-        document.querySelectorAll('.stat-card, .position-card, .division-card, .team-card').forEach(element => {
-            observer.observe(element);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ----- 3D HOVER EFFECT ENHANCEMENT -----
+        const cards = document.querySelectorAll('.stat-card-inner, .org-card-inner, .division-inner, .team-card-inner, .staff-inner');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+
+                card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateY(-5px)`;
+            });
+
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(1deg)';
+            });
         });
     });
 </script>

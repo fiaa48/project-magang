@@ -4,372 +4,339 @@
 @section('description', 'Sejarah dan perjalanan PT Mitra Nusa Konsulindo sejak berdiri tahun 2020 hingga menjadi perusahaan konsultan terpercaya.')
 
 @section('content')
-    <!-- Clean Page Header -->
-    <section class="page-header-clean py-7 bg-gradient-light-cream position-relative overflow-hidden">
-        <div class="container position-relative z-2">
-            <!-- Breadcrumb Clean -->
-            <nav aria-label="breadcrumb" class="mb-4">
-                <ol class="breadcrumb breadcrumb-clean">
-                    <li class="breadcrumb-item"><a href="{{ route('home') }}"><i class="fas fa-home me-2"></i>Beranda</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('about') }}">Tentang Kami</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Sejarah</li>
-                </ol>
-            </nav>
+    <!-- HERO SECTION – SAME STYLE AS HOME -->
+    <section class="history-hero position-relative overflow-hidden">
+        <!-- Background Pattern (same as home) -->
+        <div class="hero-bg-pattern">
+            <div class="pattern-circle circle-1"></div>
+            <div class="pattern-circle circle-2"></div>
+            <div class="pattern-square square-1"></div>
+            <div class="pattern-square square-2"></div>
+        </div>
 
-            <!-- Header Content -->
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <div class="header-content">
-                        <div class="header-badge mb-3">
-                            <span class="badge bg-brown-light text-white">Sejarah Kami</span>
-                        </div>
-                        <h1 class="display-5 fw-bold text-brown-dark mb-4">
-                            <span class="text-gradient-brown">Jejak Langkah</span> Perusahaan
-                        </h1>
-                        <p class="lead text-brown-medium mb-5">
-                            Menelusuri perjalanan inspiratif PT Mitra Nusa Konsulindo dari awal berdiri
-                            hingga tumbuh menjadi mitra konsultan terpercaya di Indonesia.
-                        </p>
+        <div class="container position-relative z-3">
+            <div class="row min-vh-60 align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <!-- Animated Badge – glassmorphism -->
+                    <div class="company-badge mb-5 animate-fade-in-down">
+                        <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal">
+                            <i class="fas fa-history me-2"></i>SEJARAH KAMI
+                        </span>
+                    </div>
 
-                        <!-- Action Buttons -->
-                        <div class="header-actions mt-5">
-                            <div class="action-buttons">
-                                <a href="{{ route('about') }}" class="btn btn-outline-brown rounded-pill px-4 py-2">
-                                    <i class="fas fa-arrow-left me-2"></i>Kembali ke Profil
-                                </a>
-                                <a href="{{ route('about.vision-mission') }}" class="btn btn-brown rounded-pill px-4 py-2">
-                                    <i class="fas fa-eye me-2"></i>Visi & Misi
-                                </a>
-                                <a href="{{ route('about.organization') }}" class="btn btn-outline-brown rounded-pill px-4 py-2">
-                                    <i class="fas fa-sitemap me-2"></i>Struktur Organisasi
-                                </a>
-                            </div>
+                    <!-- Main Heading with Gradient -->
+                    <h1 class="display-2 fw-bold mb-4 text-brown-dark animate-fade-in-up">
+                        Jejak Langkah <span class="text-gradient-brown">Perusahaan</span>
+                    </h1>
 
-                            <!-- Quick Stats -->
-                            <div class="quick-stats mt-4">
-                                <div class="stats-grid">
-                                    <div class="stat-item">
-                                        <i class="fas fa-calendar-alt stat-icon"></i>
-                                        <div class="stat-content">
-                                            <span class="stat-number">4+</span>
-                                            <span class="stat-label">Tahun Beroperasi</span>
-                                        </div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <i class="fas fa-user-tie stat-icon"></i>
-                                        <div class="stat-content">
-                                            <span class="stat-number">15+</span>
-                                            <span class="stat-label">Tenaga Ahli</span>
-                                        </div>
-                                    </div>
-                                    <div class="stat-item">
-                                        <i class="fas fa-project-diagram stat-icon"></i>
-                                        <div class="stat-content">
-                                            <span class="stat-number">50+</span>
-                                            <span class="stat-label">Proyek Selesai</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                    <!-- Subtitle with Typewriter Effect (like home) -->
+                    <div class="subtitle-wrapper mb-5 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <h2 class="h3 fw-light text-brown-medium mb-3">
+                            Menelusuri Perjalanan Inspiratif
+                        </h2>
+                        <div class="typewriter-wrapper">
+                            <span class="typewriter-text text-brown-dark fw-semibold fs-3">
+                                2020 – Sekarang
+                            </span>
                         </div>
                     </div>
-                </div>
 
-                <div class="col-lg-4 text-center d-none d-lg-block">
-                    <div class="header-visual">
-                        <div class="timeline-visual">
-                            <div class="timeline-dot dot-1"></div>
-                            <div class="timeline-dot dot-2"></div>
-                            <div class="timeline-dot dot-3"></div>
-                            <div class="timeline-dot dot-4"></div>
-                            <div class="timeline-dot dot-5"></div>
-                            <div class="timeline-line"></div>
-                        </div>
-                        <div class="history-icon">
-                            <i class="fas fa-history"></i>
-                        </div>
-                    </div>
+                    <!-- Breadcrumb with glassmorphism -->
+                    <nav aria-label="breadcrumb" class="breadcrumb-nav mt-5 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('home') }}" class="text-brown-medium">Beranda</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('about') }}" class="text-brown-medium">Tentang Kami</a>
+                            </li>
+                            <li class="breadcrumb-item active text-brown-dark" aria-current="page">Sejarah</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
 
-        <!-- Wave Decoration -->
-        <div class="wave-decoration">
-            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".1"></path>
-                <path d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".2"></path>
-            </svg>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <a href="#timeline" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </section>
 
-    <!-- Main Timeline Section -->
-    <section class="py-8 bg-white">
-        <div class="container">
-            <!-- Section Header -->
+    <!-- TIMELINE SECTION – 3D VERTICAL TIMELINE -->
+    <section id="timeline" class="py-6 bg-white position-relative">
+        <!-- Subtle background decoration -->
+        <div class="section-bg-decoration">
+            <div class="decoration-circle"></div>
+            <div class="decoration-circle"></div>
+        </div>
+
+        <div class="container position-relative z-2">
             <div class="section-header text-center mb-6">
-                <h2 class="section-title fw-bold text-brown-dark mb-3">Perjalanan Perusahaan</h2>
-                <p class="section-subtitle text-brown-medium">Setiap tahun menandai pencapaian baru dalam perjalanan kami menuju keunggulan</p>
-                <div class="section-divider mx-auto"></div>
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-timeline me-2"></i>PERJALANAN KAMI
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Sejarah Perusahaan</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Setiap tahun menandai pencapaian baru dalam perjalanan kami menuju keunggulan.
+                </p>
             </div>
 
             <!-- Vertical Timeline -->
             <div class="timeline-vertical">
                 <!-- 2020 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-circle">
-                            <span class="year">2020</span>
-                        </div>
-                        <div class="marker-line"></div>
+                <div class="timeline-item-3d animate-on-scroll">
+                    <div class="timeline-marker-wrapper">
+                        <div class="timeline-marker-circle">2020</div>
+                        <div class="timeline-marker-line"></div>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <div class="year-tag">2020</div>
-                                <div class="status-tag status-foundation">Awal Mula</div>
+                    <div class="timeline-card-3d">
+                        <div class="timeline-card-inner">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-foundation">Awal Mula</span>
+                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2020</span>
                             </div>
-                            <h3 class="card-title">Pendirian Perusahaan</h3>
-                            <p class="card-text">
-                                PT Mitra Nusa Konsulindo secara resmi berdiri dengan visi menjadi
-                                perusahaan konsultan terpercaya di bidang konstruksi dan non-konstruksi.
+                            <h3 class="fw-bold text-brown-dark mb-3">Pendirian Perusahaan</h3>
+                            <p class="text-brown-medium small mb-4">
+                                PT Mitra Nusa Konsulindo secara resmi berdiri dengan visi menjadi perusahaan konsultan terpercaya di bidang konstruksi dan non-konstruksi.
                             </p>
-                            <div class="card-milestones">
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-building"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Perseroan Terbatas</strong>
-                                        <small>Terdaftar sebagai PT resmi</small>
-                                    </div>
-                                </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-file-contract"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Legalitas Lengkap</strong>
-                                        <small>NPWP & NIB perusahaan</small>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-building text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Perseroan Terbatas</strong>
+                                            <span class="text-brown-light small">Terdaftar resmi</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-handshake"></i>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-file-contract text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Legalitas Lengkap</strong>
+                                            <span class="text-brown-light small">NPWP & NIB</span>
+                                        </div>
                                     </div>
-                                    <div class="milestone-text">
-                                        <strong>Keanggotaan Profesi</strong>
-                                        <small>Bergabung dengan INKINDO</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-handshake text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Keanggotaan Profesi</strong>
+                                            <span class="text-brown-light small">INKINDO</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2021 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-circle">
-                            <span class="year">2021</span>
-                        </div>
-                        <div class="marker-line"></div>
+                <div class="timeline-item-3d animate-on-scroll">
+                    <div class="timeline-marker-wrapper">
+                        <div class="timeline-marker-circle">2021</div>
+                        <div class="timeline-marker-line"></div>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <div class="year-tag">2021</div>
-                                <div class="status-tag status-expansion">Ekspansi</div>
+                    <div class="timeline-card-3d">
+                        <div class="timeline-card-inner">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-expansion">Ekspansi</span>
+                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2021</span>
                             </div>
-                            <h3 class="card-title">Pengembangan Jasa & Sertifikasi</h3>
-                            <p class="card-text">
-                                Tahun pertama operasional diisi dengan pengembangan layanan dan
-                                perolehan sertifikasi yang diperlukan untuk operasional profesional.
+                            <h3 class="fw-bold text-brown-dark mb-3">Pengembangan Jasa & Sertifikasi</h3>
+                            <p class="text-brown-medium small mb-4">
+                                Tahun pertama operasional diisi dengan pengembangan layanan dan perolehan sertifikasi yang diperlukan.
                             </p>
-                            <div class="card-milestones">
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-award"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Sertifikasi SBU</strong>
-                                        <small>Mendapatkan sertifikasi pertama</small>
-                                    </div>
-                                </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-expand"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Portofolio Jasa</strong>
-                                        <small>Penambahan jasa non-konstruksi</small>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-award text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Sertifikasi SBU</strong>
+                                            <span class="text-brown-light small">Pertama</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-landmark"></i>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-expand text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Portofolio Jasa</strong>
+                                            <span class="text-brown-light small">Non‑konstruksi</span>
+                                        </div>
                                     </div>
-                                    <div class="milestone-text">
-                                        <strong>Proyek Pemerintah</strong>
-                                        <small>Proyek pertama untuk pemerintah daerah</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-landmark text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Proyek Pemerintah</strong>
+                                            <span class="text-brown-light small">Pertama</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2022 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-circle">
-                            <span class="year">2022</span>
-                        </div>
-                        <div class="marker-line"></div>
+                <div class="timeline-item-3d animate-on-scroll">
+                    <div class="timeline-marker-wrapper">
+                        <div class="timeline-marker-circle">2022</div>
+                        <div class="timeline-marker-line"></div>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <div class="year-tag">2022</div>
-                                <div class="status-tag status-growth">Pertumbuhan</div>
+                    <div class="timeline-card-3d">
+                        <div class="timeline-card-inner">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-growth">Pertumbuhan</span>
+                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2022</span>
                             </div>
-                            <h3 class="card-title">Konsolidasi & Pengembangan</h3>
-                            <p class="card-text">
-                                Periode pertumbuhan signifikan dengan penguatan tim profesional
-                                dan perluasan basis klien di berbagai sektor.
+                            <h3 class="fw-bold text-brown-dark mb-3">Konsolidasi & Pengembangan</h3>
+                            <p class="text-brown-medium small mb-4">
+                                Periode pertumbuhan signifikan dengan penguatan tim profesional dan perluasan basis klien.
                             </p>
-                            <div class="card-milestones">
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-users"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Tim Profesional</strong>
-                                        <small>Ekspansi tim ahli menjadi 15+ orang</small>
-                                    </div>
-                                </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-cogs"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Sistem Manajemen</strong>
-                                        <small>Pengembangan sistem manajemen mutu</small>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-users text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Tim Profesional</strong>
+                                            <span class="text-brown-light small">15+ orang</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-handshake-simple"></i>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-cogs text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Sistem Manajemen</strong>
+                                            <span class="text-brown-light small">Manajemen mutu</span>
+                                        </div>
                                     </div>
-                                    <div class="milestone-text">
-                                        <strong>Kemitraan Strategis</strong>
-                                        <small>Kerjasama dengan perusahaan swasta nasional</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-handshake-simple text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Kemitraan Strategis</strong>
+                                            <span class="text-brown-light small">Swasta nasional</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
 
                 <!-- 2023 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-circle">
-                            <span class="year">2023</span>
-                        </div>
-                        <div class="marker-line"></div>
+                <div class="timeline-item-3d animate-on-scroll">
+                    <div class="timeline-marker-wrapper">
+                        <div class="timeline-marker-circle">2023</div>
+                        <div class="timeline-marker-line"></div>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <div class="year-tag">2023</div>
-                                <div class="status-tag status-recognition">Pengakuan</div>
+                    <div class="timeline-card-3d">
+                        <div class="timeline-card-inner">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-recognition">Pengakuan</span>
+                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2023</span>
                             </div>
-                            <h3 class="card-title">Pengakuan & Ekspansi Regional</h3>
-                            <p class="card-text">
-                                Tahun pencapaian dengan pengakuan profesional dan ekspansi
-                                layanan ke wilayah regional di Indonesia.
+                            <h3 class="fw-bold text-brown-dark mb-3">Pengakuan & Ekspansi Regional</h3>
+                            <p class="text-brown-medium small mb-4">
+                                Tahun pencapaian dengan pengakuan profesional dan ekspansi layanan ke wilayah regional.
                             </p>
-                            <div class="card-milestones">
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-certificate"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Sertifikasi ISO</strong>
-                                        <small>ISO 9001:2015 untuk mutu layanan</small>
-                                    </div>
-                                </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-map-marked-alt"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Ekspansi Regional</strong>
-                                        <small>Layanan ke Jawa Tengah & Timur</small>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-certificate text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Sertifikasi ISO</strong>
+                                            <span class="text-brown-light small">ISO 9001:2015</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-trophy"></i>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-map-marked-alt text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Ekspansi Regional</strong>
+                                            <span class="text-brown-light small">Jawa Tengah & Timur</span>
+                                        </div>
                                     </div>
-                                    <div class="milestone-text">
-                                        <strong>Penghargaan</strong>
-                                        <small>Konsultan terpercaya tahun 2023</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-trophy text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Penghargaan</strong>
+                                            <span class="text-brown-light small">Konsultan terpercaya</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- 2024 -->
-                <div class="timeline-item">
-                    <div class="timeline-marker">
-                        <div class="marker-circle">
-                            <span class="year">2024+</span>
-                        </div>
-                        <div class="marker-line"></div>
+                <!-- 2024+ -->
+                <div class="timeline-item-3d animate-on-scroll">
+                    <div class="timeline-marker-wrapper">
+                        <div class="timeline-marker-circle">2024+</div>
+                        <div class="timeline-marker-line"></div>
                     </div>
-                    <div class="timeline-content">
-                        <div class="timeline-card">
-                            <div class="card-header">
-                                <div class="year-tag">2024 - Sekarang</div>
-                                <div class="status-tag status-innovation">Inovasi</div>
+                    <div class="timeline-card-3d">
+                        <div class="timeline-card-inner">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-innovation">Inovasi</span>
+                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2024 – Sekarang</span>
                             </div>
-                            <h3 class="card-title">Inovasi & Masa Depan</h3>
-                            <p class="card-text">
-                                Fokus pada pengembangan solusi inovatif dan persiapan
-                                untuk tantangan masa depan dalam industri konsultansi.
+                            <h3 class="fw-bold text-brown-dark mb-3">Inovasi & Masa Depan</h3>
+                            <p class="text-brown-medium small mb-4">
+                                Fokus pada pengembangan solusi inovatif dan persiapan untuk tantangan masa depan.
                             </p>
-                            <div class="card-milestones">
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-laptop-code"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Digitalisasi Layanan</strong>
-                                        <small>Sistem konsultansi digital terintegrasi</small>
-                                    </div>
-                                </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-leaf"></i>
-                                    </div>
-                                    <div class="milestone-text">
-                                        <strong>Konsultansi Lingkungan</strong>
-                                        <small>Ekspansi ke jasa lingkungan berkelanjutan</small>
+                            <div class="row g-3 mb-3">
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-laptop-code text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Digitalisasi Layanan</strong>
+                                            <span class="text-brown-light small">Sistem terintegrasi</span>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="milestone">
-                                    <div class="milestone-icon">
-                                        <i class="fas fa-university"></i>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-leaf text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Konsultansi Lingkungan</strong>
+                                            <span class="text-brown-light small">Berkelanjutan</span>
+                                        </div>
                                     </div>
-                                    <div class="milestone-text">
-                                        <strong>Kemitraan Akademik</strong>
-                                        <small>Kolaborasi dengan perguruan tinggi</small>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex">
+                                        <i class="fas fa-university text-cream-gold me-2 mt-1"></i>
+                                        <div>
+                                            <strong class="d-block text-brown-dark small">Kemitraan Akademik</strong>
+                                            <span class="text-brown-light small">Perguruan tinggi</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
@@ -377,101 +344,104 @@
         </div>
     </section>
 
-    <!-- Founding Story Section -->
-    <section class="py-8 bg-cream-light">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6">
-                    <div class="founder-story">
-                        <div class="section-header mb-5">
-                            <h2 class="section-title fw-bold text-brown-dark mb-3">Cerita Pendirian</h2>
-                            <p class="section-subtitle text-brown-medium">Inspirasi di balik berdirinya PT Mitra Nusa Konsulindo</p>
-                            <div class="section-divider"></div>
-                        </div>
+    <!-- FOUNDING STORY SECTION – 3D CARDS -->
+    <section class="py-6 bg-cream-light position-relative overflow-hidden">
+        <div class="cert-pattern">
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
+        </div>
 
-                        <div class="story-content">
-                            <p class="story-text">
+        <div class="container position-relative z-2">
+            <div class="section-header text-center mb-6">
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-pen-fancy me-2"></i>CERITA PENDIRIAN
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Cerita di Balik Perusahaan</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Inspirasi dan nilai yang melandasi berdirinya PT Mitra Nusa Konsulindo.
+                </p>
+            </div>
+
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="founding-story-3d animate-on-scroll">
+                        <div class="founding-story-inner">
+                            <p class="text-brown-medium mb-4">
                                 <span class="dropcap">D</span>idirikan oleh sekelompok profesional dengan visi yang sama,
                                 PT Mitra Nusa Konsulindo lahir dari keinginan untuk menciptakan perusahaan
                                 konsultan yang tidak hanya berorientasi pada profit, tetapi juga memberikan
                                 kontribusi nyata bagi pembangunan Indonesia.
                             </p>
-
-                            <p class="story-text">
+                            <p class="text-brown-medium mb-4">
                                 Dengan latar belakang pengalaman yang beragam di bidang konstruksi, manajemen proyek,
                                 dan konsultansi kelembagaan, para pendiri melihat potensi besar dalam memberikan
                                 solusi terintegrasi yang mengedepankan profesionalisme dan inovasi.
                             </p>
-
-                            <div class="quote-box mt-5">
-                                <div class="quote-icon">
-                                    <i class="fas fa-quote-left"></i>
-                                </div>
-                                <blockquote class="quote-text">
+                            <div class="quote-box-3d mt-5">
+                                <i class="fas fa-quote-left fa-2x text-cream-gold mb-3"></i>
+                                <blockquote class="text-brown-dark fst-italic mb-3">
                                     "Kami percaya bahwa setiap proyek adalah kesempatan untuk menciptakan
                                     nilai tambah dan memberikan dampak positif yang berkelanjutan."
                                 </blockquote>
-                                <div class="quote-author">
-                                    <div class="author-line"></div>
-                                    <cite>— Pendiri PT Mitra Nusa Konsulindo</cite>
-                                </div>
+                                <cite class="text-brown-light">— Pendiri PT Mitra Nusa Konsulindo</cite>
                             </div>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="founder-visual">
-                        <!-- Vision Card -->
-                        <div class="vision-card mb-4">
-                            <div class="card-icon">
-                                <i class="fas fa-lightbulb"></i>
-                            </div>
-                            <div class="card-body">
-                                <h4 class="card-title">Visi Pendirian</h4>
-                                <p class="card-text">
-                                    Menciptakan perusahaan konsultan yang menjadi mitra terpercaya dalam
-                                    pembangunan infrastruktur dan kelembagaan di Indonesia.
-                                </p>
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="achievement-card-3d animate-on-scroll">
+                                <div class="achievement-inner text-center">
+                                    <div class="achievement-icon-wrapper mb-3">
+                                        <i class="fas fa-rocket fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <h3 class="fw-bold text-brown-dark mb-1">4+</h3>
+                                    <p class="text-brown-medium small">Tahun Beroperasi</p>
+                                    <div class="card-corner corner-1"></div>
+                                    <div class="card-corner corner-2"></div>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- Achievement Grid -->
-                        <div class="achievement-grid">
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-rocket"></i>
-                                </div>
-                                <div class="achievement-content">
-                                    <h5 class="achievement-number">4+</h5>
-                                    <p class="achievement-text">Tahun Beroperasi</p>
-                                </div>
-                            </div>
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-user-tie"></i>
-                                </div>
-                                <div class="achievement-content">
-                                    <h5 class="achievement-number">15+</h5>
-                                    <p class="achievement-text">Tenaga Ahli</p>
+                        <div class="col-md-6">
+                            <div class="achievement-card-3d animate-on-scroll">
+                                <div class="achievement-inner text-center">
+                                    <div class="achievement-icon-wrapper mb-3">
+                                        <i class="fas fa-user-tie fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <h3 class="fw-bold text-brown-dark mb-1">15+</h3>
+                                    <p class="text-brown-medium small">Tenaga Ahli</p>
+                                    <div class="card-corner corner-1"></div>
+                                    <div class="card-corner corner-2"></div>
                                 </div>
                             </div>
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-project-diagram"></i>
-                                </div>
-                                <div class="achievement-content">
-                                    <h5 class="achievement-number">50+</h5>
-                                    <p class="achievement-text">Proyek Selesai</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="achievement-card-3d animate-on-scroll">
+                                <div class="achievement-inner text-center">
+                                    <div class="achievement-icon-wrapper mb-3">
+                                        <i class="fas fa-project-diagram fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <h3 class="fw-bold text-brown-dark mb-1">50+</h3>
+                                    <p class="text-brown-medium small">Proyek Selesai</p>
+                                    <div class="card-corner corner-1"></div>
+                                    <div class="card-corner corner-2"></div>
                                 </div>
                             </div>
-                            <div class="achievement-card">
-                                <div class="achievement-icon">
-                                    <i class="fas fa-handshake"></i>
-                                </div>
-                                <div class="achievement-content">
-                                    <h5 class="achievement-number">30+</h5>
-                                    <p class="achievement-text">Klien Puas</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="achievement-card-3d animate-on-scroll">
+                                <div class="achievement-inner text-center">
+                                    <div class="achievement-icon-wrapper mb-3">
+                                        <i class="fas fa-handshake fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <h3 class="fw-bold text-brown-dark mb-1">30+</h3>
+                                    <p class="text-brown-medium small">Klien Puas</p>
+                                    <div class="card-corner corner-1"></div>
+                                    <div class="card-corner corner-2"></div>
                                 </div>
                             </div>
                         </div>
@@ -481,845 +451,670 @@
         </div>
     </section>
 
-    <!-- Core Values Section -->
-    <section class="py-8 bg-white">
+    <!-- CTA SECTION – SAME ELEGANT STYLE AS HOME -->
+    <section class="py-6 cta-elegant">
         <div class="container">
-            <div class="section-header text-center mb-6">
-                <h2 class="section-title fw-bold text-brown-dark mb-3">Nilai Inti Perusahaan</h2>
-                <p class="section-subtitle text-brown-medium">Prinsip yang membimbing setiap langkah dan keputusan kami</p>
-                <div class="section-divider mx-auto"></div>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-lg-4">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h4 class="value-title">Kemitraan</h4>
-                        <p class="value-description">
-                            Membangun hubungan jangka panjang yang saling menguntungkan dengan semua
-                            pemangku kepentingan berdasarkan kepercayaan dan transparansi.
+            <div class="cta-content-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-6 fw-bold mb-3">Tertarik Mengetahui Lebih Lanjut?</h2>
+                        <p class="lead mb-0">
+                            Pelajari lebih dalam tentang visi, misi, dan struktur organisasi perusahaan kami.
                         </p>
                     </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-gem"></i>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3">
+                            <a href="{{ route('about.vision-mission') }}" class="btn btn-brown-3d btn-lg px-5 py-3 rounded-pill">
+                                <i class="fas fa-eye me-2"></i>Visi & Misi
+                                <span class="btn-shine"></span>
+                            </a>
+                            <a href="{{ route('about.organization') }}" class="btn btn-outline-brown-3d btn-lg px-5 py-3 rounded-pill">
+                                <i class="fas fa-sitemap me-2"></i>Struktur Organisasi
+                            </a>
                         </div>
-                        <h4 class="value-title">Kualitas</h4>
-                        <p class="value-description">
-                            Tidak pernah berkompromi dengan kualitas layanan dalam setiap proyek
-                            yang kami tangani, dengan standar tertinggi dan perhatian pada detail.
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-lg-4">
-                    <div class="value-card">
-                        <div class="value-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h4 class="value-title">Inovasi</h4>
-                        <p class="value-description">
-                            Terus mengembangkan solusi kreatif dan teknologi terkini untuk menjawab
-                            tantangan masa kini dan mempersiapkan masa depan.
-                        </p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-6 bg-brown-dark text-white">
-        <div class="container">
-            <div class="row align-items-center g-4">
-                <div class="col-lg-8">
-                    <h3 class="fw-bold mb-3">Tertarik Mengetahui Lebih Lanjut?</h3>
-                    <p class="mb-0 opacity-75">
-                        Pelajari lebih dalam tentang visi, misi, dan struktur organisasi perusahaan kami.
-                    </p>
-                </div>
-                <div class="col-lg-4">
-                    <div class="d-flex flex-wrap gap-3 justify-content-lg-end">
-                        <a href="{{ route('about.vision-mission') }}" class="btn btn-light rounded-pill px-4 py-2">
-                            <i class="fas fa-eye me-2"></i>Visi & Misi
-                        </a>
-                        <a href="{{ route('about.organization') }}" class="btn btn-outline-light rounded-pill px-4 py-2">
-                            <i class="fas fa-sitemap me-2"></i>Struktur Organisasi
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- Back Button -->
+    <div class="container text-center pb-6 mt-6">
+        <a href="{{ route('about') }}" class="btn btn-outline-brown-3d rounded-pill px-5 py-3">
+            <i class="fas fa-arrow-left me-2"></i>Kembali ke Profil Perusahaan
+        </a>
+    </div>
 @endsection
 
 @push('styles')
 <style>
-    /* === COLOR SYSTEM === */
+    /* ===== INHERIT FULL STYLE FROM HOME PAGE ===== */
     :root {
-        --brown-dark: #3E2723;
-        --brown-medium: #5D4037;
-        --brown-light: #795548;
-        --brown-soft: #8D6E63;
-        --cream-dark: #BCAAA4;
-        --cream-medium: #D7CCC8;
-        --cream-light: #EFEBE9;
-        --cream-lighter: #F5F0EB;
-        --white: #FFFFFF;
+        --brown-dark: #5D4037;
+        --brown-medium: #8B6B61;
+        --brown-light: #A1887F;
+        --cream-gold: #D4AF37;
+        --cream-dark: #D7CCC8;
+        --cream-medium: #EFEBE9;
+        --cream-light: #F5F0ED;
+        --white: #ffffff;
+        --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+        --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+        --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+        --shadow-3d: 0 20px 40px rgba(93,64,55,0.2), 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    /* === CLEAN HEADER === */
-    .bg-gradient-light-cream {
-        background: linear-gradient(135deg, #F9F5F3 0%, #EFEBE9 50%, #F5F0EB 100%);
+    /* ----- Hero Section (same as home) ----- */
+    .history-hero {
+        background: linear-gradient(135deg, var(--cream-light) 0%, var(--white) 100%);
+        padding: 6rem 0 4rem;
         position: relative;
         overflow: hidden;
     }
 
-    .wave-decoration {
+    .hero-bg-pattern {
         position: absolute;
-        bottom: 0;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 120px;
-        color: var(--white);
-        z-index: 1;
-    }
-
-    .wave-decoration svg {
-        width: 100%;
         height: 100%;
-        display: block;
+        pointer-events: none;
     }
 
-    /* Breadcrumb Clean */
-    .breadcrumb-clean {
-        background: transparent;
-        padding: 0;
-        margin-bottom: 1.5rem;
+    .pattern-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(93, 64, 55, 0.05);
+        animation: float 20s ease-in-out infinite;
     }
 
-    .breadcrumb-clean .breadcrumb-item {
-        font-size: 0.9rem;
+    .pattern-circle.circle-1 {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+        right: -100px;
+        animation-delay: 0s;
     }
 
-    .breadcrumb-clean .breadcrumb-item a {
-        color: var(--brown-medium);
-        text-decoration: none;
-        transition: color 0.2s;
+    .pattern-circle.circle-2 {
+        width: 200px;
+        height: 200px;
+        bottom: -80px;
+        left: -80px;
+        background: rgba(212, 175, 55, 0.05);
+        animation-delay: 10s;
     }
 
-    .breadcrumb-clean .breadcrumb-item a:hover {
-        color: var(--brown-dark);
+    .pattern-square {
+        position: absolute;
+        background: rgba(161, 136, 127, 0.03);
+        animation: rotate 30s linear infinite;
     }
 
-    .breadcrumb-clean .breadcrumb-item.active {
-        color: var(--brown-dark);
-        font-weight: 500;
+    .pattern-square.square-1 {
+        width: 150px;
+        height: 150px;
+        top: 30%;
+        right: 15%;
+        transform: rotate(45deg);
     }
 
-    .breadcrumb-clean .breadcrumb-item + .breadcrumb-item::before {
-        color: var(--brown-light);
-        content: "›";
-        padding: 0 0.5rem;
+    .pattern-square.square-2 {
+        width: 100px;
+        height: 100px;
+        bottom: 20%;
+        left: 10%;
+        transform: rotate(15deg);
+        background: rgba(212, 175, 55, 0.03);
+        animation-delay: -15s;
     }
 
-    /* Header Badge */
-    .header-badge .badge {
-        background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
-        padding: 0.5rem 1rem;
-        font-size: 0.85rem;
-        font-weight: 500;
-        border-radius: 20px;
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
     }
 
-    /* Text Gradient */
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .min-vh-60 { min-height: 60vh; }
+
+    /* ----- Typography & Badges (same as home) ----- */
+    .display-2 {
+        font-weight: 800 !important;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+    }
+
     .text-gradient-brown {
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-light));
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
 
-    /* Action Buttons */
-    .action-buttons {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 1rem;
-        margin-bottom: 1.5rem;
+    .company-badge {
+        animation: fadeInDown 0.8s ease-out;
     }
 
-    .btn-brown {
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        border: none;
-        color: var(--cream-light);
-        font-weight: 500;
-        transition: all 0.3s ease;
+    .badge.bg-brown-dark {
+        background-color: rgba(93, 64, 55, 0.9) !important;
+        border: 1px solid rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
     }
 
-    .btn-brown:hover {
-        background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
-        color: var(--white);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(62, 39, 35, 0.2);
-    }
-
-    .btn-outline-brown {
-        border: 2px solid var(--brown-medium);
-        color: var(--brown-medium);
-        background: transparent;
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .btn-outline-brown:hover {
-        background: var(--brown-medium);
-        color: var(--cream-light);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(62, 39, 35, 0.1);
-    }
-
-    /* Quick Stats */
-    .stats-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-    }
-
-    .stat-item {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.75rem;
-        background: rgba(255, 255, 255, 0.7);
-        border-radius: 12px;
-        border: 1px solid var(--cream-medium);
-        transition: all 0.3s ease;
-    }
-
-    .stat-item:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(62, 39, 35, 0.08);
-        border-color: var(--brown-light);
-    }
-
-    .stat-icon {
-        width: 36px;
-        height: 36px;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 0.9rem;
-    }
-
-    .stat-content {
-        flex: 1;
-    }
-
-    .stat-number {
-        display: block;
-        font-size: 1.25rem;
-        font-weight: 700;
+    .badge.bg-brown-light-subtle {
+        background-color: rgba(161,136,127,0.1) !important;
         color: var(--brown-dark);
-        line-height: 1;
     }
 
-    .stat-label {
-        display: block;
-        font-size: 0.8rem;
-        color: var(--brown-medium);
-        margin-top: 0.25rem;
-    }
-
-    /* Header Visual */
-    .timeline-visual {
+    /* ----- Typewriter Effect (same as home) ----- */
+    .typewriter-wrapper {
+        display: inline-block;
         position: relative;
-        height: 200px;
-        margin-bottom: 2rem;
     }
 
-    .timeline-dot {
-        position: absolute;
-        width: 12px;
-        height: 12px;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        border-radius: 50%;
-        border: 3px solid var(--cream-light);
-        box-shadow: 0 0 0 3px var(--cream-medium);
-    }
-
-    .timeline-line {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(to bottom, transparent, var(--brown-light), transparent);
-        transform: translateX(-50%);
-    }
-
-    .dot-1 { top: 10%; left: 20%; }
-    .dot-2 { top: 25%; right: 15%; }
-    .dot-3 { top: 45%; left: 25%; }
-    .dot-4 { top: 65%; right: 20%; }
-    .dot-5 { top: 85%; left: 15%; }
-
-    .history-icon {
-        width: 120px;
-        height: 120px;
-        margin: 0 auto;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 3rem;
-        box-shadow: 0 10px 30px rgba(62, 39, 35, 0.15);
-    }
-
-    /* === SECTION STYLES === */
-    .section-header {
-        margin-bottom: 3rem;
-    }
-
-    .section-title {
-        font-size: 2.25rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-    }
-
-    .section-subtitle {
-        font-size: 1.1rem;
-        color: var(--brown-medium);
-        max-width: 600px;
-        margin: 0 auto;
-    }
-
-    .section-divider {
-        width: 60px;
-        height: 3px;
-        background: linear-gradient(90deg, var(--brown-medium), var(--cream-dark));
-        border-radius: 2px;
-        margin-top: 1rem;
-    }
-
-    /* === VERTICAL TIMELINE === */
-    .timeline-vertical {
+    .typewriter-text {
         position: relative;
-        max-width: 800px;
-        margin: 0 auto;
-        padding-left: 100px;
+        display: inline-block;
+        color: var(--brown-dark) !important;
     }
 
-    .timeline-vertical::before {
+    .typewriter-text::after {
         content: '';
         position: absolute;
-        left: 40px;
-        top: 0;
-        bottom: 0;
-        width: 2px;
-        background: linear-gradient(to bottom,
-            transparent 0%,
-            var(--brown-light) 10%,
-            var(--brown-light) 90%,
-            transparent 100%);
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 1.2em;
+        background-color: var(--brown-dark);
+        animation: blink 1s infinite;
     }
 
-    .timeline-item {
-        position: relative;
-        margin-bottom: 3rem;
-        display: flex;
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
     }
 
-    .timeline-marker {
+    /* ----- Scroll Indicator (same as home) ----- */
+    .scroll-indicator {
         position: absolute;
-        left: -60px;
-        top: 0;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .scroll-down {
+        color: var(--brown-dark);
+        font-size: 1.5rem;
+        animation: bounce 2s infinite;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s;
+    }
+
+    .scroll-down:hover {
+        background: white;
+        transform: scale(1.1);
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+    }
+
+    /* ----- Breadcrumb (glassmorphism) ----- */
+    .breadcrumb-nav .breadcrumb {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid rgba(93,64,55,0.1);
+        display: inline-flex;
+    }
+
+    .breadcrumb-item a {
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .breadcrumb-item a:hover {
+        color: var(--brown-dark) !important;
+    }
+
+    /* ===== 3D VERTICAL TIMELINE ===== */
+    .timeline-vertical {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .timeline-item-3d {
+        position: relative;
+        display: flex;
+        margin-bottom: 3rem;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.6s ease;
+    }
+
+    .timeline-item-3d.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .timeline-marker-wrapper {
         width: 80px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-right: 2rem;
     }
 
-    .marker-circle {
-        width: 40px;
-        height: 40px;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
+    .timeline-marker-circle {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, var(--brown-dark), var(--brown-medium));
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--cream-light);
-        font-weight: 600;
+        color: white;
+        font-weight: 700;
         font-size: 0.9rem;
-        border: 3px solid var(--white);
-        box-shadow: 0 0 0 3px var(--cream-medium);
+        box-shadow: var(--shadow-3d);
+        border: 3px solid var(--cream-light);
+        transition: all 0.3s;
         z-index: 2;
-        transition: all 0.3s ease;
     }
 
-    .marker-circle:hover {
+    .timeline-item-3d:hover .timeline-marker-circle {
         transform: scale(1.1);
-        box-shadow: 0 0 0 3px var(--cream-medium), 0 5px 15px rgba(62, 39, 35, 0.15);
+        box-shadow: 0 10px 20px rgba(93,64,55,0.3);
     }
 
-    .marker-line {
+    .timeline-marker-line {
         width: 2px;
-        height: calc(100% + 3rem);
-        background: var(--cream-medium);
-        margin-top: -1px;
-        position: relative;
-        z-index: 1;
-    }
-
-    .timeline-content {
         flex: 1;
-        padding-left: 2rem;
+        background: linear-gradient(to bottom, var(--cream-gold), transparent);
+        margin-top: -2px;
     }
 
-    .timeline-card {
-        background: var(--white);
-        border-radius: 16px;
-        padding: 2rem;
-        box-shadow: 0 10px 30px rgba(62, 39, 35, 0.08);
-        border: 1px solid var(--cream-medium);
-        transition: all 0.3s ease;
+    .timeline-card-3d {
+        perspective: 1000px;
+        flex: 1;
+    }
+
+    .timeline-card-inner {
+        background: white;
+        border-radius: 2rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
         position: relative;
         overflow: hidden;
     }
 
-    .timeline-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 15px 40px rgba(62, 39, 35, 0.12);
-        border-color: var(--brown-light);
+    .timeline-card-3d:hover .timeline-card-inner {
+        transform: rotateY(-1deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
     }
 
-    .timeline-card::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        bottom: 0;
-        width: 4px;
-        background: linear-gradient(to bottom, var(--brown-medium), var(--cream-dark));
+    .status-foundation { background: rgba(141,110,99,0.15) !important; color: #8D6E63 !important; }
+    .status-expansion { background: rgba(121,85,72,0.15) !important; color: #795548 !important; }
+    .status-growth { background: rgba(93,64,55,0.15) !important; color: #5D4037 !important; }
+    .status-recognition { background: rgba(62,39,35,0.15) !important; color: #3E2723 !important; }
+    .status-innovation { background: rgba(188,170,164,0.15) !important; color: #BCAAA4 !important; }
+
+    .text-cream-gold {
+        color: var(--cream-gold);
     }
 
-    .card-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 1rem;
+    /* ===== FOUNDING STORY ===== */
+    .founding-story-3d {
+        perspective: 1000px;
     }
 
-    .year-tag {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--brown-dark);
+    .founding-story-inner {
+        background: white;
+        border-radius: 2rem;
+        padding: 2.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
     }
 
-    .status-tag {
-        padding: 0.25rem 0.75rem;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        color: var(--brown-dark);
-    }
-
-    .status-foundation { background: rgba(141, 110, 99, 0.15); }
-    .status-expansion { background: rgba(121, 85, 72, 0.15); }
-    .status-growth { background: rgba(93, 64, 55, 0.15); }
-    .status-recognition { background: rgba(62, 39, 35, 0.15); }
-    .status-innovation { background: rgba(188, 170, 164, 0.15); }
-
-    .card-title {
-        font-size: 1.5rem;
-        font-weight: 600;
-        color: var(--brown-dark);
-        margin-bottom: 1rem;
-    }
-
-    .card-text {
-        color: var(--brown-medium);
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-    }
-
-    .card-milestones {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 1rem;
-    }
-
-    .milestone {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-    }
-
-    .milestone-icon {
-        width: 32px;
-        height: 32px;
-        background: rgba(188, 170, 164, 0.2);
-        border-radius: 8px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--brown-medium);
-        font-size: 0.9rem;
-        flex-shrink: 0;
-    }
-
-    .milestone-text strong {
-        display: block;
-        font-size: 0.9rem;
-        font-weight: 600;
-        color: var(--brown-dark);
-        margin-bottom: 0.125rem;
-    }
-
-    .milestone-text small {
-        display: block;
-        font-size: 0.8rem;
-        color: var(--brown-light);
-    }
-
-    /* === FOUNDING STORY === */
-    .founder-story {
-        padding-right: 2rem;
+    .founding-story-3d:hover .founding-story-inner {
+        transform: rotateY(1deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
     }
 
     .dropcap {
         float: left;
         font-size: 4em;
         line-height: 0.8;
-        padding-top: 4px;
-        padding-right: 8px;
-        padding-left: 3px;
+        padding: 0.2rem 0.3rem 0 0;
         font-weight: 700;
         color: var(--brown-dark);
     }
 
-    .story-text {
-        font-size: 1.1rem;
-        line-height: 1.7;
-        color: var(--brown-medium);
-        margin-bottom: 1.5rem;
-    }
-
-    .quote-box {
-        background: linear-gradient(135deg, #F9F5F3 0%, #EFEBE9 100%);
-        border-radius: 16px;
-        padding: 2rem;
-        border-left: 4px solid var(--brown-medium);
-        position: relative;
-        margin-top: 2rem;
-    }
-
-    .quote-icon {
-        position: absolute;
-        top: -15px;
-        right: 30px;
-        width: 40px;
-        height: 40px;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 1rem;
-        box-shadow: 0 5px 15px rgba(62, 39, 35, 0.15);
-    }
-
-    .quote-box blockquote {
-        font-size: 1.2rem;
-        line-height: 1.6;
-        color: var(--brown-medium);
-        font-style: italic;
-        margin-bottom: 1rem;
-    }
-
-    .quote-author {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .author-line {
-        width: 40px;
-        height: 2px;
-        background: var(--brown-light);
-    }
-
-    .quote-author cite {
-        font-weight: 600;
-        color: var(--brown-dark);
-        font-style: normal;
-    }
-
-    /* Vision Card */
-    .vision-card {
-        background: var(--white);
-        border-radius: 16px;
-        padding: 2rem;
-        box-shadow: 0 10px 30px rgba(62, 39, 35, 0.08);
-        border: 1px solid var(--cream-medium);
-        display: flex;
-        gap: 1.5rem;
-        align-items: flex-start;
-    }
-
-    .card-icon {
-        width: 60px;
-        height: 60px;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 1.5rem;
-        flex-shrink: 0;
-    }
-
-    .vision-card .card-body {
-        flex: 1;
-    }
-
-    .vision-card .card-title {
-        font-size: 1.5rem;
-        margin-bottom: 0.75rem;
-    }
-
-    .vision-card .card-text {
-        font-size: 1rem;
-        margin-bottom: 0;
-    }
-
-    /* Achievement Grid */
-    .achievement-grid {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    .achievement-card {
-        background: var(--white);
-        border-radius: 12px;
+    .quote-box-3d {
+        background: rgba(212,175,55,0.05);
+        border-left: 4px solid var(--cream-gold);
         padding: 1.5rem;
-        box-shadow: 0 5px 20px rgba(62, 39, 35, 0.05);
-        border: 1px solid var(--cream-medium);
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
+        border-radius: 1rem;
     }
 
-    .achievement-card:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(62, 39, 35, 0.1);
-        border-color: var(--brown-light);
-    }
-
-    .achievement-icon {
-        width: 48px;
-        height: 48px;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 1.2rem;
-        flex-shrink: 0;
-    }
-
-    .achievement-number {
-        font-size: 1.75rem;
-        font-weight: 700;
-        color: var(--brown-dark);
-        margin-bottom: 0.25rem;
-        line-height: 1;
-    }
-
-    .achievement-text {
-        font-size: 0.9rem;
-        color: var(--brown-medium);
-        margin-bottom: 0;
-    }
-
-    /* === CORE VALUES === */
-    .value-card {
-        background: var(--white);
-        border-radius: 16px;
-        padding: 2.5rem 2rem;
-        text-align: center;
+    /* ===== ACHIEVEMENT CARDS ===== */
+    .achievement-card-3d {
+        perspective: 1000px;
         height: 100%;
-        box-shadow: 0 10px 30px rgba(62, 39, 35, 0.05);
-        border: 1px solid var(--cream-medium);
-        transition: all 0.3s ease;
     }
 
-    .value-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 20px 40px rgba(62, 39, 35, 0.1);
-        border-color: var(--brown-light);
+    .achievement-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
     }
 
-    .value-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 1.5rem;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
+    .achievement-card-3d:hover .achievement-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
+    }
+
+    .achievement-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
         border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--cream-light);
-        font-size: 2rem;
-        transition: all 0.3s ease;
+        margin: 0 auto;
+        transition: all 0.3s;
     }
 
-    .value-card:hover .value-icon {
-        transform: rotate(5deg) scale(1.1);
+    .achievement-card-3d:hover .achievement-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
     }
 
-    .value-title {
-        font-size: 1.5rem;
+    /* ===== 3D BUTTONS (same as home) ===== */
+    .btn-brown-3d {
+        background: linear-gradient(145deg, var(--brown-dark), #4A342E);
+        border: none;
+        color: white;
         font-weight: 600;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(93,64,55,0.2);
+        transform-style: preserve-3d;
+        transform: translateY(0) rotateX(0deg);
+    }
+
+    .btn-brown-3d:hover {
+        transform: translateY(-3px) rotateX(2deg);
+        box-shadow: 0 15px 30px rgba(93,64,55,0.3);
+        background: linear-gradient(145deg, #4A342E, var(--brown-dark));
+    }
+
+    .btn-outline-brown-3d {
+        border: 2px solid var(--brown-dark);
         color: var(--brown-dark);
-        margin-bottom: 1rem;
+        background: transparent;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
     }
 
-    .value-description {
-        color: var(--brown-medium);
-        line-height: 1.6;
-        margin-bottom: 0;
+    .btn-outline-brown-3d:hover {
+        background: var(--brown-dark);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
     }
 
-    /* === RESPONSIVE DESIGN === */
+    .btn-brown-3d::before,
+    .btn-outline-brown-3d::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.6s;
+    }
+
+    .btn-brown-3d:hover::before,
+    .btn-outline-brown-3d:hover::before {
+        left: 100%;
+    }
+
+    /* 3D decorative corners */
+    .card-corner {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, transparent 50%, rgba(212,175,55,0.1) 50%);
+        z-index: 1;
+    }
+
+    .card-corner.corner-1 {
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+
+    .card-corner.corner-2 {
+        bottom: 0;
+        left: 0;
+        transform: rotate(270deg);
+    }
+
+    /* ----- Background decorations ----- */
+    .section-bg-decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .decoration-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.03);
+        width: 300px;
+        height: 300px;
+    }
+
+    .decoration-circle:nth-child(1) {
+        top: -100px;
+        right: -100px;
+        background: rgba(93,64,55,0.02);
+        animation: float 25s infinite;
+    }
+
+    .decoration-circle:nth-child(2) {
+        bottom: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: rgba(212,175,55,0.02);
+        animation: float 20s infinite reverse;
+    }
+
+    .bg-cream-light {
+        background-color: var(--cream-light) !important;
+        position: relative;
+    }
+
+    .cert-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .pattern-line {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--cream-gold), transparent);
+        opacity: 0.2;
+    }
+
+    .pattern-line:nth-child(1) { top: 20%; left: -50%; width: 200%; transform: rotate(2deg); }
+    .pattern-line:nth-child(2) { bottom: 30%; right: -50%; width: 200%; transform: rotate(-3deg); }
+
+    /* ----- CTA Section (same as home) ----- */
+    .cta-elegant {
+        background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-elegant::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background:
+            radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.1) 0%, transparent 50%);
+    }
+
+    .cta-content-wrapper {
+        position: relative;
+        z-index: 2;
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
+    }
+
+    .cta-elegant h2 {
+        color: #5D4037;
+        background: linear-gradient(135deg, #5D4037, #8B6B61);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .cta-elegant .lead {
+        color: #795548;
+    }
+
+    /* ----- Animations ----- */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-in-down {
+        animation: fadeInDown 0.8s ease-out forwards;
+    }
+
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-on-scroll {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* ----- Utilities ----- */
+    .py-6 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+
+    .mb-6 {
+        margin-bottom: 5rem !important;
+    }
+
+    .mt-6 {
+        margin-top: 5rem !important;
+    }
+
+    .pb-6 {
+        padding-bottom: 5rem !important;
+    }
+
+    /* ----- Responsive ----- */
     @media (max-width: 992px) {
-        .timeline-vertical {
-            padding-left: 80px;
-        }
-
-        .timeline-vertical::before {
-            left: 30px;
-        }
-
-        .timeline-marker {
-            left: -50px;
-            width: 60px;
-        }
-
-        .stats-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .achievement-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
+        .display-2 { font-size: 3rem !important; }
+        .history-hero { padding: 5rem 0 3rem; }
+        .timeline-item-3d { flex-direction: column; }
+        .timeline-marker-wrapper { width: 100%; flex-direction: row; margin-bottom: 1rem; }
+        .timeline-marker-line { width: 100%; height: 2px; margin-left: 1rem; }
+        .cta-content-wrapper { padding: 2rem 1.5rem; }
     }
 
     @media (max-width: 768px) {
-        .page-header-clean {
-            padding-top: 4rem !important;
-            padding-bottom: 4rem !important;
-        }
-
-        .display-5 {
-            font-size: 2rem !important;
-        }
-
-        .lead {
-            font-size: 1.1rem !important;
-        }
-
-        .action-buttons {
-            flex-direction: column;
-            align-items: stretch;
-        }
-
-        .btn {
-            text-align: center;
-        }
-
-        .timeline-vertical {
-            padding-left: 0;
-        }
-
-        .timeline-vertical::before {
-            display: none;
-        }
-
-        .timeline-item {
-            flex-direction: column;
-            padding-left: 60px;
-        }
-
-        .timeline-marker {
-            position: absolute;
-            left: 0;
-            top: 0;
-            flex-direction: row;
-            width: auto;
-        }
-
-        .marker-line {
-            display: none;
-        }
-
-        .timeline-content {
-            padding-left: 0;
-            padding-top: 2rem;
-        }
-
-        .card-milestones {
-            grid-template-columns: 1fr;
-        }
-
-        .stats-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .achievement-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-
-        .founder-story {
-            padding-right: 0;
-            margin-bottom: 3rem;
-        }
+        .display-2 { font-size: 2.5rem !important; }
+        .typewriter-text { font-size: 1.5rem !important; }
+        .timeline-card-inner { padding: 1.25rem; }
     }
 
     @media (max-width: 576px) {
-        .section-title {
-            font-size: 1.75rem;
-        }
-
-        .timeline-card {
-            padding: 1.5rem;
-        }
-
-        .value-card {
-            padding: 2rem 1.5rem;
-        }
-
-        .achievement-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .d-flex.flex-wrap {
-            justify-content: center !important;
-        }
+        .display-2 { font-size: 2rem !important; }
+        .badge { font-size: 0.8rem !important; }
     }
 </style>
 @endpush
@@ -1327,65 +1122,90 @@
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Add animation to timeline cards on scroll
-        const timelineCards = document.querySelectorAll('.timeline-card');
+        // ----- TYPEWRITER EFFECT (like home) -----
+        const textElement = document.querySelector('.typewriter-text');
+        if (textElement) {
+            const originalText = textElement.textContent.trim();
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+
+            function typeWriter() {
+                const currentText = originalText.substring(0, charIndex);
+                textElement.textContent = currentText;
+
+                if (!isDeleting && charIndex < originalText.length) {
+                    charIndex++;
+                    typingSpeed = 100;
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    typingSpeed = 50;
+                }
+
+                if (!isDeleting && charIndex === originalText.length) {
+                    isDeleting = true;
+                    typingSpeed = 1500;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    typingSpeed = 500;
+                }
+
+                setTimeout(typeWriter, typingSpeed);
+            }
+
+            setTimeout(typeWriter, 1000);
+        }
+
+        // ----- SMOOTH SCROLL FOR ANCHOR -----
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ----- OBSERVER FOR SCROLL ANIMATIONS -----
+        const observerOptions = {
+            threshold: 0.2,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
         const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
+            entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    setTimeout(() => {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }, index * 200);
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
         });
 
-        // Initialize card styles
-        timelineCards.forEach(card => {
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            card.style.transition = 'all 0.6s ease';
-            observer.observe(card);
-        });
+        // ----- 3D HOVER EFFECT ENHANCEMENT -----
+        const cards = document.querySelectorAll('.timeline-card-inner, .founding-story-inner, .achievement-inner');
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
 
-        // Add hover effect to value cards
-        const valueCards = document.querySelectorAll('.value-card');
-        valueCards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                const icon = this.querySelector('.value-icon');
-                if (icon) {
-                    icon.style.transform = 'rotate(5deg) scale(1.1)';
-                }
+                card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateY(-5px)`;
             });
 
-            card.addEventListener('mouseleave', function() {
-                const icon = this.querySelector('.value-icon');
-                if (icon) {
-                    icon.style.transform = 'rotate(0) scale(1)';
-                }
-            });
-        });
-
-        // Add click effect to timeline markers
-        const timelineMarkers = document.querySelectorAll('.marker-circle');
-        timelineMarkers.forEach(marker => {
-            marker.addEventListener('click', function() {
-                const year = this.querySelector('.year').textContent;
-                const card = this.closest('.timeline-item').querySelector('.timeline-card');
-
-                // Add active class
-                timelineMarkers.forEach(m => m.classList.remove('active'));
-                this.classList.add('active');
-
-                // Scroll to card
-                card.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center'
-                });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(1deg)';
             });
         });
     });

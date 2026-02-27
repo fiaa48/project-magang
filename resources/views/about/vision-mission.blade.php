@@ -1,861 +1,750 @@
 @extends('layouts.app')
 
-@section('title', 'Visi & Misi - PT Mitra Nusa Konsulindo')
+@section('title', 'Visi & Misi | PT Mitra Nusa Konsulindo')
 @section('description', 'Visi dan misi PT Mitra Nusa Konsulindo - Panduan dan komitmen kami dalam memberikan layanan konsultansi terbaik.')
 
 @section('content')
-    <!-- Animated Page Header -->
-    <section class="page-header py-6">
-        <div class="container">
-            <div class="row">
-                <div class="col-12 text-center">
-                    <div class="header-content">
-                        <div class="vision-mission-header mb-4">
-                            <i class="fas fa-bullseye header-icon"></i>
-                            <h1 class="display-5 fw-bold text-brown-dark mb-3">Visi & Misi Perusahaan</h1>
-                        </div>
-                        <p class="lead text-brown-medium mb-4" style="max-width: 700px; margin: 0 auto;">
-                            Panduan dan komitmen kami dalam memberikan layanan konsultansi terbaik
-                            untuk mewujudkan solusi inovatif dan berkelanjutan.
-                        </p>
-                        <div class="header-ornament">
-                            <div class="ornament-line"></div>
-                            <div class="ornament-dot"></div>
-                            <div class="ornament-line"></div>
+    <!-- HERO SECTION – SAME STYLE AS HOME -->
+    <section class="vision-hero position-relative overflow-hidden">
+        <!-- Background Pattern (same as home) -->
+        <div class="hero-bg-pattern">
+            <div class="pattern-circle circle-1"></div>
+            <div class="pattern-circle circle-2"></div>
+            <div class="pattern-square square-1"></div>
+            <div class="pattern-square square-2"></div>
+        </div>
+
+        <div class="container position-relative z-3">
+            <div class="row min-vh-60 align-items-center">
+                <div class="col-lg-8 mx-auto text-center">
+                    <!-- Animated Badge – glassmorphism -->
+                    <div class="company-badge mb-5 animate-fade-in-down">
+                        <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal">
+                            <i class="fas fa-bullseye me-2"></i>VISI & MISI
+                        </span>
+                    </div>
+
+                    <!-- Main Heading with Gradient -->
+                    <h1 class="display-2 fw-bold mb-4 text-brown-dark animate-fade-in-up">
+                        Panduan & <span class="text-gradient-brown">Komitmen</span>
+                    </h1>
+
+                    <!-- Subtitle with Typewriter Effect (like home) -->
+                    <div class="subtitle-wrapper mb-5 animate-fade-in-up" style="animation-delay: 0.2s;">
+                        <h2 class="h3 fw-light text-brown-medium mb-3">
+                            Mewujudkan Solusi Inovatif dan Berkelanjutan
+                        </h2>
+                        <div class="typewriter-wrapper">
+                            <span class="typewriter-text text-brown-dark fw-semibold fs-3">
+                                Integritas · Profesionalisme · Inovasi
+                            </span>
                         </div>
                     </div>
+
+                    <!-- Breadcrumb with glassmorphism -->
+                    <nav aria-label="breadcrumb" class="breadcrumb-nav mt-5 animate-fade-in-up" style="animation-delay: 0.4s;">
+                        <ol class="breadcrumb justify-content-center">
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('home') }}" class="text-brown-medium">Beranda</a>
+                            </li>
+                            <li class="breadcrumb-item">
+                                <a href="{{ route('about') }}" class="text-brown-medium">Tentang Kami</a>
+                            </li>
+                            <li class="breadcrumb-item active text-brown-dark" aria-current="page">Visi & Misi</li>
+                        </ol>
+                    </nav>
                 </div>
             </div>
         </div>
-    </section>
 
-    <!-- Breadcrumb Navigation -->
-    <section class="breadcrumb-section py-3">
-        <div class="container">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb">
-                    <li class="breadcrumb-item"><a href="{{ route('home') }}">Beranda</a></li>
-                    <li class="breadcrumb-item"><a href="{{ route('about') }}">Tentang Kami</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Visi & Misi</li>
-                </ol>
-            </nav>
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <a href="#vision-section" class="scroll-down">
+                <i class="fas fa-chevron-down"></i>
+            </a>
         </div>
     </section>
 
-    <!-- Main Content -->
-    <section class="py-6">
-        <div class="container">
-            <!-- Vision Section -->
-            <div class="row mb-7 align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="vision-hero animate-on-scroll">
-                        <div class="vision-badge mb-4">
-                            <span>VISI KAMI</span>
-                        </div>
-                        <div class="vision-icon-large mb-4">
-                            <div class="icon-circle">
-                                <i class="fas fa-eye"></i>
-                            </div>
-                            <div class="icon-rings">
-                                <div class="ring ring-1"></div>
-                                <div class="ring ring-2"></div>
-                            </div>
-                        </div>
-                        <div class="vision-quote">
-                            <div class="quote-icon">
-                                <i class="fas fa-quote-left"></i>
-                            </div>
-                            <h2 class="vision-statement fw-bold text-brown-dark">
-                                Menjadi perusahaan konsultan terdepan yang memberikan solusi inovatif
-                                dan berkelanjutan dalam bidang konstruksi dan non-konstruksi
-                            </h2>
-                            <div class="quote-author">
-                                <div class="author-line"></div>
-                                <span class="author-text">Visi Perusahaan</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- VISION SECTION – 3D CARD -->
+    <section id="vision-section" class="py-6 bg-white position-relative">
+        <!-- Subtle background decoration -->
+        <div class="section-bg-decoration">
+            <div class="decoration-circle"></div>
+            <div class="decoration-circle"></div>
+        </div>
+
+        <div class="container position-relative z-2">
+            <div class="row g-5 align-items-center">
+                <!-- Left: Vision Statement with 3D effect -->
                 <div class="col-lg-6">
-                    <div class="vision-details animate-on-scroll">
-                        <div class="vision-explanation p-4 p-lg-5">
-                            <h3 class="section-subtitle mb-4">Mewujudkan Masa Depan yang Lebih Baik</h3>
-                            <p class="text-brown-medium mb-4">
-                                Visi kami mencerminkan aspirasi jangka panjang untuk menjadi pemimpin
-                                dalam industri konsultansi, dengan fokus pada inovasi dan keberlanjutan.
+                    <div class="vision-card-3d animate-on-scroll">
+                        <div class="vision-card-inner">
+                            <div class="vision-badge-wrapper mb-4">
+                                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2">
+                                    <i class="fas fa-eye me-2"></i>VISI KAMI
+                                </span>
+                            </div>
+                            <div class="vision-icon-wrapper mb-4">
+                                <div class="vision-icon">
+                                    <i class="fas fa-eye fa-3x text-brown-dark"></i>
+                                </div>
+                            </div>
+                            <h2 class="display-6 fw-bold text-brown-dark mb-4">
+                                “Menjadi perusahaan konsultan terdepan yang memberikan solusi inovatif dan berkelanjutan dalam bidang konstruksi dan non-konstruksi”
+                            </h2>
+                            <p class="text-brown-medium">
+                                Visi kami mencerminkan aspirasi jangka panjang untuk menjadi pemimpin dalam industri konsultansi, dengan fokus pada inovasi dan keberlanjutan.
                             </p>
-
-                            <div class="vision-components">
-                                <div class="vision-component mb-4">
-                                    <div class="component-card">
-                                        <div class="component-header d-flex align-items-center mb-3">
-                                            <div class="component-icon me-3">
-                                                <div class="icon-wrapper">
-                                                    <i class="fas fa-crown"></i>
-                                                </div>
-                                            </div>
-                                            <div class="component-text">
-                                                <h5 class="mb-0 fw-bold text-brown-dark">Terdepan</h5>
-                                                <p class="text-brown-light mb-0 small">Menjadi yang terbaik di industri</p>
-                                            </div>
-                                        </div>
-                                        <div class="component-body ps-5">
-                                            <p class="text-brown-medium mb-0">
-                                                Komitmen untuk selalu menjadi yang terdepan dalam kualitas,
-                                                inovasi, dan kepuasan klien di setiap layanan yang kami berikan.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="vision-component mb-4">
-                                    <div class="component-card">
-                                        <div class="component-header d-flex align-items-center mb-3">
-                                            <div class="component-icon me-3">
-                                                <div class="icon-wrapper">
-                                                    <i class="fas fa-lightbulb"></i>
-                                                </div>
-                                            </div>
-                                            <div class="component-text">
-                                                <h5 class="mb-0 fw-bold text-brown-dark">Inovatif</h5>
-                                                <p class="text-brown-light mb-0 small">Solusi kreatif dan modern</p>
-                                            </div>
-                                        </div>
-                                        <div class="component-body ps-5">
-                                            <p class="text-brown-medium mb-0">
-                                                Mengembangkan solusi kreatif yang menjawab tantangan masa kini
-                                                dan masa depan dengan pendekatan yang segar dan modern.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="vision-component">
-                                    <div class="component-card">
-                                        <div class="component-header d-flex align-items-center mb-3">
-                                            <div class="component-icon me-3">
-                                                <div class="icon-wrapper">
-                                                    <i class="fas fa-leaf"></i>
-                                                </div>
-                                            </div>
-                                            <div class="component-text">
-                                                <h5 class="mb-0 fw-bold text-brown-dark">Berkelanjutan</h5>
-                                                <p class="text-brown-light mb-0 small">Ramah lingkungan dan berkelanjutan</p>
-                                            </div>
-                                        </div>
-                                        <div class="component-body ps-5">
-                                            <p class="text-brown-medium mb-0">
-                                                Memberikan solusi yang ramah lingkungan dan berkelanjutan,
-                                                mendukung pembangunan yang bertanggung jawab untuk generasi mendatang.
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Mission Section - SEMUA DALAM SATU BARIS -->
-            <div class="row mb-7">
-                <div class="col-12 mb-5">
-                    <div class="section-header text-center">
-                        <div class="section-badge">
-                            <span>KOMITMEN KAMI</span>
-                        </div>
-                        <h2 class="section-title fw-bold text-brown-dark mb-3">Misi Perusahaan</h2>
-                        <p class="section-subtitle text-brown-medium">Langkah konkret untuk mewujudkan visi yang lebih baik</p>
-                        <div class="section-ornament">
-                            <div class="ornament-line"></div>
-                            <div class="ornament-diamond"></div>
-                            <div class="ornament-line"></div>
+                            <!-- 3D decorative corners -->
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-12">
-                    <div class="missions-scroll-container">
-                        <div class="missions-scroll-row">
-                            <!-- Mission 1 -->
-                            <div class="mission-scroll-item">
-                                <div class="mission-card animate-on-scroll" data-delay="0">
-                                    <div class="mission-header">
-                                        <div class="mission-number">01</div>
-                                        <div class="mission-icon">
-                                            <i class="fas fa-medal"></i>
-                                        </div>
+                <!-- Right: Vision Components -->
+                <div class="col-lg-6">
+                    <div class="row g-4">
+                        <div class="col-md-6">
+                            <div class="component-card-3d animate-on-scroll">
+                                <div class="component-card-inner">
+                                    <div class="component-icon-wrapper mb-3">
+                                        <i class="fas fa-crown fa-2x text-brown-dark"></i>
                                     </div>
-                                    <div class="mission-body">
-                                        <h4 class="mission-title">Kualitas Layanan</h4>
-                                        <p class="mission-description">
-                                            Membentuk layanan konsultasi yang berkualitas tinggi dengan standar
-                                            profesionalisme tertinggi di setiap proyek yang kami lansir.
-                                        </p>
-                                        <div class="mission-features">
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Penerapan standar internasional</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Pengawasan kualitas berkelanjutan</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Evaluasi hasil secara berkala</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mission-footer">
-                                        <span class="mission-tag">Quality First</span>
-                                    </div>
+                                    <h5 class="fw-bold text-brown-dark mb-2">Terdepan</h5>
+                                    <p class="text-brown-medium small">Menjadi yang terbaik di industri dengan kualitas, inovasi, dan kepuasan klien.</p>
+                                    <div class="card-corner corner-1"></div>
+                                    <div class="card-corner corner-2"></div>
                                 </div>
                             </div>
-
-                            <!-- Mission 2 -->
-                            <div class="mission-scroll-item">
-                                <div class="mission-card animate-on-scroll" data-delay="100">
-                                    <div class="mission-header">
-                                        <div class="mission-number">02</div>
-                                        <div class="mission-icon">
-                                            <i class="fas fa-rocket"></i>
-                                        </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="component-card-3d animate-on-scroll">
+                                <div class="component-card-inner">
+                                    <div class="component-icon-wrapper mb-3">
+                                        <i class="fas fa-lightbulb fa-2x text-brown-dark"></i>
                                     </div>
-                                    <div class="mission-body">
-                                        <h4 class="mission-title">Inovasi Berkelanjutan</h4>
-                                        <p class="mission-description">
-                                            Mengembangkan solusi inovatif dan berkelanjutan yang relevan dengan
-                                            perkembangan teknologi dan kebutuhan zaman.
-                                        </p>
-                                        <div class="mission-features">
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Riset dan pengembangan teknologi</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Adaptasi teknologi terbaru</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Solusi aman lingkungan</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mission-footer">
-                                        <span class="mission-tag">Innovation Driven</span>
-                                    </div>
+                                    <h5 class="fw-bold text-brown-dark mb-2">Inovatif</h5>
+                                    <p class="text-brown-medium small">Solusi kreatif yang menjawab tantangan masa kini dan masa depan.</p>
+                                    <div class="card-corner corner-1"></div>
+                                    <div class="card-corner corner-2"></div>
                                 </div>
                             </div>
-
-                            <!-- Mission 3 -->
-                            <div class="mission-scroll-item">
-                                <div class="mission-card animate-on-scroll" data-delay="200">
-                                    <div class="mission-header">
-                                        <div class="mission-number">03</div>
-                                        <div class="mission-icon">
-                                            <i class="fas fa-handshake"></i>
-                                        </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="component-card-3d animate-on-scroll">
+                                <div class="component-card-inner">
+                                    <div class="component-icon-wrapper mb-3">
+                                        <i class="fas fa-leaf fa-2x text-brown-dark"></i>
                                     </div>
-                                    <div class="mission-body">
-                                        <h4 class="mission-title">Kemitraan Jangka Panjang</h4>
-                                        <p class="mission-description">
-                                            Membangun kemitraan jangka panjang yang saling menguntungkan dengan
-                                            klien berdasarkan kepercayaan dan komitmen bersama.
-                                        </p>
-                                        <div class="mission-features">
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Komunikasi transparan</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Pemahaman kebutuhan klien</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Dukungan pasca proyek</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mission-footer">
-                                        <span class="mission-tag">Partnership Focused</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Mission 4 -->
-                            <div class="mission-scroll-item">
-                                <div class="mission-card animate-on-scroll" data-delay="300">
-                                    <div class="mission-header">
-                                        <div class="mission-number">04</div>
-                                        <div class="mission-icon">
-                                            <i class="fas fa-users"></i>
-                                        </div>
-                                    </div>
-                                    <div class="mission-body">
-                                        <h4 class="mission-title">Pengembangan SDM</h4>
-                                        <p class="mission-description">
-                                            Meningkatkan kompetensi dan profesionalisme sumber daya manusia
-                                            secara berkaitan dengan pelatihan dan pengembangan.
-                                        </p>
-                                        <div class="mission-features">
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Program pelatihan berkualitas</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Pengembangan sistem kontributor</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Sertifikasi kompetensi</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mission-footer">
-                                        <span class="mission-tag">People Development</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Mission 5 -->
-                            <div class="mission-scroll-item">
-                                <div class="mission-card animate-on-scroll" data-delay="400">
-                                    <div class="mission-header">
-                                        <div class="mission-number">05</div>
-                                        <div class="mission-icon">
-                                            <i class="fas fa-heart"></i>
-                                        </div>
-                                    </div>
-                                    <div class="mission-body">
-                                        <h4 class="mission-title">Kontribusi Sosial</h4>
-                                        <p class="mission-description">
-                                            Berkontribusi positif bagi pembangunan masyarakat dan pelestarian
-                                            lingkungan melalui program-program berkelanjutan.
-                                        </p>
-                                        <div class="mission-features">
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Program CSR terintegrasi</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Pembangunan berkelanjutan</span>
-                                            </div>
-                                            <div class="feature-item">
-                                                <i class="fas fa-check-circle feature-icon"></i>
-                                                <span>Pelestarian lingkungan</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="mission-footer">
-                                        <span class="mission-tag">Social Responsibility</span>
-                                    </div>
+                                    <h5 class="fw-bold text-brown-dark mb-2">Berkelanjutan</h5>
+                                    <p class="text-brown-medium small">Memberikan solusi ramah lingkungan dan berkelanjutan untuk generasi mendatang.</p>
+                                    <div class="card-corner corner-1"></div>
+                                    <div class="card-corner corner-2"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <!-- Core Values - SEMUA DALAM SATU BARIS -->
-            <div class="row mb-7">
-                <div class="col-12 mb-5">
-                    <div class="section-header text-center">
-                        <div class="section-badge">
-                            <span>NILAI KAMI</span>
-                        </div>
-                        <h2 class="section-title fw-bold text-brown-dark mb-3">Nilai-Nilai Inti</h2>
-                        <p class="section-subtitle text-brown-medium">Prinsip dasar yang membimbing setiap tindakan dan keputusan kami</p>
-                        <div class="section-ornament">
-                            <div class="ornament-line"></div>
-                            <div class="ornament-hexagon"></div>
-                            <div class="ornament-line"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="values-container">
-                        <div class="values-scroll-row">
-                            <!-- Value 1 -->
-                            <div class="value-item">
-                                <div class="core-value-card text-center animate-on-scroll" data-delay="0">
-                                    <div class="value-badge">I</div>
-                                    <div class="value-icon">
-                                        <div class="icon-bg"></div>
-                                        <i class="fas fa-shield-alt"></i>
-                                    </div>
-                                    <div class="value-content">
-                                        <h5 class="value-title">Integritas</h5>
-                                        <p class="value-description">
-                                            Bertindak jujur, transparan, dan konsisten dalam setiap aspek pekerjaan
-                                            dan hubungan dengan stakeholders.
-                                        </p>
-                                    </div>
-                                    <div class="value-ornament">
-                                        <div class="ornament-dot"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Value 2 -->
-                            <div class="value-item">
-                                <div class="core-value-card text-center animate-on-scroll" data-delay="100">
-                                    <div class="value-badge">P</div>
-                                    <div class="value-icon">
-                                        <div class="icon-bg"></div>
-                                        <i class="fas fa-user-tie"></i>
-                                    </div>
-                                    <div class="value-content">
-                                        <h5 class="value-title">Profesionalisme</h5>
-                                        <p class="value-description">
-                                            Menjunjung tinggi etika profesi dan kompetensi dalam setiap layanan
-                                            yang kami berikan kepada klien.
-                                        </p>
-                                    </div>
-                                    <div class="value-ornament">
-                                        <div class="ornament-dot"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Value 3 -->
-                            <div class="value-item">
-                                <div class="core-value-card text-center animate-on-scroll" data-delay="200">
-                                    <div class="value-badge">I</div>
-                                    <div class="value-icon">
-                                        <div class="icon-bg"></div>
-                                        <i class="fas fa-cogs"></i>
-                                    </div>
-                                    <div class="value-content">
-                                        <h5 class="value-title">Inovasi</h5>
-                                        <p class="value-description">
-                                            Terus mencari cara baru dan lebih baik dalam menyelesaikan masalah
-                                            dan meningkatkan efisiensi kerja.
-                                        </p>
-                                    </div>
-                                    <div class="value-ornament">
-                                        <div class="ornament-dot"></div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Value 4 -->
-                            <div class="value-item">
-                                <div class="core-value-card text-center animate-on-scroll" data-delay="300">
-                                    <div class="value-badge">K</div>
-                                    <div class="value-icon">
-                                        <div class="icon-bg"></div>
-                                        <i class="fas fa-people-arrows"></i>
-                                    </div>
-                                    <div class="value-content">
-                                        <h5 class="value-title">Kolaborasi</h5>
-                                        <p class="value-description">
-                                            Bekerja sama dengan semangat tim untuk mencapai hasil terbaik
-                                            melalui sinergi dan dukungan bersama.
-                                        </p>
-                                    </div>
-                                    <div class="value-ornament">
-                                        <div class="ornament-dot"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CTA Section -->
-            <div class="row mt-8">
-                <div class="col-12">
-                    <div class="cta-banner animate-on-scroll">
-                        <div class="row align-items-center">
-                            <div class="col-lg-8">
-                                <h3 class="cta-title text-cream-light mb-3">Siap Bekerja Sama dengan Kami?</h3>
-                                <p class="cta-description text-cream-medium mb-0">
-                                    Jadilah bagian dari perjalanan kami dalam mewujudkan visi dan misi
-                                    untuk memberikan solusi terbaik bagi Anda.
-                                </p>
-                            </div>
-                            <div class="col-lg-4 text-lg-end">
-                                <a href="{{ route('contact') }}" class="btn btn-cream btn-lg rounded-pill px-5">
-                                    <i class="fas fa-handshake me-2"></i>Hubungi Kami
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Back Button -->
-            <div class="row mt-6">
-                <div class="col-12 text-center">
-                    <a href="{{ route('about') }}" class="btn btn-outline-brown px-5 py-3 rounded-pill">
-                        <i class="fas fa-arrow-left me-2"></i>Kembali ke Profil Perusahaan
-                    </a>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- MISSION SECTION – 3D SCROLLING CARDS -->
+    <section class="py-6 bg-cream-light position-relative overflow-hidden">
+        <div class="cert-pattern">
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
+        </div>
+
+        <div class="container position-relative z-2">
+            <div class="section-header text-center mb-6">
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-list-check me-2"></i>KOMITMEN KAMI
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Misi Perusahaan</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Langkah konkret untuk mewujudkan visi yang lebih baik.
+                </p>
+            </div>
+
+            <div class="missions-scroll-container">
+                <div class="missions-scroll-row">
+                    <!-- Mission 1 -->
+                    <div class="mission-scroll-item">
+                        <div class="mission-card-3d animate-on-scroll">
+                            <div class="mission-card-inner">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="mission-icon-wrapper">
+                                        <i class="fas fa-medal fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">01</span>
+                                </div>
+                                <h4 class="fw-bold text-brown-dark mb-3">Kualitas Layanan</h4>
+                                <p class="text-brown-medium small mb-4">Membentuk layanan konsultasi yang berkualitas tinggi dengan standar profesionalisme tertinggi di setiap proyek yang kami lansir.</p>
+                                <div class="mission-features mb-4">
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Penerapan standar internasional</span>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Pengawasan kualitas berkelanjutan</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Evaluasi hasil secara berkala</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">Quality First</span>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mission 2 -->
+                    <div class="mission-scroll-item">
+                        <div class="mission-card-3d animate-on-scroll">
+                            <div class="mission-card-inner">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="mission-icon-wrapper">
+                                        <i class="fas fa-rocket fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">02</span>
+                                </div>
+                                <h4 class="fw-bold text-brown-dark mb-3">Inovasi Berkelanjutan</h4>
+                                <p class="text-brown-medium small mb-4">Mengembangkan solusi inovatif dan berkelanjutan yang relevan dengan perkembangan teknologi dan kebutuhan zaman.</p>
+                                <div class="mission-features mb-4">
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Riset dan pengembangan teknologi</span>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Adaptasi teknologi terbaru</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Solusi aman lingkungan</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">Innovation Driven</span>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mission 3 -->
+                    <div class="mission-scroll-item">
+                        <div class="mission-card-3d animate-on-scroll">
+                            <div class="mission-card-inner">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="mission-icon-wrapper">
+                                        <i class="fas fa-handshake fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">03</span>
+                                </div>
+                                <h4 class="fw-bold text-brown-dark mb-3">Kemitraan Jangka Panjang</h4>
+                                <p class="text-brown-medium small mb-4">Membangun kemitraan jangka panjang yang saling menguntungkan dengan klien berdasarkan kepercayaan dan komitmen bersama.</p>
+                                <div class="mission-features mb-4">
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Komunikasi transparan</span>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Pemahaman kebutuhan klien</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Dukungan pasca proyek</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">Partnership Focused</span>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mission 4 -->
+                    <div class="mission-scroll-item">
+                        <div class="mission-card-3d animate-on-scroll">
+                            <div class="mission-card-inner">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="mission-icon-wrapper">
+                                        <i class="fas fa-users fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">04</span>
+                                </div>
+                                <h4 class="fw-bold text-brown-dark mb-3">Pengembangan SDM</h4>
+                                <p class="text-brown-medium small mb-4">Meningkatkan kompetensi dan profesionalisme sumber daya manusia secara berkaitan dengan pelatihan dan pengembangan.</p>
+                                <div class="mission-features mb-4">
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Program pelatihan berkualitas</span>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Pengembangan sistem kontributor</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Sertifikasi kompetensi</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">People Development</span>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mission 5 -->
+                    <div class="mission-scroll-item">
+                        <div class="mission-card-3d animate-on-scroll">
+                            <div class="mission-card-inner">
+                                <div class="d-flex justify-content-between align-items-start mb-3">
+                                    <div class="mission-icon-wrapper">
+                                        <i class="fas fa-heart fa-2x text-brown-dark"></i>
+                                    </div>
+                                    <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">05</span>
+                                </div>
+                                <h4 class="fw-bold text-brown-dark mb-3">Kontribusi Sosial</h4>
+                                <p class="text-brown-medium small mb-4">Berkontribusi positif bagi pembangunan masyarakat dan pelestarian lingkungan melalui program-program berkelanjutan.</p>
+                                <div class="mission-features mb-4">
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Program CSR terintegrasi</span>
+                                    </div>
+                                    <div class="d-flex mb-2">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Pembangunan berkelanjutan</span>
+                                    </div>
+                                    <div class="d-flex">
+                                        <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                        <span class="text-brown-medium small">Pelestarian lingkungan</span>
+                                    </div>
+                                </div>
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">Social Responsibility</span>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CORE VALUES SECTION – 3D SCROLLING CARDS -->
+    <section class="py-6 bg-white position-relative">
+        <div class="container">
+            <div class="section-header text-center mb-6">
+                <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
+                    <i class="fas fa-star me-2"></i>NILAI KAMI
+                </span>
+                <h2 class="display-5 fw-bold text-brown-dark mb-3">Nilai-Nilai Inti</h2>
+                <p class="lead text-brown-medium mx-auto" style="max-width: 600px;">
+                    Prinsip dasar yang membimbing setiap tindakan dan keputusan kami.
+                </p>
+            </div>
+
+            <div class="values-scroll-container">
+                <div class="values-scroll-row">
+                    <!-- Value 1: Integritas -->
+                    <div class="value-scroll-item">
+                        <div class="value-card-3d animate-on-scroll">
+                            <div class="value-card-inner text-center">
+                                <span class="value-badge bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 40px; height: 40px;">I</span>
+                                <div class="value-icon-wrapper mb-3">
+                                    <i class="fas fa-shield-alt fa-3x text-brown-dark"></i>
+                                </div>
+                                <h5 class="fw-bold text-brown-dark mb-2">Integritas</h5>
+                                <p class="text-brown-medium small">Bertindak jujur, transparan, dan konsisten dalam setiap aspek pekerjaan dan hubungan dengan stakeholders.</p>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Value 2: Profesionalisme -->
+                    <div class="value-scroll-item">
+                        <div class="value-card-3d animate-on-scroll">
+                            <div class="value-card-inner text-center">
+                                <span class="value-badge bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 40px; height: 40px;">P</span>
+                                <div class="value-icon-wrapper mb-3">
+                                    <i class="fas fa-user-tie fa-3x text-brown-dark"></i>
+                                </div>
+                                <h5 class="fw-bold text-brown-dark mb-2">Profesionalisme</h5>
+                                <p class="text-brown-medium small">Menjunjung tinggi etika profesi dan kompetensi dalam setiap layanan yang kami berikan kepada klien.</p>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Value 3: Inovasi -->
+                    <div class="value-scroll-item">
+                        <div class="value-card-3d animate-on-scroll">
+                            <div class="value-card-inner text-center">
+                                <span class="value-badge bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 40px; height: 40px;">I</span>
+                                <div class="value-icon-wrapper mb-3">
+                                    <i class="fas fa-cogs fa-3x text-brown-dark"></i>
+                                </div>
+                                <h5 class="fw-bold text-brown-dark mb-2">Inovasi</h5>
+                                <p class="text-brown-medium small">Terus mencari cara baru dan lebih baik dalam menyelesaikan masalah dan meningkatkan efisiensi kerja.</p>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Value 4: Kolaborasi -->
+                    <div class="value-scroll-item">
+                        <div class="value-card-3d animate-on-scroll">
+                            <div class="value-card-inner text-center">
+                                <span class="value-badge bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 40px; height: 40px;">K</span>
+                                <div class="value-icon-wrapper mb-3">
+                                    <i class="fas fa-people-arrows fa-3x text-brown-dark"></i>
+                                </div>
+                                <h5 class="fw-bold text-brown-dark mb-2">Kolaborasi</h5>
+                                <p class="text-brown-medium small">Bekerja sama dengan semangat tim untuk mencapai hasil terbaik melalui sinergi dan dukungan bersama.</p>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA SECTION – SAME ELEGANT STYLE AS HOME -->
+    <section class="py-6 cta-elegant">
+        <div class="container">
+            <div class="cta-content-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h2 class="display-6 fw-bold mb-3">Siap Bekerja Sama dengan Kami?</h2>
+                        <p class="lead mb-0">
+                            Jadilah bagian dari perjalanan kami dalam mewujudkan visi dan misi untuk memberikan solusi terbaik bagi Anda.
+                        </p>
+                    </div>
+                    <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
+                        <div class="d-flex flex-wrap justify-content-center justify-content-lg-end gap-3">
+                            <a href="{{ route('contact') }}" class="btn btn-brown-3d btn-lg px-5 py-3 rounded-pill">
+                                <i class="fas fa-handshake me-2"></i>Hubungi Kami
+                                <span class="btn-shine"></span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Back Button -->
+<div class="container text-center pb-6 mt-6">
+    <a href="{{ route('about') }}" class="btn btn-outline-brown-3d rounded-pill px-5 py-3">
+        <i class="fas fa-arrow-left me-2"></i>Kembali ke Profil Perusahaan
+    </a>
+</div>
 @endsection
 
 @push('styles')
 <style>
-    /* Color Variables */
+    /* ===== INHERIT FULL STYLE FROM HOME PAGE ===== */
     :root {
-        --brown-50: #EFEBE9;
-        --brown-100: #D7CCC8;
-        --brown-200: #BCAAA4;
-        --brown-300: #A1887F;
-        --brown-400: #8D6E63;
-        --brown-500: #795548;
-        --brown-600: #6D4C41;
-        --brown-700: #5D4037;
-        --brown-800: #4E342E;
-        --brown-900: #3E2723;
-
-        --cream-50: #FFFDF7;
-        --cream-100: #F9F5EB;
-        --cream-200: #F5F0E6;
-        --cream-300: #EEE6D9;
-        --cream-400: #E8DCCE;
-        --cream-500: #E3D6C6;
-        --cream-600: #DDCFBD;
-        --cream-700: #D7C8B4;
-        --cream-800: #D2C1AB;
-        --cream-900: #CCBAA2;
-
-        --accent-gold: #D4AF37;
-        --accent-gold-light: #F0E68C;
-
-        --brown-light: var(--brown-300);
-        --brown-medium: var(--brown-500);
-        --brown-dark: var(--brown-700);
-        --cream-light: var(--cream-100);
-        --cream-medium: var(--cream-300);
-        --cream-dark: var(--cream-500);
+        --brown-dark: #5D4037;
+        --brown-medium: #8B6B61;
+        --brown-light: #A1887F;
+        --cream-gold: #D4AF37;
+        --cream-dark: #D7CCC8;
+        --cream-medium: #EFEBE9;
+        --cream-light: #F5F0ED;
+        --white: #ffffff;
+        --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
+        --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
+        --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+        --shadow-3d: 0 20px 40px rgba(93,64,55,0.2), 0 10px 20px rgba(0,0,0,0.1);
     }
 
-    /* Page Header */
-    .page-header {
-        background: linear-gradient(135deg,
-            rgba(62, 39, 35, 0.95) 0%,
-            rgba(93, 64, 55, 0.9) 50%,
-            rgba(121, 85, 72, 0.85) 100%),
-            url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="none"/><path d="M0,50 Q25,40 50,50 T100,50" stroke="rgba(255,255,255,0.1)" stroke-width="2" fill="none"/></svg>');
-        color: var(--cream-light);
+    /* ----- Hero Section (same as home) ----- */
+    .vision-hero {
+        background: linear-gradient(135deg, var(--cream-light) 0%, var(--white) 100%);
         padding: 6rem 0 4rem;
         position: relative;
         overflow: hidden;
     }
 
-    .page-header::before {
-        content: '';
+    .hero-bg-pattern {
         position: absolute;
         top: 0;
         left: 0;
-        right: 0;
-        bottom: 0;
-        background: radial-gradient(circle at 70% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+        width: 100%;
+        height: 100%;
         pointer-events: none;
     }
 
-    .header-content {
-        position: relative;
-        z-index: 2;
-    }
-
-    .vision-mission-header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 1.5rem;
-    }
-
-    .header-icon {
-        font-size: 2.5rem;
-        color: var(--accent-gold-light);
-        animation: float 3s ease-in-out infinite;
-    }
-
-    .header-ornament {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 2rem;
-    }
-
-    .ornament-line {
-        width: 60px;
-        height: 2px;
-        background: linear-gradient(90deg, transparent, var(--accent-gold), transparent);
-    }
-
-    .ornament-dot {
-        width: 8px;
-        height: 8px;
-        background: var(--accent-gold);
-        border-radius: 50%;
-    }
-
-    /* Breadcrumb */
-    .breadcrumb-section {
-        background: var(--cream-light);
-        border-bottom: 1px solid var(--cream-dark);
-    }
-
-    .breadcrumb {
-        background: transparent;
-        padding: 0;
-        margin: 0;
-    }
-
-    .breadcrumb-item a {
-        color: var(--brown-medium);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    .breadcrumb-item a:hover {
-        color: var(--brown-dark);
-    }
-
-    .breadcrumb-item.active {
-        color: var(--brown-dark);
-        font-weight: 600;
-    }
-
-    /* Vision Section */
-    .vision-hero {
-        padding: 2rem;
-        background: linear-gradient(135deg,
-            rgba(249, 245, 235, 0.95) 0%,
-            rgba(242, 237, 226, 0.9) 100%);
-        border-radius: 20px;
-        border: 1px solid var(--cream-dark);
-        box-shadow: 0 10px 30px rgba(62, 39, 35, 0.08);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .vision-hero::before {
-        content: '';
+    .pattern-circle {
         position: absolute;
-        top: -50%;
-        right: -50%;
-        width: 200px;
-        height: 200px;
-        background: radial-gradient(circle, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
         border-radius: 50%;
+        background: rgba(93, 64, 55, 0.05);
+        animation: float 20s ease-in-out infinite;
     }
 
-    .vision-badge {
-        display: inline-block;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        color: var(--cream-light);
-        padding: 0.5rem 1.5rem;
-        border-radius: 25px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-    }
-
-    .vision-icon-large {
-        position: relative;
-        width: 120px;
-        height: 120px;
-        margin: 0 auto 2rem;
-    }
-
-    .icon-circle {
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, var(--brown-medium), var(--brown-dark));
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--cream-light);
-        font-size: 3rem;
-        position: relative;
-        z-index: 2;
-        box-shadow: 0 10px 20px rgba(62, 39, 35, 0.2);
-    }
-
-    .icon-rings {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 140px;
-        height: 140px;
-    }
-
-    .ring {
-        position: absolute;
-        border: 2px solid var(--brown-light);
-        border-radius: 50%;
-        animation: pulse 2s ease-in-out infinite;
-    }
-
-    .ring-1 {
-        width: 100%;
-        height: 100%;
+    .pattern-circle.circle-1 {
+        width: 300px;
+        height: 300px;
+        top: -150px;
+        right: -100px;
         animation-delay: 0s;
     }
 
-    .ring-2 {
-        width: 120%;
-        height: 120%;
-        top: -10%;
-        left: -10%;
-        animation-delay: 0.5s;
+    .pattern-circle.circle-2 {
+        width: 200px;
+        height: 200px;
+        bottom: -80px;
+        left: -80px;
+        background: rgba(212, 175, 55, 0.05);
+        animation-delay: 10s;
     }
 
-    .vision-quote {
-        position: relative;
-        padding: 1.5rem;
-        background: var(--cream-light);
-        border-radius: 15px;
-        border: 1px solid var(--cream-dark);
-    }
-
-    .quote-icon {
+    .pattern-square {
         position: absolute;
-        top: -15px;
-        left: 30px;
+        background: rgba(161, 136, 127, 0.03);
+        animation: rotate 30s linear infinite;
+    }
+
+    .pattern-square.square-1 {
+        width: 150px;
+        height: 150px;
+        top: 30%;
+        right: 15%;
+        transform: rotate(45deg);
+    }
+
+    .pattern-square.square-2 {
+        width: 100px;
+        height: 100px;
+        bottom: 20%;
+        left: 10%;
+        transform: rotate(15deg);
+        background: rgba(212, 175, 55, 0.03);
+        animation-delay: -15s;
+    }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    @keyframes rotate {
+        from { transform: rotate(0deg); }
+        to { transform: rotate(360deg); }
+    }
+
+    .min-vh-60 { min-height: 60vh; }
+
+    /* ----- Typography & Badges (same as home) ----- */
+    .display-2 {
+        font-weight: 800 !important;
+        letter-spacing: -0.02em;
+        line-height: 1.15;
+    }
+
+    .text-gradient-brown {
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    .company-badge {
+        animation: fadeInDown 0.8s ease-out;
+    }
+
+    .badge.bg-brown-dark {
+        background-color: rgba(93, 64, 55, 0.9) !important;
+        border: 1px solid rgba(255,255,255,0.2);
+        backdrop-filter: blur(10px);
+    }
+
+    .badge.bg-brown-light-subtle {
+        background-color: rgba(161,136,127,0.1) !important;
+        color: var(--brown-dark);
+    }
+
+    /* ----- Typewriter Effect (same as home) ----- */
+    .typewriter-wrapper {
+        display: inline-block;
+        position: relative;
+    }
+
+    .typewriter-text {
+        position: relative;
+        display: inline-block;
+        color: var(--brown-dark) !important;
+    }
+
+    .typewriter-text::after {
+        content: '';
+        position: absolute;
+        right: -8px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 3px;
+        height: 1.2em;
+        background-color: var(--brown-dark);
+        animation: blink 1s infinite;
+    }
+
+    @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
+    }
+
+    /* ----- Scroll Indicator (same as home) ----- */
+    .scroll-indicator {
+        position: absolute;
+        bottom: 2rem;
+        left: 0;
+        right: 0;
+        text-align: center;
+    }
+
+    .scroll-down {
+        color: var(--brown-dark);
+        font-size: 1.5rem;
+        animation: bounce 2s infinite;
+        display: inline-block;
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, var(--brown-light), var(--accent-gold));
+        line-height: 50px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.9);
+        box-shadow: var(--shadow-sm);
+        transition: all 0.3s;
+    }
+
+    .scroll-down:hover {
+        background: white;
+        transform: scale(1.1);
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-10px); }
+        60% { transform: translateY(-5px); }
+    }
+
+    /* ----- Breadcrumb (glassmorphism) ----- */
+    .breadcrumb-nav .breadcrumb {
+        background: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(10px);
+        border-radius: 50px;
+        padding: 0.75rem 1.5rem;
+        border: 1px solid rgba(93,64,55,0.1);
+        display: inline-flex;
+    }
+
+    .breadcrumb-item a {
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .breadcrumb-item a:hover {
+        color: var(--brown-dark) !important;
+    }
+
+    /* ===== 3D VISION CARD ===== */
+    .vision-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+
+    .vision-card-inner {
+        background: white;
+        border-radius: 2rem;
+        padding: 2.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s cubic-bezier(0.4,0,0.2,1);
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .vision-card-3d:hover .vision-card-inner {
+        transform: rotateY(-2deg) rotateX(1deg) translateY(-8px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.25);
+    }
+
+    .vision-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--cream-light);
-        font-size: 1.2rem;
+        transition: all 0.3s;
     }
 
-    .vision-statement {
-        font-size: 1.4rem;
-        line-height: 1.6;
-        margin-bottom: 1.5rem;
-        color: var(--brown-dark);
+    .vision-card-3d:hover .vision-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
     }
 
-    .quote-author {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .author-line {
-        flex: 1;
-        height: 1px;
-        background: linear-gradient(90deg, var(--brown-light), transparent);
-    }
-
-    .author-text {
-        color: var(--brown-medium);
-        font-style: italic;
-        font-size: 0.9rem;
-    }
-
-    .vision-details {
+    /* ===== 3D COMPONENT CARD ===== */
+    .component-card-3d {
+        perspective: 1000px;
         height: 100%;
     }
 
-    .vision-explanation {
-        background: var(--white);
-        border-radius: 20px;
-        box-shadow: 0 15px 35px rgba(62, 39, 35, 0.1);
-        border: 1px solid var(--cream-dark);
+    .component-card-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
         height: 100%;
-        position: relative;
-        padding: 2rem;
     }
 
-    .vision-explanation::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--brown-light), var(--accent-gold), var(--brown-light));
-        border-radius: 2px 2px 0 0;
+    .component-card-3d:hover .component-card-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
     }
 
-    .section-subtitle {
-        color: var(--brown-dark);
-        font-weight: 600;
-        font-size: 1.25rem;
-        position: relative;
-        padding-bottom: 0.5rem;
-    }
-
-    .section-subtitle::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 50px;
-        height: 3px;
-        background: linear-gradient(90deg, var(--brown-light), transparent);
-    }
-
-    .vision-components {
-        margin-top: 2rem;
-    }
-
-    .component-card {
-        padding: 1.25rem;
-        background: var(--cream-light);
-        border-radius: 12px;
-        border: 1px solid var(--cream-dark);
-        transition: all 0.3s ease;
-    }
-
-    .component-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(62, 39, 35, 0.1);
-        border-color: var(--brown-light);
-    }
-
-    .icon-wrapper {
+    .component-icon-wrapper {
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
         border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--cream-light);
-        font-size: 1.2rem;
-        flex-shrink: 0;
+        transition: all 0.3s;
     }
 
-    .component-text h5 {
-        color: var(--brown-dark);
+    .component-card-3d:hover .component-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
     }
 
-    .component-text p {
-        color: var(--brown-light);
-        font-size: 0.85rem;
-    }
-
-    /* Mission Section - SEMUA DALAM SATU BARIS */
+    /* ===== 3D MISSION CARD ===== */
     .missions-scroll-container {
         width: 100%;
         overflow-x: auto;
-        padding-bottom: 15px;
+        padding-bottom: 1rem;
         scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
     }
 
     .missions-scroll-container::-webkit-scrollbar {
@@ -875,7 +764,7 @@
         display: flex;
         gap: 1rem;
         flex-wrap: nowrap;
-        padding: 10px 5px;
+        padding: 0.5rem;
         min-width: min-content;
     }
 
@@ -884,152 +773,69 @@
         width: 320px;
     }
 
-    .mission-card {
-        background: linear-gradient(135deg, var(--cream-light) 0%, #FDFCF6 100%);
-        border-radius: 15px;
-        padding: 1.5rem;
+    .mission-card-3d {
+        perspective: 1000px;
         height: 100%;
-        border: 1px solid var(--cream-dark);
-        box-shadow: 0 8px 20px rgba(62, 39, 35, 0.08);
-        transition: all 0.4s ease;
+    }
+
+    .mission-card-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
         position: relative;
         overflow: hidden;
-        opacity: 0;
-        transform: translateY(20px);
+        height: 100%;
     }
 
-    .mission-card.visible {
-        opacity: 1;
-        transform: translateY(0);
+    .mission-card-3d:hover .mission-card-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
     }
 
-    .mission-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--brown-light), var(--accent-gold));
-    }
-
-    .mission-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 30px rgba(62, 39, 35, 0.15);
-        border-color: var(--brown-light);
-    }
-
-    .mission-header {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        margin-bottom: 1rem;
-    }
-
-    .mission-number {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--brown-light);
-        opacity: 0.7;
-        line-height: 1;
-    }
-
-    .mission-icon {
+    .mission-icon-wrapper {
         width: 50px;
         height: 50px;
-        background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
-        border-radius: 10px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        border-radius: 12px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--cream-light);
-        font-size: 1.3rem;
-        box-shadow: 0 5px 15px rgba(62, 39, 35, 0.2);
-        transition: all 0.3s ease;
+        transition: all 0.3s;
     }
 
-    .mission-card:hover .mission-icon {
+    .mission-card-3d:hover .mission-icon-wrapper {
         transform: scale(1.1) rotate(5deg);
-        background: linear-gradient(135deg, var(--accent-gold), var(--brown-medium));
     }
 
-    .mission-body {
-        margin-bottom: 1rem;
+    .mission-features i {
+        color: var(--cream-gold);
     }
 
-    .mission-title {
-        color: var(--brown-dark);
-        font-weight: 600;
-        margin-bottom: 0.75rem;
-        font-size: 1.1rem;
-        line-height: 1.3;
-    }
-
-    .mission-description {
-        color: var(--brown-medium);
-        line-height: 1.6;
-        margin-bottom: 1rem;
-        font-size: 0.95rem;
-    }
-
-    .mission-features {
-        display: flex;
-        flex-direction: column;
-        gap: 0.5rem;
-    }
-
-    .feature-item {
-        display: flex;
-        align-items: center;
-        gap: 0.5rem;
-    }
-
-    .feature-icon {
-        color: var(--accent-gold);
-        font-size: 0.85rem;
-        flex-shrink: 0;
-    }
-
-    .feature-item span {
-        color: var(--brown-medium);
-        font-size: 0.85rem;
-        line-height: 1.4;
-    }
-
-    .mission-footer {
-        padding-top: 0.75rem;
-        border-top: 1px solid var(--cream-dark);
-    }
-
-    .mission-tag {
-        display: inline-block;
-        background: rgba(212, 175, 55, 0.1);
-        color: var(--accent-gold);
-        padding: 0.2rem 0.75rem;
-        border-radius: 12px;
-        font-size: 0.75rem;
-        font-weight: 600;
-        border: 1px solid rgba(212, 175, 55, 0.3);
-    }
-
-    /* Core Values - SEMUA DALAM SATU BARIS */
-    .values-container {
+    /* ===== 3D VALUE CARD ===== */
+    .values-scroll-container {
         width: 100%;
         overflow-x: auto;
-        padding-bottom: 15px;
+        padding-bottom: 1rem;
         scrollbar-width: thin;
+        -webkit-overflow-scrolling: touch;
     }
 
-    .values-container::-webkit-scrollbar {
+    .values-scroll-container::-webkit-scrollbar {
         height: 6px;
     }
 
-    .values-container::-webkit-scrollbar-thumb {
+    .values-scroll-container::-webkit-scrollbar-thumb {
         background: var(--brown-light);
         border-radius: 3px;
     }
 
-    .values-container::-webkit-scrollbar-track {
+    .values-scroll-container::-webkit-scrollbar-track {
         background: var(--cream-light);
     }
 
@@ -1037,369 +843,316 @@
         display: flex;
         gap: 1rem;
         flex-wrap: nowrap;
-        padding: 10px 5px;
+        padding: 0.5rem;
         min-width: min-content;
     }
 
-    .value-item {
+    .value-scroll-item {
         flex: 0 0 auto;
-        width: 260px;
+        width: 280px;
     }
 
-    .core-value-card {
-        background: linear-gradient(135deg, var(--cream-light) 0%, #FDFCF6 100%);
-        border-radius: 15px;
-        padding: 1.5rem;
+    .value-card-3d {
+        perspective: 1000px;
         height: 100%;
-        border: 1px solid var(--cream-dark);
-        box-shadow: 0 8px 20px rgba(62, 39, 35, 0.08);
-        transition: all 0.4s ease;
+    }
+
+    .value-card-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 2rem 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
         position: relative;
         overflow: hidden;
-        opacity: 0;
-        transform: translateY(20px);
+        height: 100%;
     }
 
-    .core-value-card.visible {
-        opacity: 1;
-        transform: translateY(0);
+    .value-card-3d:hover .value-card-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
     }
 
-    .core-value-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 15px 30px rgba(62, 39, 35, 0.15);
-        border-color: var(--brown-light);
-    }
-
-    .core-value-card::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 4px;
-        background: linear-gradient(90deg, var(--accent-gold), var(--brown-light));
-    }
-
-    .value-badge {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        width: 35px;
-        height: 35px;
-        background: linear-gradient(135deg, var(--accent-gold), var(--brown-medium));
-        border-radius: 50%;
+    .value-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: var(--cream-light);
+        margin: 0 auto;
+        transition: all 0.3s;
+    }
+
+    .value-card-3d:hover .value-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    .value-badge {
+        font-size: 1.2rem;
         font-weight: 700;
-        font-size: 1rem;
-        box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+        box-shadow: 0 5px 10px rgba(93,64,55,0.2);
     }
 
-    .value-icon {
-        width: 70px;
-        height: 70px;
-        margin: 0 auto 1rem;
-        position: relative;
-    }
-
-    .icon-bg {
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(135deg, var(--brown-light), var(--brown-medium));
-        border-radius: 50%;
-        opacity: 0.9;
-    }
-
-    .value-icon i {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color: var(--cream-light);
-        font-size: 1.8rem;
-        z-index: 2;
-    }
-
-    .core-value-card:hover .icon-bg {
-        background: linear-gradient(135deg, var(--accent-gold), var(--brown-medium));
-        opacity: 1;
-    }
-
-    .value-content {
-        padding: 0 0.25rem;
-    }
-
-    .value-title {
-        color: var(--brown-dark);
+    /* ===== 3D BUTTONS (same as home) ===== */
+    .btn-brown-3d {
+        background: linear-gradient(145deg, var(--brown-dark), #4A342E);
+        border: none;
+        color: white;
         font-weight: 600;
-        margin-bottom: 0.75rem;
-        font-size: 1.1rem;
-    }
-
-    .value-description {
-        color: var(--brown-medium);
-        line-height: 1.5;
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-    }
-
-    .value-ornament {
-        display: flex;
-        justify-content: center;
-        margin-top: 0.5rem;
-    }
-
-    .value-ornament .ornament-dot {
-        width: 6px;
-        height: 6px;
-        background: var(--accent-gold);
-    }
-
-    /* CTA Banner */
-    .cta-banner {
-        background: linear-gradient(135deg,
-            rgba(93, 64, 55, 0.95) 0%,
-            rgba(121, 85, 72, 0.9) 100%);
-        border-radius: 15px;
-        padding: 2rem;
+        transition: all 0.3s;
         position: relative;
         overflow: hidden;
-        margin-top: 3rem;
+        box-shadow: 0 8px 16px rgba(93,64,55,0.2);
+        transform-style: preserve-3d;
+        transform: translateY(0) rotateX(0deg);
     }
 
-    .cta-banner::before {
+    .btn-brown-3d:hover {
+        transform: translateY(-3px) rotateX(2deg);
+        box-shadow: 0 15px 30px rgba(93,64,55,0.3);
+        background: linear-gradient(145deg, #4A342E, var(--brown-dark));
+    }
+
+    .btn-outline-brown-3d {
+        border: 2px solid var(--brown-dark);
+        color: var(--brown-dark);
+        background: transparent;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-outline-brown-3d:hover {
+        background: var(--brown-dark);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
+    }
+
+    .btn-brown-3d::before,
+    .btn-outline-brown-3d::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.6s;
+    }
+
+    .btn-brown-3d:hover::before,
+    .btn-outline-brown-3d:hover::before {
+        left: 100%;
+    }
+
+    /* 3D decorative corners */
+    .card-corner {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background: linear-gradient(135deg, transparent 50%, rgba(212,175,55,0.1) 50%);
+        z-index: 1;
+    }
+
+    .card-corner.corner-1 {
+        top: 0;
+        right: 0;
+        transform: rotate(90deg);
+    }
+
+    .card-corner.corner-2 {
+        bottom: 0;
+        left: 0;
+        transform: rotate(270deg);
+    }
+
+    /* ----- Background decorations ----- */
+    .section-bg-decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .decoration-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(212, 175, 55, 0.03);
+        width: 300px;
+        height: 300px;
+    }
+
+    .decoration-circle:nth-child(1) {
+        top: -100px;
+        right: -100px;
+        background: rgba(93,64,55,0.02);
+        animation: float 25s infinite;
+    }
+
+    .decoration-circle:nth-child(2) {
+        bottom: -50px;
+        left: -50px;
+        width: 200px;
+        height: 200px;
+        background: rgba(212,175,55,0.02);
+        animation: float 20s infinite reverse;
+    }
+
+    .bg-cream-light {
+        background-color: var(--cream-light) !important;
+        position: relative;
+    }
+
+    .cert-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .pattern-line {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--cream-gold), transparent);
+        opacity: 0.2;
+    }
+
+    .pattern-line:nth-child(1) { top: 20%; left: -50%; width: 200%; transform: rotate(2deg); }
+    .pattern-line:nth-child(2) { bottom: 30%; right: -50%; width: 200%; transform: rotate(-3deg); }
+
+    /* ----- CTA Section (same as home) ----- */
+    .cta-elegant {
+        background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .cta-elegant::before {
         content: '';
         position: absolute;
         top: 0;
         left: 0;
         right: 0;
         bottom: 0;
-        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></svg>');
-        background-size: 200px;
-        opacity: 0.5;
+        background:
+            radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.1) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.1) 0%, transparent 50%);
     }
 
-    .cta-title {
-        font-size: 1.5rem;
-        font-weight: 600;
+    .cta-content-wrapper {
         position: relative;
         z-index: 2;
+        padding: 3rem;
+        background: rgba(255, 255, 255, 0.9);
+        border-radius: 1.5rem;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        backdrop-filter: blur(10px);
     }
 
-    .cta-description {
-        font-size: 1rem;
-        position: relative;
-        z-index: 2;
+    .cta-elegant h2 {
+        color: #5D4037;
+        background: linear-gradient(135deg, #5D4037, #8B6B61);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
-    .btn-cream {
-        background: linear-gradient(135deg, var(--cream-light), var(--cream-medium));
-        color: var(--brown-dark);
-        border: 2px solid var(--cream-dark);
-        font-weight: 600;
-        padding: 0.6rem 1.5rem;
-        transition: all 0.3s ease;
-        position: relative;
-        z-index: 2;
+    .cta-elegant .lead {
+        color: #795548;
     }
 
-    .btn-cream:hover {
-        background: linear-gradient(135deg, var(--cream-light), var(--accent-gold-light));
-        transform: translateY(-3px);
-        box-shadow: 0 8px 15px rgba(62, 39, 35, 0.2);
-        border-color: var(--accent-gold);
-    }
-
-    /* Back Button */
-    .btn-outline-brown {
-        background: transparent;
-        border: 2px solid var(--brown-medium);
-        color: var(--brown-medium);
-        font-weight: 500;
-        transition: all 0.3s ease;
-    }
-
-    .btn-outline-brown:hover {
-        background: var(--brown-medium);
-        color: var(--cream-light);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 20px rgba(62, 39, 35, 0.15);
-    }
-
-    /* Animations */
-    @keyframes float {
-        0%, 100% {
+    /* ----- Animations ----- */
+    @keyframes fadeInDown {
+        from {
+            opacity: 0;
+            transform: translateY(-30px);
+        }
+        to {
+            opacity: 1;
             transform: translateY(0);
         }
-        50% {
-            transform: translateY(-10px);
-        }
     }
 
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-            opacity: 1;
-        }
-        100% {
-            transform: scale(1.2);
+    @keyframes fadeInUp {
+        from {
             opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
         }
     }
 
-    /* Responsive Design */
-    @media (max-width: 1200px) {
-        .mission-scroll-item {
-            width: 300px;
-        }
-
-        .value-item {
-            width: 240px;
-        }
+    .animate-fade-in-down {
+        animation: fadeInDown 0.8s ease-out forwards;
     }
 
+    .animate-fade-in-up {
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    .animate-on-scroll {
+        opacity: 0;
+        animation: fadeInUp 0.8s ease-out forwards;
+    }
+
+    /* ----- Utilities ----- */
+    .py-6 {
+        padding-top: 5rem !important;
+        padding-bottom: 5rem !important;
+    }
+
+    .mb-6 {
+        margin-bottom: 5rem !important;
+    }
+
+    .mt-6 {
+        margin-top: 5rem !important;
+    }
+
+    .pb-6 {
+        padding-bottom: 5rem !important;
+    }
+
+    /* ----- Responsive ----- */
     @media (max-width: 992px) {
-        .section-title {
-            font-size: 1.8rem;
-        }
-
-        .mission-card, .core-value-card {
-            padding: 1.25rem;
-        }
-
-        .vision-hero {
-            padding: 1.5rem;
-        }
-
-        .vision-statement {
-            font-size: 1.2rem;
-        }
-
-        .mission-scroll-item {
-            width: 280px;
-        }
-
-        .value-item {
-            width: 220px;
-        }
+        .display-2 { font-size: 3rem !important; }
+        .vision-hero { padding: 5rem 0 3rem; }
+        .vision-card-inner { padding: 2rem; }
+        .cta-content-wrapper { padding: 2rem 1.5rem; }
+        .mission-scroll-item { width: 280px; }
+        .value-scroll-item { width: 240px; }
     }
 
     @media (max-width: 768px) {
-        .page-header {
-            padding: 4rem 0 2.5rem;
-        }
-
-        .vision-mission-header {
-            gap: 1rem;
-        }
-
-        .header-icon {
-            font-size: 2rem;
-        }
-
-        .vision-hero {
-            padding: 1.25rem;
-        }
-
-        .vision-icon-large {
-            width: 100px;
-            height: 100px;
-        }
-
-        .icon-circle {
-            font-size: 2.5rem;
-        }
-
-        .vision-quote {
-            padding: 1.25rem;
-        }
-
-        .vision-statement {
-            font-size: 1.1rem;
-        }
-
-        .mission-scroll-item {
-            width: 260px;
-        }
-
-        .value-item {
-            width: 200px;
-        }
-
-        .cta-banner {
-            padding: 1.5rem;
-        }
-
-        .cta-title {
-            font-size: 1.3rem;
-        }
+        .display-2 { font-size: 2.5rem !important; }
+        .typewriter-text { font-size: 1.5rem !important; }
+        .vision-icon-wrapper { width: 70px; height: 70px; }
+        .mission-scroll-item { width: 260px; }
+        .value-scroll-item { width: 220px; }
     }
 
     @media (max-width: 576px) {
-        .section-title {
-            font-size: 1.6rem;
-        }
-
-        .mission-card, .core-value-card {
-            padding: 1rem;
-        }
-
-        .vision-explanation {
-            padding: 1.5rem;
-        }
-
-        .component-card {
-            padding: 1rem;
-        }
-
-        .component-header {
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        .icon-wrapper {
-            margin-bottom: 0.75rem;
-        }
-
-        .component-body {
-            padding-left: 0;
-            padding-top: 0.75rem;
-        }
-
-        .mission-scroll-item {
-            width: 220px;
-        }
-
-        .value-item {
-            width: 180px;
-        }
-
-        .cta-banner .row {
-            text-align: center;
-        }
-
-        .cta-banner .col-lg-4 {
-            margin-top: 1rem;
-        }
-
-        .btn-cream {
-            width: 100%;
-            max-width: 250px;
-            margin: 0 auto;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .mission-scroll-item {
-            width: 200px;
-        }
-
-        .value-item {
-            width: 160px;
-        }
+        .display-2 { font-size: 2rem !important; }
+        .badge { font-size: 0.8rem !important; }
+        .mission-scroll-item { width: 240px; }
+        .value-scroll-item { width: 200px; }
     }
 </style>
 @endpush
@@ -1407,60 +1160,90 @@
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Animation on scroll with delay
+        // ----- TYPEWRITER EFFECT (like home) -----
+        const textElement = document.querySelector('.typewriter-text');
+        if (textElement) {
+            const originalText = textElement.textContent.trim();
+            let charIndex = 0;
+            let isDeleting = false;
+            let typingSpeed = 100;
+
+            function typeWriter() {
+                const currentText = originalText.substring(0, charIndex);
+                textElement.textContent = currentText;
+
+                if (!isDeleting && charIndex < originalText.length) {
+                    charIndex++;
+                    typingSpeed = 100;
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    typingSpeed = 50;
+                }
+
+                if (!isDeleting && charIndex === originalText.length) {
+                    isDeleting = true;
+                    typingSpeed = 1500;
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    typingSpeed = 500;
+                }
+
+                setTimeout(typeWriter, typingSpeed);
+            }
+
+            setTimeout(typeWriter, 1000);
+        }
+
+        // ----- SMOOTH SCROLL FOR ANCHOR -----
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // ----- OBSERVER FOR SCROLL ANIMATIONS -----
         const observerOptions = {
-            threshold: 0.1,
+            threshold: 0.2,
             rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const element = entry.target;
-                    const delay = element.getAttribute('data-delay') || 0;
-
-                    setTimeout(() => {
-                        element.classList.add('visible');
-                    }, parseInt(delay));
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
         }, observerOptions);
 
-        // Observe all elements with animation class
-        document.querySelectorAll('.animate-on-scroll').forEach(element => {
-            observer.observe(element);
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
         });
 
-        // Hover effects for cards
-        const cards = document.querySelectorAll('.mission-card, .core-value-card, .component-card');
+        // ----- 3D HOVER EFFECT ENHANCEMENT -----
+        const cards = document.querySelectorAll('.vision-card-inner, .component-card-inner, .mission-card-inner, .value-card-inner');
         cards.forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                const icon = this.querySelector('.mission-icon, .value-icon, .icon-wrapper');
-                if (icon) {
-                    icon.style.transform = 'scale(1.1)';
-                    icon.style.transition = 'transform 0.3s ease';
-                }
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                const rotateX = (y - centerY) / 20;
+                const rotateY = (centerX - x) / 20;
+
+                card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateY(-5px)`;
             });
 
-            card.addEventListener('mouseleave', function() {
-                const icon = this.querySelector('.mission-icon, .value-icon, .icon-wrapper');
-                if (icon) {
-                    icon.style.transform = 'scale(1)';
-                }
-            });
-        });
-
-        // Smooth scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = 'rotateY(0deg) rotateX(1deg)';
             });
         });
     });
