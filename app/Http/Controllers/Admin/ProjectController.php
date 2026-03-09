@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\Project;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -37,19 +38,34 @@ class ProjectController extends Controller
         return view('admin.projects_edit', compact('project'));
     }
 
-    public function update(Request $request, Project $project)
-    {
-        $project->update($request->all());
+    public function update(Request $request, $id)
+{
+    $project = Project::findOrFail($id);
 
-        return redirect()->route('admin.projects')
-                        ->with('success', 'Project berhasil diupdate');
+    $data = $request->only([
+        'title',
+        'description',
+        'location',
+        'year',
+        'status'
+    ]);
+
+    // kalau ada gambar baru
+    if($request->hasFile('image')){
+
+        // hapus gambar lama
+        if($project->image){
+            Storage::delete('public/'.$project->image);
+        }
+
+        // upload gambar baru
+        $image = $request->file('image')->store('projects','public');
+
+        $data['image'] = $image;
     }
 
-    public function destroy(Project $project)
-    {
-        $project->delete();
+    $project->update($data);
 
-        return redirect()->route('admin.projects')
-                        ->with('success', 'Project berhasil dihapus');
-    }
+    return redirect()->route('admin.projects')->with('success','Project berhasil diupdate');
+}
 }

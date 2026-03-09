@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Konsultansi Konstruksi')
+@section('title', 'Konsultansi Konstruksi | PT Mitra Nusa Konsulindo')
+@section('description', 'Layanan konsultansi konstruksi profesional meliputi arsitektur, rekayasa sipil, pengembangan wilayah, dan konsultansi lingkungan.')
 
 @section('content')
 <div class="container-fluid px-0">
@@ -56,41 +57,213 @@
 
             @php
                 $services = [
+                    // Jasa Arsitektur
+                    [
+                        'code' => 'AR001',
+                        'title' => 'Jasa Arsitektur Bangunan Gedung Hunian dan Non Hunian',
+                        'icon' => 'fas fa-building',
+                        'full_details' => [
+                            'title' => 'JASA ARSITEKTUR BANGUNAN GEDUNG HUNIAN DAN NON HUNIAN',
+                            'code' => 'AR001',
+                            'description' => 'Jasa asistensi, nasehat, dan rekomendasi mengenai arsitektural dan hal-hal yang terkait dengan arsitektural. Termasuk didalamnya melaksanakan kajian pendahuluan tentang isu-isu seperti site philosophi, tujuan dari pembangunan, tinjauan lingkungan dan iklim, kebutuhan hunian, batasan biaya, analisa pemilihan lokasi penjadwalan pelaksanaan konstruksi dan isu lain yang mempengaruhi desain dan konstruksi dari suatu proyek. Jasa ini meliputi tidak hanya proyek konstruksi yang baru namun dapat meliputi nasihat mengenai metode dalam melaksanakan perawatan, renovasi, restorasi, atau recycling dari bangunan, atau penentuan nilai dan kualitas dari bangunan atau nasihat arsitektural lainnya.',
+                            'details' => [
+                                'Jasa desain arsitektural untuk bangunan dan struktur lainnya, dapat meliputi satu atau kombinasi dari kegiatan sebagai berikut:',
+                                '1. Jasa desain skematik yang meliputi penentuan (bersama dengan klien) batasan anggaran dan penjadwalan waktu; serta menyiapkan sketsa yang meliputi floor plans, site plans, dan exterior views;',
+                                '2. Jasa desain pembangunan yang meliputi ilustrasi presisi dari konsep desain dalam hal siting plan, bentuk dan material yang akan digunakan, struktur, sistem mekanikal dan elektrikal, dan kemungkinan biaya konstruksi; dan',
+                                '3. Jasa desain akhir yang meliputi spesifikasi tertulis dan gambar yang cocok untuk digunakan sebagai detail dari pelaksanaan tender dan konstruksi, dan juga nasihat ahli kepada klien pada saat evaluasi tender.'
+                            ]
+                        ]
+                    ],
+                    [
+                        'code' => 'AR002',
+                        'title' => 'Jasa Arsitektur Lainnya',
+                        'icon' => 'fas fa-draw-polygon',
+                        'full_details' => [
+                            'title' => 'JASA ARSITEKTUR LAINNYA',
+                            'code' => 'AR002',
+                            'description' => 'Jasa desain arsitektural untuk bangunan dan struktur lainnya, dapat meliputi satu atau kombinasi dari kegiatan sebagai berikut:',
+                            'details' => [
+                                '1. Jasa desain skematik yang meliputi penentuan (bersama dengan klien) batasan anggaran dan penjadwalan waktu; serta menyiapkan sketsa yang meliputi floor plans, site plans, dan exterior views;',
+                                '2. Jasa desain pembangunan yang meliputi ilustrasi presisi dari konsep desain dalam hal siting plan, bentuk dan material yang akan digunakan, struktur, sistem mekanikal dan elektrikal, dan kemungkinan biaya konstruksi; dan',
+                                '3. Jasa desain akhir yang meliputi spesifikasi tertulis dan gambar yang cocok untuk digunakan sebagai detail dari pelaksanaan tender dan konstruksi, dan juga nasihat ahli kepada klien pada saat evaluasi tender.'
+                            ]
+                        ]
+                    ],
+                    [
+                        'code' => 'AR003',
+                        'title' => 'Jasa Desain Interior pada Bangunan Gedung dan Bangunan Sipil',
+                        'icon' => 'fas fa-couch',
+                        'full_details' => [
+                            'title' => 'JASA DESAIN INTERIOR PADA BANGUNAN GEDUNG DAN BANGUNAN SIPIL',
+                            'code' => 'AR003',
+                            'description' => 'Jasa desain interior profesional untuk bangunan gedung dan sipil, mencakup perencanaan tata ruang dalam, estetika, dan fungsionalitas ruang.',
+                            'details' => [
+                                'Perencanaan tata ruang interior yang optimal',
+                                'Desain estetika dan fungsional sesuai kebutuhan',
+                                'Pemilihan material dan furnitur yang tepat',
+                                'Visualisasi 3D dan gambar kerja detail',
+                                'Konsultasi pencahayaan dan sirkulasi udara',
+                                'Optimasi ruang untuk kenyamanan pengguna'
+                            ]
+                        ]
+                    ],
+
+                    // Jasa Rekayasa
+                    [
+                        'code' => 'RK001',
+                        'title' => 'Jasa Rekayasa Konstruksi Bangunan Gedung Hunian dan Non Hunian',
+                        'icon' => 'fas fa-drafting-compass',
+                        'full_details' => [
+                            'title' => 'JASA REKAYASA KONSTRUKSI BANGUNAN GEDUNG HUNIAN DAN NON HUNIAN',
+                            'code' => 'RK001',
+                            'description' => 'Jasa desain rekayasa struktur untuk the load bearing framework dari bangunan perumahan dan komersial, bangunan institusi dan industrial. Jasa desain ini meliputi satu atau kombinasi dari kegiatan berikut:',
+                            'details' => [
+                                '1. Estimasi biaya spesifikasi dan rencana pendahuluan untuk mendefinisikan konsep desain teknik;',
+                                '2. Rencana akhir, spesifikasi dan estimasi biaya termasuk didalamnya gambar kerja, spesifikasi material yang digunakan, metode instalasi, batasan waktu dan spesifikasi yang dibutuhkan untuk keperluan tender dan konstruksi serta nasihat ahli untuk klien pada saat evaluasi dan penerimaan tender; dan',
+                                '3. Jasa yang diberikan pada saat fase konstruksi.'
+                            ]
+                        ]
+                    ],
+                    [
+                        'code' => 'RK002',
+                        'title' => 'Jasa Rekayasa Pekerjaan Teknik Sipil Sumber Daya Air',
+                        'icon' => 'fas fa-water',
+                        'full_details' => [
+                            'title' => 'JASA REKAYASA PEKERJAAN TEKNIK SIPIL SUMBER DAYA AIR',
+                            'code' => 'RK002',
+                            'description' => 'Jasa pembuatan desain rekayasa (engineering) untuk pekerjaan rekayasa sipil keairan seperti dam, catchment basins, sistem irigasi, pekerjaan pengendalian banjir, pelabuhan, pekerjaan penyaluran air dan sanitasi serta sistem saluran air limbah industri. Jasa Desain meliputi salah satu dari kombinasi layanan berikut:',
+                            'details' => [
+                                'Perencanaan awal, estimasi biaya dan spesifikasi dalam rangka menterjemahkan konsep desain teknis;',
+                                'Perencanaan akhir, estimasi biaya dan spesifikasi termasuk gambar teknik, spesifikasi material yang akan digunakan, metode pemasangan, batasan waktu dan spesifikasi teknis lainnya yang dibutuhkan untuk keperluan tender;',
+                                'Layanan pada saat fase konstruksi.'
+                            ]
+                        ]
+                    ],
+                    [
+                        'code' => 'RK003',
+                        'title' => 'Jasa Rekayasa Pekerjaan Teknik Sipil Transportasi',
+                        'icon' => 'fas fa-road',
+                        'full_details' => [
+                            'title' => 'JASA REKAYASA PEKERJAAN TEKNIK SIPIL TRANSPORTASI',
+                            'code' => 'RK003',
+                            'description' => 'Jasa pembuatan desain rekayasa (engineering) untuk pekerjaan rekayasa sipil transportasi seperti jembatan, jalan layang, dan jalan raya. Jasa Desain meliputi salah satu dari kombinasi layanan berikut:',
+                            'details' => [
+                                'Perencanaan awal, estimasi biaya dan spesifikasi dalam rangka menterjemahkan konsep desain teknis;',
+                                'Perencanaan akhir, estimasi biaya dan spesifikasi termasuk gambar teknik, spesifikasi material yang akan digunakan, metode pemasangan, batasan waktu dan spesifikasi teknis lainnya yang dibutuhkan untuk keperluan tender;',
+                                'Layanan pada saat fase konstruksi.',
+                                'Termasuk di dalamnya jasa pembuatan desain structural health monitoring system untuk benteng jembatan.'
+                            ]
+                        ]
+                    ],
+                    [
+                        'code' => 'RK005',
+                        'title' => 'Jasa Rekayasa Lainnya',
+                        'icon' => 'fas fa-cogs',
+                        'full_details' => [
+                            'title' => 'JASA REKAYASA LAINNYA',
+                            'code' => 'RK005',
+                            'description' => 'Jasa rekayasa untuk berbagai kebutuhan teknis lainnya yang tidak tercakup dalam kategori sebelumnya.',
+                            'details' => [
+                                'Analisis teknik komprehensif',
+                                'Studi kelayakan proyek',
+                                'Optimasi desain dan konstruksi',
+                                'Konsultasi teknis spesifik',
+                                'Audit teknis dan evaluasi',
+                                'Rekomendasi perbaikan dan peningkatan'
+                            ]
+                        ]
+                    ],
+
+                    // Jasa Pengembangan
                     [
                         'code' => 'AL001',
-                        'title' => 'Pengembangan Pemanfaatan Ruang',
-                        'description' => 'Jasa konsultansi terkait pengembangan pemanfaatan ruang untuk optimalisasi fungsi dan nilai ruang.',
+                        'title' => 'Jasa Pengembangan Pemanfaatan Ruang',
                         'icon' => 'fas fa-map-marked-alt',
-                        'features' => ['Analisis Ruang', 'Optimasi Pemanfaatan', 'Studi Kelayakan']
+                        'full_details' => [
+                            'title' => 'JASA PENGEMBANGAN PEMANFAATAN RUANG',
+                            'code' => 'AL001',
+                            'description' => 'Jasa konsultansi terkait pengembangan pemanfaatan ruang untuk optimalisasi fungsi dan nilai ruang.',
+                            'details' => [
+                                'Analisis dan optimalisasi ruang',
+                                'Studi kelayakan pemanfaatan ruang',
+                                'Perencanaan tata ruang terintegrasi',
+                                'Kajian dampak lingkungan',
+                                'Rekomendasi pengembangan kawasan',
+                                'Evaluasi pemanfaatan ruang existing'
+                            ]
+                        ]
                     ],
                     [
                         'code' => 'AL002',
-                        'title' => 'Pengembangan Wilayah',
-                        'description' => 'Perencanaan tata ruang wilayah mulai dari tingkat nasional hingga lokal dengan pendekatan terintegrasi.',
+                        'title' => 'Jasa Pengembangan Wilayah',
                         'icon' => 'fas fa-globe-asia',
-                        'features' => ['Tata Ruang Wilayah', 'Kawasan Strategis', 'Perencanaan Terpadu']
+                        'full_details' => [
+                            'title' => 'JASA PENGEMBANGAN WILAYAH',
+                            'code' => 'AL002',
+                            'description' => 'Jasa perencanaan tata ruang (mencakup darat, laut, udara, dan di dalam bumi) wilayah nasional, pulau, provinsi, kabupaten, dan kota, termasuk juga jasa pengkajian dan jasa penasehatan dalam penataan ruang wilayah yang didalamnya dapat meliputi:',
+                            'details' => [
+                                'Kawasan koridor nasional/provinsi/kabupaten/kota',
+                                'Kawasan andalan',
+                                'Kawasan permukiman termasuk ruang terbuka publik/terbuka hijau'
+                            ]
+                        ]
                     ],
                     [
                         'code' => 'AL003',
-                        'title' => 'Pengembangan Perkotaan',
-                        'description' => 'Jasa perencanaan tata ruang perkotaan dengan fokus pada keberlanjutan dan kenyamanan hunian.',
+                        'title' => 'Jasa Pengembangan Perkotaan',
                         'icon' => 'fas fa-city',
-                        'features' => ['Perencanaan Kota', 'Desain Perkotaan', 'Kajian Tata Ruang']
+                        'full_details' => [
+                            'title' => 'JASA PENGEMBANGAN PERKOTAAN',
+                            'code' => 'AL003',
+                            'description' => 'Jasa perencanaan tata ruang (mencakup darat, laut, udara, dan di dalam bumi) perkotaan, jasa perancangan bagian perkotaan, termasuk juga jasa pengkajian dan jasa penasehatan dalam penataan ruang perkotaan.',
+                            'details' => [
+                                'Perencanaan tata ruang perkotaan',
+                                'Perancangan bagian perkotaan',
+                                'Kajian penataan ruang perkotaan',
+                                'Pengembangan kawasan strategis kota',
+                                'Analisis kebutuhan infrastruktur kota',
+                                'Rencana pengembangan kawasan prioritas'
+                            ]
+                        ]
                     ],
                     [
                         'code' => 'AL004',
-                        'title' => 'Lingkungan Bangunan & Lanskap',
-                        'description' => 'Desain dan rencana aesthetic landscaping untuk berbagai tipe lingkungan bangunan dan komersial.',
+                        'title' => 'Jasa Pengembangan Lingkungan Bangunan dan Lanskap',
                         'icon' => 'fas fa-tree',
-                        'features' => ['Landscape Design', 'Desain Eksterior', 'Planning Aesthetic']
+                        'full_details' => [
+                            'title' => 'JASA PENGEMBANGAN LINGKUNGAN BANGUNAN DAN LANSKAP',
+                            'code' => 'AL004',
+                            'description' => 'Jasa pembuatan desain dan rencana dari aesthetic landscaping untuk taman, lahan komersial dan lingkungan bangunan.',
+                            'details' => [
+                                'Desain lanskap untuk taman dan area komersial',
+                                'Perencanaan ruang terbuka hijau',
+                                'Konsultasi tata lingkungan bangunan',
+                                'Pengembangan area rekreasi dan publik',
+                                'Desain elemen lanskap (hardscape & softscape)',
+                                'Sistem drainase dan irigasi lanskap'
+                            ]
+                        ]
                     ],
+
+                    // Jasa Konsultansi Lingkungan
                     [
                         'code' => 'KL401',
-                        'title' => 'Konsultansi Lingkungan',
-                        'description' => 'Solusi pengolahan air bersih, penyehatan lingkungan, dan manajemen persampahan yang terintegrasi.',
+                        'title' => 'Jasa Konsultansi Lingkungan',
                         'icon' => 'fas fa-recycle',
-                        'features' => ['Pengolahan Air', 'Sanitasi Lingkungan', 'Manajemen Sampah']
-                    ],
+                        'full_details' => [
+                            'title' => 'JASA KONSULTANSI LINGKUNGAN',
+                            'code' => 'KL401',
+                            'description' => 'Jasa konsultansi yang mencakup kegiatan pengolahan air bersih, penyehatan lingkungan permukiman, serta nasihat pengelolaan persampahan.',
+                            'details' => [
+                                'Pengolahan air bersih dan sanitasi',
+                                'Penyehatan lingkungan permukiman',
+                                'Manajemen dan pengelolaan persampahan',
+                                'Kajian dampak lingkungan (AMDAL)',
+                                'Audit lingkungan',
+                                'Sistem pengelolaan limbah'
+                            ]
+                        ]
+                    ]
                 ];
             @endphp
 
@@ -116,33 +289,20 @@
                                         </div>
                                     </div>
 
-                                    <!-- Title & Description -->
-                                    <h3 class="h4 fw-bold text-brown-800 mb-3">{{ $service['title'] }}</h3>
-                                    <p class="text-brown-600 mb-4 flex-grow-1">{{ $service['description'] }}</p>
-
-                                    <!-- Features -->
-                                    <div class="mb-4">
-                                        @foreach($service['features'] as $feature)
-                                            <div class="d-flex align-items-center mb-2">
-                                                <i class="fas fa-check-circle text-brown-600 me-2"></i>
-                                                <span class="text-brown-700">{{ $feature }}</span>
-                                            </div>
-                                        @endforeach
-                                    </div>
+                                    <!-- Title -->
+                                    <h3 class="h5 fw-bold text-brown-800 mb-4">{{ $service['title'] }}</h3>
 
                                     <!-- Card Footer -->
-                                    <div class="mt-auto pt-3 border-top border-brown-200">
+                                    <div class="mt-auto pt-2 border-top border-brown-200">
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div class="availability-status">
-                                                <span class="text-success fw-medium">
+                                                <span class="text-success fw-medium small">
                                                     <i class="fas fa-circle-check me-1"></i>Tersedia
                                                 </span>
                                             </div>
-                                            <button type="button" class="btn btn-brown-700 px-4 py-2 rounded-pill detail-btn"
-                                                    data-code="{{ $service['code'] }}"
-                                                    data-title="{{ $service['title'] }}"
-                                                    data-description="{{ $service['description'] }}">
-                                                Detail <i class="fas fa-arrow-right ms-2"></i>
+                                            <button type="button" class="btn btn-sm btn-brown-700 px-3 py-1 rounded-pill detail-btn"
+                                                    data-details='@json($service['full_details'])'>
+                                                Detail <i class="fas fa-arrow-right ms-1"></i>
                                             </button>
                                         </div>
                                     </div>
@@ -200,77 +360,22 @@
             </div>
             <div class="modal-body bg-cream-50 p-0">
                 <div class="row g-0">
-                    <div class="col-lg-8 p-5">
-                        <div class="mb-4">
+                    <div class="col-12 p-5">
+                        <div class="mb-3">
                             <span class="badge bg-brown-100 text-brown-700 px-3 py-2" id="modal-service-code"></span>
                         </div>
                         <h3 class="fw-bold text-brown-800 mb-4" id="modal-service-title"></h3>
-                        <p class="text-brown-700 mb-5" id="modal-service-description"></p>
 
-                        <div class="service-details">
+                        <!-- Full Description -->
+                        <div class="text-brown-700 mb-4" id="modal-service-description" style="line-height: 1.7;"></div>
+
+                        <!-- Detailed Points -->
+                        <div class="service-details mt-4">
                             <h5 class="text-brown-800 mb-3 fw-semibold">
-                                <i class="fas fa-list-check me-2"></i>Cakupan Layanan
+                                <i class="fas fa-list-check me-2"></i>Rincian Layanan
                             </h5>
-                            <ul class="list-unstyled">
-                                <li class="mb-3">
-                                    <div class="d-flex">
-                                        <i class="fas fa-check text-brown-600 me-3 mt-1"></i>
-                                        <span class="text-brown-700">Analisis dan studi kelayakan mendalam</span>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div class="d-flex">
-                                        <i class="fas fa-check text-brown-600 me-3 mt-1"></i>
-                                        <span class="text-brown-700">Perencanaan strategis dan implementasi</span>
-                                    </div>
-                                </li>
-                                <li class="mb-3">
-                                    <div class="d-flex">
-                                        <i class="fas fa-check text-brown-600 me-3 mt-1"></i>
-                                        <span class="text-brown-700">Monitoring dan evaluasi berkelanjutan</span>
-                                    </div>
-                                </li>
-                                <li>
-                                    <div class="d-flex">
-                                        <i class="fas fa-check text-brown-600 me-3 mt-1"></i>
-                                        <span class="text-brown-700">Dokumentasi dan laporan komprehensif</span>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 bg-brown-100 p-5">
-                        <h5 class="text-brown-800 mb-4 fw-semibold">
-                            <i class="fas fa-clock me-2"></i>Proses Kerja
-                        </h5>
-                        <div class="timeline">
-                            <div class="timeline-step mb-4">
-                                <div class="step-number bg-brown-700 text-white">1</div>
-                                <div class="step-content">
-                                    <h6 class="text-brown-800 fw-semibold">Konsultasi Awal</h6>
-                                    <p class="text-brown-600 small">Identifikasi kebutuhan dan tujuan proyek</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step mb-4">
-                                <div class="step-number bg-brown-700 text-white">2</div>
-                                <div class="step-content">
-                                    <h6 class="text-brown-800 fw-semibold">Analisis Mendalam</h6>
-                                    <p class="text-brown-600 small">Studi kelayakan dan analisis komprehensif</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step mb-4">
-                                <div class="step-number bg-brown-700 text-white">3</div>
-                                <div class="step-content">
-                                    <h6 class="text-brown-800 fw-semibold">Perencanaan</h6>
-                                    <p class="text-brown-600 small">Penyusunan rencana dan strategi implementasi</p>
-                                </div>
-                            </div>
-                            <div class="timeline-step">
-                                <div class="step-number bg-brown-700 text-white">4</div>
-                                <div class="step-content">
-                                    <h6 class="text-brown-800 fw-semibold">Implementasi & Review</h6>
-                                    <p class="text-brown-600 small">Pelaksanaan dan evaluasi hasil</p>
-                                </div>
+                            <div class="ps-3" id="modal-service-details">
+                                <!-- Details will be populated by JavaScript -->
                             </div>
                         </div>
                     </div>
@@ -422,8 +527,8 @@
     }
 
     .service-icon-circle {
-        width: 80px;
-        height: 80px;
+        width: 70px;
+        height: 70px;
         border-radius: 50%;
         display: flex;
         align-items: center;
@@ -437,7 +542,7 @@
     }
 
     .availability-status {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
     }
 
     /* Decorative Elements */
@@ -502,32 +607,47 @@
         filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
     }
 
-    /* Timeline in Modal */
-    .timeline-step {
-        display: flex;
-        align-items: flex-start;
-    }
-
-    .step-number {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        margin-right: 15px;
-        flex-shrink: 0;
-    }
-
-    .step-content {
-        flex-grow: 1;
-    }
-
     /* Modal Customization */
     .modal-content {
         border-radius: 20px;
         box-shadow: 0 25px 50px rgba(62, 39, 35, 0.2);
+    }
+
+    #modal-service-description {
+        max-height: 200px;
+        overflow-y: auto;
+        padding-right: 10px;
+        line-height: 1.7;
+    }
+
+    #modal-service-details {
+        max-height: 300px;
+        overflow-y: auto;
+        padding-right: 10px;
+    }
+
+    #modal-service-description::-webkit-scrollbar,
+    #modal-service-details::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    #modal-service-description::-webkit-scrollbar-track,
+    #modal-service-details::-webkit-scrollbar-track {
+        background: #EFEBE9;
+    }
+
+    #modal-service-description::-webkit-scrollbar-thumb,
+    #modal-service-details::-webkit-scrollbar-thumb {
+        background: #5D4037;
+        border-radius: 5px;
+    }
+
+    .detail-point {
+        padding: 0.75rem;
+        margin-bottom: 0.5rem;
+        background: rgba(255, 255, 255, 0.5);
+        border-radius: 10px;
+        border-left: 3px solid #5D4037;
     }
 
     /* Responsive Adjustments */
@@ -584,19 +704,30 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle detail button clicks
     document.querySelectorAll('.detail-btn').forEach(button => {
         button.addEventListener('click', function() {
-            const code = this.getAttribute('data-code');
-            const title = this.getAttribute('data-title');
-            const description = this.getAttribute('data-description');
+            const details = JSON.parse(this.getAttribute('data-details'));
 
             // Update modal content
-            document.getElementById('modal-service-code').textContent = code;
-            document.getElementById('modal-service-title').textContent = title;
-            document.getElementById('modal-service-description').textContent = description;
+            document.getElementById('modal-service-code').textContent = details.code;
+            document.getElementById('modal-service-title').textContent = details.title;
+            document.getElementById('modal-service-description').textContent = details.description;
+
+            // Update details list
+            const detailsContainer = document.getElementById('modal-service-details');
+            detailsContainer.innerHTML = '';
+
+            if (Array.isArray(details.details)) {
+                details.details.forEach(point => {
+                    const div = document.createElement('div');
+                    div.className = 'detail-point';
+                    div.innerHTML = `<i class="fas fa-circle-check text-brown-600 me-2"></i>${point}`;
+                    detailsContainer.appendChild(div);
+                });
+            }
 
             // Update consultation link
             const contactBtn = document.getElementById('modal-contact-btn');
             const baseUrl = contactBtn.getAttribute('href').split('?')[0];
-            contactBtn.setAttribute('href', `${baseUrl}?service=${encodeURIComponent(title)}&code=${code}`);
+            contactBtn.setAttribute('href', `${baseUrl}?service=${encodeURIComponent(details.title)}&code=${details.code}`);
 
             // Show modal
             serviceModal.show();

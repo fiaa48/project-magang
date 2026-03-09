@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Konsultansi Non-Konstruksi')
+@section('title', 'Konsultansi Non-Konstruksi | PT Mitra Nusa Konsulindo')
+@section('description', 'Layanan konsultansi non-konstruksi profesional meliputi Pengembangan Pertanian, Transportasi, Telematika, Jasa Survey, Studi Penelitian, Manajemen, dan Jasa Khusus.')
 
 @section('content')
 <div class="container-fluid p-0">
@@ -16,7 +17,7 @@
                             <li class="breadcrumb-item active" aria-current="page">Konsultansi Non-Konstruksi</li>
                         </ol>
                     </nav>
-                    
+
                     <div class="hero-content mt-4">
                         <div class="service-badge mb-3">
                             <span>KONSULTANSI SPESIALIS</span>
@@ -25,17 +26,17 @@
                             Konsultansi <span class="text-accent-gold">Non-Konstruksi</span>
                         </h1>
                         <p class="lead text-cream-medium mb-5">
-                            Solusi komprehensif untuk berbagai kebutuhan konsultansi di luar bidang konstruksi, 
+                            Solusi komprehensif untuk berbagai kebutuhan konsultansi di luar bidang konstruksi,
                             memberikan nilai tambah melalui pendekatan inovatif dan berkelanjutan.
                         </p>
-                        
+
                         <div class="hero-stats d-flex flex-wrap gap-4">
                             <div class="stat-item">
-                                <div class="stat-number">7+</div>
-                                <div class="stat-label">Bidang Keahlian</div>
+                                <div class="stat-number">7</div>
+                                <div class="stat-label">Bidang Utama</div>
                             </div>
                             <div class="stat-item">
-                                <div class="stat-number">30+</div>
+                                <div class="stat-number">35+</div>
                                 <div class="stat-label">Jenis Layanan</div>
                             </div>
                             <div class="stat-item">
@@ -70,7 +71,7 @@
                 </div>
                 <h2 class="section-title fw-bold text-brown-dark mb-3">Layanan Konsultansi Non-Konstruksi</h2>
                 <p class="section-subtitle text-brown-medium">
-                    Kami menyediakan berbagai layanan konsultansi profesional untuk mendukung 
+                    Kami menyediakan berbagai layanan konsultansi profesional untuk mendukung
                     pengembangan dan optimasi bisnis Anda di berbagai sektor.
                 </p>
                 <div class="section-ornament">
@@ -82,153 +83,220 @@
 
             @php
                 $categories = [
+                    // PENGEMBANGAN PERTANIAN DAN PEDESAAN
                     [
                         'id' => 1,
-                        'category' => 'Pengembangan Pertanian dan Pedesaan',
+                        'category' => 'PENGEMBANGAN PERTANIAN DAN PEDESAAN',
                         'services' => [
-                            'Penerapan Social-Care, Pengembangan / Pedesaan Manuskrip',
-                            'Kesehatan',
-                            'Pelayanan',
-                            'Sakit-Sakit yang Penghasilnya Pedesaan Dan Pedesaan Lainnya'
+                            'Prasarana Sosial Dan Pengembangan / Partisipasi Masyarakat',
+                            'Kehutanan',
+                            'Perikanan',
+                            'Sub-Bidang Pengembangan Pertanian Dan Pedesaan Lainnya'
                         ],
-                        'description' => 'Konsultansi pengembangan pertanian dan pedesaan dengan fokus pada pemberdayaan masyarakat, kesehatan lingkungan, dan pengembangan berkelanjutan.',
+                        'description' => 'Layanan konsultansi pengembangan pertanian dan pedesaan yang berfokus pada pemberdayaan masyarakat, pengelolaan sumber daya alam, dan pembangunan berkelanjutan.',
                         'icon' => 'fas fa-tractor',
-                        'color' => 'agriculture'
+                        'color' => 'agriculture',
+                        'full_details' => [
+                            'title' => 'PENGEMBANGAN PERTANIAN DAN PEDESAAN',
+                            'code' => '1.01-32.73-23-0037',
+                            'serial' => 'No Seri B21.000773',
+                            'description' => 'Layanan konsultansi profesional untuk pengembangan sektor pertanian dan pedesaan dengan pendekatan partisipatif dan berkelanjutan.',
+                            'details' => [
+                                'Prasarana Sosial Dan Pengembangan / Partisipasi Masyarakat - Pengembangan infrastruktur sosial dan program pemberdayaan masyarakat',
+                                'Kehutanan - Konsultansi pengelolaan hutan dan sumber daya kehutanan',
+                                'Perikanan - Pengembangan sektor perikanan tangkap dan budidaya',
+                                'Sub-Bidang Pengembangan Pertanian Dan Pedesaan Lainnya - Layanan pengembangan pertanian dan pedesaan lainnya'
+                            ]
+                        ]
                     ],
+
+                    // TRANSPORTASI
                     [
                         'id' => 2,
-                        'category' => 'Transportasi',
+                        'category' => 'TRANSPORTASI',
                         'services' => [
-                            'Pengembangan Sistem Transportasi',
-                            'Logistik dan Jasa Belanja Terapese',
-                            'Usaha Jasa Logistik',
-                            'Soalings Tersedia (pemilik Lainnya)'
+                            'Pengembangan Sarana Transportasi',
+                            'Legislasi/Peraturan Bidang Transportasi',
+                            'Usaha Jasa Angkutan',
+                            'Sub-bidang Transportasi Lainnya'
                         ],
-                        'description' => 'Konsultansi sistem transportasi dan logistik untuk efisiensi distribusi dan mobilitas.',
+                        'description' => 'Konsultansi sistem transportasi dan logistik untuk efisiensi distribusi dan mobilitas, mencakup pengembangan sarana, regulasi, dan jasa angkutan.',
                         'icon' => 'fas fa-truck-moving',
-                        'color' => 'transport'
+                        'color' => 'transport',
+                        'full_details' => [
+                            'title' => 'TRANSPORTASI',
+                            'code' => '1.02-32.73-23-0037',
+                            'serial' => 'No Seri B21.000774',
+                            'description' => 'Layanan konsultansi profesional di bidang transportasi untuk mendukung pengembangan sistem transportasi yang efisien dan berkelanjutan.',
+                            'details' => [
+                                'Pengembangan Sarana Transportasi - Perencanaan dan pengembangan sarana transportasi',
+                                'Legislasi/Peraturan Bidang Transportasi - Konsultansi regulasi dan kebijakan transportasi',
+                                'Usaha Jasa Angkutan - Pengembangan dan optimasi usaha jasa angkutan',
+                                'Sub-bidang Transportasi Lainnya - Layanan transportasi lainnya'
+                            ]
+                        ]
                     ],
+
+                    // TELEMATIKA
                     [
                         'id' => 3,
-                        'category' => 'Telemadia',
+                        'category' => 'TELEMATIKA',
                         'services' => [
-                            'Telemadias Cari',
-                            'Telemadias Ganti',
-                            'Penggantian',
-                            'Online / Penggantian Lainnya',
-                            'Daftar Telemadias Lainnya'
+                            'Telekomunikasi Darat',
+                            'Telekomunikasi Satelit',
+                            'Perangkat Keras',
+                            'Konten',
+                            'Aplikasi / Perangkat Lunak',
+                            'Sub-bidang Telematica Lainnya'
                         ],
-                        'description' => 'Konsultansi teknologi telematika dan komunikasi digital untuk transformasi bisnis.',
+                        'description' => 'Konsultansi teknologi telematika dan komunikasi digital untuk transformasi bisnis, mencakup infrastruktur telekomunikasi, perangkat keras, konten, dan aplikasi.',
                         'icon' => 'fas fa-satellite-dish',
-                        'color' => 'telematics'
+                        'color' => 'telematics',
+                        'full_details' => [
+                            'title' => 'TELEMATIKA',
+                            'code' => '1.03-32.73-23-0037',
+                            'serial' => 'No Seri B21.000775',
+                            'description' => 'Layanan konsultansi profesional di bidang telematika untuk mendukung transformasi digital dan pengembangan infrastruktur telekomunikasi.',
+                            'details' => [
+                                'Telekomunikasi Darat - Pengembangan dan optimasi jaringan telekomunikasi darat',
+                                'Telekomunikasi Satelit - Solusi komunikasi berbasis satelit',
+                                'Perangkat Keras - Konsultansi pengadaan dan pengembangan perangkat keras',
+                                'Konten - Pengembangan dan manajemen konten digital',
+                                'Aplikasi / Perangkat Lunak - Pengembangan aplikasi dan perangkat lunak',
+                                'Sub-bidang Telematica Lainnya - Layanan telematika lainnya'
+                            ]
+                        ]
                     ],
+
+                    // JASA SURVEY
                     [
                         'id' => 4,
-                        'category' => 'Jasa Bursy',
+                        'category' => 'JASA SURVEY',
                         'services' => [
-                            'Suara Testesi',
-                            'Pengadaan Jasa / Tanggapan',
-                            'Suara Informasi / Sistem',
-                            'Sistem Informasi',
-                            'Suara Informasi / Pengadaan Tekstil / Industri',
-                            'Suara Informasi / Sistem',
-                            'Suara Informasi / Sistem',
-                            'Jasa Bursy dan Sistem',
-                            'Jasa Bursy / Sistem dan Gerbong (non-merek)'
+                            'Survey Terestris',
+                            'Penginderaan Jauh / Fotogrametri',
+                            'Survey Hidrografi / Batimetri',
+                            'Sistem Informasi Geografi',
+                            'Survey Registrasi Kepemilikan Tanah / Kadastral',
+                            'Survey Geologi dan Geofisika',
+                            'Survey Pertanian',
+                            'Jasa Survey non Seismik',
+                            'Jasa Survey Geologi dan Geofisika (non seismik)'
                         ],
-                        'description' => 'Layanan survei dan analisis data untuk mendukung pengambilan keputusan strategis.',
+                        'description' => 'Layanan survei dan pemetaan komprehensif untuk berbagai kebutuhan, mulai dari survei terestris hingga survei geologi dan geofisika, didukung dengan teknologi terkini dan tenaga ahli berpengalaman.',
                         'icon' => 'fas fa-map-marked-alt',
-                        'color' => 'survey'
+                        'color' => 'survey',
+                        'full_details' => [
+                            'title' => 'JASA SURVEY',
+                            'code' => '1.SSI-32.73-23-0037',
+                            'serial' => 'No Seri L21.000981',
+                            'description' => 'Layanan survei profesional yang mencakup berbagai metode dan teknik survei untuk mendukung pengambilan keputusan yang akurat dan tepat.',
+                            'details' => [
+                                'Survey Terestris - Pengukuran dan pemetaan permukaan bumi dengan metode terestris',
+                                'Penginderaan Jauh / Fotogrametri - Analisis data citra satelit dan foto udara',
+                                'Survey Hidrografi / Batimetri - Pemetaan dasar perairan dan kedalaman laut',
+                                'Sistem Informasi Geografi - Pengelolaan dan analisis data spasial',
+                                'Survey Registrasi Kepemilikan Tanah / Kadastral - Pemetaan batas-batas kepemilikan tanah',
+                                'Survey Geologi dan Geofisika - Investigasi kondisi geologi dan geofisika',
+                                'Survey Pertanian - Pemetaan lahan pertanian dan analisis kesesuaian lahan',
+                                'Jasa Survey non Seismik - Survei dengan metode non-seismik',
+                                'Jasa Survey Geologi dan Geofisika (non seismik) - Survei geologi dan geofisika dengan metode non-seismik'
+                            ]
+                        ]
                     ],
+
+                    // JASA STUDI PENELITIAN DAN BANTUAN TEKNIS
                     [
                         'id' => 5,
-                        'category' => 'Jasa Studi, Pemilihan dan Berhutan Teknik',
+                        'category' => 'JASA STUDI PENELITIAN DAN BANTUAN TEKNIS',
                         'services' => [
-                            'Studi Teknik',
-                            'Studi Pengajuan & Studi Teknik Lainnya',
-                            'Studi Pengajuan & Studi Teknik',
-                            'Jasa Pembelian Lainnya',
-                            'Jasa Berhutan Teknik'
+                            'Studi Makro',
+                            'Studi Kelayakan & Studi Mikro Lainnya',
+                            'Studi Perencanaan Umum',
+                            'Jasa Penelitian',
+                            'Jasa Bantuan Teknik'
                         ],
-                        'description' => 'Konsultansi studi kelayakan, penelitian, dan bantuan teknis untuk proyek-proyek strategis.',
+                        'description' => 'Layanan studi dan penelitian komprehensif untuk mendukung perencanaan dan pengambilan keputusan, serta bantuan teknis dalam implementasi proyek.',
                         'icon' => 'fas fa-microscope',
-                        'color' => 'research'
+                        'color' => 'research',
+                        'full_details' => [
+                            'title' => 'JASA STUDI PENELITIAN DAN BANTUAN TEKNIS',
+                            'code' => '1.SI-32.73-23-0037',
+                            'serial' => 'No Seri L21.000980',
+                            'description' => 'Layanan studi dan penelitian profesional untuk berbagai kebutuhan, dari studi makro hingga bantuan teknis dalam implementasi proyek.',
+                            'details' => [
+                                'Studi Makro - Analisis dan kajian pada tingkat makro (regional/nasional)',
+                                'Studi Kelayakan & Studi Mikro Lainnya - Analisis kelayakan proyek dan studi pada tingkat mikro',
+                                'Studi Perencanaan Umum - Perencanaan strategis dan operasional',
+                                'Jasa Penelitian - Penelitian mendalam untuk berbagai bidang',
+                                'Jasa Bantuan Teknik - Pendampingan dan bantuan teknis dalam implementasi'
+                            ]
+                        ]
                     ],
+
+                    // JASA KONSULTANSI MANAJEMEN
                     [
                         'id' => 6,
-                        'category' => 'Jasa Konsultan Manajemen',
+                        'category' => 'JASA KONSULTANSI MANAJEMEN',
                         'services' => [
-                            'Perencanaan Sistem Automat',
-                            'Perencanaan dan Pengurusan SCM',
-                            'Kontrol Sistem Manajemen Pengurusan',
-                            'Kontrol Sistem Bisnis'
+                            'Perencanaan Sistem Akuntansi',
+                            'Pelatihan dan Pengembangan SDM',
+                            'Konsultasi Manajemen Fungsional',
+                            'Konsultasi Hukum Bisnis'
                         ],
-                        'description' => 'Konsultansi manajemen untuk meningkatkan efisiensi operasional dan strategi bisnis.',
+                        'description' => 'Layanan konsultansi manajemen untuk meningkatkan efisiensi operasional, mengoptimalkan sumber daya manusia, dan memastikan kepatuhan hukum dalam bisnis Anda.',
                         'icon' => 'fas fa-briefcase',
-                        'color' => 'management'
+                        'color' => 'management',
+                        'full_details' => [
+                            'title' => 'JASA KONSULTANSI MANAJEMEN',
+                            'code' => '1.MS-32.73-23-0037',
+                            'serial' => 'No Seri L21.000978',
+                            'description' => 'Layanan konsultansi manajemen profesional untuk mendukung pengembangan dan optimasi bisnis Anda.',
+                            'details' => [
+                                'Perencanaan Sistem Akuntansi - Desain dan implementasi sistem akuntansi yang efektif',
+                                'Pelatihan dan Pengembangan SDM - Program pelatihan untuk meningkatkan kompetensi sumber daya manusia',
+                                'Konsultasi Manajemen Fungsional - Konsultasi untuk berbagai fungsi manajemen',
+                                'Konsultasi Hukum Bisnis - Pendampingan dan konsultasi aspek hukum dalam bisnis'
+                            ]
+                        ]
                     ],
+
+                    // JASA KHUSUS
                     [
                         'id' => 7,
-                        'category' => 'Jasa Khusus',
+                        'category' => 'JASA KHUSUS',
                         'services' => [
                             'Jasa Teknologi dan Sistem Informasi',
                             'Jasa Penilai / Appraisal / Valuer',
                             'Jasa Surveyor Independen',
                             'Jasa Sertifikasi',
                             'Jasa Inspeksi Teknik',
-                            'Jasa Kehumasan'
+                            'Jasa Kehutanan'
                         ],
-                        'description' => 'Layanan khusus yang disesuaikan dengan kebutuhan unik klien.',
+                        'description' => 'Layanan khusus yang disesuaikan dengan kebutuhan unik klien, mencakup berbagai bidang dari teknologi informasi hingga penilaian aset dan inspeksi teknik.',
                         'icon' => 'fas fa-star',
-                        'color' => 'special'
-                    ],
+                        'color' => 'special',
+                        'full_details' => [
+                            'title' => 'JASA KHUSUS',
+                            'code' => '1.SC-32.73-23-0037',
+                            'serial' => 'No Seri L21.000979',
+                            'description' => 'Layanan khusus yang dirancang untuk memenuhi kebutuhan spesifik klien di berbagai bidang.',
+                            'details' => [
+                                'Jasa Teknologi dan Sistem Informasi - Pengembangan dan implementasi solusi TI',
+                                'Jasa Penilai / Appraisal / Valuer - Penilaian aset dan properti',
+                                'Jasa Surveyor Independen - Survei independen untuk verifikasi',
+                                'Jasa Sertifikasi - Layanan sertifikasi untuk berbagai kebutuhan',
+                                'Jasa Inspeksi Teknik - Inspeksi dan evaluasi teknis',
+                                'Jasa Kehutanan - Konsultansi dan pengelolaan sumber daya hutan'
+                            ]
+                        ]
+                    ]
                 ];
             @endphp
 
-            <!-- Baris pertama: 4 kartu -->
-            <div class="row g-4 mb-4">
+            <!-- Baris kategori - 7 kartu -->
+            <div class="row g-4">
                 @foreach($categories as $index => $category)
-                    @if($index < 4)
-                    <div class="col-lg-3 col-md-6">
-                        <div class="category-card animate-on-scroll" data-delay="{{ $index * 100 }}">
-                            <div class="category-header">
-                                <div class="category-icon category-{{ $category['color'] }}">
-                                    <i class="{{ $category['icon'] }}"></i>
-                                </div>
-                                <div class="category-number">0{{ $index + 1 }}</div>
-                            </div>
-                            <div class="category-body">
-                                <h3 class="category-title">{{ $category['category'] }}</h3>
-                                <div class="services-list">
-                                    @foreach(array_slice($category['services'], 0, 3) as $service)
-                                    <div class="service-item">
-                                        <div class="service-dot"></div>
-                                        <span class="service-name">{{ $service }}</span>
-                                    </div>
-                                    @endforeach
-                                    @if(count($category['services']) > 3)
-                                    <div class="more-services">
-                                        +{{ count($category['services']) - 3 }} layanan lainnya
-                                    </div>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="category-footer">
-                                <button type="button" class="btn-category-detail" data-bs-toggle="modal" data-bs-target="#categoryModal{{ $category['id'] }}">
-                                    <span>Lihat Detail</span>
-                                    <i class="fas fa-arrow-right"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    @endif
-                @endforeach
-            </div>
-
-            <!-- Baris kedua: 3 kartu di tengah -->
-            <div class="row g-4 justify-content-center">
-                @foreach($categories as $index => $category)
-                    @if($index >= 4)
                     <div class="col-lg-4 col-md-6">
                         <div class="category-card animate-on-scroll" data-delay="{{ $index * 100 }}">
                             <div class="category-header">
@@ -261,7 +329,6 @@
                             </div>
                         </div>
                     </div>
-                    @endif
                 @endforeach
             </div>
         </div>
@@ -277,58 +344,58 @@
                             <span>KEUNGGULAN KAMI</span>
                         </div>
                         <h2 class="section-title fw-bold text-cream-light mb-4">
-                            Mengapa Memilih Layanan Konsultansi Kami?
+                            Mengapa Memilih Layanan Konsultansi Non-Konstruksi Kami?
                         </h2>
                         <p class="text-cream-medium mb-5">
-                            Dengan pengalaman bertahun-tahun dan tim ahli yang berdedikasi, 
-                            kami memberikan solusi konsultansi yang tepat dan efektif untuk 
-                            kebutuhan bisnis Anda.
+                            Dengan pengalaman bertahun-tahun dan tim ahli yang berdedikasi,
+                            kami memberikan solusi konsultansi yang tepat dan efektif untuk
+                            kebutuhan bisnis Anda di berbagai sektor non-konstruksi.
                         </p>
-                        
+
                         <div class="features-grid">
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-user-tie"></i>
                                 </div>
                                 <div class="feature-content">
-                                    <h5>Tim Ahli Berpengalaman</h5>
-                                    <p>Didukung oleh profesional dengan pengalaman di berbagai sektor industri</p>
+                                    <h5>Tim Ahli Multi-Disiplin</h5>
+                                    <p>Didukung oleh profesional dari berbagai bidang keahlian</p>
                                 </div>
                             </div>
-                            
+
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-lightbulb"></i>
                                 </div>
                                 <div class="feature-content">
-                                    <h5>Solusi Inovatif</h5>
-                                    <p>Pendekatan kreatif dan solusi yang sesuai dengan perkembangan zaman</p>
+                                    <h5>Solusi Terintegrasi</h5>
+                                    <p>Pendekatan holistik yang mencakup berbagai aspek kebutuhan</p>
                                 </div>
                             </div>
-                            
+
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-handshake"></i>
                                 </div>
                                 <div class="feature-content">
                                     <h5>Pendekatan Personal</h5>
-                                    <p>Setiap klien mendapatkan perhatian khusus dan solusi yang disesuaikan</p>
+                                    <p>Setiap klien mendapatkan solusi yang disesuaikan dengan kebutuhan spesifik</p>
                                 </div>
                             </div>
-                            
+
                             <div class="feature-item">
                                 <div class="feature-icon">
                                     <i class="fas fa-clock"></i>
                                 </div>
                                 <div class="feature-content">
-                                    <h5>Efisiensi Waktu</h5>
-                                    <p>Proses kerja yang terstruktur untuk hasil yang cepat dan tepat</p>
+                                    <h5>Efisiensi dan Ketepatan</h5>
+                                    <p>Proses kerja terstruktur untuk hasil yang cepat dan akurat</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-6">
                     <div class="why-choose-image text-center">
                         <div class="image-wrapper">
@@ -361,7 +428,7 @@
                             Siap Mengembangkan Bisnis Anda?
                         </h3>
                         <p class="cta-description text-cream-medium mb-0">
-                            Konsultasikan kebutuhan Anda dengan tim ahli kami dan 
+                            Konsultasikan kebutuhan Anda dengan tim ahli kami dan
                             dapatkan solusi terbaik untuk pengembangan bisnis Anda.
                         </p>
                     </div>
@@ -386,30 +453,36 @@
                     <i class="{{ $category['icon'] }}"></i>
                 </div>
                 <div class="modal-title-container">
-                    <h5 class="modal-title" id="categoryModalLabel{{ $category['id'] }}">{{ $category['category'] }}</h5>
-                    <div class="modal-subtitle">Konsultansi Non-Konstruksi</div>
+                    <h5 class="modal-title" id="categoryModalLabel{{ $category['id'] }}">{{ $category['full_details']['title'] }}</h5>
+                    <div class="modal-subtitle">
+                        <span class="badge bg-accent-gold text-brown-dark me-2">{{ $category['full_details']['code'] }}</span>
+                        <span class="badge bg-brown-medium text-cream-light">{{ $category['full_details']['serial'] }}</span>
+                    </div>
                 </div>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <div class="modal-description">
-                    <p>{{ $category['description'] }}</p>
+                    <p>{{ $category['full_details']['description'] }}</p>
                 </div>
+
                 <div class="modal-services">
-                    <h6>Layanan yang Tersedia:</h6>
+                    <h6>Rincian Layanan:</h6>
                     <div class="services-grid">
-                        @foreach($category['services'] as $service)
+                        @foreach($category['full_details']['details'] as $detail)
                         <div class="service-item-modal">
                             <div class="service-icon-modal">
                                 <i class="fas fa-check-circle"></i>
                             </div>
-                            <div class="service-text">{{ $service }}</div>
+                            <div class="service-text">{{ $detail }}</div>
                         </div>
                         @endforeach
                     </div>
                 </div>
-                <div class="modal-location">
-                    <h6>Lokasi:</h6>
+
+                <div class="modal-location mt-4">
+                    <h6>Butuh Konsultasi?</h6>
+                    <p class="text-brown-medium mb-3">Isi lokasi proyek Anda untuk mendapatkan rekomendasi layanan yang sesuai.</p>
                     <div class="location-input">
                         <div class="input-group">
                             <input type="text" class="form-control" placeholder="Masukkan lokasi proyek Anda" aria-label="Lokasi Proyek">
@@ -422,7 +495,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-outline-brown" data-bs-dismiss="modal">Tutup</button>
-                <a href="{{ route('contact') }}" class="btn btn-brown">
+                <a href="{{ route('contact') }}?service={{ urlencode($category['category']) }}" class="btn btn-brown">
                     <i class="fas fa-phone-alt me-2"></i>Hubungi Konsultan
                 </a>
             </div>
@@ -430,6 +503,74 @@
     </div>
 </div>
 @endforeach
+
+<!-- CSS Tambahan untuk Modal -->
+<style>
+    .badge.bg-accent-gold {
+        background: linear-gradient(135deg, #D4AF37, #F0E68C);
+        color: #3E2723;
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        font-weight: 500;
+    }
+
+    .badge.bg-brown-medium {
+        background: #795548;
+        color: #F5F0E6;
+        padding: 0.35rem 0.75rem;
+        border-radius: 20px;
+        font-weight: 500;
+    }
+
+    .modal-subtitle {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .category-modal .modal-header {
+        background: linear-gradient(135deg, #5D4037, #3E2723);
+    }
+
+    .modal-location p {
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .services-grid {
+        max-height: 400px;
+        overflow-y: auto;
+        padding-right: 0.5rem;
+    }
+
+    .services-grid::-webkit-scrollbar {
+        width: 5px;
+    }
+
+    .services-grid::-webkit-scrollbar-track {
+        background: #EFEBE9;
+        border-radius: 10px;
+    }
+
+    .services-grid::-webkit-scrollbar-thumb {
+        background: #5D4037;
+        border-radius: 10px;
+    }
+
+    .service-item-modal {
+        background: white;
+        border: 1px solid #EFEBE9;
+        transition: all 0.3s ease;
+    }
+
+    .service-item-modal:hover {
+        background: #F5F0E6;
+        border-color: #D4AF37;
+        transform: translateX(5px);
+    }
+</style>
+
 @endsection
 
 @push('styles')
@@ -447,7 +588,7 @@
         --brown-700: #5D4037;
         --brown-800: #4E342E;
         --brown-900: #3E2723;
-        
+
         /* Cream Shades */
         --cream-50: #FFFDF7;
         --cream-100: #F9F5EB;
@@ -459,17 +600,20 @@
         --cream-700: #D7C8B4;
         --cream-800: #D2C1AB;
         --cream-900: #CCBAA2;
-        
-        /* Accent Colors */
+
+        /* Accent Colors - New Colors untuk kategori tambahan */
+        --accent-agriculture: #2E7D32;
+        --accent-agriculture-light: #4CAF50;
+        --accent-transport: #1565C0;
+        --accent-transport-light: #2196F3;
+        --accent-telematics: #6A1B9A;
+        --accent-telematics-light: #9C27B0;
         --accent-gold: #D4AF37;
         --accent-gold-light: #F0E68C;
-        --accent-green: #2E7D32;
-        --accent-blue: #1565C0;
-        --accent-purple: #6A1B9A;
-        --accent-orange: #EF6C00;
         --accent-teal: #00695C;
+        --accent-orange: #EF6C00;
         --accent-red: #C62828;
-        
+
         /* Theme Colors */
         --brown-light: var(--brown-300);
         --brown-medium: var(--brown-500);
@@ -481,9 +625,9 @@
 
     /* Hero Section */
     .non-construction-hero {
-        background: linear-gradient(135deg, 
-            rgba(62, 39, 35, 0.95) 0%, 
-            rgba(93, 64, 55, 0.9) 50%, 
+        background: linear-gradient(135deg,
+            rgba(62, 39, 35, 0.95) 0%,
+            rgba(93, 64, 55, 0.9) 50%,
             rgba(121, 85, 72, 0.85) 100%);
         color: var(--cream-light);
         padding: 6rem 0 4rem;
@@ -736,15 +880,15 @@
 
     /* Category Icon Colors */
     .category-agriculture {
-        background: linear-gradient(135deg, var(--accent-green), #4CAF50);
+        background: linear-gradient(135deg, var(--accent-agriculture), var(--accent-agriculture-light));
     }
 
     .category-transport {
-        background: linear-gradient(135deg, var(--accent-blue), #2196F3);
+        background: linear-gradient(135deg, var(--accent-transport), var(--accent-transport-light));
     }
 
     .category-telematics {
-        background: linear-gradient(135deg, var(--accent-purple), #9C27B0);
+        background: linear-gradient(135deg, var(--accent-telematics), var(--accent-telematics-light));
     }
 
     .category-survey {
@@ -781,13 +925,14 @@
         margin-bottom: 1rem;
         font-size: 1.25rem;
         line-height: 1.3;
+        min-height: 60px;
     }
 
     .services-list {
         display: flex;
         flex-direction: column;
         gap: 0.75rem;
-        min-height: 120px;
+        min-height: 140px;
     }
 
     .service-item {
@@ -1020,8 +1165,8 @@
 
     /* Why Choose Us Section */
     .why-choose-section {
-        background: linear-gradient(135deg, 
-            rgba(62, 39, 35, 0.95) 0%, 
+        background: linear-gradient(135deg,
+            rgba(62, 39, 35, 0.95) 0%,
             rgba(93, 64, 55, 0.9) 100%);
         color: var(--cream-light);
         position: relative;
@@ -1152,8 +1297,8 @@
     }
 
     .cta-card {
-        background: linear-gradient(135deg, 
-            rgba(93, 64, 55, 0.95) 0%, 
+        background: linear-gradient(135deg,
+            rgba(93, 64, 55, 0.95) 0%,
             rgba(121, 85, 72, 0.9) 100%);
         border-radius: 20px;
         padding: 3rem;
@@ -1230,14 +1375,9 @@
         .hero-content h1 {
             font-size: 2.5rem;
         }
-        
+
         .section-title {
             font-size: 2.2rem;
-        }
-        
-        .category-card .col-lg-3 {
-            flex: 0 0 50%;
-            max-width: 50%;
         }
     }
 
@@ -1245,41 +1385,31 @@
         .non-construction-hero {
             padding: 4rem 0 2.5rem;
         }
-        
+
         .hero-content h1 {
             font-size: 2.2rem;
         }
-        
+
         .hero-content .lead {
             font-size: 1.1rem;
         }
-        
+
         .hero-icon {
             width: 150px;
             height: 150px;
             margin-top: 2rem;
         }
-        
+
         .icon-wrapper {
             font-size: 4rem;
         }
-        
+
         .section-title {
             font-size: 1.8rem;
         }
-        
+
         .category-card {
             margin-bottom: 1rem;
-        }
-        
-        .category-card .col-lg-3 {
-            flex: 0 0 50%;
-            max-width: 50%;
-        }
-        
-        .category-card .col-lg-4 {
-            flex: 0 0 100%;
-            max-width: 100%;
         }
     }
 
@@ -1287,36 +1417,39 @@
         .hero-content h1 {
             font-size: 1.8rem;
         }
-        
+
         .hero-stats {
             gap: 2rem;
         }
-        
+
         .stat-number {
             font-size: 1.5rem;
         }
-        
+
         .section-title {
             font-size: 1.6rem;
         }
-        
+
         .cta-card {
             padding: 2rem;
         }
-        
+
         .cta-title {
             font-size: 1.5rem;
         }
-        
+
         .btn-cream {
             width: 100%;
             max-width: 250px;
             margin: 0 auto;
         }
-        
-        .category-card .col-lg-3 {
-            flex: 0 0 100%;
-            max-width: 100%;
+
+        .category-title {
+            min-height: auto;
+        }
+
+        .services-list {
+            min-height: auto;
         }
     }
 
@@ -1324,36 +1457,36 @@
         .hero-content h1 {
             font-size: 1.6rem;
         }
-        
+
         .service-badge {
             font-size: 0.7rem;
             padding: 0.4rem 1rem;
         }
-        
+
         .hero-content .lead {
             font-size: 1rem;
         }
-        
+
         .section-title {
             font-size: 1.4rem;
         }
-        
+
         .section-subtitle {
             font-size: 0.95rem;
         }
-        
+
         .cta-card .row {
             text-align: center;
         }
-        
+
         .cta-card .col-lg-4 {
             margin-top: 1.5rem;
         }
-        
+
         .category-modal .modal-body {
             padding: 1.5rem;
         }
-        
+
         .services-grid {
             grid-template-columns: 1fr;
         }
@@ -1375,7 +1508,7 @@
                 if (entry.isIntersecting) {
                     const element = entry.target;
                     const delay = element.getAttribute('data-delay') || 0;
-                    
+
                     setTimeout(() => {
                         element.classList.add('visible');
                     }, parseInt(delay));

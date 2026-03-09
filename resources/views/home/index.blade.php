@@ -1,51 +1,51 @@
 @extends('layouts.app')
 
-@section('title', 'PT Mitra Nusa Konsultan - Konsultan Profesional')
-@section('description', 'Perusahaan Konsultan Konstruksi dan Non-Konstruksi dengan pengalaman luas di bidang arsitektur, teknik sipil, dan manajemen proyek.')
+@section('title', 'PT Mitra Nusa Konsulindo - Konsultan Konstruksi & Non Konstruksi')
+@section('description', 'PT Mitra Nusa Konsulindo adalah perusahaan konsultan mandiri sejak 2020 yang bergerak di bidang jasa konsultansi teknik, manajemen, konstruksi dan non-konstruksi dengan tenaga ahli berpengalaman dan berkualitas.')
 
 @section('content')
-    <!-- Hero Section with Auto Slider -->
-    <section class="hero-section position-relative">
-        <!-- Image Slider -->
+    <!-- HERO / BERANDA UTAMA -->
+    <section class="hero-section position-relative overflow-hidden">
+        <!-- Background Slider -->
         <div class="hero-slider">
             <div class="slider-track">
-                <!-- Slide 1 - Construction -->
+                <!-- Slide 1 - Konstruksi -->
                 <div class="slide active">
-                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80');"></div>
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
-                        <h3>Konsultasi Konstruksi</h3>
-                        <p>Solusi terintegrasi untuk proyek konstruksi Anda</p>
+                        <h3>Konsultansi Konstruksi</h3>
+                        <p>Perencanaan dan rekayasa bangunan gedung hunian & non hunian.</p>
                     </div>
                 </div>
 
-                <!-- Slide 2 - Architecture -->
+                <!-- Slide 2 - Arsitektur -->
                 <div class="slide">
-                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=1920&q=80');"></div>
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
-                        <h3>Desain Arsitektural</h3>
-                        <p>Inovasi dalam setiap desain bangunan</p>
+                        <h3>Jasa Arsitektural</h3>
+                        <p>Desain bangunan, interior, dan lanskap berkarakter, fungsional, dan estetis.</p>
                     </div>
                 </div>
 
-                <!-- Slide 3 - Engineering -->
+                <!-- Slide 3 - Teknik Sipil & SDA -->
                 <div class="slide">
-                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80');"></div>
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
-                        <h3>Rekayasa Teknik</h3>
-                        <p>Presisi dalam setiap perhitungan struktur</p>
+                        <h3>Rekayasa Teknik Sipil</h3>
+                        <p>Infrastruktur sumber daya air, transportasi, dan struktur bangunan.</p>
                     </div>
                 </div>
 
-                <!-- Slide 4 - Management -->
+                <!-- Slide 4 - Non-Konstruksi -->
                 <div class="slide">
-                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');"></div>
+                    <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80');"></div>
                     <div class="slide-overlay"></div>
                     <div class="slide-content">
-                        <h3>Manajemen Proyek</h3>
-                        <p>Efisiensi dari perencanaan hingga penyelesaian</p>
+                        <h3>Konsultansi Non-Konstruksi</h3>
+                        <p>Studi, penelitian, manajemen, dan pengembangan berbagai sektor.</p>
                     </div>
                 </div>
             </div>
@@ -67,185 +67,511 @@
             </div>
         </div>
 
-        <!-- Hero Content -->
+        <!-- Main Hero Content -->
         <div class="container position-relative">
             <div class="row min-vh-100 align-items-center">
-                <div class="col-lg-8 mx-auto text-center">
-                    <!-- Logo/Badge -->
-                    <div class="company-badge mb-5">
-                        <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal">
-                            <i class="fas fa-medal me-2"></i>BERPENGALAMAN SEJAK 2020
+                <div class="col-xl-8 col-lg-9 mx-auto text-center">
+                    <!-- Badge -->
+                    <div class="company-badge mb-4 animate__animated animate__fadeInDown">
+                        <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal shadow-soft">
+                            <i class="fas fa-medal me-2"></i>Perusahaan Konsultan Mandiri Sejak 2020
                         </span>
                     </div>
 
                     <!-- Main Heading -->
-                    <h1 class="display-1 fw-bold mb-4 text-white">
+                    <h1 class="display-1 fw-bold mb-3 text-white hero-title animate__animated animate__fadeInUp">
                         PT Mitra Nusa<br>
-                        <span class="text-gradient-brown">Konsultan</span>
+                        <span class="text-gradient-brown">Konsulindo</span>
                     </h1>
 
-                    <!-- Subtitle -->
-                    <div class="subtitle-wrapper mb-5">
-                        <h2 class="h3 fw-light text-white-50 mb-3">
-                            Konsultan Profesional di Bidang
+                    <!-- Sub Heading / Tagline dari company profile -->
+                    <p class="lead fs-5 text-white-50 lh-lg mx-auto hero-lead animate__animated animate__fadeInUp animate__delay-1s" style="max-width: 780px;">
+                        PT. MITRA NUSA KONSULINDO merupakan perusahaan konsultan mandiri yang berdiri pada tahun 2020,
+                        berkembang dengan dukungan tenaga ahli terkemuka dan berkualitas yang telah melaksanakan berbagai
+                        proyek terintegrasi lintas disiplin, siap memberikan bantuan dan pelayanan profesional bagi instansi
+                        pemerintah maupun swasta di bidang jasa Konsultansi Teknik dan Manajemen.
+                    </p>
+
+                    <!-- Typewriter text -->
+                    <div class="subtitle-wrapper mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                        <h2 class="h4 fw-light text-white-50 mb-2">
+                            Spesialis Jasa Konsultansi
                         </h2>
                         <div class="typewriter-wrapper">
-                            <span class="typewriter-text text-white fw-semibold fs-3">
-                                Konstruksi & Non-Konstruksi
+                            <span class="typewriter-text text-white fw-semibold fs-4">
+                                Perencanaan Umum • Studi Kelayakan • Perencanaan Teknik • Dokumen Lingkungan • Pengawasan Teknik • Penelitian & Pengembangan
                             </span>
                         </div>
                     </div>
 
-                    <!-- Description -->
-                    <div class="description-wrapper mb-6">
-                        <p class="lead fs-5 text-white-50 lh-lg mx-auto" style="max-width: 700px;">
-                            Memberikan solusi inovatif dan terpercaya untuk proyek konstruksi dan non-konstruksi
-                            dengan tim ahli bersertifikasi. Komitmen kami adalah kesempurnaan dan kepuasan klien.
-                        </p>
-                    </div>
-
                     <!-- CTA Buttons -->
-                    <div class="cta-buttons d-flex flex-wrap gap-3 justify-content-center mb-6">
-                        <a href="{{ route('about') }}" class="btn btn-cream btn-lg px-5 py-3 rounded-pill">
-                            <i class="fas fa-building me-2"></i>Tentang Kami
+                    <div class="cta-buttons d-flex flex-wrap gap-3 justify-content-center mb-4">
+                        <a href="{{ route('about') }}" class="btn btn-cream btn-lg px-5 py-3 rounded-pill shadow-soft">
+                            <i class="fas fa-building me-2"></i>Tentang Perusahaan
                         </a>
-                        <a href="{{ route('services') }}" class="btn btn-outline-cream btn-lg px-5 py-3 rounded-pill">
-                            <i class="fas fa-cogs me-2"></i>Layanan Kami
+                        <a href="{{ route('services') }}" class="btn btn-outline-cream btn-lg px-5 py-3 rounded-pill shadow-soft">
+                            <i class="fas fa-cogs me-2"></i>Layanan Konstruksi & Non-Konstruksi
                         </a>
-                        <a href="{{ route('contact') }}" class="btn btn-brown btn-lg px-5 py-3 rounded-pill">
-                            <i class="fab fa-whatsapp me-2"></i>Konsultasi Gratis
+                        <a href="{{ route('contact') }}" class="btn btn-brown-3d btn-lg px-5 py-3 rounded-pill shadow-soft">
+                            <i class="fab fa-whatsapp me-2"></i>Konsultasi Awal Gratis
+                            <span class="btn-shine"></span>
                         </a>
                     </div>
 
-                    <!-- Stats -->
-                    <div class="stats-wrapper mt-6">
+                    <!-- Highlighted Info / Stats -->
+                    <div class="stats-wrapper mt-4 glass-panel">
                         <div class="row g-4 justify-content-center">
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number display-4 fw-bold text-white">5+</div>
+                                    <div class="stat-number display-5 fw-bold text-white" data-target="5">5+</div>
                                     <div class="stat-label text-white-50">Tahun Pengalaman</div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number display-4 fw-bold text-white">50+</div>
-                                    <div class="stat-label text-white-50">Proyek Selesai</div>
+                                    <div class="stat-number display-5 fw-bold text-white" data-target="50">50+</div>
+                                    <div class="stat-label text-white-50">Proyek Terselesaikan</div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number display-4 fw-bold text-white">15+</div>
-                                    <div class="stat-label text-white-50">Sertifikasi</div>
+                                    <div class="stat-number display-5 fw-bold text-white" data-target="15">15+</div>
+                                    <div class="stat-label text-white-50">Bidang Sertifikasi</div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number display-4 fw-bold text-white">10+</div>
-                                    <div class="stat-label text-white-50">Ahli Professional</div>
+                                    <div class="stat-number display-5 fw-bold text-white" data-target="10">10+</div>
+                                    <div class="stat-label text-white-50">Tenaga Ahli Profesional</div>
                                 </div>
                             </div>
                         </div>
                     </div>
+
+                    <!-- Scroll Indicator -->
+                    <div class="scroll-indicator">
+                        <a href="#about-brief" class="scroll-down">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <a href="#services" class="scroll-down">
-                <i class="fas fa-chevron-down"></i>
-            </a>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services" class="py-6 bg-light">
-        <div class="container">
-            <div class="row mb-6">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="display-5 fw-bold mb-3 text-brown-dark">Layanan Unggulan</h2>
-                    <p class="lead text-brown-medium">Solusi komprehensif untuk setiap kebutuhan proyek Anda</p>
-                </div>
-            </div>
+    <!-- SECTION: Sekilas Perusahaan (Profil & Latar Belakang) -->
+    <section id="about-brief" class="py-6 bg-light-gradient position-relative overflow-hidden">
+        <!-- Background Decoration -->
+        <div class="section-bg-decoration">
+            <div class="decoration-circle"></div>
+            <div class="decoration-circle"></div>
+        </div>
 
-            <div class="row g-4">
-                @foreach([
-                    ['icon' => 'fas fa-hard-hat', 'title' => 'Konsultansi Konstruksi', 'desc' => 'Perencanaan, pengawasan, dan manajemen proyek konstruksi terintegrasi.', 'color' => 'brown'],
-                    ['icon' => 'fas fa-industry', 'title' => 'Konsultansi Non-Konstruksi', 'desc' => 'Layanan konsultansi manajemen dan penelitian untuk berbagai sektor industri.', 'color' => 'brown-medium'],
-                    ['icon' => 'fas fa-drafting-compass', 'title' => 'Desain Arsitektural', 'desc' => 'Desain inovatif untuk bangunan hunian, komersial, dan publik.', 'color' => 'brown-light'],
-                    ['icon' => 'fas fa-tools', 'title' => 'Rekayasa Teknik', 'desc' => 'Solusi rekayasa teknik sipil untuk infrastruktur dan sumber daya air.', 'color' => 'cream-gold']
-                ] as $service)
-                <div class="col-lg-3 col-md-6">
-                    <div class="service-card card border-0 shadow-sm h-100 hover-lift">
-                        <div class="card-body p-4 text-center">
-                            <div class="service-icon-wrapper mb-4">
-                                <div class="icon-circle bg-{{ $service['color'] }}-subtle text-{{ $service['color'] }}">
-                                    <i class="{{ $service['icon'] }} fa-2x"></i>
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-3d rounded-4 p-4 p-lg-5 bg-white position-relative overflow-hidden hover-3d-card">
+                        <span class="floating-badge">
+                            <i class="fas fa-award me-2"></i>Konsultan Mandiri
+                        </span>
+                        <h2 class="display-6 fw-bold mb-3 text-brown-dark">Profil Singkat Perusahaan</h2>
+                        <p class="text-brown-medium mb-3">
+                            PT. MITRA NUSA KONSULINDO adalah perusahaan konsultan yang menekuni bidang jasa Konsultansi Teknik
+                            dan Manajemen sebagai profesi, disiapkan untuk memberikan bantuan dan pelayanan dalam berbagai kegiatan
+                            yang berkaitan dengan Perencanaan Umum, Studi Kelayakan, Perencanaan Teknik, Dokumen Lingkungan,
+                            Pengawasan Teknik, Penelitian serta pengembangan berbagai bidang lainnya.
+                        </p>
+                        <p class="text-brown-medium mb-4">
+                            Dalam menyelesaikan setiap penugasan, perusahaan menerapkan sistem penyelesaian teknik dan administrasi
+                            secara profesional, didukung tenaga ahli berpengalaman dan tenaga muda berbakat sehingga pekerjaan
+                            berdaya guna dan berhasil guna secara maksimal.
+                        </p>
+
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <div class="info-pill">
+                                    <span class="label">Berdiri</span>
+                                    <span class="value">Tahun 2020</span>
                                 </div>
                             </div>
-                            <h5 class="card-title fw-bold mb-3 text-brown-dark">{{ $service['title'] }}</h5>
-                            <p class="card-text text-brown-medium mb-4">{{ $service['desc'] }}</p>
-                            <a href="{{ route('services.construction') }}" class="btn btn-outline-{{ $service['color'] }} rounded-pill">
-                                Selengkapnya <i class="fas fa-arrow-right ms-2"></i>
+                            <div class="col-sm-6">
+                                <div class="info-pill">
+                                    <span class="label">Bentuk Usaha</span>
+                                    <span class="value">Perseroan Terbatas (PT)</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="info-pill">
+                                    <span class="label">Domisili</span>
+                                    <span class="value">Gedung Graha Mulia Sejahtera, Jl. Terusan Jakarta No. 175A, Antapani - Bandung 40291</span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="info-pill">
+                                    <span class="label">Asosiasi</span>
+                                    <span class="value">Anggota INKINDO & KADIN</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-4">
+                            <a href="{{ route('about') }}" class="btn btn-brown-3d rounded-pill px-4">
+                                Profil Lengkap Perusahaan
                             </a>
                         </div>
                     </div>
                 </div>
+
+                <!-- Latar Belakang & Filosofi -->
+                <div class="col-lg-6">
+                    <div class="card border-0 bg-transparent">
+                        <h3 class="h3 fw-bold mb-3 text-brown-dark">Latar Belakang & Cara Pandang</h3>
+                        <p class="text-brown-medium mb-3">
+                            Menghadapi proses perubahan yang sangat cepat dan kompleks, perusahaan menyadari perlunya visi dan misi
+                            yang akurat dengan landasan pengalaman, kebijakan, kreativitas, kecepatan bertindak, dan dukungan teknologi
+                            tinggi agar setiap perubahan serta permasalahan dapat diselesaikan secara tepat.
+                        </p>
+                        <p class="text-brown-medium mb-4">
+                            PT. MITRA NUSA KONSULINDO tumbuh dan berkembang atas kepercayaan rekanan dan mitra kerja yang terjalin
+                            dalam suatu jaringan kerja sama saling menguntungkan. Perusahaan selalu siap menerima tawaran kerja sama
+                            dari instansi pemerintah maupun swasta dalam bidang profesinya.
+                        </p>
+
+                        <ul class="list-unstyled premium-list">
+                            <li>
+                                <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                Berpandangan ke depan dengan visi dan misi yang tajam.
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                Didukung tenaga ahli berpengalaman dan tenaga muda potensial.
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                Penanganan proyek secara profesional, efektif, dan efisien.
+                            </li>
+                            <li>
+                                <i class="fas fa-check-circle text-cream-gold me-2"></i>
+                                Terbuka untuk kerja sama jangka panjang yang saling menguntungkan.
+                            </li>
+                        </ul>
+
+                        <div class="mt-4 d-flex flex-wrap gap-3">
+                            <div class="mini-card">
+                                <span class="label">Telepon</span>
+                                <span class="value">+62 22-20502071</span>
+                            </div>
+                            <div class="mini-card">
+                                <span class="label">Email</span>
+                                <span class="value">mitranusa.kons@gmail.com</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Legalitas & Identitas Badan Usaha (ringkasan beranda) -->
+    <section class="py-6 bg-cream-light position-relative overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="cert-pattern">
+            <div class="pattern-line"></div>
+            <div class="pattern-line"></div>
+        </div>
+
+        <div class="container">
+            <div class="row mb-4 align-items-end">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold mb-2 text-brown-dark">Legalitas & Identitas Perusahaan</h2>
+                    <p class="lead text-brown-medium mb-0">
+                        Legalitas lengkap dan keanggotaan asosiasi resmi menjadi dasar kepercayaan dalam setiap kerja sama.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <a href="{{ route('certifications.index') }}" class="btn btn-outline-brown-3d rounded-pill px-4">
+                        Detail Sertifikasi & Legalitas
+                    </a>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Kolom 1 -->
+                <div class="col-md-4">
+                    <div class="legal-card shadow-3d h-100 hover-3d-card">
+                        <h5 class="fw-bold text-brown-dark mb-3"><i class="fas fa-file-signature me-2 text-cream-gold"></i>Akte & Pengesahan</h5>
+                        <ul class="list-unstyled small text-brown-medium mb-0">
+                            <li><strong>Akte Pendirian</strong> No. 19, Notaris Susyana Herlawati, SH, M.Kn, 22 Oktober 2020.</li>
+                            <li class="mt-2"><strong>Akte Perubahan</strong> No. 03, Notaris Susyana Herlawati, SH, M.Kn, 7 Desember 2023.</li>
+                            <li class="mt-2"><strong>Pengesahan Kemenkumham</strong> No. AHU-0057316.AH.01.01.TAHUN 2020, tanggal 4 November 2020.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kolom 2 -->
+                <div class="col-md-4">
+                    <div class="legal-card shadow-3d h-100 hover-3d-card">
+                        <h5 class="fw-bold text-brown-dark mb-3"><i class="fas fa-id-card me-2 text-cream-gold"></i>Perizinan & Nomor Resmi</h5>
+                        <ul class="list-unstyled small text-brown-medium mb-0">
+                            <li><strong>NPWP</strong> 96.431.796.0.429.000.</li>
+                            <li class="mt-2"><strong>NIB / SIUJK / SIUP</strong> No. 0257011100093.</li>
+                            <li class="mt-2"><strong>Izin Gangguan / Tempat Usaha</strong> No. 0257011100093.</li>
+                            <li class="mt-2"><strong>Relasi Bank</strong> Bank BJB & Bank Mandiri (rekening operasional).</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Kolom 3 -->
+                <div class="col-md-4">
+                    <div class="legal-card shadow-3d h-100 hover-3d-card">
+                        <h5 class="fw-bold text-brown-dark mb-3"><i class="fas fa-users-cog me-2 text-cream-gold"></i>Asosiasi & Keanggotaan</h5>
+                        <ul class="list-unstyled small text-brown-medium mb-0">
+                            <li><strong>INKINDO</strong> Ikatan Nasional Konsultan Indonesia, No. Anggota: 17744/P/1304.JB.</li>
+                            <li class="mt-2"><strong>KADIN</strong> Kamar Dagang dan Industri, No. Anggota: 20112-2026270629.</li>
+                            <li class="mt-2">Sertifikat Badan Usaha Jasa Konsultansi Konstruksi & Non Konstruksi dengan berbagai klasifikasi layanan.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logo Sertifikasi (dengan efek 3D) -->
+            <div class="row g-4 align-items-center justify-content-center mt-5">
+                @foreach(['inkindo', 'sbu', 'iso-9001', 'iso-14001', 'kemenkumham'] as $cert)
+                    <div class="col-lg-2 col-md-3 col-4">
+                        <div class="cert-card-3d">
+                            <div class="cert-inner">
+                                <img src="{{ asset('images/certificates/' . $cert . '.png') }}"
+                                     alt="{{ strtoupper($cert) }}"
+                                     class="img-fluid cert-logo">
+                                <div class="cert-hover-info">
+                                    <span>{{ str_replace('-', ' ', strtoupper($cert)) }}</span>
+                                </div>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION: Lingkup Layanan Utama -->
+    <section id="services" class="py-6 bg-light position-relative">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-5 fw-bold mb-3 text-brown-dark">Lingkup Layanan Utama</h2>
+                    <p class="lead text-brown-medium">
+                        Berdasarkan kelompok bidang yang dapat ditangani, PT. MITRA NUSA KONSULINDO menyediakan jasa konsultansi
+                        yang mencakup layanan konstruksi dan non konstruksi, dari tahap studi hingga pengawasan pelaksanaan.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4 mb-4">
+                <!-- Konstruksi -->
+                <div class="col-lg-6">
+                    <div class="service-group-card shadow-3d h-100 hover-3d-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-brown-subtle text-brown-dark me-3">
+                                <i class="fas fa-hard-hat fa-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold text-brown-dark mb-1">Konsultansi Konstruksi</h3>
+                                <p class="text-brown-medium mb-0 small">
+                                    Jasa arsitektur, rekayasa, dan tata ruang sesuai klasifikasi Sertifikat Badan Usaha.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small text-brown-medium mb-0">
+                                    <li><strong>Jasa Arsitektural Bangunan Gedung Hunian & Non Hunian (AR001)</strong></li>
+                                    <li class="mt-1"><strong>Jasa Arsitektural Lainnya (AR002)</strong></li>
+                                    <li class="mt-1"><strong>Jasa Desain Interior Bangunan Gedung & Bangunan Sipil (AR003)</strong></li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small text-brown-medium mb-0">
+                                    <li><strong>Jasa Rekayasa Konstruksi Bangunan Gedung Hunian & Non Hunian (RK001)</strong></li>
+                                    <li class="mt-1"><strong>Jasa Rekayasa Pekerjaan Teknik Sipil Sumber Daya Air (RK002)</strong></li>
+                                    <li class="mt-1"><strong>Jasa Rekayasa Pekerjaan Teknik Sipil Transportasi (RK003)</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ route('services.construction') }}" class="btn btn-outline-brown-3d btn-sm rounded-pill px-3">
+                                Lihat Detail Layanan Konstruksi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Non-Konstruksi -->
+                <div class="col-lg-6">
+                    <div class="service-group-card shadow-3d h-100 hover-3d-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-circle bg-cream-gold-subtle text-cream-gold me-3">
+                                <i class="fas fa-industry fa-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="h4 fw-bold text-brown-dark mb-1">Konsultansi Non Konstruksi</h3>
+                                <p class="text-brown-medium mb-0 small">
+                                    Meliputi pengembangan wilayah, studi, manajemen, dan jasa khusus di berbagai sektor.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small text-brown-medium mb-0">
+                                    <li><strong>Pengembangan Pertanian & Perdesaan</strong> (prasarana sosial, kehutanan, perikanan, dll.).</li>
+                                    <li class="mt-1"><strong>Transportasi</strong> (sarana transportasi, regulasi, usaha jasa angkutan).</li>
+                                    <li class="mt-1"><strong>Telematika</strong> (telekomunikasi, perangkat keras, perangkat lunak, konten).</li>
+                                </ul>
+                            </div>
+                            <div class="col-sm-6">
+                                <ul class="list-unstyled small text-brown-medium mb-0">
+                                    <li><strong>Jasa Konsultansi Manajemen</strong> (sistem akuntansi, SDM, hukum bisnis).</li>
+                                    <li class="mt-1"><strong>Jasa Studi, Penelitian & Bantuan Teknis</strong> (studi makro, kelayakan, perencanaan umum).</li>
+                                    <li class="mt-1"><strong>Jasa Khusus & Jasa Survey</strong> (survey teknis, GIS, appraisal, inspeksi teknik, kehumasan).</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="mt-3">
+                            <a href="{{ route('services') }}" class="btn btn-outline-brown-3d btn-sm rounded-pill px-3">
+                                Layanan Non-Konstruksi Lengkap
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4 kartu ringkas dengan efek 3D -->
+            <div class="row g-4 mt-2">
+                @php
+                    $services = [
+                        ['icon' => 'fas fa-drafting-compass', 'title' => 'Desain Arsitektural', 'desc' => 'Desain skematik, pengembangan desain, hingga desain akhir untuk bangunan dan struktur, termasuk nasihat arsitektural menyeluruh.', 'color' => 'brown', 'link' => 'services.architectural'],
+                        ['icon' => 'fas fa-water', 'title' => 'Rekayasa Sumber Daya Air', 'desc' => 'Perencanaan dam, irigasi, pengendalian banjir, penyaluran air, sanitasi, dan sistem saluran limbah.', 'color' => 'brown-medium', 'link' => 'services.engineering'],
+                        ['icon' => 'fas fa-road', 'title' => 'Rekayasa Transportasi', 'desc' => 'Desain jalan, jembatan, jalan layang, termasuk structural health monitoring system untuk bentang jembatan.', 'color' => 'brown-light', 'link' => 'services.engineering'],
+                        ['icon' => 'fas fa-chart-line', 'title' => 'Studi & Manajemen', 'desc' => 'Studi kelayakan, studi makro, perencanaan umum, konsultansi manajemen dan pengembangan sistem.', 'color' => 'cream-gold', 'link' => 'services.non-construction']
+                    ];
+                @endphp
+                @foreach($services as $service)
+                    <div class="col-lg-3 col-md-6">
+                        <div class="service-card-3d hover-3d-card">
+                            <div class="service-card-inner">
+                                <div class="service-icon-wrapper mb-3">
+                                    <i class="{{ $service['icon'] }} fa-2x text-brown-dark"></i>
+                                </div>
+                                <h5 class="fw-bold text-brown-dark mb-2">{{ $service['title'] }}</h5>
+                                <p class="text-brown-medium small mb-4">{{ $service['desc'] }}</p>
+                                <a href="{{ route($service['link']) }}" class="btn btn-outline-brown-3d rounded-pill px-3 py-2 w-100">
+                                    Selengkapnya <i class="fas fa-arrow-right ms-2"></i>
+                                </a>
+                                <div class="card-corner corner-1"></div>
+                                <div class="card-corner corner-2"></div>
+                            </div>
+                        </div>
+                    </div>
                 @endforeach
             </div>
 
-            <div class="text-center mt-6">
-                <a href="{{ route('services') }}" class="btn btn-brown-dark btn-lg px-5 rounded-pill">
+            <div class="text-center mt-5">
+                <a href="{{ route('services') }}" class="btn btn-brown-3d btn-lg px-5 rounded-pill shadow-soft">
                     <i class="fas fa-list me-2"></i>Lihat Semua Layanan
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Certifications Section -->
-    <section class="py-6 bg-cream-light">
+    <!-- SECTION: Struktur Pengurus (ringkas) -->
+    <section class="py-6 bg-cream-medium position-relative overflow-hidden">
         <div class="container">
-            <div class="row mb-6">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="display-5 fw-bold mb-3 text-brown-dark">Sertifikasi & Lisensi</h2>
-                    <p class="lead text-brown-medium">Didukung oleh sertifikasi resmi yang menjamin kualitas layanan</p>
+            <div class="row mb-4 align-items-end">
+                <div class="col-lg-8">
+                    <h2 class="display-6 fw-bold text-brown-dark mb-2">Pengurus & Organisasi</h2>
+                    <p class="text-brown-medium mb-0">
+                        Struktur organisasi yang jelas memastikan setiap proyek ditangani oleh tim dengan kapabilitas yang tepat.
+                    </p>
+                </div>
+                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                    <a href="{{ route('about') }}#organization" class="btn btn-outline-brown-3d rounded-pill px-4">
+                        Lihat Struktur Organisasi Lengkap
+                    </a>
                 </div>
             </div>
 
-            <div class="row g-4 align-items-center justify-content-center">
-                @foreach(['inkindo', 'sbu', 'iso-9001', 'iso-14001', 'kemenkumham'] as $cert)
-                <div class="col-lg-2 col-md-3 col-4">
-                    <div class="certification-item p-3 text-center">
-                        <div class="cert-logo-wrapper">
-                            <img src="{{ asset('images/certificates/' . $cert . '.png') }}"
-                                 alt="{{ strtoupper($cert) }}"
-                                 class="img-fluid cert-logo">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="team-card-3d hover-3d-card">
+                        <div class="team-card-inner">
+                            <div class="team-icon-wrapper mb-3">
+                                <i class="fas fa-user-tie fa-3x text-brown-dark"></i>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-2">Dewan Komisaris</h5>
+                            <ul class="list-unstyled small text-brown-medium">
+                                <li><strong>Komisaris Utama:</strong> Dede Samsul Muharom.</li>
+                                <li class="mt-2"><strong>Komisaris:</strong> Endah Nuraeni.</li>
+                            </ul>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
-                @endforeach
-            </div>
 
-            <div class="text-center mt-6">
-                <a href="{{ route('certifications.index') }}" class="btn btn-outline-brown-dark btn-lg px-5 rounded-pill">
-                    <i class="fas fa-certificate me-2"></i>Detail Sertifikasi
-                </a>
+                <div class="col-md-4">
+                    <div class="team-card-3d hover-3d-card">
+                        <div class="team-card-inner">
+                            <div class="team-icon-wrapper mb-3">
+                                <i class="fas fa-user-cog fa-3x text-brown-dark"></i>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-2">Dewan Direksi</h5>
+                            <ul class="list-unstyled small text-brown-medium">
+                                <li><strong>Direktur Utama:</strong> Muria Cipta, ST.</li>
+                                <li class="mt-2"><strong>Direktur:</strong> Andri Hendrawan.</li>
+                            </ul>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="team-card-3d hover-3d-card">
+                        <div class="team-card-inner">
+                            <div class="team-icon-wrapper mb-3">
+                                <i class="fas fa-sitemap fa-3x text-brown-dark"></i>
+                            </div>
+                            <h5 class="fw-bold text-brown-dark mb-2">Divisi Teknis & Pendukung</h5>
+                            <p class="small text-brown-medium mb-0">
+                                Terdiri dari divisi Tata Ruang, Arsitektur & Landscaping, Lingkungan, Sipil, Manajemen, Keuangan, Administrasi & Personalia, Pemasaran & Relasi, serta tenaga ahli dan tenaga pendukung.
+                            </p>
+                            <div class="card-corner corner-1"></div>
+                            <div class="card-corner corner-2"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section - Elegant Brown Cream -->
-    <section class="py-6 cta-elegant">
+    <!-- CTA PREMIUM -->
+    <section class="py-6 cta-elegant position-relative overflow-hidden">
         <div class="container">
             <div class="cta-content-wrapper">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
-                        <h2 class="display-6 fw-bold mb-3">Siap Memulai Proyek Anda?</h2>
-                        <p class="lead mb-0">Konsultasikan kebutuhan proyek konstruksi atau non-konstruksi Anda dengan tim ahli kami.</p>
+                        <h2 class="display-6 fw-bold mb-3">Siap Mengikutsertakan Kami Dalam Proyek Anda?</h2>
+                        <p class="lead mb-0">
+                            Adalah suatu kehormatan besar bagi kami apabila Relasi dan Klien berkenan memberikan kepercayaan
+                            untuk bekerja sama, sehingga kami dapat membuktikan kinerja yang profesional dan saling menguntungkan.
+                        </p>
                     </div>
                     <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                        <a href="{{ route('contact') }}" class="btn btn-brown btn-lg px-5 rounded-pill">
-                            <i class="fas fa-paper-plane me-2"></i>Hubungi Kami
+                        <a href="{{ route('contact') }}" class="btn btn-brown-3d btn-lg px-5 rounded-pill shadow-soft">
+                            <i class="fas fa-paper-plane me-2"></i>Hubungi Kami Sekarang
+                            <span class="btn-shine"></span>
                         </a>
                     </div>
                 </div>
@@ -273,6 +599,7 @@
         --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
         --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
         --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
+        --shadow-3d: 0 20px 40px rgba(93,64,55,0.2), 0 10px 20px rgba(0,0,0,0.1);
     }
 
     /* Text Colors */
@@ -287,92 +614,276 @@
     .bg-brown-light { background-color: var(--brown-light) !important; }
     .bg-cream-gold { background-color: var(--cream-gold) !important; }
     .bg-cream-light { background-color: var(--cream-light) !important; }
+    .bg-cream-medium { background-color: var(--cream-medium) !important; }
+    .bg-light-gradient {
+        background: radial-gradient(circle at top left, #F5F0ED 0%, #ffffff 40%, #EFEBE9 100%);
+    }
 
     /* Subtle Backgrounds */
-    .bg-brown-subtle { background-color: rgba(93, 64, 55, 0.1) !important; }
-    .bg-brown-medium-subtle { background-color: rgba(139, 107, 97, 0.1) !important; }
-    .bg-brown-light-subtle { background-color: rgba(161, 136, 127, 0.1) !important; }
-    .bg-cream-gold-subtle { background-color: rgba(212, 175, 55, 0.1) !important; }
+    .bg-brown-subtle { background-color: rgba(93, 64, 55, 0.08) !important; }
+    .bg-brown-medium-subtle { background-color: rgba(139, 107, 97, 0.12) !important; }
+    .bg-brown-light-subtle { background-color: rgba(161, 136, 127, 0.12) !important; }
+    .bg-cream-gold-subtle { background-color: rgba(212, 175, 55, 0.12) !important; }
 
-    /* Button Colors */
-    .btn-brown {
-        background-color: var(--brown-dark);
-        border-color: var(--brown-dark);
+    /* ===== 3D BUTTONS ===== */
+    .btn-brown-3d {
+        background: linear-gradient(145deg, var(--brown-dark), #4A342E);
+        border: none;
         color: white;
+        font-weight: 600;
+        transition: all 0.3s;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 8px 16px rgba(93,64,55,0.2);
+        transform-style: preserve-3d;
+        transform: translateY(0) rotateX(0deg);
     }
 
-    .btn-brown:hover {
-        background-color: #4A342E;
-        border-color: #4A342E;
-        color: white;
+    .btn-brown-3d:hover {
+        transform: translateY(-3px) rotateX(2deg);
+        box-shadow: 0 15px 30px rgba(93,64,55,0.3);
+        background: linear-gradient(145deg, #4A342E, var(--brown-dark));
     }
 
-    .btn-outline-brown {
-        border-color: var(--brown-dark);
+    .btn-outline-brown-3d {
+        border: 2px solid var(--brown-dark);
         color: var(--brown-dark);
-    }
-
-    .btn-outline-brown:hover {
-        background-color: var(--brown-dark);
-        border-color: var(--brown-dark);
-        color: white;
-    }
-
-    .btn-brown-dark {
-        background-color: var(--brown-dark);
-        border-color: var(--brown-dark);
-        color: white;
-    }
-
-    .btn-outline-brown-dark {
-        border-color: var(--brown-dark);
-        color: var(--brown-dark);
-    }
-
-    .btn-outline-brown-dark:hover {
-        background-color: var(--brown-dark);
-        border-color: var(--brown-dark);
-        color: white;
-    }
-
-    .btn-cream {
-        background-color: white;
-        border-color: white;
-        color: var(--brown-dark);
-    }
-
-    .btn-outline-cream {
-        border-color: white;
-        color: white;
         background: transparent;
+        font-weight: 600;
+        transition: all 0.3s;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+        position: relative;
+        overflow: hidden;
     }
 
-    .btn-outline-cream:hover {
-        background-color: white;
-        color: var(--brown-dark);
+    .btn-outline-brown-3d:hover {
+        background: var(--brown-dark);
+        color: white;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
     }
 
-    /* Global Styles */
-    body {
-        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        background-color: var(--white);
-        color: var(--dark);
+    .btn-brown-3d::before, .btn-outline-brown-3d::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+        transition: left 0.6s;
     }
 
-    .py-6 {
-        padding-top: 5rem !important;
-        padding-bottom: 5rem !important;
+    .btn-brown-3d:hover::before, .btn-outline-brown-3d:hover::before {
+        left: 100%;
     }
 
-    .mb-6 {
-        margin-bottom: 5rem !important;
+    /* ===== 3D CARD HOVER EFFECT ===== */
+    .hover-3d-card {
+        perspective: 1000px;
+        transform-style: preserve-3d;
+        transition: all 0.4s;
     }
 
-    .mt-6 {
-        margin-top: 5rem !important;
+    .hover-3d-card:hover {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.25);
     }
 
-    /* Hero Slider Styles */
+    /* ===== SERVICE CARD 3D ===== */
+    .service-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+    .service-card-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 2rem 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        text-align: center;
+    }
+    .service-card-3d:hover .service-card-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
+    }
+    .service-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1rem;
+        transition: all 0.3s;
+    }
+    .service-card-3d:hover .service-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    /* ===== TEAM CARD 3D ===== */
+    .team-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+    .team-card-inner {
+        background: white;
+        border-radius: 1.5rem;
+        padding: 2rem 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        text-align: center;
+    }
+    .team-card-3d:hover .team-card-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
+    }
+    .team-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 1.5rem;
+        transition: all 0.3s;
+    }
+    .team-card-3d:hover .team-icon-wrapper {
+        transform: scale(1.1) rotate(5deg);
+    }
+
+    /* ===== CERTIFICATION CARD 3D ===== */
+    .cert-card-3d {
+        perspective: 1000px;
+        height: 100%;
+    }
+    .cert-inner {
+        background: white;
+        border-radius: 1rem;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-3d);
+        border: 1px solid rgba(93,64,55,0.1);
+        transition: all 0.4s;
+        transform-style: preserve-3d;
+        transform: rotateY(0deg) rotateX(1deg);
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cert-card-3d:hover .cert-inner {
+        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
+        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        border-color: var(--cream-gold);
+    }
+    .cert-logo {
+        max-height: 50px;
+        max-width: 100%;
+        filter: grayscale(30%);
+        transition: all 0.3s;
+    }
+    .cert-card-3d:hover .cert-logo {
+        filter: grayscale(0);
+        transform: scale(1.05);
+    }
+    .cert-hover-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(93,64,55,0.9);
+        color: white;
+        font-size: 0.7rem;
+        padding: 0.3rem;
+        text-align: center;
+        transform: translateY(100%);
+        transition: transform 0.3s;
+    }
+    .cert-card-3d:hover .cert-hover-info {
+        transform: translateY(0);
+    }
+
+    /* ===== DECORATIVE CORNERS ===== */
+    .card-corner {
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, transparent 50%, rgba(212,175,55,0.1) 50%);
+        z-index: 1;
+    }
+    .card-corner.corner-1 { top: 0; right: 0; transform: rotate(90deg); }
+    .card-corner.corner-2 { bottom: 0; left: 0; transform: rotate(270deg); }
+
+    /* ===== BACKGROUND DECORATIONS ===== */
+    .section-bg-decoration {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .decoration-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(212,175,55,0.03);
+        width: 300px;
+        height: 300px;
+    }
+    .decoration-circle:nth-child(1) { top: -100px; right: -100px; background: rgba(93,64,55,0.02); animation: float 25s infinite; }
+    .decoration-circle:nth-child(2) { bottom: -50px; left: -50px; width: 200px; height: 200px; background: rgba(212,175,55,0.02); animation: float 20s infinite reverse; }
+
+    @keyframes float {
+        0%, 100% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-20px) rotate(180deg); }
+    }
+
+    .cert-pattern {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+
+    .pattern-line {
+        position: absolute;
+        width: 100%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--cream-gold), transparent);
+        opacity: 0.2;
+    }
+
+    .pattern-line:nth-child(1) { top: 20%; left: -50%; width: 200%; transform: rotate(2deg); }
+    .pattern-line:nth-child(2) { bottom: 30%; right: -50%; width: 200%; transform: rotate(-3deg); }
+
+    /* HERO SECTION */
+    .hero-section {
+        position: relative;
+        min-height: 100vh;
+        color: white;
+    }
+
     .hero-slider {
         position: absolute;
         top: 0;
@@ -405,17 +916,14 @@
         height: 100%;
         background-size: cover;
         background-position: center;
+        transform-origin: center;
         animation: kenburns 20s infinite;
     }
 
     @keyframes kenburns {
         0% { transform: scale(1); }
-        50% { transform: scale(1.1); }
+        50% { transform: scale(1.08); }
         100% { transform: scale(1); }
-    }
-
-    .slide.active .slide-image {
-        animation: kenburns 20s infinite;
     }
 
     .slide-overlay {
@@ -424,13 +932,14 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background: linear-gradient(135deg, rgba(92, 64, 51, 0.85) 0%, rgba(210, 180, 140, 0.85) 100%);
-        opacity: 0.7;
+        background:
+            linear-gradient(135deg, rgba(92, 64, 51, 0.85) 0%, rgba(210, 180, 140, 0.9) 100%);
+        mix-blend-mode: multiply;
     }
 
     .slide-content {
         position: absolute;
-        bottom: 20%;
+        bottom: 16%;
         right: 10%;
         color: white;
         text-align: right;
@@ -445,17 +954,16 @@
     }
 
     .slide-content h3 {
-        font-size: 2rem;
+        font-size: 1.85rem;
         font-weight: 700;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.25rem;
     }
 
     .slide-content p {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
         opacity: 0.9;
     }
 
-    /* Slider Navigation */
     .slider-nav {
         position: absolute;
         top: 50%;
@@ -472,66 +980,50 @@
         cursor: pointer;
         z-index: 10;
         transition: all 0.3s ease;
-        backdrop-filter: blur(5px);
+        backdrop-filter: blur(6px);
     }
 
     .slider-nav:hover {
-        background: rgba(255, 255, 255, 0.3);
-        transform: translateY(-50%) scale(1.1);
+        background: rgba(255, 255, 255, 0.32);
+        transform: translateY(-50%) scale(1.08);
     }
 
-    .slider-nav.prev {
-        left: 30px;
-    }
+    .slider-nav.prev { left: 30px; }
+    .slider-nav.next { right: 30px; }
 
-    .slider-nav.next {
-        right: 30px;
-    }
-
-    /* Slider Dots */
     .slider-dots {
         position: absolute;
-        bottom: 30px;
+        bottom: 28px;
         left: 0;
         right: 0;
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 12px;
         z-index: 10;
     }
 
     .slider-dots .dot {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.5);
+        width: 10px;
+        height: 10px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.6);
         cursor: pointer;
         transition: all 0.3s ease;
     }
 
     .slider-dots .dot.active {
+        width: 24px;
         background: white;
-        transform: scale(1.3);
     }
 
-    .slider-dots .dot:hover {
-        background: white;
-        transform: scale(1.2);
-    }
-
-    /* Hero Content */
     .hero-section .container {
         position: relative;
         z-index: 2;
     }
 
-    /* Typography */
-    .display-1 {
-        font-weight: 800 !important;
-        letter-spacing: -0.02em;
-        line-height: 1.15;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        margin-bottom: 1.5rem !important;
+    .hero-title {
+        letter-spacing: -0.03em;
+        text-shadow: 0 18px 40px rgba(0,0,0,0.5);
     }
 
     .text-gradient-brown {
@@ -539,28 +1031,32 @@
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
-        text-shadow: none;
     }
 
-    /* Subtitle dengan spacing lebih baik */
-    .subtitle-wrapper {
-        margin-bottom: 2rem !important;
+    .hero-lead {
+        text-shadow: 0 4px 18px rgba(0,0,0,0.4);
     }
 
-    .subtitle-wrapper .h3 {
-        margin-bottom: 0.75rem !important;
+    .subtitle-wrapper .h4 {
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
     }
 
     .typewriter-wrapper {
         display: inline-block;
         position: relative;
-        margin-top: 0.5rem;
+        margin-top: 0.3rem;
+        background: rgba(0,0,0,0.28);
+        padding: 0.6rem 1.1rem;
+        border-radius: 999px;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+        backdrop-filter: blur(4px);
     }
 
     .typewriter-text {
         position: relative;
         display: inline-block;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        white-space: nowrap;
     }
 
     .typewriter-text::after {
@@ -580,86 +1076,186 @@
         50% { opacity: 0; }
     }
 
-    /* Company Badge */
-    .company-badge {
-        animation: fadeInDown 0.8s ease-out;
-        margin-bottom: 2.5rem !important;
-    }
-
-    .badge.bg-brown-dark {
-        background-color: rgba(93, 64, 55, 0.9) !important;
-        border: 1px solid rgba(255,255,255,0.2);
+    .company-badge .badge {
         backdrop-filter: blur(10px);
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        border: 1px solid rgba(255,255,255,0.3);
     }
 
-    /* Description dengan spacing lebih baik */
-    .description-wrapper {
-        margin-bottom: 3rem !important;
-    }
-
-    .description-wrapper p {
-        line-height: 1.8 !important;
-    }
-
-    /* CTA Buttons dengan spacing lebih baik */
-    .cta-buttons {
-        margin-bottom: 4rem !important;
-        gap: 1rem !important;
-    }
-
-    .cta-buttons .btn {
-        margin: 0.25rem 0;
-    }
-
-    /* Stats dengan spacing lebih baik */
     .stats-wrapper {
-        background: rgba(255, 255, 255, 0.1);
         padding: 2.5rem 2rem;
-        border-radius: 1rem;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(255,255,255,0.2);
-        animation: fadeInUp 0.8s ease-out 0.6s both;
-        margin-top: 4rem !important;
+        margin-top: 2rem !important;
     }
 
-    .stat-item {
-        text-align: center;
-        padding: 0.5rem;
+    .glass-panel {
+        background: linear-gradient(135deg, rgba(255,255,255,0.28), rgba(255,255,255,0.15));
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        border-radius: 1.5rem;
+        border: 1px solid rgba(255,255,255,0.35);
     }
 
     .stat-number {
         font-weight: 700;
         line-height: 1;
-        margin-bottom: 0.75rem !important;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-        font-size: 3.5rem !important;
+        margin-bottom: 0.5rem !important;
+        text-shadow: 0 4px 18px rgba(0,0,0,0.6);
     }
 
     .stat-label {
-        font-size: 0.95rem;
-        color: rgba(255,255,255,0.85);
-        font-weight: 500;
-        letter-spacing: 0.3px;
+        font-size: 0.9rem;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
     }
 
-    /* Buttons */
+    .scroll-indicator {
+        margin-top: 1.5rem;
+    }
+
+    .scroll-down {
+        color: var(--dark);
+        font-size: 1.4rem;
+        animation: bounce 2s infinite;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.92);
+        box-shadow: var(--shadow-sm);
+        border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    @keyframes bounce {
+        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+        40% { transform: translateY(-8px); }
+        60% { transform: translateY(-4px); }
+    }
+
+    /* About Section */
+    .floating-badge {
+        position: absolute;
+        top: 1.5rem;
+        right: 1.5rem;
+        background: rgba(93, 64, 55, 0.06);
+        padding: 0.45rem 0.95rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        color: var(--brown-dark);
+        font-weight: 600;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+    }
+
+    .info-pill {
+        background: linear-gradient(145deg, #fdfaf7, #f3ebe4);
+        border-radius: 999px;
+        padding: 0.6rem 1.1rem;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+        border: 1px solid rgba(139,107,97,0.18);
+    }
+
+    .info-pill .label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--brown-medium);
+        margin-bottom: 0.1rem;
+    }
+
+    .info-pill .value {
+        font-size: 0.88rem;
+        font-weight: 600;
+        color: var(--brown-dark);
+    }
+
+    .mini-card {
+        background: #ffffff;
+        border-radius: 0.9rem;
+        padding: 0.7rem 1rem;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+        border: 1px solid rgba(139,107,97,0.12);
+    }
+
+    .mini-card .label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--brown-medium);
+        display: block;
+    }
+
+    .mini-card .value {
+        font-size: 0.9rem;
+        font-weight: 600;
+        color: var(--brown-dark);
+    }
+
+    .premium-list li {
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 0.55rem;
+        font-size: 0.92rem;
+    }
+
+    /* Legal Cards & Service Group Cards */
+    .legal-card, .service-group-card {
+        background: #ffffff;
+        border-radius: 1.25rem;
+        padding: 1.5rem 1.6rem;
+        border: 1px solid rgba(93,64,55,0.12);
+    }
+
+    .shadow-3d {
+        box-shadow:
+            0 18px 40px rgba(0,0,0,0.18),
+            0 2px 4px rgba(255,255,255,0.4) inset;
+        border-radius: 1.25rem !important;
+    }
+
+    .shadow-soft {
+        box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
     .btn {
         font-weight: 600;
         letter-spacing: 0.02em;
         transition: all 0.3s ease;
-        border: none;
+        border-radius: 999px;
+    }
+
+    .btn-brown {
+        background-color: var(--brown-dark);
+        border-color: var(--brown-dark);
+        color: white;
     }
 
     .btn-brown:hover {
         background-color: #4A342E;
+        color: white;
         transform: translateY(-2px);
         box-shadow: var(--shadow-md);
+    }
+
+    .btn-cream {
+        background-color: white;
+        border-color: white;
+        color: var(--brown-dark);
     }
 
     .btn-cream:hover {
         background-color: #f8f9fa;
         transform: translateY(-2px);
         box-shadow: var(--shadow-md);
+    }
+
+    .btn-outline-cream {
+        border-color: rgba(255,255,255,0.8);
+        color: white;
+        background: transparent;
     }
 
     .btn-outline-cream:hover {
@@ -669,98 +1265,16 @@
         box-shadow: var(--shadow-md);
     }
 
-    .rounded-pill {
-        border-radius: 50rem !important;
+    .btn-outline-brown-dark {
+        border-color: var(--brown-dark);
+        color: var(--brown-dark);
+        background: transparent;
     }
 
-    /* Scroll Indicator */
-    .scroll-indicator {
-        position: absolute;
-        bottom: 2rem;
-        left: 0;
-        right: 0;
-        text-align: center;
-    }
-
-    .scroll-down {
-        color: var(--dark);
-        font-size: 1.5rem;
-        animation: bounce 2s infinite;
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.9);
-        box-shadow: var(--shadow-sm);
-    }
-
-    @keyframes bounce {
-        0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-        40% { transform: translateY(-10px); }
-        60% { transform: translateY(-5px); }
-    }
-
-    /* Service Cards */
-    .service-card {
-        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        border-radius: 1rem !important;
-        overflow: hidden;
-        border: 1px solid rgba(93, 64, 55, 0.1) !important;
-    }
-
-    .service-card:hover {
-        transform: translateY(-10px);
-        box-shadow: var(--shadow-lg) !important;
-        border-color: var(--brown-light) !important;
-    }
-
-    .hover-lift {
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .icon-circle {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-    }
-
-    /* Certification Logos */
-    .certification-item {
-        transition: all 0.3s ease;
-    }
-
-    .certification-item:hover {
-        transform: scale(1.05);
-    }
-
-    .cert-logo-wrapper {
-        background: var(--white);
-        padding: 1.5rem;
-        border-radius: 0.75rem;
-        box-shadow: var(--shadow-sm);
-        border: 1px solid rgba(93, 64, 55, 0.1);
-        height: 120px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .cert-logo {
-        max-height: 60px;
-        max-width: 100%;
-        filter: grayscale(100%);
-        opacity: 0.7;
-        transition: all 0.3s ease;
-    }
-
-    .certification-item:hover .cert-logo {
-        filter: grayscale(0%);
-        opacity: 1;
+    .btn-outline-brown-dark:hover {
+        background-color: var(--brown-dark);
+        color: white;
+        box-shadow: var(--shadow-md);
     }
 
     /* CTA Section - Elegant Brown Cream */
@@ -773,28 +1287,24 @@
     .cta-elegant::before {
         content: '';
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0;
         background:
-            radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.1) 0%, transparent 50%);
+            radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.14) 0%, transparent 50%),
+            radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.16) 0%, transparent 55%);
     }
 
     .cta-content-wrapper {
         position: relative;
         z-index: 2;
         padding: 3rem;
-        background: rgba(255, 255, 255, 0.9);
+        background: rgba(255, 255, 255, 0.92);
         border-radius: 1.5rem;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        backdrop-filter: blur(10px);
+        box-shadow: 0 14px 40px rgba(0, 0, 0, 0.12);
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        backdrop-filter: blur(14px);
     }
 
     .cta-elegant h2 {
-        color: #5D4037;
         background: linear-gradient(135deg, #5D4037, #8B6B61);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
@@ -802,33 +1312,24 @@
     }
 
     .cta-elegant .lead {
-        color: #795548;
+        color: #5D4037;
     }
 
-    /* Animations */
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
+    /* Responsive */
+    @media (max-width: 992px) {
+        .display-1 {
+            font-size: 3rem !important;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
 
-    @keyframes fadeInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-30px);
+        .stats-wrapper {
+            padding: 1.8rem 1.4rem;
         }
-        to {
-            opacity: 1;
-            transform: translateY(0);
+
+        .cta-content-wrapper {
+            padding: 2.2rem 1.8rem;
         }
     }
 
-    /* Responsive Design for Slider */
     @media (max-width: 768px) {
         .slider-nav {
             display: none;
@@ -837,78 +1338,21 @@
         .slide-content {
             bottom: 10%;
             right: 5%;
+            left: 5%;
             text-align: center;
-            width: 90%;
         }
 
-        .slide-content h3 {
-            font-size: 1.5rem;
-        }
-
-        .slide-content p {
-            font-size: 1rem;
-        }
-
-        .slider-dots {
-            bottom: 20px;
-        }
-    }
-
-    /* Responsive Design untuk spacing di mobile */
-    @media (max-width: 992px) {
         .display-1 {
-            font-size: 3rem !important;
-            margin-bottom: 1.25rem !important;
+            font-size: 2.4rem !important;
         }
 
-        .company-badge {
-            margin-bottom: 2rem !important;
+        .typewriter-wrapper {
+            max-width: 100%;
+            white-space: normal;
         }
 
-        .subtitle-wrapper {
-            margin-bottom: 1.5rem !important;
-        }
-
-        .description-wrapper {
-            margin-bottom: 2.5rem !important;
-        }
-
-        .cta-buttons {
-            margin-bottom: 3rem !important;
-            gap: 0.75rem !important;
-        }
-
-        .stats-wrapper {
-            margin-top: 3rem !important;
-            padding: 2rem 1.5rem;
-        }
-
-        .stat-number {
-            font-size: 2.75rem !important;
-            margin-bottom: 0.5rem !important;
-        }
-
-        .stat-label {
-            font-size: 0.9rem;
-        }
-
-        .cta-content-wrapper {
-            padding: 2rem 1.5rem;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .display-1 {
-            font-size: 2.5rem !important;
-            margin-bottom: 1rem !important;
-        }
-
-        .stats-wrapper {
-            padding: 1.5rem 1rem;
-        }
-
-        .stat-number {
-            font-size: 2.25rem !important;
+        .typewriter-text {
+            white-space: normal;
         }
 
         .cta-buttons .btn {
@@ -922,46 +1366,40 @@
             align-items: center;
         }
 
-        .btn-brown, .btn-cream {
-            width: 100%;
-            max-width: 280px;
+        .cta-content-wrapper {
+            padding: 1.8rem 1.4rem;
         }
     }
 
     @media (max-width: 576px) {
-        .company-badge {
-            margin-bottom: 1.5rem !important;
-        }
-
         .badge.bg-brown-dark {
-            font-size: 0.85rem;
-            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            padding: 0.5rem 0.9rem;
         }
 
-        .stats-wrapper .row {
-            gap: 1rem;
+        .info-pill {
+            padding: 0.5rem 0.9rem;
         }
 
-        .stat-item {
-            padding: 0.75rem;
-        }
-
-        .cta-content-wrapper {
-            padding: 1.5rem 1rem;
+        .legal-card,
+        .service-group-card,
+        .org-card {
+            padding: 1.25rem 1.3rem;
         }
     }
 
-    /* Smooth Scroll */
     html {
         scroll-behavior: smooth;
     }
 </style>
+<!-- Animate.css for hero animations -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 @endpush
 
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // Slider Variables
+        // ===== SLIDER =====
         const sliderTrack = document.querySelector('.slider-track');
         const slides = document.querySelectorAll('.slide');
         const dots = document.querySelectorAll('.dot');
@@ -970,148 +1408,111 @@
         let currentSlide = 0;
         let slideInterval;
 
-        // Initialize Slider
-        function initSlider() {
-            updateSlider();
-            startAutoSlide();
-        }
-
-        // Update Slider Position
         function updateSlider() {
+            if (!sliderTrack) return;
             sliderTrack.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-            // Update active classes
-            slides.forEach((slide, index) => {
-                slide.classList.toggle('active', index === currentSlide);
-            });
-
-            // Update dots
-            dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentSlide);
-            });
+            slides.forEach((slide, index) => slide.classList.toggle('active', index === currentSlide));
+            dots.forEach((dot, index) => dot.classList.toggle('active', index === currentSlide));
         }
 
-        // Next Slide
         function nextSlide() {
             currentSlide = (currentSlide + 1) % slides.length;
             updateSlider();
         }
 
-        // Previous Slide
         function prevSlide() {
             currentSlide = (currentSlide - 1 + slides.length) % slides.length;
             updateSlider();
         }
 
-        // Start Auto Slide
         function startAutoSlide() {
             clearInterval(slideInterval);
-            slideInterval = setInterval(nextSlide, 5000);
+            slideInterval = setInterval(nextSlide, 6000);
         }
 
-        // Stop Auto Slide
         function stopAutoSlide() {
             clearInterval(slideInterval);
         }
 
-        // Event Listeners
-        prevBtn.addEventListener('click', function() {
-            prevSlide();
-            stopAutoSlide();
-            startAutoSlide();
-        });
+        if (prevBtn && nextBtn && sliderTrack) {
+            prevBtn.addEventListener('click', () => { prevSlide(); stopAutoSlide(); startAutoSlide(); });
+            nextBtn.addEventListener('click', () => { nextSlide(); stopAutoSlide(); startAutoSlide(); });
+        }
 
-        nextBtn.addEventListener('click', function() {
-            nextSlide();
-            stopAutoSlide();
-            startAutoSlide();
-        });
-
-        // Dot Navigation
         dots.forEach(dot => {
             dot.addEventListener('click', function() {
-                const slideIndex = parseInt(this.dataset.slide);
-                currentSlide = slideIndex;
+                currentSlide = parseInt(this.dataset.slide);
                 updateSlider();
                 stopAutoSlide();
                 startAutoSlide();
             });
         });
 
-        // Pause on hover
         const slider = document.querySelector('.hero-slider');
-        slider.addEventListener('mouseenter', stopAutoSlide);
-        slider.addEventListener('mouseleave', startAutoSlide);
-
-        // Initialize
-        initSlider();
-
-        // Typewriter Effect
-        const textElement = document.querySelector('.typewriter-text');
-        if (textElement) {
-            const originalText = textElement.textContent;
-            let charIndex = 0;
-            let isDeleting = false;
-            let typingSpeed = 100;
-
-            function typeWriter() {
-                const currentText = originalText.substring(0, charIndex);
-                textElement.textContent = currentText;
-
-                if (!isDeleting && charIndex < originalText.length) {
-                    charIndex++;
-                    typingSpeed = 100;
-                } else if (isDeleting && charIndex > 0) {
-                    charIndex--;
-                    typingSpeed = 50;
-                }
-
-                if (!isDeleting && charIndex === originalText.length) {
-                    isDeleting = true;
-                    typingSpeed = 1500;
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    typingSpeed = 500;
-                }
-
-                setTimeout(typeWriter, typingSpeed);
-            }
-
-            setTimeout(typeWriter, 1000);
+        if (slider) {
+            slider.addEventListener('mouseenter', stopAutoSlide);
+            slider.addEventListener('mouseleave', startAutoSlide);
         }
 
-        // Animate stats on scroll
-        const observerOptions = {
-            threshold: 0.5
-        };
+        if (slides.length > 0) {
+            updateSlider();
+            startAutoSlide();
+        }
 
+        // ===== TYPEWRITER =====
+        const textElement = document.querySelector('.typewriter-text');
+        if (textElement) {
+            const fullText = textElement.textContent.trim();
+            let charIndex = 0;
+            textElement.textContent = '';
+
+            function typeWriter() {
+                if (charIndex <= fullText.length) {
+                    textElement.textContent = fullText.substring(0, charIndex);
+                    charIndex++;
+                    setTimeout(typeWriter, 40);
+                }
+            }
+            setTimeout(typeWriter, 800);
+        }
+
+        // ===== STATS COUNTER =====
+        const statsSection = document.querySelector('.stats-wrapper');
+        if (statsSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const stats = entry.target.querySelectorAll('.stat-number');
+                        stats.forEach(stat => {
+                            const target = parseInt(stat.getAttribute('data-target') || stat.textContent.replace('+', ''));
+                            let current = 0;
+                            const increment = Math.max(1, Math.floor(target / 50));
+                            const timer = setInterval(() => {
+                                current += increment;
+                                if (current >= target) {
+                                    current = target;
+                                    clearInterval(timer);
+                                }
+                                stat.textContent = current + '+';
+                            }, 30);
+                        });
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.5 });
+            observer.observe(statsSection);
+        }
+
+        // ===== SCROLL ANIMATION FOR CARDS =====
+        const animateItems = document.querySelectorAll('.service-card-3d, .team-card-3d, .legal-card, .service-group-card');
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    const stats = entry.target.querySelectorAll('.stat-number');
-                    stats.forEach(stat => {
-                        const target = parseInt(stat.textContent);
-                        let current = 0;
-                        const increment = target / 50;
-
-                        const timer = setInterval(() => {
-                            current += increment;
-                            if (current >= target) {
-                                current = target;
-                                clearInterval(timer);
-                            }
-                            stat.textContent = Math.floor(current) + '+';
-                        }, 30);
-                    });
-                    observer.unobserve(entry.target);
+                    entry.target.classList.add('animate__animated', 'animate__fadeInUp');
                 }
             });
-        }, observerOptions);
-
-        const statsSection = document.querySelector('.stats-wrapper');
-        if (statsSection) {
-            observer.observe(statsSection);
-        }
+        }, { threshold: 0.1 });
+        animateItems.forEach(el => observer.observe(el));
     });
 </script>
 @endpush

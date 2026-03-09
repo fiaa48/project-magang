@@ -10,13 +10,8 @@ class CertificateController extends Controller
 {
     public function index()
     {
-        $certificates = Certificate::latest()->get();
+        $certificates = Certificate::all();
         return view('admin.certificates.index', compact('certificates'));
-    }
-
-    public function create()
-    {
-        return view('admin.certificates.create');
     }
 
     public function store(Request $request)
@@ -24,39 +19,42 @@ class CertificateController extends Controller
         $request->validate([
             'name' => 'required',
             'type' => 'required',
-            'year' => 'required'
+            'year' => 'required',
+            'file' => 'required|image'
         ]);
 
-        Certificate::create($request->all());
+        $file = $request->file('file')->store('certificates', 'public');
 
-        return redirect()->route('admin.certificates')
-            ->with('success', 'Sertifikat berhasil ditambahkan');
+        Certificate::create([
+            'name' => $request->name,
+            'type' => $request->type,
+            'year' => $request->year,
+            'file' => $file
+        ]);
+
+        return back()->with('success','Sertifikat berhasil ditambahkan');
     }
 
-    public function edit(Certificate $certificate)
+    public function create()
     {
+        return view('admin.certificates.create');
+    }
+
+    public function edit($id)
+    {
+        $certificate = Certificate::findOrFail($id);
         return view('admin.certificates.edit', compact('certificate'));
     }
 
-    public function update(Request $request, Certificate $certificate)
+    public function update(Request $request, $id)
     {
-        $request->validate([
-            'name' => 'required',
-            'type' => 'required',
-            'year' => 'required'
+        $certificate = Certificate::findOrFail($id);
+
+        $certificate->update([
+            'name' => $request->name,
+            'type' => $request->type,
         ]);
 
-        $certificate->update($request->all());
-
-        return redirect()->route('admin.certificates')
-            ->with('success', 'Sertifikat berhasil diupdate');
-    }
-
-    public function destroy(Certificate $certificate)
-    {
-        $certificate->delete();
-
-        return redirect()->route('admin.certificates')
-            ->with('success', 'Sertifikat berhasil dihapus');
+        return redirect()->back()->with('success', 'Certificate updated');
     }
 }

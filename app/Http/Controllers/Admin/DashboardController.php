@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 use App\Models\Project;
+use App\Models\Certificate;
+use App\Models\Message;
 
 class DashboardController extends Controller
 {
@@ -12,10 +14,14 @@ class DashboardController extends Controller
     {
         $totalUsers = User::count();
         $totalProjects = Project::count();
+        $totalCertificates = Certificate::count();
+        $totalMessages = Message::count();
 
         return view('admin.dashboard', compact(
             'totalUsers',
-            'totalProjects'
+            'totalProjects',
+            'totalCertificates',
+            'totalMessages'
         ));
     }
 }

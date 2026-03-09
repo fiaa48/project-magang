@@ -495,11 +495,12 @@
             <table class="table align-middle">
                 <thead>
                     <tr>
-                        <th style="width: 60px;">No</th>
-                        <th>Nama Sertifikat</th>
-                        <th>Jenis</th>
-                        <th>Tahun</th>
-                        <th class="text-end">Aksi</th>
+                        <th style="width:60px;">No</th>
+                            <th>Preview</th>
+                            <th>Nama Sertifikat</th>
+                            <th>Jenis</th>
+                            <th>Tahun</th>
+                            <th class="text-end">Aksi</th>
                     </tr>
                 </thead>
                 <tbody>

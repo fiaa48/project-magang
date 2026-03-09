@@ -2,88 +2,41 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Barryvdh\DomPDF\Facade\Pdf;
+use App\Models\Certificate;
 
 class CertificationController extends Controller
 {
-    private function certifications()
-    {
-        return [
-            [
-                'slug' => 'sbu-al001',
-                'type' => 'SBU Konstruksi - Jasa Pengembangan Pemanfaatan Ruang',
-                'description' => 'Klasifikasi: Kecil, Kode: AL001',
-                'number' => '025701110009300200010',
-                'issuer' => 'LPJK / Kementerian PUPR',
-                'valid_from' => '2025-10-06',
-                'valid_until' => '2028-10-05',
-                'status' => 'active',
-                'document' => 'documents/certificates/sbu-al001.pdf',
-            ],
-            [
-                'slug' => 'iso-9001',
-                'type' => 'ISO 9001:2015 - Quality Management System',
-                'description' => 'Consultancy and Management System',
-                'number' => 'QAIS-Q-INDO-PM-11.25.004',
-                'issuer' => 'QACS International (IAS USA)',
-                'valid_from' => '2025-01-04',
-                'valid_until' => '2028-01-03',
-                'status' => 'active',
-                'document' => 'documents/certificates/iso-9001.pdf',
-            ],
-            [
-                'slug' => 'nib',
-                'type' => 'NIB (Nomor Induk Berusaha)',
-                'description' => 'Perizinan Berusaha Berbasis Risiko',
-                'number' => '0257011100093',
-                'issuer' => 'BKPM',
-                'valid_from' => '2020-11-09',
-                'valid_until' => null,
-                'status' => 'active',
-                'document' => 'documents/legal/nib.pdf',
-            ],
-        ];
-    }
-
     public function index()
     {
-        $activeCertifications = $this->certifications();
-        return view('certifications.index', compact('activeCertifications'));
+        $certificates = Certificate::latest()->get();
+        return view('certifications.index', compact('certificates'));
     }
 
-    public function viewPdf($slug)
+    // Gunakan 1 method untuk semua tipe
+    public function show($type)
     {
-        $cert = collect($this->certifications())->firstWhere('slug', $slug);
-        abort_if(!$cert, 404);
+        $certificates = Certificate::where('type', $type)
+            ->latest()
+            ->get();
 
-        return response()->file(
-            storage_path('app/public/' . $cert['document'])
-        );
+        return view('certifications.index', compact('certificates', 'type'));
     }
 
-    public function downloadPdf($slug)
-    {
-        $cert = collect($this->certifications())->firstWhere('slug', $slug);
-        abort_if(!$cert, 404);
+    public function download($id)
+{
+    $certificate = Certificate::findOrFail($id);
 
-        return response()->download(
-            storage_path('app/public/' . $cert['document']),
-            $slug . '.pdf'
-        );
+    $filePath = storage_path('app/public/'.$certificate->file);
+
+    if (!file_exists($filePath)) {
+        abort(404);
     }
 
-    public function sbu()
-    {
-        return view('certifications.sbu');
-    }
+    $pdf = Pdf::loadView('certifications.pdf', [
+        'image' => $filePath
+    ]);
 
-    public function iso()
-    {
-        return view('certifications.iso');
-    }
-
-    public function legal()
-    {
-        return view('certifications.legal');
-    }
+    return $pdf->download($certificate->name . '.pdf');
+}
 }

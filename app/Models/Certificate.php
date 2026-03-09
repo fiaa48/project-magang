@@ -9,6 +9,7 @@ class Certificate extends Model
     protected $fillable = [
         'name',
         'type',
-        'year'
+        'year',
+        'file'
     ];
 }
