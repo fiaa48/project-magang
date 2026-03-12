@@ -18,7 +18,6 @@
                         <p>Perencanaan dan rekayasa bangunan gedung hunian & non hunian.</p>
                     </div>
                 </div>
-
                 <!-- Slide 2 - Arsitektur -->
                 <div class="slide">
                     <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=1920&q=80');"></div>
@@ -28,7 +27,6 @@
                         <p>Desain bangunan, interior, dan lanskap berkarakter, fungsional, dan estetis.</p>
                     </div>
                 </div>
-
                 <!-- Slide 3 - Teknik Sipil & SDA -->
                 <div class="slide">
                     <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80');"></div>
@@ -38,7 +36,6 @@
                         <p>Infrastruktur sumber daya air, transportasi, dan struktur bangunan.</p>
                     </div>
                 </div>
-
                 <!-- Slide 4 - Non-Konstruksi -->
                 <div class="slide">
                     <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80');"></div>
@@ -68,37 +65,37 @@
         </div>
 
         <!-- Main Hero Content -->
-        <div class="container position-relative">
+        <div class="container position-relative" style="padding-top: 120px;">
             <div class="row min-vh-100 align-items-center">
                 <div class="col-xl-8 col-lg-9 mx-auto text-center">
                     <!-- Badge -->
-                    <div class="company-badge mb-4 animate__animated animate__fadeInDown">
+                    <div class="company-badge mb-4">
                         <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal shadow-soft">
                             <i class="fas fa-medal me-2"></i>Perusahaan Konsultan Mandiri Sejak 2020
                         </span>
                     </div>
 
                     <!-- Main Heading -->
-                    <h1 class="display-1 fw-bold mb-3 text-white hero-title animate__animated animate__fadeInUp">
+                    <h1 class="display-1 fw-bold mb-3 text-white hero-title">
                         PT Mitra Nusa<br>
                         <span class="text-gradient-brown">Konsulindo</span>
                     </h1>
 
-                    <!-- Sub Heading / Tagline dari company profile -->
-                    <p class="lead fs-5 text-white-50 lh-lg mx-auto hero-lead animate__animated animate__fadeInUp animate__delay-1s" style="max-width: 780px;">
+                    <!-- Sub Heading / Tagline -->
+                    <p class="lead fs-5 text-white-50 lh-lg mx-auto hero-lead" style="max-width: 780px;">
                         PT. MITRA NUSA KONSULINDO merupakan perusahaan konsultan mandiri yang berdiri pada tahun 2020,
                         berkembang dengan dukungan tenaga ahli terkemuka dan berkualitas yang telah melaksanakan berbagai
                         proyek terintegrasi lintas disiplin, siap memberikan bantuan dan pelayanan profesional bagi instansi
                         pemerintah maupun swasta di bidang jasa Konsultansi Teknik dan Manajemen.
                     </p>
 
-                    <!-- Typewriter text -->
-                    <div class="subtitle-wrapper mb-4 animate__animated animate__fadeInUp animate__delay-1s">
+                    <!-- Spesialis Jasa Konsultansi (teks biasa, bisa wrap) -->
+                    <div class="subtitle-wrapper mb-4">
                         <h2 class="h4 fw-light text-white-50 mb-2">
                             Spesialis Jasa Konsultansi
                         </h2>
-                        <div class="typewriter-wrapper">
-                            <span class="typewriter-text text-white fw-semibold fs-4">
+                        <div class="specialist-text-wrapper">
+                            <span class="text-white fw-semibold specialist-text">
                                 Perencanaan Umum • Studi Kelayakan • Perencanaan Teknik • Dokumen Lingkungan • Pengawasan Teknik • Penelitian & Pengembangan
                             </span>
                         </div>
@@ -106,7 +103,7 @@
 
                     <!-- CTA Buttons -->
                     <div class="cta-buttons d-flex flex-wrap gap-3 justify-content-center mb-4">
-                        <a href="{{ route('about') }}" class="btn btn-cream btn-lg px-5 py-3 rounded-pill shadow-soft">
+                        <a href="{{ route('about') }}" class="btn btn-brown btn-lg px-5 py-3 rounded-pill shadow-soft">
                             <i class="fas fa-building me-2"></i>Tentang Perusahaan
                         </a>
                         <a href="{{ route('services') }}" class="btn btn-outline-cream btn-lg px-5 py-3 rounded-pill shadow-soft">
@@ -118,7 +115,7 @@
                         </a>
                     </div>
 
-                    <!-- Highlighted Info / Stats -->
+                    <!-- Stats -->
                     <div class="stats-wrapper mt-4 glass-panel">
                         <div class="row g-4 justify-content-center">
                             <div class="col-md-3 col-6">
@@ -160,7 +157,7 @@
     </section>
 
     <!-- SECTION: Sekilas Perusahaan (Profil & Latar Belakang) -->
-    <section id="about-brief" class="py-6 bg-light-gradient position-relative overflow-hidden">
+    <section id="about-brief" class="py-7 bg-light-gradient position-relative overflow-hidden">
         <!-- Background Decoration -->
         <div class="section-bg-decoration">
             <div class="decoration-circle"></div>
@@ -215,7 +212,7 @@
                         </div>
 
                         <div class="mt-4">
-                            <a href="{{ route('about') }}" class="btn btn-brown-3d rounded-pill px-4">
+                            <a href="{{ route('about') }}" class="btn btn-outline-brown-3d rounded-pill px-4">
                                 Profil Lengkap Perusahaan
                             </a>
                         </div>
@@ -272,8 +269,8 @@
         </div>
     </section>
 
-    <!-- SECTION: Legalitas & Identitas Badan Usaha (ringkasan beranda) -->
-    <section class="py-6 bg-cream-light position-relative overflow-hidden">
+    <!-- SECTION: Legalitas & Identitas Badan Usaha -->
+    <section class="py-7 bg-cream-light position-relative overflow-hidden">
         <!-- Background Pattern -->
         <div class="cert-pattern">
             <div class="pattern-line"></div>
@@ -334,8 +331,8 @@
                 </div>
             </div>
 
-            <!-- Logo Sertifikasi (dengan efek 3D) -->
-            <div class="row g-4 align-items-center justify-content-center mt-5">
+            <!-- Logo Sertifikasi (dengan jarak cukup) -->
+            <div class="row g-4 align-items-center justify-content-center mt-6">
                 @foreach(['inkindo', 'sbu', 'iso-9001', 'iso-14001', 'kemenkumham'] as $cert)
                     <div class="col-lg-2 col-md-3 col-4">
                         <div class="cert-card-3d">
@@ -357,7 +354,7 @@
     </section>
 
     <!-- SECTION: Lingkup Layanan Utama -->
-    <section id="services" class="py-6 bg-light position-relative">
+    <section id="services" class="py-7 bg-light position-relative">
         <div class="container">
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto text-center">
@@ -477,8 +474,8 @@
                 @endforeach
             </div>
 
-            <div class="text-center mt-5">
-                <a href="{{ route('services') }}" class="btn btn-brown-3d btn-lg px-5 rounded-pill shadow-soft">
+            <div class="text-center mt-5 mb-5">
+                <a href="{{ route('services') }}" class="btn btn-outline-brown-3d rounded-pill px-5">
                     <i class="fas fa-list me-2"></i>Lihat Semua Layanan
                 </a>
             </div>
@@ -486,7 +483,7 @@
     </section>
 
     <!-- SECTION: Struktur Pengurus (ringkas) -->
-    <section class="py-6 bg-cream-medium position-relative overflow-hidden">
+    <section class="py-7 bg-cream-medium position-relative overflow-hidden">
         <div class="container">
             <div class="row mb-4 align-items-end">
                 <div class="col-lg-8">
@@ -557,7 +554,7 @@
     </section>
 
     <!-- CTA PREMIUM -->
-    <section class="py-6 cta-elegant position-relative overflow-hidden">
+    <section class="py-7 cta-elegant position-relative overflow-hidden">
         <div class="container">
             <div class="cta-content-wrapper">
                 <div class="row align-items-center">
@@ -569,7 +566,7 @@
                         </p>
                     </div>
                     <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                        <a href="{{ route('contact') }}" class="btn btn-brown-3d btn-lg px-5 rounded-pill shadow-soft">
+                        <a href="{{ route('contact') }}" class="btn btn-outline-brown-3d rounded-pill px-5 ">
                             <i class="fas fa-paper-plane me-2"></i>Hubungi Kami Sekarang
                             <span class="btn-shine"></span>
                         </a>
@@ -811,11 +808,14 @@
         right: 0;
         background: rgba(93,64,55,0.9);
         color: white;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         padding: 0.3rem;
         text-align: center;
         transform: translateY(100%);
         transition: transform 0.3s;
+        white-space: normal;
+        word-wrap: break-word;
+        line-height: 1.2;
     }
     .cert-card-3d:hover .cert-hover-info {
         transform: translateY(0);
@@ -1042,38 +1042,34 @@
         text-transform: uppercase;
     }
 
-    .typewriter-wrapper {
-        display: inline-block;
-        position: relative;
-        margin-top: 0.3rem;
-        background: rgba(0,0,0,0.28);
-        padding: 0.6rem 1.1rem;
-        border-radius: 999px;
-        box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+    /* Teks Spesialis - bisa wrap */
+    .specialist-text-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0.5rem 1rem;
+        background: rgba(0,0,0,0.2);
+        border-radius: 50px;
         backdrop-filter: blur(4px);
     }
 
-    .typewriter-text {
-        position: relative;
-        display: inline-block;
-        white-space: nowrap;
+    .specialist-text {
+        display: block;
+        font-size: 1rem;
+        line-height: 1.6;
+        word-wrap: break-word;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
 
-    .typewriter-text::after {
-        content: '';
-        position: absolute;
-        right: -8px;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 3px;
-        height: 1.2em;
-        background-color: white;
-        animation: blink 1s infinite;
+    @media (max-width: 768px) {
+        .specialist-text {
+            font-size: 0.9rem;
+        }
     }
 
-    @keyframes blink {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0; }
+    @media (max-width: 576px) {
+        .specialist-text {
+            font-size: 0.8rem;
+        }
     }
 
     .company-badge .badge {
@@ -1209,6 +1205,7 @@
         border: 1px solid rgba(93,64,55,0.12);
     }
 
+
     .shadow-3d {
         box-shadow:
             0 18px 40px rgba(0,0,0,0.18),
@@ -1315,6 +1312,20 @@
         color: #5D4037;
     }
 
+    /* Utility classes for spacing */
+    .py-7 {
+        padding-top: 6rem !important;
+        padding-bottom: 6rem !important;
+    }
+
+    .mt-6 {
+        margin-top: 4rem !important;
+    }
+
+    .mb-5 {
+        margin-bottom: 3rem !important;
+    }
+
     /* Responsive */
     @media (max-width: 992px) {
         .display-1 {
@@ -1344,15 +1355,6 @@
 
         .display-1 {
             font-size: 2.4rem !important;
-        }
-
-        .typewriter-wrapper {
-            max-width: 100%;
-            white-space: normal;
-        }
-
-        .typewriter-text {
-            white-space: normal;
         }
 
         .cta-buttons .btn {
@@ -1457,23 +1459,6 @@
         if (slides.length > 0) {
             updateSlider();
             startAutoSlide();
-        }
-
-        // ===== TYPEWRITER =====
-        const textElement = document.querySelector('.typewriter-text');
-        if (textElement) {
-            const fullText = textElement.textContent.trim();
-            let charIndex = 0;
-            textElement.textContent = '';
-
-            function typeWriter() {
-                if (charIndex <= fullText.length) {
-                    textElement.textContent = fullText.substring(0, charIndex);
-                    charIndex++;
-                    setTimeout(typeWriter, 40);
-                }
-            }
-            setTimeout(typeWriter, 800);
         }
 
         // ===== STATS COUNTER =====

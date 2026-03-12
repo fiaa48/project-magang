@@ -1,68 +1,135 @@
 @extends('layouts.app')
 
 @section('content')
+
 <div class="container py-5">
 
-    <div class="row">
-        @forelse($certificates as $cert)
-        <div class="col-md-4 mb-4">
-            <div class="card shadow-sm">
+<div class="text-center mb-5">
+<h2 class="fw-bold">Sertifikasi Perusahaan</h2>
+<p class="text-muted">Dokumen legalitas dan sertifikasi resmi perusahaan</p>
+</div>
 
-                <img src="{{ asset($cert->file) }}"
-                     class="card-img-top"
-                     style="height:200px; object-fit:cover; cursor:pointer"
-                     onclick="showPreview(
-                        '{{ asset($cert->file) }}',
-                        '{{ route('certifications.download', $cert->id) }}'
-                     )">
+<div class="row justify-content-center g-4">
 
-                <div class="card-body text-center">
-                    <small>{{ $cert->name }}</small>
-                </div>
+{{-- ISO --}}
+<div class="col-lg-3 col-md-4 col-sm-6">
+<a href="{{ route('certifications.category','iso') }}" class="text-decoration-none">
+<div class="cert-card">
+<div class="cert-icon">📄</div>
+<h5>ISO</h5>
+<p>Sertifikat standar internasional</p>
+</div>
+</a>
+</div>
 
-            </div>
-        </div>
-        @empty
-            <div class="col-12">
-                <div class="alert alert-warning text-center">
-                    Tidak ada sertifikat di kategori ini.
-                </div>
-            </div>
-        @endforelse
-    </div>
+{{-- NIB --}}
+<div class="col-lg-3 col-md-4 col-sm-6">
+<a href="{{ route('certifications.category','nib') }}" class="text-decoration-none">
+<div class="cert-card">
+<div class="cert-icon">🏢</div>
+<h5>NIB</h5>
+<p>Nomor Induk Berusaha</p>
+</div>
+</a>
+</div>
+
+{{-- NPWP --}}
+<div class="col-lg-3 col-md-4 col-sm-6">
+<a href="{{ route('certifications.category','npwp') }}" class="text-decoration-none">
+<div class="cert-card">
+<div class="cert-icon">💳</div>
+<h5>NPWP</h5>
+<p>Nomor Pokok Wajib Pajak</p>
+</div>
+</a>
+</div>
+
+{{-- SPT --}}
+<div class="col-lg-3 col-md-4 col-sm-6">
+<a href="{{ route('certifications.category','spt') }}" class="text-decoration-none">
+<div class="cert-card">
+<div class="cert-icon">🧾</div>
+<h5>SPT</h5>
+<p>Surat Pemberitahuan Tahunan</p>
+</div>
+</a>
+</div>
+
+{{-- Sertifikat Standar --}}
+<div class="col-lg-3 col-md-4 col-sm-6">
+<a href="{{ route('certifications.category','sertifikat-standar') }}" class="text-decoration-none">
+<div class="cert-card">
+<div class="cert-icon">📑</div>
+<h5>Sertifikat Standar</h5>
+<p>Standar operasional perusahaan</p>
+</div>
+</a>
+</div>
+
+{{-- SBU Non Konstruksi --}}
+<div class="col-lg-3 col-md-4 col-sm-6">
+<a href="{{ route('certifications.category','sbu-non-konstruksi') }}" class="text-decoration-none">
+<div class="cert-card">
+<div class="cert-icon">🏗</div>
+<h5>SBU Non Konstruksi</h5>
+<p>Sertifikat badan usaha non konstruksi</p>
+</div>
+</a>
+</div>
+
+{{-- SBU Konstruksi --}}
+<div class="col-lg-3 col-md-4 col-sm-6">
+<a href="{{ route('certifications.category','sbu-konstruksi') }}" class="text-decoration-none">
+<div class="cert-card">
+<div class="cert-icon">🏢</div>
+<h5>SBU Konstruksi</h5>
+<p>Sertifikat badan usaha konstruksi</p>
+</div>
+</a>
+</div>
 
 </div>
 
-<!-- MODAL PREVIEW -->
-<div class="modal fade" id="previewModal" tabindex="-1">
-  <div class="modal-dialog modal-xl modal-dialog-centered">
-    <div class="modal-content">
-
-      <div class="modal-body text-center">
-          <img id="previewImage" src="" style="width:100%; height:auto;">
-      </div>
-
-      <div class="modal-footer">
-          <a id="downloadBtn" href="#" class="btn btn-success">Download PDF</a>
-          <a id="waBtn" href="#" target="_blank" class="btn btn-primary">Share WhatsApp</a>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-      </div>
-
-    </div>
-  </div>
 </div>
 
-<script>
-function showPreview(imageUrl, downloadUrl)
-{
-    document.getElementById('previewImage').src = imageUrl;
-    document.getElementById('downloadBtn').href = downloadUrl;
-    document.getElementById('waBtn').href =
-        "https://wa.me/?text=" + encodeURIComponent("Lihat Sertifikat: " + imageUrl);
 
-    var myModal = new bootstrap.Modal(document.getElementById('previewModal'));
-    myModal.show();
+
+<style>
+
+.cert-card{
+background:white;
+border-radius:18px;
+padding:40px 25px;
+text-align:center;
+box-shadow:0 8px 25px rgba(0,0,0,0.07);
+transition:all .35s ease;
+border:1px solid #f2f2f2;
+height:100%;
 }
-</script>
+
+.cert-icon{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.cert-card h5{
+font-weight:600;
+margin-bottom:8px;
+color:#333;
+}
+
+.cert-card p{
+font-size:14px;
+color:#777;
+margin:0;
+}
+
+.cert-card:hover{
+transform:translateY(-8px);
+box-shadow:0 15px 35px rgba(0,0,0,0.12);
+border-color:#d6c4b8;
+}
+
+</style>
 
 @endsection

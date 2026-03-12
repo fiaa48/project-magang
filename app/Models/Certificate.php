@@ -10,6 +10,8 @@ class Certificate extends Model
         'name',
         'type',
         'year',
-        'file'
+        'image',
+        'certificate_number',
+        'valid_until'
     ];
 }

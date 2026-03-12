@@ -7,7 +7,6 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\User;
 use App\Models\Project;
 use App\Models\Certificate;
-use App\Models\Message;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AboutController;
@@ -20,67 +19,81 @@ use App\Http\Controllers\CompanyDataController;
 
 use App\Http\Controllers\Admin\ProjectController;
 use App\Http\Controllers\Admin\CertificateController;
-
+use App\Http\Controllers\AdminProfileController;
+use App\Http\Controllers\AdminContactController;
+use App\Http\Controllers\AdminUserController;
 
 /*
 |--------------------------------------------------------------------------
-| FRONTEND ROUTES
+| FRONTEND
 |--------------------------------------------------------------------------
 */
 
-// Home
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', [HomeController::class,'index'])->name('home');
 
+/*
+|--------------------------------------------------------------------------
+| ABOUT
+|--------------------------------------------------------------------------
+*/
 
-// About
-Route::prefix('about')->group(function () {
+Route::prefix('about')->group(function(){
 
-    Route::get('/', [AboutController::class, 'index'])->name('about');
+    Route::get('/',[AboutController::class,'index'])->name('about');
 
-    Route::get('/history', [AboutController::class, 'history'])
+    Route::get('/history',[AboutController::class,'history'])
         ->name('about.history');
 
-    Route::get('/vision-mission', [AboutController::class, 'visionMission'])
+    Route::get('/vision-mission',[AboutController::class,'visionMission'])
         ->name('about.vision-mission');
 
-    Route::get('/organization', [AboutController::class, 'organization'])
+    Route::get('/organization',[AboutController::class,'organization'])
         ->name('about.organization');
 
 });
 
 
-// Services
-Route::prefix('services')->group(function () {
+/*
+|--------------------------------------------------------------------------
+| SERVICES
+|--------------------------------------------------------------------------
+*/
 
-    Route::get('/', [ServicesController::class, 'index'])
-        ->name('services');
+Route::prefix('services')->group(function(){
+
+    Route::get('/',[ServicesController::class,'index'])->name('services');
 
     Route::get('/construction-consultancy',
-        [ServicesController::class, 'constructionConsultancy'])
+        [ServicesController::class,'constructionConsultancy'])
         ->name('services.construction');
 
     Route::get('/non-construction-consultancy',
-        [ServicesController::class, 'nonConstructionConsultancy'])
+        [ServicesController::class,'nonConstructionConsultancy'])
         ->name('services.non-construction');
 
     Route::get('/architectural',
-        [ServicesController::class, 'architectural'])
+        [ServicesController::class,'architectural'])
         ->name('services.architectural');
 
     Route::get('/engineering',
-        [ServicesController::class, 'engineering'])
+        [ServicesController::class,'engineering'])
         ->name('services.engineering');
 
 });
 
 
-// Portfolio
-Route::prefix('portofolio')->group(function () {
+/*
+|--------------------------------------------------------------------------
+| PORTFOLIO
+|--------------------------------------------------------------------------
+*/
 
-    Route::get('/', [PortofolioController::class, 'index'])
+Route::prefix('portofolio')->group(function(){
+
+    Route::get('/',[PortofolioController::class,'index'])
         ->name('portofolio');
 
-    Route::get('/{id}', [PortofolioController::class, 'show'])
+    Route::get('/{id}',[PortofolioController::class,'show'])
         ->name('portofolio.details');
 
 });
@@ -93,15 +106,19 @@ Route::prefix('portofolio')->group(function () {
 */
 
 Route::get('/certifications',
-    [CertificationController::class, 'index'])
+    [CertificationController::class,'index'])
     ->name('certifications.index');
 
 Route::get('/certifications/{type}',
-    [CertificationController::class, 'show'])
-    ->name('certifications.show');
+    [CertificationController::class,'category'])
+    ->name('certifications.category');
+
+Route::get('/certifications/view/{id}',
+    [CertificationController::class,'show'])
+    ->name('certifications.view');
 
 Route::get('/certifications/download/{id}',
-    [CertificationController::class, 'download'])
+    [CertificationController::class,'download'])
     ->name('certifications.download');
 
 
@@ -111,82 +128,80 @@ Route::get('/certifications/download/{id}',
 |--------------------------------------------------------------------------
 */
 
-Route::prefix('company-data')->group(function () {
+Route::prefix('company-data')->group(function(){
 
-    Route::get('/', [CompanyDataController::class, 'index'])
+    Route::get('/',[CompanyDataController::class,'index'])
         ->name('company-data');
 
     Route::get('/legal-documents',
-        [CompanyDataController::class, 'legalDocuments'])
+        [CompanyDataController::class,'legalDocuments'])
         ->name('company-data.legal');
 
     Route::get('/npwp-pkp',
-        [CompanyDataController::class, 'npwpPkp'])
+        [CompanyDataController::class,'npwpPkp'])
         ->name('company-data.npwp-pkp');
 
 });
 
 
-// Management
+/*
+|--------------------------------------------------------------------------
+| MANAGEMENT
+|--------------------------------------------------------------------------
+*/
+
 Route::get('/management',
-    [ManagementController::class, 'index'])
+    [ManagementController::class,'index'])
     ->name('management');
 
 
-// Contact
+/*
+|--------------------------------------------------------------------------
+| CONTACT
+|--------------------------------------------------------------------------
+*/
+
 Route::get('/contact',
-    [ContactController::class, 'index'])
+    [ContactController::class,'index'])
     ->name('contact');
 
 Route::post('/contact/send',
-    [ContactController::class, 'send'])
+    [ContactController::class,'send'])
     ->name('contact.send');
 
 
 /*
 |--------------------------------------------------------------------------
-| ADMIN AUTH
+| ADMIN LOGIN
 |--------------------------------------------------------------------------
 */
 
-Route::prefix('admin')->group(function () {
+Route::get('/login', function(){
+    return view('admin.login');
+})->name('login');   // penting untuk middleware auth
 
-    Route::get('/login', function () {
+
+Route::prefix('admin')->group(function(){
+
+    Route::get('/login', function(){
         return view('admin.login');
     })->name('admin.login');
 
 
-    Route::post('/login', function (Request $request) {
+    Route::post('/login', function(Request $request){
 
-        if (Auth::attempt($request->only('email', 'password'))) {
+        if(Auth::attempt($request->only('email','password'))){
             return redirect()->route('admin.dashboard');
         }
 
-        return back()->with('error', 'Email atau password salah');
+        return back()->with('error','Email atau password salah');
 
     })->name('admin.login.process');
 
 
-    Route::get('/dashboard', function () {
-
-        $totalUsers = User::count();
-        $totalProjects = Project::count();
-        $totalCertificates = Certificate::count();
-
-        return view('admin.dashboard', compact(
-            'totalUsers',
-            'totalProjects',
-            'totalCertificates',
-        ));
-
-    })->middleware('auth')->name('admin.dashboard');
-
-
-    Route::post('/logout', function () {
-
+    Route::post('/logout', function(){
         Auth::logout();
         return redirect()->route('home');
-
     })->name('admin.logout');
 
 });
@@ -194,36 +209,69 @@ Route::prefix('admin')->group(function () {
 
 /*
 |--------------------------------------------------------------------------
-| ADMIN PANEL CRUD
+| ADMIN PANEL
 |--------------------------------------------------------------------------
 */
 
-Route::prefix('admin')->middleware('auth')->group(function () {
+Route::prefix('admin')->middleware('auth')->group(function(){
 
-    // Projects
-    Route::resource('projects', ProjectController::class)->names([
-        'index' => 'admin.projects',
-        'create' => 'admin.projects.create',
-        'store' => 'admin.projects.store',
-        'edit' => 'admin.projects.edit',
-        'update' => 'admin.projects.update',
-        'destroy' => 'admin.projects.destroy',
+    Route::get('/dashboard',function(){
+
+        $totalUsers = User::count();
+        $totalProjects = Project::count();
+        $totalCertificates = Certificate::count();
+
+        return view('admin.dashboard',compact(
+            'totalUsers',
+            'totalProjects',
+            'totalCertificates'
+        ));
+
+    })->name('admin.dashboard');
+
+
+    // projects
+    Route::resource('projects',ProjectController::class)->names([
+        'index'=>'admin.projects',
+        'create'=>'admin.projects.create',
+        'store'=>'admin.projects.store',
+        'edit'=>'admin.projects.edit',
+        'update'=>'admin.projects.update',
+        'destroy'=>'admin.projects.destroy',
     ]);
 
-    // Certificates
-    Route::resource('certificates', CertificateController::class)->names([
-        'index' => 'admin.certificates',
-        'create' => 'admin.certificates.create',
-        'store' => 'admin.certificates.store',
-        'edit' => 'admin.certificates.edit',
-        'update' => 'admin.certificates.update',
-        'destroy' => 'admin.certificates.destroy',
+
+    // certificates
+    Route::resource('certificates',CertificateController::class)->names([
+        'index'=>'admin.certificates',
+        'create'=>'admin.certificates.create',
+        'store'=>'admin.certificates.store',
+        'edit'=>'admin.certificates.edit',
+        'update'=>'admin.certificates.update',
+        'destroy'=>'admin.certificates.destroy',
     ]);
 
-    // Static Pages
-    Route::view('/messages', 'admin.messages')->name('admin.messages');
-    Route::view('/reports', 'admin.reports')->name('admin.reports');
-    Route::view('/settings', 'admin.settings')->name('admin.settings');
-    Route::view('/users', 'admin.users')->name('admin.users');
 
+    // profile
+    Route::get('/profile',[AdminProfileController::class,'index'])
+        ->name('admin.profile');
+
+    Route::post('/profile/update',[AdminProfileController::class,'update'])
+        ->name('admin.profile.update');
+
+
+    // contacts
+    Route::get('/contacts',[AdminContactController::class,'index'])
+        ->name('admin.contacts');
+
+
+    // users
+    Route::get('/users',[AdminUserController::class,'index'])
+        ->name('admin.users');
+
+
+    // static pages
+    Route::view('/messages','admin.messages')->name('admin.messages');
+    Route::view('/reports','admin.reports')->name('admin.reports');
+    Route::view('/settings','admin.settings')->name('admin.settings');
 });

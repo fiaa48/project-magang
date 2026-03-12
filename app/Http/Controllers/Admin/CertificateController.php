@@ -8,9 +8,14 @@ use Illuminate\Http\Request;
 
 class CertificateController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-        $certificates = Certificate::all();
+        $search = $request->search;
+
+        $certificates = Certificate::when($search, function ($query) use ($search) {
+            $query->where('name','like','%'.$search.'%');
+        })->latest()->get();
+
         return view('admin.certificates.index', compact('certificates'));
     }
 
@@ -18,23 +23,20 @@ class CertificateController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            'type' => 'required',
-            'year' => 'required',
-            'file' => 'required|image'
+            'image' => 'required|image'
         ]);
 
-        $file = $request->file('file')->store('certificates', 'public');
+        $path = $request->file('image')->store('certificates','public');
 
         Certificate::create([
             'name' => $request->name,
+            'image' => 'storage/'.$path,
             'type' => $request->type,
-            'year' => $request->year,
-            'file' => $file
+            'year' => $request->year
         ]);
 
-        return back()->with('success','Sertifikat berhasil ditambahkan');
+        return redirect()->back()->with('success','Sertifikat berhasil ditambahkan');
     }
-
     public function create()
     {
         return view('admin.certificates.create');
@@ -56,5 +58,14 @@ class CertificateController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Certificate updated');
+    }
+
+    public function destroy($id)
+    {
+        $certificate = Certificate::findOrFail($id);
+
+        $certificate->delete();
+
+        return redirect()->back()->with('success','Sertifikat berhasil dihapus');
     }
 }

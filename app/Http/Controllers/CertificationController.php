@@ -9,34 +9,39 @@ class CertificationController extends Controller
 {
     public function index()
     {
-        $certificates = Certificate::latest()->get();
-        return view('certifications.index', compact('certificates'));
+        return view('certifications.index');
     }
 
-    // Gunakan 1 method untuk semua tipe
-    public function show($type)
+    // menampilkan list sertifikat berdasarkan type
+    public function category($type)
     {
-        $certificates = Certificate::where('type', $type)
-            ->latest()
-            ->get();
+        $certificates = Certificate::where('type',$type)->get();
 
-        return view('certifications.index', compact('certificates', 'type'));
+        return view('certifications.list', compact('certificates','type'));
+    }
+
+    // menampilkan sertifikat yang dipilih
+    public function show($id)
+    {
+        $certificate = Certificate::findOrFail($id);
+
+        return view('certifications.view', compact('certificate'));
     }
 
     public function download($id)
-{
-    $certificate = Certificate::findOrFail($id);
+    {
+        $certificate = Certificate::findOrFail($id);
 
-    $filePath = storage_path('app/public/'.$certificate->file);
+        $filePath = storage_path('app/public/'.$certificate->image);
 
-    if (!file_exists($filePath)) {
-        abort(404);
+        if (!file_exists($filePath)) {
+            abort(404);
+        }
+
+        $pdf = Pdf::loadView('certifications.pdf', [
+            'image' => $filePath
+        ]);
+
+        return $pdf->download($certificate->name . '.pdf');
     }
-
-    $pdf = Pdf::loadView('certifications.pdf', [
-        'image' => $filePath
-    ]);
-
-    return $pdf->download($certificate->name . '.pdf');
-}
 }

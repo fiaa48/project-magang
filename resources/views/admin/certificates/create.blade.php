@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -87,21 +88,13 @@ background:#6b4f3a;
 <select name="type" class="form-control" required>
 
 <option value="">Pilih Jenis</option>
-
 <option value="ISO">ISO</option>
-
 <option value="NIB">NIB</option>
-
 <option value="NPWP">NPWP</option>
-
 <option value="SPT">SPT</option>
-
 <option value="SERTIFIKAT STANDAR">SERTIFIKAT STANDAR</option>
-
 <option value="SBU NON KONSTRUKSI">SBU NON KONSTRUKSI</option>
-
 <option value="SBU KONSTRUKSI">SBU KONSTRUKSI</option>
-
 
 </select>
 </div>
@@ -112,30 +105,20 @@ background:#6b4f3a;
 <input type="number" name="year" class="form-control" required>
 </div>
 
-<!-- KETERANGAN -->
-<div class="form-group">
-<label class="form-label">Keterangan</label>
-<input type="text" name="description" class="form-control">
-</div>
-
 <!-- FILE -->
 <div class="form-group">
 <label class="form-label">Upload Sertifikat</label>
-<input type="file" name="file" class="form-control" required>
+<input type="file" name="image" class="form-control" required>
 </div>
 
 <br>
 
 <a href="{{ route('admin.certificates') }}" class="btn btn-secondary">
-
 Kembali
-
 </a>
 
 <button type="submit" class="btn btn-primary">
-
 Simpan Sertifikat
-
 </button>
 
 </form>

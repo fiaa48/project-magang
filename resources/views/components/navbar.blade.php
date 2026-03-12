@@ -62,74 +62,12 @@
                     </a>
                 </li>
 
-                <li class="nav-item dropdown mx-1">
-    <a class="nav-link nav-link-custom dropdown-toggle {{ request()->is('certifications*') ? 'active' : '' }}"
-       href="#"
-       role="button"
-       data-bs-toggle="dropdown">
-        Sertifikasi
-    </a>
-
-    <ul class="dropdown-menu">
-        <li>
-            <a class="dropdown-item"
-               href="{{ route('certifications.index') }}">
-               Semua
-            </a>
-        </li>
-
-        <li><hr class="dropdown-divider"></li>
-
-        <li>
-            <a class="dropdown-item"
-               href="{{ route('certifications.show', 'sbu-non-konstruksi') }}">
-               SBU Non Konstruksi
-            </a>
-        </li>
-
-        <li>
-            <a class="dropdown-item"
-               href="{{ route('certifications.show', 'sbu-konstruksi') }}">
-               SBU Konstruksi
-            </a>
-        </li>
-
-        <li>
-            <a class="dropdown-item"
-               href="{{ route('certifications.show', 'iso') }}">
-               ISO
-            </a>
-        </li>
-
-        <li>
-            <a class="dropdown-item"
-               href="{{ route('certifications.show', 'nib') }}">
-               NIB
-            </a>
-        </li>
-
-        <li>
-            <a class="dropdown-item"
-               href="{{ route('certifications.show', 'sertifikat-standar') }}">
-               Sertifikat Standar
-            </a>
-        </li>
-
-        <li>
-            <a class="dropdown-item"
-               href="{{ route('certifications.show', 'spt') }}">
-               SPT
-            </a>
-        </li>
-
-        <li>
-            <a class="dropdown-item"
-               href="{{ route('certifications.show', 'npwp') }}">
-               NPWP
-            </a>
-        </li>
-    </ul>
-</li>
+                <li class="nav-item mx-1">
+                    <a class="nav-link nav-link-custom {{ request()->is('certifications*') ? 'active' : '' }}"
+                    href="{{ route('certifications.index') }}">
+                        Sertifikasi
+                    </a>
+                </li>
 
                 <li class="nav-item mx-1">
                     <a class="nav-link nav-link-custom {{ request()->is('management') ? 'active' : '' }}" href="{{ route('management') }}">
