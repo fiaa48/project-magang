@@ -1,410 +1,352 @@
-<!DOCTYPE html>
-<html lang="id">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Sertifikat — Admin</title>
+@extends('admin.layouts.app')
 
-    <!-- Bootstrap 5.3 -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome 6 -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+@section('title', 'Edit Sertifikasi Perusahaan - Admin')
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+@push('styles')
+<style>
+    :root { --brown-dark:#171247; --brown-medium:#241b64; --brown-light:#4b3dad; --white:#fff; --gold:#D4AF37; --gold-light:#F3E5AB; --shadow-md:0 20px 30px -12px rgba(0,0,0,.1),0 8px 12px rgba(0,0,0,.05); }
+    body { background:linear-gradient(145deg,#F9F5EF 0%,#FDF9F4 100%); }
+    .page-header-premium { margin-bottom:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .page-title-premium { font-size:2rem; font-weight:800; background:linear-gradient(135deg,var(--brown-dark),var(--brown-medium)); -webkit-background-clip:text; background-clip:text; color:transparent; display:inline-flex; align-items:center; gap:.75rem; }
+    .page-title-premium i { background:linear-gradient(135deg,var(--gold),#B8860B); -webkit-background-clip:text; background-clip:text; color:transparent; font-size:2.2rem; }
+    .card-ultra { background:var(--white); border-radius:2rem; border:none; box-shadow:var(--shadow-md); overflow:hidden; position:relative; }
+    .card-ultra::before { content:''; position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,var(--gold),var(--brown-light),var(--gold)); z-index:2; }
+    .form-group-premium { margin-bottom:1.5rem; }
+    .form-label-premium { font-weight:700; color:var(--brown-dark); margin-bottom:.5rem; display:flex; align-items:center; gap:.5rem; font-size:.9rem; }
+    .form-label-premium i { color:var(--gold); width:1.25rem; }
+    .input-group-premium { position:relative; }
+    .input-group-premium .input-icon { position:absolute; left:1rem; top:50%; transform:translateY(-50%); color:var(--gold); pointer-events:none; z-index:2; }
+    .form-control-premium { background:#fff; border:1px solid rgba(36,27,100,.14); border-radius:1rem; padding:.85rem 1.2rem .85rem 2.8rem; font-size:.95rem; color:var(--brown-dark); width:100%; transition:all .25s; }
+    .form-control-premium:focus { border-color:var(--gold); outline:none; box-shadow:0 0 0 4px rgba(212,175,55,.18); }
+    textarea.form-control-premium { padding-top: .85rem; padding-bottom: .85rem; resize: vertical; min-height: 100px; }
+    .btn-premium-ultra { background:linear-gradient(105deg,var(--brown-dark),#241b64); border:none; border-radius:60px; padding:.85rem 2rem; font-weight:700; color:white; display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; transition: all 0.2s; }
+    .btn-premium-ultra:hover { color:var(--gold-light); transform: translateY(-2px); box-shadow:0 10px 20px rgba(0,0,0,0.1); }
+    .btn-outline-premium { background:transparent; border:1px solid var(--brown-dark); border-radius:60px; padding:.85rem 2rem; font-weight:600; color:var(--brown-dark); display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; transition: all 0.2s; }
+    .btn-outline-premium:hover { background:var(--brown-dark); color:white; }
+    .alert-premium { background:#FFF2F0; border-left:5px solid #D32F2F; border-radius:1rem; padding:1rem 1.2rem; color:#B71C1C; margin-bottom:1.5rem; }
+    .section-title-small { font-size: 1.2rem; font-weight: 700; margin: 1.5rem 0 1rem 0; color: var(--brown-dark); border-left: 4px solid var(--gold); padding-left: 1rem; }
+</style>
+@endpush
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #faf6f2;
-            color: #3e3a37;
-            line-height: 1.5;
-        }
+@section('content')
+<div class="container-fluid px-0 px-lg-2 py-3">
+    <div class="page-header-premium">
+        <div class="page-title-premium">
+            <i class="fas fa-edit"></i>
+            <span>Edit Data Sertifikasi</span>
+        </div>
+    </div>
 
-        .container {
-            max-width: 680px;
-            padding: 0 24px;
-        }
+    <div class="card-ultra">
+        <div class="card-body p-4 p-lg-5">
+            @if ($errors->any())
+                <div class="alert-premium">
+                    <strong>Periksa kembali data Anda:</strong>
+                    <ul class="mb-0 mt-2 ps-3">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
 
-        /* ===== HEADER MINIMALIS ===== */
-        .page-header {
-            background: #8b6b4d;
-            padding: 1.5rem 0;
-            margin-bottom: 2rem;
-        }
+            <form action="{{ route('admin.certificates.update', $certificate->id) }}" method="POST">
+                @csrf
+                @method('PUT')
 
-        .header-content {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-briefcase"></i> SIUJK</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-briefcase input-icon"></i>
+                                <input type="text" name="siujk" value="{{ old('siujk', $certificate->siujk) }}" class="form-control-premium" placeholder="Izin Usaha Jasa Konstruksi">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        .header-icon {
-            width: 48px;
-            height: 48px;
-            background: #a5856b;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 1.4rem;
-        }
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-store"></i> SIUP</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-store input-icon"></i>
+                                <input type="text" name="siup" value="{{ old('siup', $certificate->siup) }}" class="form-control-premium" placeholder="Surat Izin Usaha Perdagangan">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-chart-line"></i> PKP</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-chart-line input-icon"></i>
+                                <input type="text" name="pkp" value="{{ old('pkp', $certificate->pkp) }}" class="form-control-premium" placeholder="Nomor Pengukuhan PKP">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        .header-text h1 {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin: 0;
-            color: white;
-            letter-spacing: -0.02em;
-        }
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-file-invoice"></i> SKT Pajak</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-file-invoice input-icon"></i>
+                                <input type="text" name="skt_pajak" value="{{ old('skt_pajak', $certificate->skt_pajak) }}" class="form-control-premium" placeholder="Nomor SKT / NPWP">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-calendar-check"></i> Bukti SPT Tahunan</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-calendar-check input-icon"></i>
+                                <input type="text" name="bukti_spt" value="{{ old('bukti_spt', $certificate->bukti_spt) }}" class="form-control-premium" placeholder="Contoh: SPT 1771 Tahun Pajak 2024, nihil">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        .header-text p {
-            margin: 2px 0 0;
-            color: #f0e4dc;
-            font-size: 0.8rem;
-        }
+                <div class="form-group-premium">
+                    <label class="form-label-premium"><i class="fas fa-hard-hat"></i> SBU Konstruksi</label>
+                    <div class="input-group-premium">
+                        <i class="fas fa-hard-hat input-icon"></i>
+                        <textarea name="sbu_konstruksi" class="form-control-premium" rows="3" placeholder="Contoh: AL001, AL002, AL003, AL004, AR001, AR002, AR003, RK001, RK002, RK003, RK005">{{ old('sbu_konstruksi', $certificate->sbu_konstruksi) }}</textarea>
+                    </div>
+                    <small class="text-muted">Pisahkan dengan koma atau baris baru</small>
+                </div>
 
-        /* ===== FORM CARD ===== */
-        .form-card {
-            background: white;
-            border-radius: 20px;
-            border: 1px solid #eae1d9;
-            padding: 2rem 2rem;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02);
-            margin-bottom: 1.5rem;
-        }
+                <div class="form-group-premium">
+                    <label class="form-label-premium"><i class="fas fa-chalkboard-user"></i> SBU Non-Konstruksi</label>
+                    <div class="input-group-premium">
+                        <i class="fas fa-chalkboard-user input-icon"></i>
+                        <textarea name="sbu_non_konstruksi" class="form-control-premium" rows="3" placeholder="Pertanian, Transportasi, Telematika, Manajemen, Jasa Khusus, Studi/Penelitian, Survey">{{ old('sbu_non_konstruksi', $certificate->sbu_non_konstruksi) }}</textarea>
+                    </div>
+                </div>
 
-        /* ===== FORM GROUP ===== */
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
+                <div class="form-group-premium">
+                    <label class="form-label-premium"><i class="fas fa-certificate"></i> Sertifikat ISO</label>
+                    <div class="input-group-premium">
+                        <i class="fas fa-certificate input-icon"></i>
+                        <textarea name="iso" class="form-control-premium" rows="2" placeholder="Misal: ISO 9001:2015, nomor sertifikat, dan tahun">{{ old('iso', $certificate->iso) }}</textarea>
+                    </div>
+                </div>
 
-        .form-label {
-            font-weight: 500;
-            font-size: 0.85rem;
-            color: #5e4e44;
-            margin-bottom: 0.5rem;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+                <div class="form-group-premium">
+                    <label class="form-label-premium"><i class="fas fa-star-of-life"></i> Sertifikasi Baru (Tambahan)</label>
+                    <div class="input-group-premium">
+                        <i class="fas fa-star-of-life input-icon"></i>
+                        <input type="text" name="sertifikasi_baru" value="{{ old('sertifikasi_baru', $certificate->sertifikasi_baru) }}" class="form-control-premium" placeholder="Informasi sertifikasi terbaru lainnya">
+                    </div>
+                </div>
 
-        .form-label i {
-            color: #8b6b4d;
-            font-size: 0.8rem;
-            width: 18px;
-            text-align: center;
-        }
+                <!-- ======== TIGA KOLOM AKTA YANG DITAMBAHKAN ======== -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-file-alt"></i> Akta Pendirian</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-file-alt input-icon"></i>
+                                <input type="text" name="akta_pendirian" value="{{ old('akta_pendirian', $certificate->akta_pendirian) }}" class="form-control-premium" placeholder="Nomor & tanggal Akta Pendirian">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-file-contract"></i> Akta Perubahan</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-file-contract input-icon"></i>
+                                <input type="text" name="akta_perubahan" value="{{ old('akta_perubahan', $certificate->akta_perubahan) }}" class="form-control-premium" placeholder="Nomor & tanggal Akta Perubahan terakhir">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-check-circle"></i> Pengesahan AHU</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-check-circle input-icon"></i>
+                                <input type="text" name="pengesahan_ahu" value="{{ old('pengesahan_ahu', $certificate->pengesahan_ahu) }}" class="form-control-premium" placeholder="Nomor & tanggal Pengesahan AHU">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- =========================================== -->
 
-        .form-label .required {
-            color: #b34a4a;
-            font-size: 0.7rem;
-            margin-left: 4px;
-        }
-
-        .form-control {
-            border: 1px solid #e0d6ce;
-            border-radius: 12px;
-            padding: 0.7rem 1.2rem;
-            font-size: 0.95rem;
-            color: #2c2a27;
-            background: white;
-            transition: all 0.2s;
-        }
-
-        .form-control:focus {
-            border-color: #b08968;
-            box-shadow: 0 0 0 3px rgba(176, 137, 104, 0.08);
-            outline: none;
-        }
-
-        .form-control::placeholder {
-            color: #bbb0a8;
-            font-size: 0.9rem;
-        }
-
-        /* ===== FORM ROW ===== */
-        .form-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.25rem;
-        }
-
-        /* ===== INFO CARD ===== */
-        .info-card {
-            background: #f8f4f0;
-            border-radius: 16px;
-            padding: 1rem 1.25rem;
-            margin-bottom: 1.5rem;
-            border: 1px solid #eae1d9;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .info-icon {
-            width: 40px;
-            height: 40px;
-            background: white;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #8b6b4d;
-            font-size: 1.1rem;
-            border: 1px solid #e0d6ce;
-        }
-
-        .info-text {
-            font-size: 0.9rem;
-            color: #5e4e44;
-        }
-
-        .info-text strong {
-            color: #3e3a37;
-        }
-
-        /* ===== ACTION BUTTONS ===== */
-        .form-actions {
-            display: flex;
-            gap: 1rem;
-            justify-content: flex-end;
-            margin-top: 1.5rem;
-        }
-
-        .btn {
-            padding: 0.7rem 1.8rem;
-            border-radius: 40px;
-            font-weight: 500;
-            font-size: 0.9rem;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            transition: all 0.2s;
-            border: none;
-        }
-
-        .btn-primary {
-            background: #8b6b4d;
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: #6b4f3a;
-            color: white;
-        }
-
-        .btn-secondary {
-            background: #f2ebe5;
-            color: #5e4e44;
-            border: 1px solid #e0d6ce;
-        }
-
-        .btn-secondary:hover {
-            background: #e8dcd2;
-            color: #3e3a37;
-        }
-
-        .btn i {
-            font-size: 0.85rem;
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 20px;
-            }
-
-            .form-card {
-                padding: 1.5rem;
-            }
-
-            .form-row {
-                grid-template-columns: 1fr;
-                gap: 0;
-            }
-
-            .form-actions {
-                flex-direction: column;
-            }
-
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
-
-        /* ===== ANIMATION ===== */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(5px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        .animate-in {
-            animation: fadeIn 0.3s ease;
-        }
-
-        /* ===== CURRENT VALUE TAG ===== */
-        .current-value {
-            display: inline-block;
-            background: #f5efea;
-            padding: 0.2rem 0.8rem;
-            border-radius: 30px;
-            font-size: 0.7rem;
-            color: #6b4f3a;
-            margin-left: 8px;
-            border: 1px solid #e0d6ce;
-        }
-    </style>
-</head>
-<body>
-
-<!-- HEADER -->
-<div class="page-header">
-    <div class="container">
-        <div class="header-content">
-            <div class="header-icon">
-                <i class="fas fa-certificate"></i>
-            </div>
-            <div class="header-text">
-                <h1>Edit Sertifikat</h1>
-                <p>Perbarui informasi sertifikat</p>
-            </div>
+                <div class="d-flex flex-wrap justify-content-between gap-3 mt-4 pt-3">
+                    <a href="{{ route('admin.certificates.index') }}" class="btn-outline-premium"><i class="fas fa-arrow-left"></i> Batal</a>
+                    <button type="submit" class="btn-premium-ultra"><i class="fas fa-save"></i> Perbarui Sertifikasi</button>
+                </div>
+            </form>
         </div>
     </div>
 </div>
+@endsection
 
-<div class="container mb-5 animate-in">
-    <div class="form-card">
-        <form action="{{ route('admin.certificates.update', $certificate->id) }}" method="POST">
-            @csrf
-            @method('PUT')
+{{-- @extends('admin.layouts.app')
 
-            <!-- INFO CARD - DATA LAMA -->
-            <div class="info-card">
-                <div class="info-icon">
-                    <i class="fas fa-info"></i>
-                </div>
-                <div class="info-text">
-                    <strong>ID: {{ $certificate->id }}</strong> ·
-                    Dibuat: {{ $certificate->created_at ? date('d M Y', strtotime($certificate->created_at)) : '-' }}
-                </div>
-            </div>
+@section('title', 'Edit Sertifikat - Admin')
 
-            <!-- NAMA SERTIFIKAT -->
-            <div class="form-group">
-                <label class="form-label">
-                    <i class="fas fa-tag"></i>
-                    Nama Sertifikat
-                    <span class="required">*</span>
-                </label>
-                <input type="text"
-                       name="name"
-                       value="{{ $certificate->name }}"
-                       class="form-control"
-                       placeholder="Contoh: Sertifikat ISO 9001"
-                       required>
-                <div style="font-size: 0.7rem; color: #9c8e85; margin-top: 6px; display: flex; align-items: center; gap: 6px;">
-                    <i class="fas fa-info-circle" style="color: #b08968;"></i>
-                    Edit nama sertifikat sesuai dokumen
-                </div>
-            </div>
+@push('styles')
+<style>
+    :root { --brown-dark:#171247; --brown-medium:#241b64; --brown-light:#4b3dad; --white:#fff; --gold:#D4AF37; --gold-light:#F3E5AB; --shadow-md:0 20px 30px -12px rgba(0,0,0,.1),0 8px 12px rgba(0,0,0,.05); }
+    body { background:linear-gradient(145deg,#F9F5EF 0%,#FDF9F4 100%); }
+    .page-header-premium { margin-bottom:2rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+    .page-title-premium { font-size:2rem; font-weight:800; background:linear-gradient(135deg,var(--brown-dark),var(--brown-medium)); -webkit-background-clip:text; background-clip:text; color:transparent; display:inline-flex; align-items:center; gap:.75rem; }
+    .page-title-premium i { background:linear-gradient(135deg,var(--gold),#B8860B); -webkit-background-clip:text; background-clip:text; color:transparent; font-size:2.2rem; }
+    .card-ultra { background:var(--white); border-radius:2rem; border:none; box-shadow:var(--shadow-md); overflow:hidden; position:relative; }
+    .card-ultra::before { content:''; position:absolute; top:0; left:0; right:0; height:6px; background:linear-gradient(90deg,var(--gold),var(--brown-light),var(--gold)); z-index:2; }
+    .form-group-premium { margin-bottom:1.5rem; }
+    .form-label-premium { font-weight:700; color:var(--brown-dark); margin-bottom:.5rem; display:flex; align-items:center; gap:.5rem; font-size:.9rem; }
+    .form-label-premium i { color:var(--gold); width:1.25rem; }
+    .input-group-premium { position:relative; }
+    .input-group-premium .input-icon { position:absolute; left:1rem; top:50%; transform:translateY(-50%); color:var(--gold); pointer-events:none; z-index:2; }
+    .form-control-premium { background:#fff; border:1px solid rgba(36,27,100,.14); border-radius:1rem; padding:.85rem 1.2rem .85rem 2.8rem; font-size:.95rem; color:var(--brown-dark); width:100%; transition:all .25s; }
+    .form-control-premium:focus { border-color:var(--gold); outline:none; box-shadow:0 0 0 4px rgba(212,175,55,.18); }
+    textarea.form-control-premium { padding-top: .85rem; padding-bottom: .85rem; resize: vertical; min-height: 100px; }
+    .btn-premium-ultra { background:linear-gradient(105deg,var(--brown-dark),#241b64); border:none; border-radius:60px; padding:.85rem 2rem; font-weight:700; color:white; display:inline-flex; align-items:center; gap:.6rem; text-decoration:none; transition: all 0.2s; }
+    .btn-premium-ultra:hover { color:var(--gold-light); transform: translateY(-2px); box-shadow:0 10px 20px rgba(0,0,0,0.1); }
+    .btn-outline-premium { background:transparent; border:1px solid var(--brown-dark); border-radius:60px; padding:.85rem 2rem; font-weight:600; color:var(--brown-dark); display:inline-flex; align-items:center; gap:.5rem; text-decoration:none; transition: all 0.2s; }
+    .btn-outline-premium:hover { background:var(--brown-dark); color:white; }
+    .alert-premium { background:#FFF2F0; border-left:5px solid #D32F2F; border-radius:1rem; padding:1rem 1.2rem; color:#B71C1C; margin-bottom:1.5rem; }
+</style>
+@endpush
 
-            <!-- JENIS & TAHUN -->
-            <div class="form-row">
-                <div class="form-group">
-                    <label class="form-label">
-                        <i class="fas fa-clipboard-list"></i>
-                        Jenis Sertifikat
-                        <span class="required">*</span>
-                    </label>
-                    <input type="text"
-                           name="type"
-                           value="{{ $certificate->type }}"
-                           class="form-control"
-                           placeholder="Contoh: ISO, SNI, dll"
-                           required>
-                </div>
-
-                <div class="form-group">
-                    <label class="form-label">
-                        <i class="fas fa-calendar"></i>
-                        Tahun Terbit
-                        <span class="required">*</span>
-                    </label>
-                    <input type="number"
-                           name="year"
-                           value="{{ $certificate->year }}"
-                           class="form-control"
-                           placeholder="{{ date('Y') }}"
-                           min="2000"
-                           max="{{ date('Y') + 5 }}"
-                           required>
-                </div>
-            </div>
-
-            <!-- ACTION BUTTONS -->
-            <div class="form-actions">
-                <a href="{{ route('admin.certificates') }}" class="btn btn-secondary">
-                    <i class="fas fa-arrow-left"></i>
-                    Kembali
-                </a>
-                <button type="submit" class="btn btn-primary">
-                    <i class="fas fa-save"></i>
-                    Update Sertifikat
-                </button>
-            </div>
-
-        </form>
+@section('content')
+<div class="container-fluid px-0 px-lg-2 py-3">
+    <div class="page-header-premium">
+        <div class="page-title-premium">
+            <i class="fas fa-edit"></i>
+            <span>Edit Sertifikat</span>
+        </div>
     </div>
 
-    <!-- FOOTER NOTE -->
-    <div class="text-center mt-3">
-        <span style="color: #9c8e85; font-size: 0.7rem;">
-            <i class="fas fa-shield-alt me-1" style="color: #b08968;"></i>
-            Perubahan akan langsung tersimpan
-        </span>
+    <div class="card-ultra">
+        <div class="card-body p-4 p-lg-5">
+            @if ($errors->any())
+                <div class="alert-premium">
+                    <strong>Periksa kembali data Anda:</strong>
+                    <ul class="mb-0 mt-2 ps-3">
+                        @foreach ($errors->all() as $error)
+                            <li>{{ $error }}</li>
+                        @endforeach
+                    </ul>
+                </div>
+            @endif
+
+            <form action="{{ route('admin.certificates.update', $certificate->id) }}" method="POST">
+                @csrf
+                @method('PUT')
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-tag"></i> Jenis Sertifikat</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-tag input-icon"></i>
+                                <input type="text" name="jenis_sertifikat" value="{{ old('jenis_sertifikat', $certificate->jenis_sertifikat) }}" class="form-control-premium" required>
+                            </div>
+                            <small class="text-muted">Contoh: Sertifikat Standar, SBU Konstruksi, ISO, NIB, NPWP, dll</small>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-hashtag"></i> Nomor Sertifikat</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-hashtag input-icon"></i>
+                                <input type="text" name="nomor_sertifikat" value="{{ old('nomor_sertifikat', $certificate->nomor_sertifikat) }}" class="form-control-premium" required>
+                            </div>
+                            <small class="text-muted">Nomor unik dokumen</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-heading"></i> Nama Sertifikat</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-heading input-icon"></i>
+                                <input type="text" name="nama_sertifikat" value="{{ old('nama_sertifikat', $certificate->nama_sertifikat) }}" class="form-control-premium" placeholder="Judul / nama dokumen">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-building"></i> Penerbit</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-building input-icon"></i>
+                                <input type="text" name="penerbit" value="{{ old('penerbit', $certificate->penerbit) }}" class="form-control-premium" placeholder="Instansi penerbit">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-calendar-alt"></i> Tanggal Terbit</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-calendar-alt input-icon"></i>
+                                <input type="date" name="tanggal_terbit" value="{{ old('tanggal_terbit', $certificate->tanggal_terbit) }}" class="form-control-premium">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-hourglass-end"></i> Berlaku Sampai</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-hourglass-end input-icon"></i>
+                                <input type="date" name="tanggal_berlaku_sampai" value="{{ old('tanggal_berlaku_sampai', $certificate->tanggal_berlaku_sampai) }}" class="form-control-premium">
+                            </div>
+                            <small class="text-muted">Kosongkan jika tidak terbatas</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-chart-simple"></i> Kualifikasi</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-chart-simple input-icon"></i>
+                                <input type="text" name="kualifikasi" value="{{ old('kualifikasi', $certificate->kualifikasi) }}" class="form-control-premium" placeholder="Contoh: Kecil, Menengah Tinggi, dll">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group-premium">
+                            <label class="form-label-premium"><i class="fas fa-barcode"></i> Kode KBLI</label>
+                            <div class="input-group-premium">
+                                <i class="fas fa-barcode input-icon"></i>
+                                <input type="text" name="kode_kbli" value="{{ old('kode_kbli', $certificate->kode_kbli) }}" class="form-control-premium" placeholder="Contoh: 71101">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-premium">
+                    <label class="form-label-premium"><i class="fas fa-globe"></i> Lingkup (Scope)</label>
+                    <div class="input-group-premium">
+                        <i class="fas fa-globe input-icon"></i>
+                        <textarea name="scope" class="form-control-premium" rows="3" placeholder="Deskripsi ruang lingkup sertifikat">{{ old('scope', $certificate->scope) }}</textarea>
+                    </div>
+                </div>
+
+                <div class="form-group-premium">
+                    <label class="form-label-premium"><i class="fas fa-info-circle"></i> Keterangan</label>
+                    <div class="input-group-premium">
+                        <i class="fas fa-info-circle input-icon"></i>
+                        <textarea name="keterangan" class="form-control-premium" rows="2" placeholder="Catatan tambahan (opsional)">{{ old('keterangan', $certificate->keterangan) }}</textarea>
+                    </div>
+                </div>
+
+                <div class="d-flex flex-wrap justify-content-between gap-3 mt-4 pt-3">
+                    <a href="{{ route('admin.certificates.index') }}" class="btn-outline-premium"><i class="fas fa-arrow-left"></i> Batal</a>
+                    <button type="submit" class="btn-premium-ultra"><i class="fas fa-save"></i> Perbarui Sertifikat</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-
-<!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-<script>
-    // Auto format tahun
-    document.querySelector('input[name="year"]')?.addEventListener('input', function() {
-        let year = parseInt(this.value);
-        let currentYear = new Date().getFullYear();
-
-        if (year < 2000) {
-            this.value = 2000;
-        } else if (year > currentYear + 5) {
-            this.value = currentYear + 5;
-        }
-    });
-
-    // Confirm sebelum keluar jika ada perubahan (opsional)
-    let formChanged = false;
-    document.querySelectorAll('input').forEach(input => {
-        input.addEventListener('input', function() {
-            formChanged = true;
-        });
-    });
-
-    document.querySelector('.btn-secondary')?.addEventListener('click', function(e) {
-        if (formChanged) {
-            if (!confirm('Ada perubahan yang belum disimpan. Yakin ingin kembali?')) {
-                e.preventDefault();
-            }
-        }
-    });
-</script>
-
-</body>
-</html>
+@endsection --}}

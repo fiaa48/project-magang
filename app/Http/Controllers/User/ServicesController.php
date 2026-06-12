@@ -1,272 +1,144 @@
 <?php
 
-namespace App\Http\Controllers\user;
-use App\Http\Controllers\Controller;
+namespace App\Http\Controllers\User;
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Service;
 
 class ServicesController extends Controller
 {
     public function index()
     {
-        $constructionServices = [
-            [
-                'title' => 'Jasa Arsitektural',
-                'description' => 'Desain arsitektur untuk bangunan hunian dan non-hunian dengan konsep inovatif.',
-                'icon' => 'fas fa-drafting-compass',
-                'route' => 'services.architectural',
-                'sub_services' => [
-                    'Jasa Arsitektural Bangunan Gedung Hunian dan Non Hunian (AR001)',
-                    'Jasa Arsitektural Lainnya (AR002)',
-                    'Jasa Desain Interior (AR003)'
-                ]
-            ],
-            [
-                'title' => 'Jasa Rekayasa Konstruksi',
-                'description' => 'Desain rekayasa struktur untuk berbagai jenis bangunan dan infrastruktur.',
-                'icon' => 'fas fa-hard-hat',
-                'route' => 'services.engineering',
-                'sub_services' => [
-                    'Rekayasa Bangunan Gedung (RK001)',
-                    'Rekayasa Teknik Sipil Sumber Daya Air (RK002)',
-                    'Rekayasa Teknik Sipil Transportasi (RK003)'
-                ]
-            ],
-            [
-                'title' => 'Jasa Pengembangan Wilayah',
-                'description' => 'Perencanaan tata ruang wilayah dan pengembangan kawasan terpadu.',
-                'icon' => 'fas fa-map-marked-alt',
-                'route' => 'services.construction',
-                'sub_services' => [
-                    'Pengembangan Pemanfaatan Ruang (AL001)',
-                    'Pengembangan Wilayah (AL002)',
-                    'Pengembangan Perkotaan (AL003)'
-                ]
-            ]
-        ];
+        $constructionServices = $this->sectionData('construction');
+        $constructionConsultancyServices = $this->normalizeDetailServices($this->sectionData('construction_consultancy'));
 
-        $nonConstructionServices = [
-            [
-                'title' => 'Jasa Survey & Penelitian',
-                'description' => 'Layanan survey teristris, penginderaan jauh, dan penelitian berbagai bidang.',
-                'icon' => 'fas fa-search-location',
-                'route' => 'services.non-construction',
-                'sub_services' => [
-                    'Survey Teristris',
-                    'Penginderaan Jauh / Fotogrametri',
-                    'Survey Hidrografi / Batimetri'
-                ]
-            ],
-            [
-                'title' => 'Konsultansi Manajemen',
-                'description' => 'Konsultasi manajemen fungsional, pengembangan SDM, dan sistem akuntansi.',
-                'icon' => 'fas fa-chart-line',
-                'route' => 'services.non-construction',
-                'sub_services' => [
-                    'Perencanaan Sistem Akuntansi',
-                    'Pelatihan dan Pengembangan SDM',
-                    'Konsultasi Manajemen Fungsional'
-                ]
-            ],
-            [
-                'title' => 'Jasa Khusus',
-                'description' => 'Layanan khusus seperti teknologi informasi, penilai, sertifikasi, dan inspeksi.',
-                'icon' => 'fas fa-cogs',
-                'route' => 'services.non-construction',
-                'sub_services' => [
-                    'Jasa Teknologi dan Sistem Informasi',
-                    'Jasa Penilai / Appraisal',
-                    'Jasa Sertifikasi'
-                ]
-            ]
-        ];
-
-        return view('user.services.index', compact('constructionServices', 'nonConstructionServices'));
+        return view('user.services.index', compact('constructionServices', 'constructionConsultancyServices'));
     }
 
     public function constructionConsultancy()
     {
-        $services = [
-            [
-                'code' => 'AR001',
-                'title' => 'Jasa Arsitektural Bangunan Gedung Hunian dan Non Hunian',
-                'description' => 'Jasa asistensi, nasehat, dan rekomendasi mengenai arsitektural dan hal-hal yang terkait dengan arsitektural.',
-                'scope' => [
-                    'Kajian pendahuluan tentang isu-isu seperti site philosophy, tujuan pembangunan',
-                    'Tinjauan lingkungan dan iklim, kebutuhan hunian, batasan biaya',
-                    'Analisa pemilihan lokasi, penjadwalan pelaksanaan konstruksi',
-                    'Nasihat mengenai metode perawatan, renovasi, restorasi, atau recycling bangunan'
-                ],
-                'process' => [
-                    'Desain skematik: penentuan batasan anggaran dan penjadwalan waktu',
-                    'Desain pembangunan: ilustrasi presisi konsep desain',
-                    'Desain akhir: spesifikasi tertulis dan gambar untuk tender dan konstruksi'
-                ]
-            ],
-            [
-                'code' => 'RK001',
-                'title' => 'Jasa Rekayasa Konstruksi Bangunan Gedung Hunian dan Non Hunian',
-                'description' => 'Jasa desain rekayasa struktur untuk load bearing framework dari bangunan perumahan dan komersial.',
-                'scope' => [
-                    'Estimasi biaya spesifikasi dan rencana pendahuluan',
-                    'Rencana akhir, spesifikasi dan estimasi biaya termasuk gambar kerja',
-                    'Spesifikasi material, metode instalasi, batasan waktu',
-                    'Nasihat ahli untuk klien pada saat evaluasi dan penerimaan tender'
-                ]
-            ],
-            [
-                'code' => 'AL002',
-                'title' => 'Jasa Pengembangan Wilayah',
-                'description' => 'Jasa perencanaan tata ruang wilayah nasional, pulau, provinsi, kabupaten, dan kota.',
-                'scope' => [
-                    'Perencanaan tata ruang darat, laut, udara, dan di dalam bumi',
-                    'Pengkajian dan penasehatan dalam penataan ruang wilayah',
-                    'Perencanaan kawasan koridor nasional/provinsi/kabupaten/kota',
-                    'Pengembangan kawasan andalan dan kawasan permukiman'
-                ]
-            ]
-        ];
+        $services = $this->normalizeDetailServices($this->sectionData('construction_consultancy'));
+        $databaseServices = $services;
 
-        return view('user.services.construction_consultancy', compact('services'));
+        return view('user.services.index', compact('services', 'databaseServices'));
     }
 
     public function nonConstructionConsultancy()
     {
-        $services = [
-            [
-                'category' => 'Jasa Survey',
-                'services' => [
-                    'Survey Teristris',
-                    'Penginderaan Jauh / Fotogrametri',
-                    'Survey Hidrografi / Batimetri',
-                    'Sistem Informasi Geografi',
-                    'Survey Registrasi Kepemilikan Tanah / Kadastral',
-                    'Survey Geologi dan Geofisika',
-                    'Survey Pertanian',
-                    'Jasa Survey non Seismik',
-                    'Jasa Survey Geologi dan Geofisika (non seismik)'
-                ]
-            ],
-            [
-                'category' => 'Jasa Studi, Penelitian dan Bantuan Teknis',
-                'services' => [
-                    'Studi Makro',
-                    'Studi Kelayakan & Studi Mikro Lainnya',
-                    'Studi Perencanaan Umum',
-                    'Jasa Penelitian',
-                    'Jasa Bantuan Teknik'
-                ]
-            ],
-            [
-                'category' => 'Jasa Konsultansi Manajemen',
-                'services' => [
-                    'Perencanaan Sistem Akuntansi',
-                    'Pelatihan dan Pengembangan SDM',
-                    'Konsultasi Manajemen Fungsional',
-                    'Konsultasi Hukum Bisnis'
-                ]
-            ],
-            [
-                'category' => 'Jasa Khusus',
-                'services' => [
-                    'Jasa Teknologi dan Sistem Informasi',
-                    'Jasa Penilai / Appraisal / Valuer',
-                    'Jasa Surveyor Independen',
-                    'Jasa Sertifikasi',
-                    'Jasa Inspeksi Teknik',
-                    'Jasa Kehumasan'
-                ]
-            ],
-            [
-                'category' => 'Bidang Khusus',
-                'services' => [
-                    'Pengembangan Pertanian dan Pedesaan',
-                    'Transportasi',
-                    'Telematika'
-                ]
-            ]
-        ];
+        $categories = $this->normalizeCategories($this->sectionData('non_construction_consultancy'));
+        $databaseCategories = $categories;
+        $services = $categories;
+        $nonConstructionServices = $this->sectionData('non_construction');
 
-        return view('user.services.non_construction_consultancy', compact('services'));
+        return view('user.services.non_construction_consultancy', compact('categories', 'databaseCategories', 'services', 'nonConstructionServices'));
     }
 
     public function architectural()
     {
-        $services = [
-            [
-                'code' => 'AR001',
-                'title' => 'Jasa Arsitektural Bangunan Gedung Hunian dan Non Hunian',
-                'description' => 'Layanan desain arsitektur lengkap untuk berbagai jenis bangunan.',
-                'phases' => [
-                    'Phase 1: Desain Skematik' => [
-                        'Penentuan batasan anggaran dan penjadwalan waktu bersama klien',
-                        'Penyiapan sketsa floor plans, site plans, dan exterior views'
-                    ],
-                    'Phase 2: Desain Pembangunan' => [
-                        'Ilustrasi presisi dari konsep desain',
-                        'Detail siting plan, bentuk dan material yang akan digunakan',
-                        'Perencanaan struktur, sistem mekanikal dan elektrikal',
-                        'Estimasi biaya konstruksi'
-                    ],
-                    'Phase 3: Desain Akhir' => [
-                        'Spesifikasi tertulis dan gambar detail',
-                        'Dokumen untuk pelaksanaan tender dan konstruksi',
-                        'Nasihat ahli kepada klien pada saat evaluasi tender'
-                    ]
-                ]
-            ],
-            [
-                'code' => 'AR003',
-                'title' => 'Jasa Desain Interior pada Bangunan Gedung dan Bangunan Sipil',
-                'description' => 'Layanan desain interior yang fungsional dan estetik.',
-                'scope' => [
-                    'Desain interior untuk bangunan komersial, residensial, dan institusi',
-                    'Pemilihan material, furnitur, dan pencahayaan',
-                    'Perencanaan tata ruang interior yang ergonomis',
-                    'Desain khusus untuk kebutuhan aksesibilitas'
-                ]
-            ]
-        ];
+        $services = $this->normalizeDetailServices($this->sectionData('architectural'));
+        $databaseServices = $services;
 
-        return view('user.services.architectural', compact('services'));
+        return view('user.services.architectural', compact('services', 'databaseServices'));
     }
 
     public function engineering()
     {
-        $services = [
-            [
-                'code' => 'RK002',
-                'title' => 'Jasa Rekayasa Pekerjaan Teknik Sipil Sumber Daya Air',
-                'description' => 'Desain rekayasa untuk pekerjaan teknik sipil keairan.',
-                'projects' => [
-                    'Dam dan bendungan',
-                    'Catchment basins',
-                    'Sistem irigasi',
-                    'Pekerjaan pengendalian banjir',
-                    'Pelabuhan',
-                    'Pekerjaan penyaluran air dan sanitasi',
-                    'Sistem saluran air limbah industri'
-                ],
-                'process' => [
-                    'Perencanaan awal, estimasi biaya dan spesifikasi',
-                    'Perencanaan akhir, estimasi biaya dan spesifikasi',
-                    'Gambar teknik, spesifikasi material, metode pemasangan',
-                    'Layanan pada saat fase konstruksi'
-                ]
-            ],
-            [
-                'code' => 'RK003',
-                'title' => 'Jasa Rekayasa Pekerjaan Teknik Sipil Transportasi',
-                'description' => 'Desain rekayasa untuk infrastruktur transportasi.',
-                'projects' => [
-                    'Jembatan dan jalan layang',
-                    'Jalan raya dan jalan tol',
-                    'Struktural health monitoring system untuk jembatan',
-                    'Infrastruktur transportasi publik'
-                ]
-            ]
-        ];
+        $services = $this->normalizeDetailServices($this->sectionData('engineering'));
+        $databaseServices = $services;
 
-        return view('user.services.engineering', compact('services'));
+        return view('user.services.engineering', compact('services', 'databaseServices'));
+    }
+
+    private function sectionData(string $section): array
+    {
+        return Service::where('section', $section)
+            ->orderBy('id')
+            ->get()
+            ->flatMap(function (Service $service) {
+                $data = $service->data;
+
+                if (!is_array($data)) {
+                    return [];
+                }
+
+                return isset($data['title']) && !isset($data[0]) ? [$data] : $data;
+            })
+            ->values()
+            ->all();
+    }
+
+    private function normalizeDetailServices(array $items): array
+    {
+        $colors = ['primary', 'secondary', 'tertiary', 'quaternary'];
+
+        return array_values(array_map(function (array $item, int $index) use ($colors) {
+            $item['icon'] = $item['icon'] ?? $this->iconFor($item);
+            $item['color'] = $item['color'] ?? $colors[$index % count($colors)];
+            $item['features'] = $item['features'] ?? $this->featuresFrom($item);
+
+            return $item;
+        }, $items, array_keys($items)));
+    }
+
+    private function normalizeCategories(array $items): array
+    {
+        $colors = ['agriculture', 'transport', 'telematics', 'survey', 'research', 'management', 'special'];
+
+        return array_values(array_map(function (array $item, int $index) use ($colors) {
+            $item['id'] = $item['id'] ?? $index + 1;
+            $item['icon'] = $item['icon'] ?? $this->iconFor($item);
+            $item['color'] = $item['color'] ?? $colors[$index % count($colors)];
+            $item['description'] = $item['description'] ?? 'Layanan profesional untuk ' . strtolower($item['category'] ?? 'kebutuhan konsultansi') . '.';
+            $item['services'] = $item['services'] ?? [];
+
+            return $item;
+        }, $items, array_keys($items)));
+    }
+
+    private function featuresFrom(array $item): array
+    {
+        if (!empty($item['scope']) && is_array($item['scope'])) {
+            return $item['scope'];
+        }
+
+        if (!empty($item['projects']) && is_array($item['projects'])) {
+            return $item['projects'];
+        }
+
+        if (!empty($item['process']) && is_array($item['process'])) {
+            return $item['process'];
+        }
+
+        if (!empty($item['phases']) && is_array($item['phases'])) {
+            return array_values(array_merge(...array_values($item['phases'])));
+        }
+
+        if (!empty($item['services']) && is_array($item['services'])) {
+            return $item['services'];
+        }
+
+        if (!empty($item['sub_services']) && is_array($item['sub_services'])) {
+            return $item['sub_services'];
+        }
+
+        return [];
+    }
+
+    private function iconFor(array $item): string
+    {
+        $text = strtolower(($item['code'] ?? '') . ' ' . ($item['title'] ?? '') . ' ' . ($item['category'] ?? ''));
+
+        return match (true) {
+            str_contains($text, 'ar') || str_contains($text, 'arsitektur') => 'fas fa-drafting-compass',
+            str_contains($text, 'rk') || str_contains($text, 'rekayasa') => 'fas fa-hard-hat',
+            str_contains($text, 'air') || str_contains($text, 'hidro') => 'fas fa-water',
+            str_contains($text, 'transport') || str_contains($text, 'jalan') || str_contains($text, 'jembatan') => 'fas fa-road',
+            str_contains($text, 'survey') || str_contains($text, 'survei') => 'fas fa-search-location',
+            str_contains($text, 'manajemen') => 'fas fa-chart-line',
+            str_contains($text, 'telematika') || str_contains($text, 'informasi') => 'fas fa-satellite-dish',
+            str_contains($text, 'pertanian') || str_contains($text, 'pedesaan') => 'fas fa-tractor',
+            str_contains($text, 'khusus') => 'fas fa-cogs',
+            default => 'fas fa-list-check',
+        };
     }
 }

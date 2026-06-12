@@ -11,29 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-    Schema::create('projects', function (Blueprint $table) {
-        $table->id();
-        $table->string('title');
-        $table->string('slug')->unique();
-        $table->string('category')->nullable();
-        $table->year('year')->nullable();
-        $table->text('short_description')->nullable();
-        $table->text('description');
-        $table->string('image')->nullable();
-        $table->string('client')->nullable();
-        $table->string('location')->nullable();
-        $table->string('duration')->nullable();
-        $table->string('scope')->nullable();
-        $table->json('sub_services')->nullable();
-        $table->json('certifications')->nullable();
-        $table->json('details')->nullable();
-        $table->json('tags')->nullable();
-        $table->text('testimonial')->nullable();
-        $table->string('start_date')->nullable();
-        $table->string('end_date')->nullable();
-        $table->string('team_size')->nullable();
-        $table->enum('status', ['ongoing','completed','pending'])->default('ongoing');
-        $table->timestamps();
+        Schema::create('projects', function (Blueprint $table) {
+            $table->id();
+            $table->string('title');
+            $table->string('slug')->unique();
+            $table->string('category')->nullable();
+            $table->string('location')->nullable();
+            $table->year('year')->nullable();
+            $table->timestamps();
         });
     }
 

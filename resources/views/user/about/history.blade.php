@@ -6,73 +6,52 @@
 @section('content')
     <!-- HERO SECTION – SAME STYLE AS HOME -->
     <section class="history-hero position-relative overflow-hidden">
-        <!-- Background Pattern (same as home) -->
         <div class="hero-bg-pattern">
             <div class="pattern-circle circle-1"></div>
             <div class="pattern-circle circle-2"></div>
             <div class="pattern-square square-1"></div>
             <div class="pattern-square square-2"></div>
         </div>
-
         <div class="container position-relative z-3">
             <div class="row min-vh-60 align-items-center">
                 <div class="col-lg-8 mx-auto text-center">
-                    <!-- Animated Badge – glassmorphism -->
                     <div class="company-badge mb-5 animate-fade-in-down">
                         <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal">
                             <i class="fas fa-history me-2"></i>SEJARAH KAMI
                         </span>
                     </div>
-
-                    <!-- Main Heading with Gradient -->
                     <h1 class="display-2 fw-bold mb-4 text-brown-dark animate-fade-in-up">
                         Jejak Langkah <span class="text-gradient-brown">Perusahaan</span>
                     </h1>
-
-                    <!-- Subtitle with Typewriter Effect (like home) -->
                     <div class="subtitle-wrapper mb-5 animate-fade-in-up" style="animation-delay: 0.2s;">
-                        <h2 class="h3 fw-light text-brown-medium mb-3">
-                            Menelusuri Perjalanan Inspiratif
-                        </h2>
+                        <h2 class="h3 fw-light text-brown-medium mb-3">Menelusuri Perjalanan Inspiratif</h2>
                         <div class="typewriter-wrapper">
                             <span class="typewriter-text text-brown-dark fw-semibold fs-3">
-                                2020 – Sekarang
+                                {{ $histories->min('year') ?? '2020' }} – {{ $histories->max('year') ?? 'Sekarang' }}
                             </span>
                         </div>
                     </div>
-
-                    <!-- Breadcrumb with glassmorphism -->
                     <nav aria-label="breadcrumb" class="breadcrumb-nav mt-5 animate-fade-in-up" style="animation-delay: 0.4s;">
                         <ol class="breadcrumb justify-content-center">
-                            <li class="breadcrumb-item">
-                                <a href="{{ route('home') }}" class="text-brown-medium">Beranda</a>
-                            </li>
-                            <li class="breadcrumb-item">
-                                <a href="{{ route('about') }}" class="text-brown-medium">Tentang Kami</a>
-                            </li>
+                            <li class="breadcrumb-item"><a href="{{ route('home') }}" class="text-brown-medium">Beranda</a></li>
+                            <li class="breadcrumb-item"><a href="{{ route('about') }}" class="text-brown-medium">Tentang Kami</a></li>
                             <li class="breadcrumb-item active text-brown-dark" aria-current="page">Sejarah</li>
                         </ol>
                     </nav>
                 </div>
             </div>
         </div>
-
-        <!-- Scroll Indicator -->
         <div class="scroll-indicator">
-            <a href="#timeline" class="scroll-down">
-                <i class="fas fa-chevron-down"></i>
-            </a>
+            <a href="#timeline" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
         </div>
     </section>
 
-    <!-- TIMELINE SECTION – 3D VERTICAL TIMELINE -->
+    <!-- TIMELINE SECTION – 3D VERTICAL TIMELINE (DINAMIS DARI DATABASE) -->
     <section id="timeline" class="py-6 bg-white position-relative">
-        <!-- Subtle background decoration -->
         <div class="section-bg-decoration">
             <div class="decoration-circle"></div>
             <div class="decoration-circle"></div>
         </div>
-
         <div class="container position-relative z-2">
             <div class="section-header text-center mb-6">
                 <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
@@ -84,273 +63,61 @@
                 </p>
             </div>
 
-            <!-- Vertical Timeline -->
+            <!-- Vertical Timeline Dinamis -->
             <div class="timeline-vertical">
-                <!-- 2020 -->
+                @forelse($histories as $history)
                 <div class="timeline-item-3d animate-on-scroll">
                     <div class="timeline-marker-wrapper">
-                        <div class="timeline-marker-circle">2020</div>
+                        <div class="timeline-marker-circle">{{ $history->year }}</div>
                         <div class="timeline-marker-line"></div>
                     </div>
                     <div class="timeline-card-3d">
                         <div class="timeline-card-inner">
                             <div class="d-flex justify-content-between align-items-start mb-3">
-                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-foundation">Awal Mula</span>
-                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2020</span>
+                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2">
+                                    {{ $history->year == $histories->min('year') ? 'Awal Mula' : ($history->year == $histories->max('year') ? 'Inovasi' : 'Perkembangan') }}
+                                </span>
+                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>{{ $history->year }}</span>
                             </div>
-                            <h3 class="fw-bold text-brown-dark mb-3">Pendirian Perusahaan</h3>
-                            <p class="text-brown-medium small mb-4">
-                                PT Mitra Nusa Konsulindo secara resmi berdiri dengan visi menjadi perusahaan konsultan terpercaya di bidang konstruksi dan non-konstruksi.
-                            </p>
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-building text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Perseroan Terbatas</strong>
-                                            <span class="text-brown-light small">Terdaftar resmi</span>
+                            <h3 class="fw-bold text-brown-dark mb-3">{{ $history->title }}</h3>
+                            <p class="text-brown-medium small mb-4">{{ $history->description }}</p>
+                            @if($history->details)
+                                <div class="row g-3 mb-3">
+                                    @php
+                                        $details = is_string($history->details) ? json_decode($history->details, true) : $history->details;
+                                    @endphp
+                                    @foreach($details as $detail)
+                                    <div class="col-md-4">
+                                        <div class="d-flex">
+                                            <i class="fas fa-check-circle text-cream-gold me-2 mt-1"></i>
+                                            <div>
+                                                <span class="text-brown-light small">{{ $detail }}</span>
+                                            </div>
                                         </div>
                                     </div>
+                                    @endforeach
                                 </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-file-contract text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Legalitas Lengkap</strong>
-                                            <span class="text-brown-light small">NPWP & NIB</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-handshake text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Keanggotaan Profesi</strong>
-                                            <span class="text-brown-light small">INKINDO</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+                            @endif
                             <div class="card-corner corner-1"></div>
                             <div class="card-corner corner-2"></div>
                         </div>
                     </div>
                 </div>
-
-                <!-- 2021 -->
-                <div class="timeline-item-3d animate-on-scroll">
-                    <div class="timeline-marker-wrapper">
-                        <div class="timeline-marker-circle">2021</div>
-                        <div class="timeline-marker-line"></div>
-                    </div>
-                    <div class="timeline-card-3d">
-                        <div class="timeline-card-inner">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-expansion">Ekspansi</span>
-                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2021</span>
-                            </div>
-                            <h3 class="fw-bold text-brown-dark mb-3">Pengembangan Jasa & Sertifikasi</h3>
-                            <p class="text-brown-medium small mb-4">
-                                Tahun pertama operasional diisi dengan pengembangan layanan dan perolehan sertifikasi yang diperlukan.
-                            </p>
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-award text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Sertifikasi SBU</strong>
-                                            <span class="text-brown-light small">Pertama</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-expand text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Project Jasa</strong>
-                                            <span class="text-brown-light small">Non‑konstruksi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-landmark text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Proyek Pemerintah</strong>
-                                            <span class="text-brown-light small">Pertama</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-corner corner-1"></div>
-                            <div class="card-corner corner-2"></div>
-                        </div>
-                    </div>
+                @empty
+                <div class="text-center py-5">
+                    <p class="text-brown-medium">Belum ada data sejarah.</p>
                 </div>
-
-                <!-- 2022 -->
-                <div class="timeline-item-3d animate-on-scroll">
-                    <div class="timeline-marker-wrapper">
-                        <div class="timeline-marker-circle">2022</div>
-                        <div class="timeline-marker-line"></div>
-                    </div>
-                    <div class="timeline-card-3d">
-                        <div class="timeline-card-inner">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-growth">Pertumbuhan</span>
-                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2022</span>
-                            </div>
-                            <h3 class="fw-bold text-brown-dark mb-3">Konsolidasi & Pengembangan</h3>
-                            <p class="text-brown-medium small mb-4">
-                                Periode pertumbuhan signifikan dengan penguatan tim profesional dan perluasan basis klien.
-                            </p>
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-users text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Tim Profesional</strong>
-                                            <span class="text-brown-light small">15+ orang</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-cogs text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Sistem Manajemen</strong>
-                                            <span class="text-brown-light small">Manajemen mutu</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-handshake-simple text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Kemitraan Strategis</strong>
-                                            <span class="text-brown-light small">Swasta nasional</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-corner corner-1"></div>
-                            <div class="card-corner corner-2"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2023 -->
-                <div class="timeline-item-3d animate-on-scroll">
-                    <div class="timeline-marker-wrapper">
-                        <div class="timeline-marker-circle">2023</div>
-                        <div class="timeline-marker-line"></div>
-                    </div>
-                    <div class="timeline-card-3d">
-                        <div class="timeline-card-inner">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-recognition">Pengakuan</span>
-                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2023</span>
-                            </div>
-                            <h3 class="fw-bold text-brown-dark mb-3">Pengakuan & Ekspansi Regional</h3>
-                            <p class="text-brown-medium small mb-4">
-                                Tahun pencapaian dengan pengakuan profesional dan ekspansi layanan ke wilayah regional.
-                            </p>
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-certificate text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Sertifikasi ISO</strong>
-                                            <span class="text-brown-light small">ISO 9001:2015</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-map-marked-alt text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Ekspansi Regional</strong>
-                                            <span class="text-brown-light small">Jawa Tengah & Timur</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-trophy text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Penghargaan</strong>
-                                            <span class="text-brown-light small">Konsultan terpercaya</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-corner corner-1"></div>
-                            <div class="card-corner corner-2"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 2024+ -->
-                <div class="timeline-item-3d animate-on-scroll">
-                    <div class="timeline-marker-wrapper">
-                        <div class="timeline-marker-circle">2024+</div>
-                        <div class="timeline-marker-line"></div>
-                    </div>
-                    <div class="timeline-card-3d">
-                        <div class="timeline-card-inner">
-                            <div class="d-flex justify-content-between align-items-start mb-3">
-                                <span class="badge bg-brown-light-subtle text-brown-dark rounded-pill px-3 py-2 status-innovation">Inovasi</span>
-                                <span class="text-brown-light small"><i class="fas fa-calendar-alt me-1"></i>2024 – Sekarang</span>
-                            </div>
-                            <h3 class="fw-bold text-brown-dark mb-3">Inovasi & Masa Depan</h3>
-                            <p class="text-brown-medium small mb-4">
-                                Fokus pada pengembangan solusi inovatif dan persiapan untuk tantangan masa depan.
-                            </p>
-                            <div class="row g-3 mb-3">
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-laptop-code text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Digitalisasi Layanan</strong>
-                                            <span class="text-brown-light small">Sistem terintegrasi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-leaf text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Konsultansi Lingkungan</strong>
-                                            <span class="text-brown-light small">Berkelanjutan</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div class="d-flex">
-                                        <i class="fas fa-university text-cream-gold me-2 mt-1"></i>
-                                        <div>
-                                            <strong class="d-block text-brown-dark small">Kemitraan Akademik</strong>
-                                            <span class="text-brown-light small">Perguruan tinggi</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-corner corner-1"></div>
-                            <div class="card-corner corner-2"></div>
-                        </div>
-                    </div>
-                </div>
+                @endforelse
             </div>
         </div>
     </section>
 
-    <!-- FOUNDING STORY SECTION – 3D CARDS -->
+    <!-- FOUNDING STORY SECTION – 3D CARDS (tetap statis atau bisa dari data profil) -->
     <section class="py-6 bg-cream-light position-relative overflow-hidden">
         <div class="cert-pattern">
             <div class="pattern-line"></div>
             <div class="pattern-line"></div>
         </div>
-
         <div class="container position-relative z-2">
             <div class="section-header text-center mb-6">
                 <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 mb-3">
@@ -399,7 +166,7 @@
                                     <div class="achievement-icon-wrapper mb-3">
                                         <i class="fas fa-rocket fa-2x text-brown-dark"></i>
                                     </div>
-                                    <h3 class="fw-bold text-brown-dark mb-1">4+</h3>
+                                    <h3 class="fw-bold text-brown-dark mb-1">{{ $histories->count() }}+</h3>
                                     <p class="text-brown-medium small">Tahun Beroperasi</p>
                                     <div class="card-corner corner-1"></div>
                                     <div class="card-corner corner-2"></div>
@@ -480,7 +247,7 @@
 
     <!-- Back Button -->
     <div class="container text-center pb-6 mt-6">
-        <a href="{{ route('about') }}" class="btn btn-outline-brown-3d rounded-pill px-5 py-3">
+        <a href="{{ route('about') }}" class="btn btn-outline-brown-3d rounded-pill px-5 py-3 back-button">
             <i class="fas fa-arrow-left me-2"></i>Kembali ke Profil Perusahaan
         </a>
     </div>
@@ -490,13 +257,13 @@
 <style>
     /* ===== INHERIT FULL STYLE FROM HOME PAGE ===== */
     :root {
-        --brown-dark: #5D4037;
-        --brown-medium: #8B6B61;
+        --brown-dark: #241b64;
+        --brown-medium: #302574;
         --brown-light: #A1887F;
         --cream-gold: #D4AF37;
         --cream-dark: #D7CCC8;
-        --cream-medium: #EFEBE9;
-        --cream-light: #F5F0ED;
+        --cream-medium: #f8fafc;
+        --cream-light: #f8fafc;
         --white: #ffffff;
         --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
         --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
@@ -773,12 +540,6 @@
         border-color: var(--cream-gold);
     }
 
-    .status-foundation { background: rgba(141,110,99,0.15) !important; color: #8D6E63 !important; }
-    .status-expansion { background: rgba(121,85,72,0.15) !important; color: #795548 !important; }
-    .status-growth { background: rgba(93,64,55,0.15) !important; color: #5D4037 !important; }
-    .status-recognition { background: rgba(62,39,35,0.15) !important; color: #3E2723 !important; }
-    .status-innovation { background: rgba(188,170,164,0.15) !important; color: #BCAAA4 !important; }
-
     .text-cream-gold {
         color: var(--cream-gold);
     }
@@ -903,6 +664,38 @@
         box-shadow: 0 10px 20px rgba(93,64,55,0.2);
     }
 
+    /* ===== PERBAIKAN WARNA TOMBOL (ICON & TEKS MENJADI HITAM) ===== */
+    .btn-outline-brown-3d,
+    .btn-outline-brown-3d i,
+    .btn-outline-brown-3d span {
+        color: #000000 !important;
+        border-color: #000000 !important;
+    }
+    .btn-outline-brown-3d:hover {
+        background: #000000 !important;
+        border-color: #000000 !important;
+    }
+    .btn-outline-brown-3d:hover i,
+    .btn-outline-brown-3d:hover span {
+        color: #ffffff !important;
+    }
+
+    /* Khusus untuk tombol "Kembali ke Profil Perusahaan" jika perlu dipastikan */
+    .back-button,
+    .back-button i,
+    .back-button span {
+        color: #000000 !important;
+        border-color: #000000 !important;
+    }
+    .back-button:hover {
+        background: #000000 !important;
+        color: #ffffff !important;
+    }
+    .back-button:hover i,
+    .back-button:hover span {
+        color: #ffffff !important;
+    }
+
     .btn-brown-3d::before,
     .btn-outline-brown-3d::before {
         content: '';
@@ -1002,7 +795,7 @@
 
     /* ----- CTA Section (same as home) ----- */
     .cta-elegant {
-        background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        background: linear-gradient(135deg, #f8fafc 0%, #D7CCC8 100%);
         position: relative;
         overflow: hidden;
     }
@@ -1014,9 +807,8 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background:
-            radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.1) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.1) 0%, transparent 50%);
+        background: radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.1) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.1) 0%, transparent 50%);
     }
 
     .cta-content-wrapper {
@@ -1031,38 +823,26 @@
     }
 
     .cta-elegant h2 {
-        color: #5D4037;
-        background: linear-gradient(135deg, #5D4037, #8B6B61);
+        color: #241b64;
+        background: linear-gradient(135deg, #241b64, #302574);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
 
     .cta-elegant .lead {
-        color: #795548;
+        color: #4b3dad;
     }
 
     /* ----- Animations ----- */
     @keyframes fadeInDown {
-        from {
-            opacity: 0;
-            transform: translateY(-30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(-30px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
     @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
     }
 
     .animate-fade-in-down {
@@ -1122,7 +902,7 @@
 @push('scripts')
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        // ----- TYPEWRITER EFFECT (like home) -----
+        // ----- TYPEWRITER EFFECT -----
         const textElement = document.querySelector('.typewriter-text');
         if (textElement) {
             const originalText = textElement.textContent.trim();
@@ -1162,20 +942,13 @@
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
+                    window.scrollTo({ top: target.offsetTop - 80, behavior: 'smooth' });
                 }
             });
         });
 
         // ----- OBSERVER FOR SCROLL ANIMATIONS -----
-        const observerOptions = {
-            threshold: 0.2,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
+        const observerOptions = { threshold: 0.2, rootMargin: '0px 0px -50px 0px' };
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -1184,10 +957,7 @@
                 }
             });
         }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach(el => {
-            observer.observe(el);
-        });
+        document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
 
         // ----- 3D HOVER EFFECT ENHANCEMENT -----
         const cards = document.querySelectorAll('.timeline-card-inner, .founding-story-inner, .achievement-inner');
@@ -1200,10 +970,8 @@
                 const centerY = rect.height / 2;
                 const rotateX = (y - centerY) / 20;
                 const rotateY = (centerX - x) / 20;
-
                 card.style.transform = `rotateY(${rotateY}deg) rotateX(${rotateX}deg) translateY(-5px)`;
             });
-
             card.addEventListener('mouseleave', () => {
                 card.style.transform = 'rotateY(0deg) rotateX(1deg)';
             });

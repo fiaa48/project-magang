@@ -65,7 +65,7 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION – 3D CARDS -->
+    <!-- SERVICES SECTION – 3D CARDS (tanpa tombol detail) -->
     <section id="services" class="py-6 bg-white position-relative">
         <!-- Subtle background decoration -->
         <div class="section-bg-decoration">
@@ -120,6 +120,9 @@
                     ],
                 ];
             @endphp
+            @php
+                $services = !empty($databaseServices ?? []) ? $databaseServices : $services;
+            @endphp
 
             <div class="row g-4">
                 @foreach($services as $service)
@@ -153,15 +156,11 @@
                                     @endif
                                 </div>
 
-                                <!-- Footer -->
-                                <div class="card-footer d-flex justify-content-between align-items-center pt-3">
+                                <!-- Footer (tanpa tombol detail, hanya teks) -->
+                                <div class="card-footer pt-3">
                                     <span class="text-brown-light small">
                                         <i class="fas fa-clock me-1"></i> Konsultasi gratis
                                     </span>
-                                    <button type="button" class="btn btn-outline-brown-3d rounded-pill px-4 py-2 detail-btn"
-                                            data-bs-toggle="modal" data-bs-target="#serviceModal{{ $loop->index + 1 }}">
-                                        Detail <i class="fas fa-arrow-right ms-2"></i>
-                                    </button>
                                 </div>
 
                                 <!-- 3D decorative corners -->
@@ -275,109 +274,17 @@
     </section>
 @endsection
 
-<!-- MODALS FOR SERVICE DETAILS (3D PREMIUM) -->
-@foreach($services as $index => $service)
-<div class="modal fade" id="serviceModal{{ $loop->index + 1 }}" tabindex="-1" aria-labelledby="serviceModalLabel{{ $loop->index + 1 }}" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content service-modal overflow-hidden">
-            <div class="modal-header bg-brown-dark text-white py-4">
-                <div class="d-flex align-items-center gap-3">
-                    <div class="modal-icon-wrapper service-{{ $service['color'] }}">
-                        <i class="{{ $service['icon'] }} fa-2x text-white"></i>
-                    </div>
-                    <div>
-                        <h5 class="modal-title fw-bold" id="serviceModalLabel{{ $loop->index + 1 }}">
-                            {{ $service['code'] }} - {{ $service['title'] }}
-                        </h5>
-                        <p class="small text-cream-gold mb-0">Jasa Rekayasa Teknik</p>
-                    </div>
-                </div>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body p-5">
-                <p class="text-brown-medium mb-4">{{ $service['description'] }}</p>
-
-                <h6 class="fw-bold text-brown-dark mb-3"><i class="fas fa-list-check me-2"></i>Detail Layanan:</h6>
-                <div class="row g-3 mb-4">
-                    @foreach($service['features'] as $feature)
-                        <div class="col-md-6">
-                            <div class="d-flex">
-                                <i class="fas fa-check-circle text-cream-gold me-2 mt-1"></i>
-                                <span class="text-brown-medium small">{{ $feature }}</span>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-
-                <div class="modal-process bg-cream-light p-4 rounded-4 mb-4">
-                    <h6 class="fw-bold text-brown-dark mb-3"><i class="fas fa-clock me-2"></i>Tahapan Pengerjaan</h6>
-                    <div class="row g-3">
-                        <div class="col-md-4">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">1</span>
-                                <span class="text-brown-dark small fw-semibold">Konsultasi</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">2</span>
-                                <span class="text-brown-dark small fw-semibold">Analisis</span>
-                            </div>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="d-flex align-items-center gap-2">
-                                <span class="step-number bg-brown-dark text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 28px; height: 28px;">3</span>
-                                <span class="text-brown-dark small fw-semibold">Desain</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="quote-form bg-cream-light p-4 rounded-4">
-                    <h6 class="fw-bold text-brown-dark mb-3"><i class="fas fa-file-invoice me-2"></i>Request Quotation</h6>
-                    <div class="row g-3">
-                        <div class="col-md-6">
-                            <input type="text" class="form-control border-brown-light" placeholder="Nama Lengkap">
-                        </div>
-                        <div class="col-md-6">
-                            <input type="email" class="form-control border-brown-light" placeholder="Email">
-                        </div>
-                        <div class="col-12">
-                            <input type="text" class="form-control border-brown-light" placeholder="Jenis Proyek">
-                        </div>
-                        <div class="col-12">
-                            <textarea class="form-control border-brown-light" rows="3" placeholder="Deskripsi Proyek"></textarea>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="modal-footer bg-cream-light px-5 py-4">
-                <button type="button" class="btn btn-outline-brown-3d px-4 py-2 rounded-pill" data-bs-dismiss="modal">
-                    <i class="fas fa-times me-2"></i>Tutup
-                </button>
-                <button type="button" class="btn btn-brown-3d px-4 py-2 rounded-pill">
-                    <i class="fas fa-file-download me-2"></i>Download Brosur
-                </button>
-                <button type="button" class="btn btn-brown-3d px-4 py-2 rounded-pill">
-                    <i class="fas fa-paper-plane me-2"></i>Kirim Permintaan
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-@endforeach
-
 @push('styles')
 <style>
     /* ===== INHERIT FULL STYLE FROM HOME PAGE ===== */
     :root {
-        --brown-dark: #5D4037;
-        --brown-medium: #8B6B61;
+        --brown-dark: #241b64;
+        --brown-medium: #302574;
         --brown-light: #A1887F;
         --cream-gold: #D4AF37;
         --cream-dark: #D7CCC8;
-        --cream-medium: #EFEBE9;
-        --cream-light: #F5F0ED;
+        --cream-medium: #f8fafc;
+        --cream-light: #f8fafc;
         --white: #ffffff;
         --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
         --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
@@ -700,26 +607,7 @@
         background: linear-gradient(145deg, #4A342E, var(--brown-dark));
     }
 
-    .btn-outline-brown-3d {
-        border: 2px solid var(--brown-dark);
-        color: var(--brown-dark);
-        background: transparent;
-        font-weight: 600;
-        transition: all 0.3s;
-        box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-        position: relative;
-        overflow: hidden;
-    }
-
-    .btn-outline-brown-3d:hover {
-        background: var(--brown-dark);
-        color: white;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
-    }
-
-    .btn-brown-3d::before,
-    .btn-outline-brown-3d::before {
+    .btn-brown-3d::before {
         content: '';
         position: absolute;
         top: 0;
@@ -730,8 +618,7 @@
         transition: left 0.6s;
     }
 
-    .btn-brown-3d:hover::before,
-    .btn-outline-brown-3d:hover::before {
+    .btn-brown-3d:hover::before {
         left: 100%;
     }
 
@@ -817,7 +704,7 @@
 
     /* ----- CTA Section (same as home) ----- */
     .cta-elegant {
-        background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        background: linear-gradient(135deg, #f8fafc 0%, #D7CCC8 100%);
         position: relative;
         overflow: hidden;
     }
@@ -846,55 +733,15 @@
     }
 
     .cta-elegant h2 {
-        color: #5D4037;
-        background: linear-gradient(135deg, #5D4037, #8B6B61);
+        color: #241b64;
+        background: linear-gradient(135deg, #241b64, #302574);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
 
     .cta-elegant .lead {
-        color: #795548;
-    }
-
-    /* ----- Modal Customization ----- */
-    .service-modal .modal-content {
-        border-radius: 2rem;
-        overflow: hidden;
-        border: none;
-        box-shadow: var(--shadow-3d);
-    }
-
-    .service-modal .modal-header {
-        border-bottom: none;
-    }
-
-    .modal-icon-wrapper {
-        width: 60px;
-        height: 60px;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .btn-close-white {
-        filter: brightness(0) invert(1);
-    }
-
-    .text-cream-gold {
-        color: var(--cream-gold);
-    }
-
-    .quote-form .form-control {
-        border-radius: 50rem;
-        height: 48px;
-        background: white;
-    }
-
-    .quote-form textarea.form-control {
-        border-radius: 1rem;
-        height: auto;
+        color: #4b3dad;
     }
 
     /* ----- Animations ----- */

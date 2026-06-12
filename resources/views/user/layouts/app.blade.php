@@ -13,17 +13,27 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    {{-- <link rel="stylesheet" href="{{ asset('css/app.css') }}"> --}}
-    {{-- <link rel="stylesheet" href="{{ asset('css/custom.css') }}"> --}}
 
     @stack('styles')
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+    <style>
+        :root {
+            --cream-dark: #eef2ff !important;
+            --cream-medium: #f8fafc !important;
+            --cream-light: #ffffff !important;
+            --cream-gold: #ef332d !important;
+            --brown-dark: #241b64 !important;
+            --brown-medium: #302574 !important;
+            --brown-light: #4b3dad !important;
+        }
+    </style>
 </head>
-<body>
+<body class="user-shell">
     <!-- Navbar -->
     @include('user.components.navbar')
 
     <!-- Main Content -->
-    <main>
+    <main class="user-main">
         @yield('content')
     </main>
 
@@ -39,3 +49,5 @@
     @stack('scripts')
 </body>
 </html>
+
+

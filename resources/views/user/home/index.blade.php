@@ -1,7 +1,7 @@
 @extends('user.layouts.app')
 
-@section('title', 'PT Mitra Nusa Konsulindo - Konsultan Konstruksi & Non Konstruksi')
-@section('description', 'PT Mitra Nusa Konsulindo adalah perusahaan konsultan mandiri sejak 2020 yang bergerak di bidang jasa konsultansi teknik, manajemen, konstruksi dan non-konstruksi dengan tenaga ahli berpengalaman dan berkualitas.')
+@section('title', $home->meta_title ?? 'PT Mitra Nusa Konsulindo - Konsultan Konstruksi & Non Konstruksi')
+@section('description', $home->meta_description ?? 'PT Mitra Nusa Konsulindo adalah perusahaan konsultan mandiri sejak 2020 yang bergerak di bidang jasa konsultansi teknik, manajemen, konstruksi dan non-konstruksi dengan tenaga ahli berpengalaman dan berkualitas.')
 
 @section('content')
     <!-- HERO / BERANDA UTAMA -->
@@ -9,7 +9,6 @@
         <!-- Background Slider -->
         <div class="hero-slider">
             <div class="slider-track">
-                <!-- Slide 1 - Konstruksi -->
                 <div class="slide active">
                     <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1920&q=80');"></div>
                     <div class="slide-overlay"></div>
@@ -18,7 +17,6 @@
                         <p>Perencanaan dan rekayasa bangunan gedung hunian & non hunian.</p>
                     </div>
                 </div>
-                <!-- Slide 2 - Arsitektur -->
                 <div class="slide">
                     <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1487956382158-bb926046304a?auto=format&fit=crop&w=1920&q=80');"></div>
                     <div class="slide-overlay"></div>
@@ -27,7 +25,6 @@
                         <p>Desain bangunan, interior, dan lanskap berkarakter, fungsional, dan estetis.</p>
                     </div>
                 </div>
-                <!-- Slide 3 - Teknik Sipil & SDA -->
                 <div class="slide">
                     <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1920&q=80');"></div>
                     <div class="slide-overlay"></div>
@@ -36,7 +33,6 @@
                         <p>Infrastruktur sumber daya air, transportasi, dan struktur bangunan.</p>
                     </div>
                 </div>
-                <!-- Slide 4 - Non-Konstruksi -->
                 <div class="slide">
                     <div class="slide-image" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1920&q=80');"></div>
                     <div class="slide-overlay"></div>
@@ -46,16 +42,8 @@
                     </div>
                 </div>
             </div>
-
-            <!-- Slider Navigation -->
-            <button class="slider-nav prev">
-                <i class="fas fa-chevron-left"></i>
-            </button>
-            <button class="slider-nav next">
-                <i class="fas fa-chevron-right"></i>
-            </button>
-
-            <!-- Slider Dots -->
+            <button class="slider-nav prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-nav next"><i class="fas fa-chevron-right"></i></button>
             <div class="slider-dots">
                 <span class="dot active" data-slide="0"></span>
                 <span class="dot" data-slide="1"></span>
@@ -65,38 +53,32 @@
         </div>
 
         <!-- Main Hero Content -->
-        <div class="container position-relative" style="padding-top: 120px;">
-            <div class="row min-vh-100 align-items-center">
+        <div class="container position-relative hero-container">
+            <div class="row min-vh-100 align-items-center justify-content-center">
                 <div class="col-xl-8 col-lg-9 mx-auto text-center">
-                    <!-- Badge -->
-                    <div class="company-badge mb-4">
+                    <!-- Badge - diturunkan dengan margin-top -->
+                    <div class="company-badge mb-4" style="margin-top: 3rem;">
                         <span class="badge bg-brown-dark text-white rounded-pill px-4 py-2 fs-6 fw-normal shadow-soft">
                             <i class="fas fa-medal me-2"></i>Perusahaan Konsultan Mandiri Sejak 2020
                         </span>
                     </div>
 
-                    <!-- Main Heading -->
-                    <h1 class="display-1 fw-bold mb-3 text-white hero-title">
-                        PT Mitra Nusa<br>
-                        <span class="text-gradient-brown">Konsulindo</span>
-                    </h1>
+                    <!-- Main Heading dengan Efek Typewriter -->
+                    <div class="hero-title-wrapper">
+                        <h1 class="hero-typewriter fw-bold text-white" id="heroTypewriter"></h1>
+                    </div>
 
                     <!-- Sub Heading / Tagline -->
-                    <p class="lead fs-5 text-white-50 lh-lg mx-auto hero-lead" style="max-width: 780px;">
-                        PT. MITRA NUSA KONSULINDO merupakan perusahaan konsultan mandiri yang berdiri pada tahun 2020,
-                        berkembang dengan dukungan tenaga ahli terkemuka dan berkualitas yang telah melaksanakan berbagai
-                        proyek terintegrasi lintas disiplin, siap memberikan bantuan dan pelayanan profesional bagi instansi
-                        pemerintah maupun swasta di bidang jasa Konsultansi Teknik dan Manajemen.
+                    <p class="lead fs-5 lh-lg mx-auto hero-lead" style="max-width: 780px; color: #ffffff !important; text-shadow: 0 2px 12px rgba(0,0,0,0.7); font-weight: 500;">
+                        {{ $home->hero_description ?? 'PT. MITRA NUSA KONSULINDO merupakan perusahaan konsultan mandiri yang berdiri pada tahun 2020, berkembang dengan dukungan tenaga ahli terkemuka dan berkualitas yang telah melaksanakan berbagai proyek terintegrasi lintas disiplin, siap memberikan bantuan dan pelayanan profesional bagi instansi pemerintah maupun swasta di bidang jasa Konsultansi Teknik dan Manajemen.' }}
                     </p>
 
-                    <!-- Spesialis Jasa Konsultansi (teks biasa, bisa wrap) -->
+                    <!-- Spesialis Jasa Konsultansi -->
                     <div class="subtitle-wrapper mb-4">
-                        <h2 class="h4 fw-light text-white-50 mb-2">
-                            Spesialis Jasa Konsultansi
-                        </h2>
+                        <h2 class="h4 fw-light text-white-50 mb-2">Spesialis Jasa Konsultansi</h2>
                         <div class="specialist-text-wrapper">
                             <span class="text-white fw-semibold specialist-text">
-                                Perencanaan Umum • Studi Kelayakan • Perencanaan Teknik • Dokumen Lingkungan • Pengawasan Teknik • Penelitian & Pengembangan
+                                {{ $home->hero_specialist ?? 'Perencanaan Umum • Studi Kelayakan • Perencanaan Teknik • Dokumen Lingkungan • Pengawasan Teknik • Penelitian & Pengembangan' }}
                             </span>
                         </div>
                     </div>
@@ -109,10 +91,6 @@
                         <a href="{{ route('services') }}" class="btn btn-outline-cream btn-lg px-5 py-3 rounded-pill shadow-soft">
                             <i class="fas fa-cogs me-2"></i>Layanan Konstruksi & Non-Konstruksi
                         </a>
-                        <a href="{{ route('contact') }}" class="btn btn-brown-3d btn-lg px-5 py-3 rounded-pill shadow-soft">
-                            <i class="fab fa-whatsapp me-2"></i>Konsultasi Awal Gratis
-                            <span class="btn-shine"></span>
-                        </a>
                     </div>
 
                     <!-- Stats -->
@@ -120,25 +98,25 @@
                         <div class="row g-4 justify-content-center">
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number display-5 fw-bold text-white" data-target="5">5+</div>
+                                    <div class="stat-number display-5 fw-bold text-white" data-target="{{ $home->experience_years ?? 5 }}">{{ ($home->experience_years ?? 5) }}+</div>
                                     <div class="stat-label text-white-50">Tahun Pengalaman</div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number display-5 fw-bold text-white" data-target="50">50+</div>
+                                    <div class="stat-number display-5 fw-bold text-white" data-target="{{ $home->projects_done ?? 50 }}">{{ ($home->projects_done ?? 50) }}+</div>
                                     <div class="stat-label text-white-50">Proyek Terselesaikan</div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number display-5 fw-bold text-white" data-target="15">15+</div>
+                                    <div class="stat-number display-5 fw-bold text-white" data-target="{{ (isset($certificates) ? $certificates->count() : 0) ?: ($home->certifications ?? 15) }}">{{ (isset($certificates) ? $certificates->count() : 0) ?: ($home->certifications ?? 15) }}+</div>
                                     <div class="stat-label text-white-50">Bidang Sertifikasi</div>
                                 </div>
                             </div>
                             <div class="col-md-3 col-6">
                                 <div class="stat-item">
-                                    <div class="stat-number display-5 fw-bold text-white" data-target="10">10+</div>
+                                    <div class="stat-number display-5 fw-bold text-white" data-target="{{ $home->experts ?? 10 }}">{{ ($home->experts ?? 10) }}+</div>
                                     <div class="stat-label text-white-50">Tenaga Ahli Profesional</div>
                                 </div>
                             </div>
@@ -147,9 +125,7 @@
 
                     <!-- Scroll Indicator -->
                     <div class="scroll-indicator">
-                        <a href="#about-brief" class="scroll-down">
-                            <i class="fas fa-chevron-down"></i>
-                        </a>
+                        <a href="#about-brief" class="scroll-down"><i class="fas fa-chevron-down"></i></a>
                     </div>
                 </div>
             </div>
@@ -158,109 +134,87 @@
 
     <!-- SECTION: Sekilas Perusahaan (Profil & Latar Belakang) -->
     <section id="about-brief" class="py-7 bg-light-gradient position-relative overflow-hidden">
-        <!-- Background Decoration -->
         <div class="section-bg-decoration">
             <div class="decoration-circle"></div>
             <div class="decoration-circle"></div>
         </div>
-
         <div class="container">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
                     <div class="card border-0 shadow-3d rounded-4 p-4 p-lg-5 bg-white position-relative overflow-hidden hover-3d-card">
-                        <span class="floating-badge">
-                            <i class="fas fa-award me-2"></i>Konsultan Mandiri
-                        </span>
+                        <span class="floating-badge"><i class="fas fa-award me-2"></i>Konsultan Mandiri</span>
                         <h2 class="display-6 fw-bold mb-3 text-brown-dark">Profil Singkat Perusahaan</h2>
                         <p class="text-brown-medium mb-3">
-                            PT. MITRA NUSA KONSULINDO adalah perusahaan konsultan yang menekuni bidang jasa Konsultansi Teknik
-                            dan Manajemen sebagai profesi, disiapkan untuk memberikan bantuan dan pelayanan dalam berbagai kegiatan
-                            yang berkaitan dengan Perencanaan Umum, Studi Kelayakan, Perencanaan Teknik, Dokumen Lingkungan,
-                            Pengawasan Teknik, Penelitian serta pengembangan berbagai bidang lainnya.
+                            {{ $home->about_desc_1 ?? 'PT. MITRA NUSA KONSULINDO adalah perusahaan konsultan yang menekuni bidang jasa Konsultansi Teknik dan Manajemen sebagai profesi, disiapkan untuk memberikan bantuan dan pelayanan dalam berbagai kegiatan yang berkaitan dengan Perencanaan Umum, Studi Kelayakan, Perencanaan Teknik, Dokumen Lingkungan, Pengawasan Teknik, Penelitian serta pengembangan berbagai bidang lainnya.' }}
                         </p>
                         <p class="text-brown-medium mb-4">
-                            Dalam menyelesaikan setiap penugasan, perusahaan menerapkan sistem penyelesaian teknik dan administrasi
-                            secara profesional, didukung tenaga ahli berpengalaman dan tenaga muda berbakat sehingga pekerjaan
-                            berdaya guna dan berhasil guna secara maksimal.
+                            {{ $home->about_desc_2 ?? 'Dalam menyelesaikan setiap penugasan, perusahaan menerapkan sistem penyelesaian teknik dan administrasi secara profesional, didukung tenaga ahli berpengalaman dan tenaga muda berbakat sehingga pekerjaan berdaya guna dan berhasil guna secara maksimal.' }}
                         </p>
-
                         <div class="row g-3">
                             <div class="col-sm-6">
                                 <div class="info-pill">
                                     <span class="label">Berdiri</span>
-                                    <span class="value">Tahun 2020</span>
+                                    <span class="value">{{ $companyProfile->established_year ?? 'Tahun 2020' }}</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="info-pill">
                                     <span class="label">Bentuk Usaha</span>
-                                    <span class="value">Perseroan Terbatas (PT)</span>
+                                    <span class="data-value">{{ $companyProfile->type ?? 'Perseroan Terbatas (PT)' }}</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="info-pill">
                                     <span class="label">Domisili</span>
-                                    <span class="value">Gedung Graha Mulia Sejahtera, Jl. Terusan Jakarta No. 175A, Antapani - Bandung 40291</span>
+                                    <span class="data-value">{{ $companyProfile->address_main ?? 'Gedung Graha Mulia Sejahtera, Jl. Terusan Jakarta No. 175A, Antapani-Kulon, Bandung 40291 &' }} {{ $companyProfile->address_branch ?? 'Jl. Tulip VII No. 8, Rancabolang, Kec. Gedebage, Kota Bandung, Jawa Barat 40295' }}</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="info-pill">
                                     <span class="label">Asosiasi</span>
-                                    <span class="value">Anggota INKINDO & KADIN</span>
+                                    <span class="data-value">{{ $companyProfile->association ?? 'Anggota INKINDO & KADIN' }}</span>
                                 </div>
                             </div>
                         </div>
-
                         <div class="mt-4">
-                            <a href="{{ route('about') }}" class="btn btn-outline-brown-3d rounded-pill px-4">
-                                Profil Lengkap Perusahaan
-                            </a>
+                            <a href="{{ route('about') }}" class="btn btn-outline-brown-3d rounded-pill px-4">Profil Lengkap Perusahaan</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Latar Belakang & Filosofi -->
                 <div class="col-lg-6">
-                    <div class="card border-0 bg-transparent">
+                    <div class="card border-0 shadow-3d rounded-4 p-4 p-lg-5 bg-white h-100">
                         <h3 class="h3 fw-bold mb-3 text-brown-dark">Latar Belakang & Cara Pandang</h3>
                         <p class="text-brown-medium mb-3">
-                            Menghadapi proses perubahan yang sangat cepat dan kompleks, perusahaan menyadari perlunya visi dan misi
-                            yang akurat dengan landasan pengalaman, kebijakan, kreativitas, kecepatan bertindak, dan dukungan teknologi
-                            tinggi agar setiap perubahan serta permasalahan dapat diselesaikan secara tepat.
+                            {{ $home->background_desc_1 ?? 'Menghadapi proses perubahan yang sangat cepat dan kompleks, perusahaan menyadari perlunya visi dan misi yang akurat dengan landasan pengalaman, kebijakan, kreativitas, kecepatan bertindak, dan dukungan teknologi tinggi agar setiap perubahan serta permasalahan dapat diselesaikan secara tepat.' }}
                         </p>
                         <p class="text-brown-medium mb-4">
-                            PT. MITRA NUSA KONSULINDO tumbuh dan berkembang atas kepercayaan rekanan dan mitra kerja yang terjalin
-                            dalam suatu jaringan kerja sama saling menguntungkan. Perusahaan selalu siap menerima tawaran kerja sama
-                            dari instansi pemerintah maupun swasta dalam bidang profesinya.
+                            {{ $home->background_desc_2 ?? 'PT. MITRA NUSA KONSULINDO tumbuh dan berkembang atas kepercayaan rekanan dan mitra kerja yang terjalin dalam suatu jaringan kerja sama saling menguntungkan. Perusahaan selalu siap menerima tawaran kerja sama dari instansi pemerintah maupun swasta dalam bidang profesinya.' }}
                         </p>
-
                         <ul class="list-unstyled premium-list">
-                            <li>
-                                <i class="fas fa-check-circle text-cream-gold me-2"></i>
-                                Berpandangan ke depan dengan visi dan misi yang tajam.
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle text-cream-gold me-2"></i>
-                                Didukung tenaga ahli berpengalaman dan tenaga muda potensial.
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle text-cream-gold me-2"></i>
-                                Penanganan proyek secara profesional, efektif, dan efisien.
-                            </li>
-                            <li>
-                                <i class="fas fa-check-circle text-cream-gold me-2"></i>
-                                Terbuka untuk kerja sama jangka panjang yang saling menguntungkan.
-                            </li>
+                            @php
+                                $backgroundList = $home->background_list ?? [];
+                                if (is_string($backgroundList)) $backgroundList = json_decode($backgroundList, true);
+                                if (empty($backgroundList)) {
+                                    $backgroundList = [
+                                        'Berpandangan ke depan dengan visi dan misi yang tajam.',
+                                        'Didukung tenaga ahli berpengalaman dan tenaga muda potensial.',
+                                        'Penanganan proyek secara profesional, efektif, dan efisien.',
+                                        'Terbuka untuk kerja sama jangka panjang yang saling menguntungkan.'
+                                    ];
+                                }
+                            @endphp
+                            @foreach($backgroundList as $item)
+                            <li><i class="fas fa-check-circle text-cream-gold me-2"></i>{{ $item }}</li>
+                            @endforeach
                         </ul>
-
                         <div class="mt-4 d-flex flex-wrap gap-3">
                             <div class="mini-card">
                                 <span class="label">Telepon</span>
-                                <span class="value">+62 22-20502071</span>
+                                <span class="data-value">{{ $companyProfile->telepon_pt ?? '(022) 20502071' }}</span>
                             </div>
                             <div class="mini-card">
                                 <span class="label">Email</span>
-                                <span class="value">mitranusa.kons@gmail.com</span>
+                                <span class="data-value">{{ $companyProfile->email_pt ?? 'mitranusakonsulindo@gmail.com' }}</span>
                             </div>
                         </div>
                     </div>
@@ -268,290 +222,6 @@
             </div>
         </div>
     </section>
-
-    {{-- <!-- SECTION: Legalitas & Identitas Badan Usaha -->
-    <section class="py-7 bg-cream-light position-relative overflow-hidden">
-        <!-- Background Pattern -->
-        <div class="cert-pattern">
-            <div class="pattern-line"></div>
-            <div class="pattern-line"></div>
-        </div>
-
-        <div class="container">
-            <div class="row mb-4 align-items-end">
-                <div class="col-lg-8">
-                    <h2 class="display-6 fw-bold mb-2 text-brown-dark">Legalitas & Identitas Perusahaan</h2>
-                    <p class="lead text-brown-medium mb-0">
-                        Legalitas lengkap dan keanggotaan asosiasi resmi menjadi dasar kepercayaan dalam setiap kerja sama.
-                    </p>
-                </div>
-                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-                    <a href="{{ route('certifications.index') }}" class="btn btn-outline-brown-3d rounded-pill px-4">
-                        Detail Sertifikasi & Legalitas
-                    </a>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <!-- Kolom 1 -->
-                <div class="col-md-4">
-                    <div class="legal-card shadow-3d h-100 hover-3d-card">
-                        <h5 class="fw-bold text-brown-dark mb-3"><i class="fas fa-file-signature me-2 text-cream-gold"></i>Akte & Pengesahan</h5>
-                        <ul class="list-unstyled small text-brown-medium mb-0">
-                            <li><strong>Akte Pendirian</strong> No. 19, Notaris Susyana Herlawati, SH, M.Kn, 22 Oktober 2020.</li>
-                            <li class="mt-2"><strong>Akte Perubahan</strong> No. 03, Notaris Susyana Herlawati, SH, M.Kn, 7 Desember 2023.</li>
-                            <li class="mt-2"><strong>Pengesahan Kemenkumham</strong> No. AHU-0057316.AH.01.01.TAHUN 2020, tanggal 4 November 2020.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Kolom 2 -->
-                <div class="col-md-4">
-                    <div class="legal-card shadow-3d h-100 hover-3d-card">
-                        <h5 class="fw-bold text-brown-dark mb-3"><i class="fas fa-id-card me-2 text-cream-gold"></i>Perizinan & Nomor Resmi</h5>
-                        <ul class="list-unstyled small text-brown-medium mb-0">
-                            <li><strong>NPWP</strong> 96.431.796.0.429.000.</li>
-                            <li class="mt-2"><strong>NIB / SIUJK / SIUP</strong> No. 0257011100093.</li>
-                            <li class="mt-2"><strong>Izin Gangguan / Tempat Usaha</strong> No. 0257011100093.</li>
-                            <li class="mt-2"><strong>Relasi Bank</strong> Bank BJB & Bank Mandiri (rekening operasional).</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <!-- Kolom 3 -->
-                <div class="col-md-4">
-                    <div class="legal-card shadow-3d h-100 hover-3d-card">
-                        <h5 class="fw-bold text-brown-dark mb-3"><i class="fas fa-users-cog me-2 text-cream-gold"></i>Asosiasi & Keanggotaan</h5>
-                        <ul class="list-unstyled small text-brown-medium mb-0">
-                            <li><strong>INKINDO</strong> Ikatan Nasional Konsultan Indonesia, No. Anggota: 17744/P/1304.JB.</li>
-                            <li class="mt-2"><strong>KADIN</strong> Kamar Dagang dan Industri, No. Anggota: 20112-2026270629.</li>
-                            <li class="mt-2">Sertifikat Badan Usaha Jasa Konsultansi Konstruksi & Non Konstruksi dengan berbagai klasifikasi layanan.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Logo Sertifikasi (dengan jarak cukup) -->
-            <div class="row g-4 align-items-center justify-content-center mt-6">
-                @foreach(['inkindo', 'sbu', 'iso-9001', 'iso-14001', 'kemenkumham'] as $cert)
-                    <div class="col-lg-2 col-md-3 col-4">
-                        <div class="cert-card-3d">
-                            <div class="cert-inner">
-                                <img src="{{ asset('images/certificates/' . $cert . '.png') }}"
-                                     alt="{{ strtoupper($cert) }}"
-                                     class="img-fluid cert-logo">
-                                <div class="cert-hover-info">
-                                    <span>{{ str_replace('-', ' ', strtoupper($cert)) }}</span>
-                                </div>
-                                <div class="card-corner corner-1"></div>
-                                <div class="card-corner corner-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section> --}}
-
-    <!-- SECTION: Lingkup Layanan Utama -->
-    <section id="services" class="py-7 bg-light position-relative">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="display-5 fw-bold mb-3 text-brown-dark">Lingkup Layanan Utama</h2>
-                    <p class="lead text-brown-medium">
-                        Berdasarkan kelompok bidang yang dapat ditangani, PT. MITRA NUSA KONSULINDO menyediakan jasa konsultansi
-                        yang mencakup layanan konstruksi dan non konstruksi, dari tahap studi hingga pengawasan pelaksanaan.
-                    </p>
-                </div>
-            </div>
-
-            <div class="row g-4 mb-4">
-                <!-- Konstruksi -->
-                <div class="col-lg-6">
-                    <div class="service-group-card shadow-3d h-100 hover-3d-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-circle bg-brown-subtle text-brown-dark me-3">
-                                <i class="fas fa-hard-hat fa-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="h4 fw-bold text-brown-dark mb-1">Konsultansi Konstruksi</h3>
-                                <p class="text-brown-medium mb-0 small">
-                                    Jasa arsitektur, rekayasa, dan tata ruang sesuai klasifikasi Sertifikat Badan Usaha.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <ul class="list-unstyled small text-brown-medium mb-0">
-                                    <li><strong>Jasa Arsitektural Bangunan Gedung Hunian & Non Hunian (AR001)</strong></li>
-                                    <li class="mt-1"><strong>Jasa Arsitektural Lainnya (AR002)</strong></li>
-                                    <li class="mt-1"><strong>Jasa Desain Interior Bangunan Gedung & Bangunan Sipil (AR003)</strong></li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list-unstyled small text-brown-medium mb-0">
-                                    <li><strong>Jasa Rekayasa Konstruksi Bangunan Gedung Hunian & Non Hunian (RK001)</strong></li>
-                                    <li class="mt-1"><strong>Jasa Rekayasa Pekerjaan Teknik Sipil Sumber Daya Air (RK002)</strong></li>
-                                    <li class="mt-1"><strong>Jasa Rekayasa Pekerjaan Teknik Sipil Transportasi (RK003)</strong></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mt-3">
-                            <a href="{{ route('services.construction') }}" class="btn btn-outline-brown-3d btn-sm rounded-pill px-3">
-                                Lihat Detail Layanan Konstruksi
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Non-Konstruksi -->
-                <div class="col-lg-6">
-                    <div class="service-group-card shadow-3d h-100 hover-3d-card">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-circle bg-cream-gold-subtle text-cream-gold me-3">
-                                <i class="fas fa-industry fa-lg"></i>
-                            </div>
-                            <div>
-                                <h3 class="h4 fw-bold text-brown-dark mb-1">Konsultansi Non Konstruksi</h3>
-                                <p class="text-brown-medium mb-0 small">
-                                    Meliputi pengembangan wilayah, studi, manajemen, dan jasa khusus di berbagai sektor.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="row g-3">
-                            <div class="col-sm-6">
-                                <ul class="list-unstyled small text-brown-medium mb-0">
-                                    <li><strong>Pengembangan Pertanian & Perdesaan</strong> (prasarana sosial, kehutanan, perikanan, dll.).</li>
-                                    <li class="mt-1"><strong>Transportasi</strong> (sarana transportasi, regulasi, usaha jasa angkutan).</li>
-                                    <li class="mt-1"><strong>Telematika</strong> (telekomunikasi, perangkat keras, perangkat lunak, konten).</li>
-                                </ul>
-                            </div>
-                            <div class="col-sm-6">
-                                <ul class="list-unstyled small text-brown-medium mb-0">
-                                    <li><strong>Jasa Konsultansi Manajemen</strong> (sistem akuntansi, SDM, hukum bisnis).</li>
-                                    <li class="mt-1"><strong>Jasa Studi, Penelitian & Bantuan Teknis</strong> (studi makro, kelayakan, perencanaan umum).</li>
-                                    <li class="mt-1"><strong>Jasa Khusus & Jasa Survey</strong> (survey teknis, GIS, appraisal, inspeksi teknik, kehumasan).</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="mt-3">
-                            <a href="{{ route('services') }}" class="btn btn-outline-brown-3d btn-sm rounded-pill px-3">
-                                Layanan Non-Konstruksi Lengkap
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- 4 kartu ringkas dengan efek 3D -->
-            <div class="row g-4 mt-2">
-                @php
-                    $services = [
-                        ['icon' => 'fas fa-drafting-compass', 'title' => 'Desain Arsitektural', 'desc' => 'Desain skematik, pengembangan desain, hingga desain akhir untuk bangunan dan struktur, termasuk nasihat arsitektural menyeluruh.', 'color' => 'brown', 'link' => 'services.architectural'],
-                        ['icon' => 'fas fa-water', 'title' => 'Rekayasa Sumber Daya Air', 'desc' => 'Perencanaan dam, irigasi, pengendalian banjir, penyaluran air, sanitasi, dan sistem saluran limbah.', 'color' => 'brown-medium', 'link' => 'services.engineering'],
-                        ['icon' => 'fas fa-road', 'title' => 'Rekayasa Transportasi', 'desc' => 'Desain jalan, jembatan, jalan layang, termasuk structural health monitoring system untuk bentang jembatan.', 'color' => 'brown-light', 'link' => 'services.engineering'],
-                        ['icon' => 'fas fa-chart-line', 'title' => 'Studi & Manajemen', 'desc' => 'Studi kelayakan, studi makro, perencanaan umum, konsultansi manajemen dan pengembangan sistem.', 'color' => 'cream-gold', 'link' => 'services.non-construction']
-                    ];
-                @endphp
-                @foreach($services as $service)
-                    <div class="col-lg-3 col-md-6">
-                        <div class="service-card-3d hover-3d-card">
-                            <div class="service-card-inner">
-                                <div class="service-icon-wrapper mb-3">
-                                    <i class="{{ $service['icon'] }} fa-2x text-brown-dark"></i>
-                                </div>
-                                <h5 class="fw-bold text-brown-dark mb-2">{{ $service['title'] }}</h5>
-                                <p class="text-brown-medium small mb-4">{{ $service['desc'] }}</p>
-                                <a href="{{ route($service['link']) }}" class="btn btn-outline-brown-3d rounded-pill px-3 py-2 w-100">
-                                    Selengkapnya <i class="fas fa-arrow-right ms-2"></i>
-                                </a>
-                                <div class="card-corner corner-1"></div>
-                                <div class="card-corner corner-2"></div>
-                            </div>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-
-            <div class="text-center mt-5 mb-5">
-                <a href="{{ route('services') }}" class="btn btn-outline-brown-3d rounded-pill px-5">
-                    <i class="fas fa-list me-2"></i>Lihat Semua Layanan
-                </a>
-            </div>
-        </div>
-    </section>
-
-    {{-- <!-- SECTION: Struktur Pengurus (ringkas) -->
-    <section class="py-7 bg-cream-medium position-relative overflow-hidden">
-        <div class="container">
-            <div class="row mb-4 align-items-end">
-                <div class="col-lg-8">
-                    <h2 class="display-6 fw-bold text-brown-dark mb-2">Pengurus & Organisasi</h2>
-                    <p class="text-brown-medium mb-0">
-                        Struktur organisasi yang jelas memastikan setiap proyek ditangani oleh tim dengan kapabilitas yang tepat.
-                    </p>
-                </div>
-                <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
-                    <a href="{{ route('about') }}#organization" class="btn btn-outline-brown-3d rounded-pill px-4">
-                        Lihat Struktur Organisasi Lengkap
-                    </a>
-                </div>
-            </div>
-
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="team-card-3d hover-3d-card">
-                        <div class="team-card-inner">
-                            <div class="team-icon-wrapper mb-3">
-                                <i class="fas fa-user-tie fa-3x text-brown-dark"></i>
-                            </div>
-                            <h5 class="fw-bold text-brown-dark mb-2">Dewan Komisaris</h5>
-                            <ul class="list-unstyled small text-brown-medium">
-                                <li><strong>Komisaris Utama:</strong> Dede Samsul Muharom.</li>
-                                <li class="mt-2"><strong>Komisaris:</strong> Endah Nuraeni.</li>
-                            </ul>
-                            <div class="card-corner corner-1"></div>
-                            <div class="card-corner corner-2"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="team-card-3d hover-3d-card">
-                        <div class="team-card-inner">
-                            <div class="team-icon-wrapper mb-3">
-                                <i class="fas fa-user-cog fa-3x text-brown-dark"></i>
-                            </div>
-                            <h5 class="fw-bold text-brown-dark mb-2">Dewan Direksi</h5>
-                            <ul class="list-unstyled small text-brown-medium">
-                                <li><strong>Direktur Utama:</strong> Muria Cipta, ST.</li>
-                                <li class="mt-2"><strong>Direktur:</strong> Andri Hendrawan.</li>
-                            </ul>
-                            <div class="card-corner corner-1"></div>
-                            <div class="card-corner corner-2"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="team-card-3d hover-3d-card">
-                        <div class="team-card-inner">
-                            <div class="team-icon-wrapper mb-3">
-                                <i class="fas fa-sitemap fa-3x text-brown-dark"></i>
-                            </div>
-                            <h5 class="fw-bold text-brown-dark mb-2">Divisi Teknis & Pendukung</h5>
-                            <p class="small text-brown-medium mb-0">
-                                Terdiri dari divisi Tata Ruang, Arsitektur & Landscaping, Lingkungan, Sipil, Manajemen, Keuangan, Administrasi & Personalia, Pemasaran & Relasi, serta tenaga ahli dan tenaga pendukung.
-                            </p>
-                            <div class="card-corner corner-1"></div>
-                            <div class="card-corner corner-2"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> --}}
 
     <!-- CTA PREMIUM -->
     <section class="py-7 cta-elegant position-relative overflow-hidden">
@@ -559,14 +229,11 @@
             <div class="cta-content-wrapper">
                 <div class="row align-items-center">
                     <div class="col-lg-8">
-                        <h2 class="display-6 fw-bold mb-3">Siap Mengikutsertakan Kami Dalam Proyek Anda?</h2>
-                        <p class="lead mb-0">
-                            Adalah suatu kehormatan besar bagi kami apabila Relasi dan Klien berkenan memberikan kepercayaan
-                            untuk bekerja sama, sehingga kami dapat membuktikan kinerja yang profesional dan saling menguntungkan.
-                        </p>
+                        <h2 class="display-6 fw-bold mb-3">{{ $home->cta_title ?? 'Siap Mengikutsertakan Kami Dalam Proyek Anda?' }}</h2>
+                        <p class="lead mb-0 text-brown-dark" style="color: #241b64 !important;">{{ $home->cta_description ?? 'Adalah suatu kehormatan besar bagi kami apabila Relasi dan Klien berkenan memberikan kepercayaan untuk bekerja sama, sehingga kami dapat membuktikan kinerja yang profesional dan saling menguntungkan.' }}</p>
                     </div>
                     <div class="col-lg-4 text-lg-end mt-4 mt-lg-0">
-                        <a href="{{ route('contact') }}" class="btn btn-outline-brown-3d rounded-pill px-5 ">
+                        <a href="{{ route('contact') }}" class="btn btn-outline-brown-3d rounded-pill px-5">
                             <i class="fas fa-paper-plane me-2"></i>Hubungi Kami Sekarang
                             <span class="btn-shine"></span>
                         </a>
@@ -579,15 +246,15 @@
 
 @push('styles')
 <style>
-    /* Brown & Cream Color Palette */
+    /* ===== SAME STYLES AS ORIGINAL, with fix for hero text and CTA button ===== */
     :root {
-        --brown-dark: #5D4037;
-        --brown-medium: #8B6B61;
-        --brown-light: #A1887F;
-        --cream-gold: #D4AF37;
-        --cream-dark: #D7CCC8;
-        --cream-medium: #EFEBE9;
-        --cream-light: #F5F0ED;
+        --brown-dark: #241b64;
+        --brown-medium: #302574;
+        --brown-light: #4b3dad;
+        --cream-gold: #ef332d;
+        --cream-dark: #eef2ff;
+        --cream-medium: #f8fafc;
+        --cream-light: #f8fafc;
         --white: #ffffff;
         --light: #f8f9fa;
         --light-gray: #e9ecef;
@@ -596,7 +263,7 @@
         --shadow-sm: 0 .125rem .25rem rgba(0,0,0,.075);
         --shadow-md: 0 .5rem 1rem rgba(0,0,0,.15);
         --shadow-lg: 0 1rem 3rem rgba(0,0,0,.175);
-        --shadow-3d: 0 20px 40px rgba(93,64,55,0.2), 0 10px 20px rgba(0,0,0,0.1);
+        --shadow-3d: 0 20px 40px rgba(36,27,100,0.16), 0 10px 20px rgba(0,0,0,0.08);
     }
 
     /* Text Colors */
@@ -613,33 +280,33 @@
     .bg-cream-light { background-color: var(--cream-light) !important; }
     .bg-cream-medium { background-color: var(--cream-medium) !important; }
     .bg-light-gradient {
-        background: radial-gradient(circle at top left, #F5F0ED 0%, #ffffff 40%, #EFEBE9 100%);
+        background: radial-gradient(circle at top left, #f8fafc 0%, #ffffff 40%, #f8fafc 100%);
     }
 
     /* Subtle Backgrounds */
-    .bg-brown-subtle { background-color: rgba(93, 64, 55, 0.08) !important; }
-    .bg-brown-medium-subtle { background-color: rgba(139, 107, 97, 0.12) !important; }
-    .bg-brown-light-subtle { background-color: rgba(161, 136, 127, 0.12) !important; }
-    .bg-cream-gold-subtle { background-color: rgba(212, 175, 55, 0.12) !important; }
+    .bg-brown-subtle { background-color: rgba(36, 27, 100, 0.08) !important; }
+    .bg-brown-medium-subtle { background-color: rgba(48, 37, 116, 0.12) !important; }
+    .bg-brown-light-subtle { background-color: rgba(75, 61, 173, 0.12) !important; }
+    .bg-cream-gold-subtle { background-color: rgba(239, 51, 45, 0.12) !important; }
 
     /* ===== 3D BUTTONS ===== */
     .btn-brown-3d {
-        background: linear-gradient(145deg, var(--brown-dark), #4A342E);
+        background: linear-gradient(145deg, var(--brown-dark), #171247);
         border: none;
         color: white;
         font-weight: 600;
         transition: all 0.3s;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 8px 16px rgba(93,64,55,0.2);
+        box-shadow: 0 8px 16px rgba(36,27,100,0.2);
         transform-style: preserve-3d;
         transform: translateY(0) rotateX(0deg);
     }
 
     .btn-brown-3d:hover {
         transform: translateY(-3px) rotateX(2deg);
-        box-shadow: 0 15px 30px rgba(93,64,55,0.3);
-        background: linear-gradient(145deg, #4A342E, var(--brown-dark));
+        box-shadow: 0 15px 30px rgba(36,27,100,0.3);
+        background: linear-gradient(145deg, #171247, var(--brown-dark));
     }
 
     .btn-outline-brown-3d {
@@ -657,7 +324,7 @@
         background: var(--brown-dark);
         color: white;
         transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(93,64,55,0.2);
+        box-shadow: 0 10px 20px rgba(36,27,100,0.2);
     }
 
     .btn-brown-3d::before, .btn-outline-brown-3d::before {
@@ -684,7 +351,7 @@
 
     .hover-3d-card:hover {
         transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
-        box-shadow: 0 30px 60px rgba(93,64,55,0.25);
+        box-shadow: 0 30px 60px rgba(36,27,100,0.2);
     }
 
     /* ===== SERVICE CARD 3D ===== */
@@ -697,7 +364,7 @@
         border-radius: 1.5rem;
         padding: 2rem 1.5rem;
         box-shadow: var(--shadow-3d);
-        border: 1px solid rgba(93,64,55,0.1);
+        border: 1px solid rgba(36,27,100,0.1);
         transition: all 0.4s;
         transform-style: preserve-3d;
         transform: rotateY(0deg) rotateX(1deg);
@@ -708,7 +375,7 @@
     }
     .service-card-3d:hover .service-card-inner {
         transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
-        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        box-shadow: 0 30px 60px rgba(36,27,100,0.18);
         border-color: var(--cream-gold);
     }
     .service-icon-wrapper {
@@ -736,7 +403,7 @@
         border-radius: 1.5rem;
         padding: 2rem 1.5rem;
         box-shadow: var(--shadow-3d);
-        border: 1px solid rgba(93,64,55,0.1);
+        border: 1px solid rgba(36,27,100,0.1);
         transition: all 0.4s;
         transform-style: preserve-3d;
         transform: rotateY(0deg) rotateX(1deg);
@@ -747,7 +414,7 @@
     }
     .team-card-3d:hover .team-card-inner {
         transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
-        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
+        box-shadow: 0 30px 60px rgba(36,27,100,0.18);
         border-color: var(--cream-gold);
     }
     .team-icon-wrapper {
@@ -763,62 +430,6 @@
     }
     .team-card-3d:hover .team-icon-wrapper {
         transform: scale(1.1) rotate(5deg);
-    }
-
-    /* ===== CERTIFICATION CARD 3D ===== */
-    .cert-card-3d {
-        perspective: 1000px;
-        height: 100%;
-    }
-    .cert-inner {
-        background: white;
-        border-radius: 1rem;
-        padding: 1.5rem;
-        box-shadow: var(--shadow-3d);
-        border: 1px solid rgba(93,64,55,0.1);
-        transition: all 0.4s;
-        transform-style: preserve-3d;
-        transform: rotateY(0deg) rotateX(1deg);
-        position: relative;
-        overflow: hidden;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .cert-card-3d:hover .cert-inner {
-        transform: rotateY(2deg) rotateX(1deg) translateY(-5px);
-        box-shadow: 0 30px 60px rgba(93,64,55,0.2);
-        border-color: var(--cream-gold);
-    }
-    .cert-logo {
-        max-height: 50px;
-        max-width: 100%;
-        filter: grayscale(30%);
-        transition: all 0.3s;
-    }
-    .cert-card-3d:hover .cert-logo {
-        filter: grayscale(0);
-        transform: scale(1.05);
-    }
-    .cert-hover-info {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background: rgba(93,64,55,0.9);
-        color: white;
-        font-size: 0.6rem;
-        padding: 0.3rem;
-        text-align: center;
-        transform: translateY(100%);
-        transition: transform 0.3s;
-        white-space: normal;
-        word-wrap: break-word;
-        line-height: 1.2;
-    }
-    .cert-card-3d:hover .cert-hover-info {
-        transform: translateY(0);
     }
 
     /* ===== DECORATIVE CORNERS ===== */
@@ -849,8 +460,8 @@
         width: 300px;
         height: 300px;
     }
-    .decoration-circle:nth-child(1) { top: -100px; right: -100px; background: rgba(93,64,55,0.02); animation: float 25s infinite; }
-    .decoration-circle:nth-child(2) { bottom: -50px; left: -50px; width: 200px; height: 200px; background: rgba(212,175,55,0.02); animation: float 20s infinite reverse; }
+    .decoration-circle:nth-child(1) { top: -100px; right: -100px; background: rgba(36,27,100,0.03); animation: float 25s infinite; }
+    .decoration-circle:nth-child(2) { bottom: -50px; left: -50px; width: 200px; height: 200px; background: rgba(239,51,45,0.03); animation: float 20s infinite reverse; }
 
     @keyframes float {
         0%, 100% { transform: translateY(0) rotate(0deg); }
@@ -932,8 +543,7 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background:
-            linear-gradient(135deg, rgba(92, 64, 51, 0.85) 0%, rgba(210, 180, 140, 0.9) 100%);
+        background: linear-gradient(135deg, rgba(36, 27, 100, 0.88) 0%, rgba(239, 51, 45, 0.72) 100%);
         mix-blend-mode: multiply;
     }
 
@@ -1016,25 +626,97 @@
         background: white;
     }
 
-    .hero-section .container {
+    /* ----- PERBAIKAN HERO CONTAINER & TYPEWRITER ----- */
+    .hero-container {
         position: relative;
-        z-index: 2;
+        z-index: 5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
-    .hero-title {
-        letter-spacing: -0.03em;
+    .hero-section .row {
+        width: 100%;
+    }
+
+    /* Wrapper untuk typewriter agar tetap satu baris dan tengah */
+    .hero-title-wrapper {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
+    .hero-typewriter {
+        font-size: clamp(1.2rem, 4vw, 2.5rem);
+        font-weight: 700;
+        letter-spacing: -0.02em;
         text-shadow: 0 18px 40px rgba(0,0,0,0.5);
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 3px solid rgba(255,255,255,0.75);
+        display: inline-block;
+        padding-right: 5px;
+        animation: blink-caret 0.75s step-end infinite;
+        text-align: center;
+        margin: 0 auto;
     }
 
-    .text-gradient-brown {
-        background: linear-gradient(135deg, var(--cream-gold), var(--brown-light));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
+    @keyframes blink-caret {
+        from, to { border-color: transparent; }
+        50% { border-color: rgba(255,255,255,0.75); }
     }
 
+    /* Perbaikan: Badge diturunkan dengan margin-top */
+    .company-badge {
+        margin-top: 2rem !important;
+    }
+
+    /* Responsif untuk layar kecil */
+    @media (max-width: 768px) {
+        .hero-typewriter {
+            font-size: clamp(1rem, 3.5vw, 1.8rem);
+            white-space: nowrap;
+        }
+        .company-badge {
+            margin-top: 1rem !important;
+        }
+    }
+    @media (max-width: 576px) {
+        .hero-typewriter {
+            font-size: clamp(0.9rem, 3vw, 1.4rem);
+        }
+        .company-badge {
+            margin-top: 0.5rem !important;
+        }
+    }
+
+    /* ----- PERBAIKAN: teks hero putih solid ----- */
     .hero-lead {
-        text-shadow: 0 4px 18px rgba(0,0,0,0.4);
+        color: #ffffff !important;
+        text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+        font-weight: 500;
+    }
+
+    /* ----- PERBAIKAN: tombol Hubungi Kami Sekarang menjadi hitam ----- */
+    .cta-elegant .btn-outline-brown-3d,
+    .cta-elegant .btn-outline-brown-3d i,
+    .cta-elegant .btn-outline-brown-3d span {
+        color: #000000 !important;
+    }
+    .cta-elegant .btn-outline-brown-3d {
+        border-color: #000000 !important;
+    }
+    .cta-elegant .btn-outline-brown-3d:hover {
+        background: #000000 !important;
+        color: #ffffff !important;
+        border-color: #000000 !important;
+    }
+    .cta-elegant .btn-outline-brown-3d:hover i,
+    .cta-elegant .btn-outline-brown-3d:hover span {
+        color: #ffffff !important;
     }
 
     .subtitle-wrapper .h4 {
@@ -1042,7 +724,6 @@
         text-transform: uppercase;
     }
 
-    /* Teks Spesialis - bisa wrap */
     .specialist-text-wrapper {
         max-width: 800px;
         margin: 0 auto;
@@ -1061,15 +742,10 @@
     }
 
     @media (max-width: 768px) {
-        .specialist-text {
-            font-size: 0.9rem;
-        }
+        .specialist-text { font-size: 0.9rem; }
     }
-
     @media (max-width: 576px) {
-        .specialist-text {
-            font-size: 0.8rem;
-        }
+        .specialist-text { font-size: 0.8rem; }
     }
 
     .company-badge .badge {
@@ -1134,7 +810,7 @@
         position: absolute;
         top: 1.5rem;
         right: 1.5rem;
-        background: rgba(93, 64, 55, 0.06);
+        background: rgba(36, 27, 100, 0.06);
         padding: 0.45rem 0.95rem;
         border-radius: 999px;
         font-size: 0.8rem;
@@ -1145,13 +821,13 @@
     }
 
     .info-pill {
-        background: linear-gradient(145deg, #fdfaf7, #f3ebe4);
+        background: linear-gradient(145deg, #ffffff, #eef2ff);
         border-radius: 999px;
         padding: 0.6rem 1.1rem;
         display: flex;
         flex-direction: column;
         box-shadow: 0 10px 25px rgba(0,0,0,0.06);
-        border: 1px solid rgba(139,107,97,0.18);
+        border: 1px solid rgba(36,27,100,0.14);
     }
 
     .info-pill .label {
@@ -1173,7 +849,7 @@
         border-radius: 0.9rem;
         padding: 0.7rem 1rem;
         box-shadow: 0 8px 20px rgba(0,0,0,0.05);
-        border: 1px solid rgba(139,107,97,0.12);
+        border: 1px solid rgba(36,27,100,0.12);
     }
 
     .mini-card .label {
@@ -1202,14 +878,11 @@
         background: #ffffff;
         border-radius: 1.25rem;
         padding: 1.5rem 1.6rem;
-        border: 1px solid rgba(93,64,55,0.12);
+        border: 1px solid rgba(36,27,100,0.12);
     }
 
-
     .shadow-3d {
-        box-shadow:
-            0 18px 40px rgba(0,0,0,0.18),
-            0 2px 4px rgba(255,255,255,0.4) inset;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.18), 0 2px 4px rgba(255,255,255,0.4) inset;
         border-radius: 1.25rem !important;
     }
 
@@ -1231,7 +904,7 @@
     }
 
     .btn-brown:hover {
-        background-color: #4A342E;
+        background-color: #171247;
         color: white;
         transform: translateY(-2px);
         box-shadow: var(--shadow-md);
@@ -1274,9 +947,9 @@
         box-shadow: var(--shadow-md);
     }
 
-    /* CTA Section - Elegant Brown Cream */
+    /* CTA Section */
     .cta-elegant {
-        background: linear-gradient(135deg, #EFEBE9 0%, #D7CCC8 100%);
+        background: linear-gradient(135deg, #f8fafc 0%, #eef2ff 100%);
         position: relative;
         overflow: hidden;
     }
@@ -1285,9 +958,8 @@
         content: '';
         position: absolute;
         inset: 0;
-        background:
-            radial-gradient(circle at 20% 30%, rgba(92, 64, 51, 0.14) 0%, transparent 50%),
-            radial-gradient(circle at 80% 70%, rgba(210, 180, 140, 0.16) 0%, transparent 55%);
+        background: radial-gradient(circle at 20% 30%, rgba(36, 27, 100, 0.12) 0%, transparent 50%),
+                    radial-gradient(circle at 80% 70%, rgba(239, 51, 45, 0.10) 0%, transparent 55%);
     }
 
     .cta-content-wrapper {
@@ -1302,17 +974,17 @@
     }
 
     .cta-elegant h2 {
-        background: linear-gradient(135deg, #5D4037, #8B6B61);
+        background: linear-gradient(135deg, #241b64, #302574);
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         background-clip: text;
     }
 
     .cta-elegant .lead {
-        color: #5D4037;
+        color: #241b64;
     }
 
-    /* Utility classes for spacing */
+    /* Utility classes */
     .py-7 {
         padding-top: 6rem !important;
         padding-bottom: 6rem !important;
@@ -1328,66 +1000,23 @@
 
     /* Responsive */
     @media (max-width: 992px) {
-        .display-1 {
-            font-size: 3rem !important;
-        }
-
-        .stats-wrapper {
-            padding: 1.8rem 1.4rem;
-        }
-
-        .cta-content-wrapper {
-            padding: 2.2rem 1.8rem;
-        }
+        .display-1 { font-size: 3rem !important; }
+        .stats-wrapper { padding: 1.8rem 1.4rem; }
+        .cta-content-wrapper { padding: 2.2rem 1.8rem; }
     }
 
     @media (max-width: 768px) {
-        .slider-nav {
-            display: none;
-        }
-
-        .slide-content {
-            bottom: 10%;
-            right: 5%;
-            left: 5%;
-            text-align: center;
-        }
-
-        .display-1 {
-            font-size: 2.4rem !important;
-        }
-
-        .cta-buttons .btn {
-            width: 100%;
-            max-width: 280px;
-            margin: 0.5rem auto !important;
-        }
-
-        .cta-buttons {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .cta-content-wrapper {
-            padding: 1.8rem 1.4rem;
-        }
+        .slider-nav { display: none; }
+        .slide-content { bottom: 10%; right: 5%; left: 5%; text-align: center; }
+        .cta-buttons .btn { width: 100%; max-width: 280px; margin: 0.5rem auto !important; }
+        .cta-buttons { flex-direction: column; align-items: center; }
+        .cta-content-wrapper { padding: 1.8rem 1.4rem; }
     }
 
     @media (max-width: 576px) {
-        .badge.bg-brown-dark {
-            font-size: 0.8rem;
-            padding: 0.5rem 0.9rem;
-        }
-
-        .info-pill {
-            padding: 0.5rem 0.9rem;
-        }
-
-        .legal-card,
-        .service-group-card,
-        .org-card {
-            padding: 1.25rem 1.3rem;
-        }
+        .badge.bg-brown-dark { font-size: 0.8rem; padding: 0.5rem 0.9rem; }
+        .info-pill { padding: 0.5rem 0.9rem; }
+        .legal-card, .service-group-card, .org-card { padding: 1.25rem 1.3rem; }
     }
 
     html {
@@ -1486,6 +1115,37 @@
                 });
             }, { threshold: 0.5 });
             observer.observe(statsSection);
+        }
+
+        // ===== TYPEWRITER EFFECT UNTUK JUDUL HERO (BERGERAK) =====
+        const typewriterElement = document.getElementById('heroTypewriter');
+        if (typewriterElement) {
+            const originalText = "{{ $home->hero_title ?? 'PT Mitra Nusa Konsulindo' }}";
+            let charIndex = 0;
+            let isDeleting = false;
+
+            function typeWriter() {
+                const currentText = originalText.substring(0, charIndex);
+                typewriterElement.textContent = currentText;
+
+                if (!isDeleting && charIndex < originalText.length) {
+                    charIndex++;
+                    setTimeout(typeWriter, 120); // kecepatan mengetik
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    setTimeout(typeWriter, 60); // kecepatan menghapus
+                }
+
+                if (!isDeleting && charIndex === originalText.length) {
+                    isDeleting = true;
+                    setTimeout(typeWriter, 2500); // jeda sebelum menghapus
+                } else if (isDeleting && charIndex === 0) {
+                    isDeleting = false;
+                    setTimeout(typeWriter, 800); // jeda sebelum mengetik ulang
+                }
+            }
+
+            setTimeout(typeWriter, 500);
         }
 
         // ===== SCROLL ANIMATION FOR CARDS =====

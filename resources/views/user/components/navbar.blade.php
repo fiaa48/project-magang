@@ -6,7 +6,7 @@
                 <img src="{{ asset('images/logopt.png') }}" alt="PT Mitra Nusa Konsulindo">
             </div>
             <div class="brand-text d-none d-md-block">
-                <div class="brand-title">PT Mitra Nusa Konsultan</div>
+                <div class="brand-title">PT Mitra Nusa Konsulindo</div>
             </div>
         </a>
 
@@ -28,7 +28,8 @@
                     <a class="nav-link nav-link-custom dropdown-toggle {{ request()->is('about*') ? 'active' : '' }}"
                        href="#"
                        role="button"
-                       data-bs-toggle="dropdown">
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
                         Tentang
                     </a>
                     <ul class="dropdown-menu">
@@ -43,16 +44,15 @@
                     <a class="nav-link nav-link-custom dropdown-toggle {{ request()->is('services*') ? 'active' : '' }}"
                        href="#"
                        role="button"
-                       data-bs-toggle="dropdown">
+                       data-bs-toggle="dropdown"
+                       aria-expanded="false">
                         Layanan
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('services') }}">Semua</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{{ route('services.construction') }}">Konstruksi</a></li>
+                        <li><a class="dropdown-item" href="{{ route('services') }}">Konstruksi</a></li>
                         <li><a class="dropdown-item" href="{{ route('services.non-construction') }}">Non-Konstruksi</a></li>
-                        <li><a class="dropdown-item" href="{{ route('services.architectural') }}">Arsitektural</a></li>
-                        <li><a class="dropdown-item" href="{{ route('services.engineering') }}">Teknik</a></li>
+                        {{-- <li><a class="dropdown-item" href="{{ route('services.architectural') }}">Arsitektural</a></li>
+                        <li><a class="dropdown-item" href="{{ route('services.engineering') }}">Teknik</a></li> --}}
                     </ul>
                 </li>
 
@@ -62,27 +62,12 @@
                     </a>
                 </li>
 
-                <li class="nav-item dropdown mx-1">
-                    <a class="nav-link nav-link-custom dropdown-toggle {{ request()->is('certifications*') ? 'active' : '' }}"
-                       href="#"
-                       role="button"
-                       data-bs-toggle="dropdown">
+                <li class="nav-item mx-1">
+                    <a class="nav-link nav-link-custom {{ request()->is('certifications*') ? 'active' : '' }}"
+                       href="{{ route('certifications.index') }}">
                         Sertifikasi
                     </a>
-                    <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="{{ route('certifications.index') }}">Semua</a></li>
-                        <li><hr class="dropdown-divider"></li>
-                        <li><a class="dropdown-item" href="{{ route('certifications.sbu') }}">SBU</a></li>
-                        <li><a class="dropdown-item" href="{{ route('certifications.iso') }}">ISO</a></li>
-                        <li><a class="dropdown-item" href="{{ route('certifications.legal') }}">Legal</a></li>
-                    </ul>
                 </li>
-
-                {{-- <li class="nav-item mx-1">
-                    <a class="nav-link nav-link-custom {{ request()->is('management') ? 'active' : '' }}" href="{{ route('management') }}">
-                        Manajemen
-                    </a>
-                </li> --}}
 
                 <li class="nav-item mx-1">
                     <a class="nav-link nav-link-custom {{ request()->is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">
@@ -102,7 +87,7 @@
     </div>
 </nav>
 
-<div style="height: 60px;"></div> <!-- Reduced spacer -->
+<div style="height: 60px;"></div> <!-- Spacer -->
 
 <style>
     /* Navbar Styles - SUPER COMPACT */
@@ -133,7 +118,7 @@
 
     /* Navigation Links - Compact */
     .nav-link-custom {
-        color: #374151 !important;
+        color: var(--brand-dark) !important;
         font-weight: 500;
         padding: 0.4rem 0.75rem !important;
         margin: 0 0.15rem;
@@ -143,11 +128,11 @@
     }
 
     .nav-link-custom:hover {
-        color: #1d4ed8 !important;
+        color: var(--brand-rich) !important;
     }
 
     .nav-link-custom.active {
-        color: #1d4ed8 !important;
+        color: var(--brand-rich) !important;
         font-weight: 600;
     }
 
@@ -158,7 +143,7 @@
         left: 0.75rem;
         right: 0.75rem;
         height: 2px;
-        background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+        background: linear-gradient(90deg, var(--accent-red), var(--brand-rich));
         border-radius: 2px;
         animation: slideIn 0.2s ease;
     }
@@ -172,21 +157,23 @@
         }
     }
 
-    /* Dropdown Menu - Compact */
+    /* Dropdown Menu - Compact & Mobile Friendly */
     .dropdown-menu {
         border: none;
-        border-radius: 10px;
-        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
-        padding: 0.4rem;
+        border-radius: 12px;
+        box-shadow: 0 12px 35px rgba(15, 23, 42, 0.1);
+        padding: 0.45rem;
         margin-top: 0.4rem;
-        border: 1px solid rgba(0, 0, 0, 0.04);
-        min-width: 180px;
+        border: 1px solid rgba(36, 27, 100, 0.08);
+        min-width: 190px;
+        background: rgba(255,255,255,0.96);
+        backdrop-filter: blur(12px);
     }
 
     .dropdown-item {
         padding: 0.5rem 1rem;
-        border-radius: 6px;
-        color: #374151;
+        border-radius: 8px;
+        color: var(--text-primary);
         font-weight: 500;
         transition: all 0.15s ease;
         margin: 0.1rem 0;
@@ -194,8 +181,8 @@
     }
 
     .dropdown-item:hover {
-        background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
-        color: #1d4ed8;
+        background: rgba(36, 27, 100, 0.08);
+        color: var(--brand-dark);
         transform: translateX(3px);
     }
 
@@ -206,7 +193,7 @@
 
     /* CTA Button - Compact */
     .btn-cta {
-        background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+        background: linear-gradient(135deg, var(--brand-rich), var(--brand-dark));
         border: none;
         color: white;
         font-weight: 600;
@@ -214,17 +201,17 @@
         transition: all 0.2s ease;
         position: relative;
         overflow: hidden;
-        box-shadow: 0 3px 10px rgba(59, 130, 246, 0.25);
+        box-shadow: 0 6px 18px rgba(36, 27, 100, 0.28);
         font-size: 0.88rem;
     }
 
     .btn-cta:hover {
         transform: translateY(-1px);
-        box-shadow: 0 5px 15px rgba(59, 130, 246, 0.35);
+        box-shadow: 0 5px 15px rgba(36, 27, 100, 0.35);
         color: white;
     }
 
-    /* Mobile Menu - Compact */
+    /* Mobile Menu - Compact & Dropdown fix */
     @media (max-width: 991px) {
         .navbar {
             padding: 0.5rem 0;
@@ -236,6 +223,8 @@
             border-radius: 0 0 15px 15px;
             box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
             margin-top: 0.4rem;
+            max-height: 80vh;
+            overflow-y: auto;
         }
 
         .nav-link-custom {
@@ -247,18 +236,28 @@
 
         .nav-link-custom:hover,
         .nav-link-custom.active {
-            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            background: rgba(36, 27, 100, 0.08);
         }
 
         .nav-link-custom.active:after {
             display: none;
         }
 
+        /* Dropdown menu di mobile: tampil sebagai blok biasa, tanpa hover */
         .dropdown-menu {
             box-shadow: none;
             border: 1px solid rgba(0, 0, 0, 0.04);
             margin: 0.4rem 0 0.4rem 0.75rem;
             min-width: 160px;
+            background: #fff;
+            position: static !important;
+            transform: none !important;
+            width: calc(100% - 0.75rem);
+        }
+
+        .dropdown-toggle::after {
+            float: right;
+            margin-top: 0.5rem;
         }
 
         .btn-cta {
@@ -325,15 +324,14 @@
 </style>
 
 <script>
-    // Navbar scroll effect
     document.addEventListener('DOMContentLoaded', function() {
         const navbar = document.querySelector('.navbar');
+        const navbarCollapse = document.querySelector('.navbar-collapse');
 
-        // Add scrolled class initially if needed
+        // Scroll effect
         if (window.scrollY > 10) {
             navbar.classList.add('scrolled');
         }
-
         window.addEventListener('scroll', function() {
             if (window.scrollY > 10) {
                 navbar.classList.add('scrolled');
@@ -342,27 +340,38 @@
             }
         });
 
-        // Mobile menu close on click
-        const navLinks = document.querySelectorAll('.nav-link');
-        const navbarCollapse = document.querySelector('.navbar-collapse');
-        const bsCollapse = new bootstrap.Collapse(navbarCollapse, { toggle: false });
+        // === PERBAIKAN: Mobile menu hanya tertutup ketika klik link yang bukan dropdown toggle ===
+        if (navbarCollapse) {
+            // Tutup navbar collapse ketika link navigasi biasa (bukan dropdown toggle) diklik
+            const navLinks = document.querySelectorAll('.navbar-nav .nav-link:not(.dropdown-toggle)');
+            const dropdownItems = document.querySelectorAll('.dropdown-item');
 
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            const closeNavbar = () => {
                 if (navbarCollapse.classList.contains('show')) {
-                    bsCollapse.hide();
+                    const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse);
+                    if (bsCollapse) {
+                        bsCollapse.hide();
+                    } else {
+                        // fallback
+                        navbarCollapse.classList.remove('show');
+                    }
                 }
-            });
-        });
+            };
 
-        // Auto close dropdowns on mobile when clicking elsewhere
-        document.addEventListener('click', function(event) {
-            if (window.innerWidth < 992) {
-                const isClickInside = navbar.contains(event.target);
-                if (!isClickInside && navbarCollapse.classList.contains('show')) {
-                    bsCollapse.hide();
-                }
-            }
-        });
+            navLinks.forEach(link => {
+                link.addEventListener('click', closeNavbar);
+            });
+
+            dropdownItems.forEach(item => {
+                item.addEventListener('click', closeNavbar);
+            });
+        }
+
+        // Pastikan dropdown toggle tidak menutup navbar (hanya membuka dropdown)
+        // Bootstrap sudah menangani toggle, jadi tidak perlu tambahan.
+        // Juga, pada mobile, dropdown menu akan terbuka karena CSS `position: static`?
+        // Kita perlu memastikan dropdown dapat di-trigger oleh klik.
+        // Pada layar kecil, Bootstrap secara default akan membuka dropdown saat elemen toggle diklik.
+        // Tidak ada modifikasi tambahan yang diperlukan.
     });
 </script>
