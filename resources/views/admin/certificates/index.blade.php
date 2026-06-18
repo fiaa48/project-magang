@@ -4,7 +4,6 @@
 
 @push('styles')
 <style>
-    /* (semua style tetap seperti kode awal Anda, tidak diubah) */
     :root { --brown-dark:#171247; --brown-medium:#241b64; --brown-light:#4b3dad; --white:#fff; --gold:#D4AF37; --gold-light:#F3E5AB; --shadow-sm:0 10px 20px rgba(0,0,0,.02),0 6px 6px rgba(0,0,0,.03); --shadow-md:0 20px 30px -12px rgba(0,0,0,.1),0 8px 12px rgba(0,0,0,.05); }
     body { background:linear-gradient(145deg,#F9F5EF 0%,#FDF9F4 100%); }
     .page-header-premium { margin-bottom:2.5rem; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
@@ -31,6 +30,8 @@
         text-transform:uppercase;
         font-size:.75rem;
         letter-spacing:.08em;
+        color:#000 !important;
+        white-space:nowrap;
     }
     .table-ultra tbody td { padding:1.1rem 1rem; vertical-align:middle; border-bottom:1px solid rgba(141,110,99,.1); color:#2C1A12; font-weight:500; background:var(--white); }
     .table-ultra tbody tr:hover td { background:#FFFBF5; }
@@ -86,6 +87,15 @@
         gap: 1.5rem;
         align-items: flex-start;
     }
+    /* tambahan untuk tampilan field yang panjang */
+    .text-ellipsis {
+        max-width: 150px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: inline-block;
+        vertical-align: middle;
+    }
 </style>
 @endpush
 
@@ -112,7 +122,7 @@
         <div class="toolbar-premium">
             <form method="GET" action="{{ route('admin.certificates.index') }}" class="search-premium">
                 <i class="fas fa-search"></i>
-                <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari SIUJK, SBU, ISO...">
+                <input type="text" name="search" value="{{ request('search') }}" placeholder="Cari PKP, SKT, SBU, ISO, Akta...">
                 @if(request('search'))
                     <a href="{{ route('admin.certificates.index') }}"><i class="fas fa-times-circle"></i></a>
                 @endif
@@ -124,10 +134,12 @@
                 <thead>
                     <tr>
                         <th style="color: #000000 !important;">No</th>
-                        <th style="color: #000000 !important;">SIUJK</th>
-                        <th style="color: #000000 !important;">SIUP</th>
+                        <th style="color: #000000 !important;">PKP</th>
+                        <th style="color: #000000 !important;">SKT Pajak</th>
                         <th style="color: #000000 !important;">SBU Konstruksi</th>
+                        <th style="color: #000000 !important;">SBU Non-Konstruksi</th>
                         <th style="color: #000000 !important;">ISO</th>
+                        <th style="color: #000000 !important;">Sertifikasi Baru</th>
                         <th style="color: #000000 !important;">Akta Pendirian</th>
                         <th style="color: #000000 !important;">Akta Perubahan</th>
                         <th style="color: #000000 !important;">Pengesahan AHU</th>
@@ -138,11 +150,18 @@
                     @forelse($certificates as $index => $certificate)
                     <tr>
                         <td>{{ $certificates->firstItem() + $index }}</td>
-                        <td>{{ $certificate->siujk ?? '-' }}</td>
-                        <td>{{ $certificate->siup ?? '-' }}</td>
+                        <td>{{ $certificate->pkp ?? '-' }}</td>
+                        <td>{{ $certificate->skt_pajak ?? '-' }}</td>
                         <td>
                             @if($certificate->sbu_konstruksi)
                                 <span class="sbu-preview" title="{{ $certificate->sbu_konstruksi }}">{{ Str::limit($certificate->sbu_konstruksi, 35) }}</span>
+                            @else
+                                -
+                            @endif
+                        </td>
+                        <td>
+                            @if($certificate->sbu_non_konstruksi)
+                                <span class="sbu-preview" title="{{ $certificate->sbu_non_konstruksi }}">{{ Str::limit($certificate->sbu_non_konstruksi, 35) }}</span>
                             @else
                                 -
                             @endif
@@ -154,6 +173,7 @@
                                 -
                             @endif
                         </td>
+                        <td>{{ $certificate->sertifikasi_baru ?? '-' }}</td>
                         <td>{{ $certificate->akta_pendirian ?? '-' }}</td>
                         <td>{{ $certificate->akta_perubahan ?? '-' }}</td>
                         <td>{{ $certificate->pengesahan_ahu ?? '-' }}</td>
@@ -170,7 +190,7 @@
                     </tr>
                     @empty
                     <tr>
-                        <td colspan="9" class="text-center py-5">
+                        <td colspan="11" class="text-center py-5">
                             <i class="fas fa-certificate fa-2x text-brown-light mb-3 d-block"></i>
                             <p class="text-brown-medium mb-0">Belum ada data sertifikasi.</p>
                             <a href="{{ route('admin.certificates.create') }}" class="btn btn-sm btn-outline-brown-3d mt-3 rounded-pill">Tambah Sekarang</a>

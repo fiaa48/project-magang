@@ -8,27 +8,32 @@ use Illuminate\Http\Request;
 
 class CertificationController extends Controller
 {
+    /**
+     * Daftar field yang digunakan untuk validasi, penyimpanan, dan pencarian.
+     * Field 'name' dan 'type' tidak perlu dicari karena bersifat internal.
+     */
     private array $certificateFields = [
-        'siujk',
-        'siup',
-        'sbu_konstruksi',
-        'sbu_non_konstruksi',
         'pkp',
         'skt_pajak',
-        'bukti_spt',
+        'sbu_konstruksi',
+        'sbu_non_konstruksi',
         'iso',
         'sertifikasi_baru',
+        'akta_pendirian',
+        'akta_perubahan',
+        'pengesahan_ahu',
     ];
 
     public function index(Request $request)
     {
         $search = $request->search;
 
-        $certificates = $this->profileCertificateQuery()
+        $certificates = Certificate::query()
+            ->where('type', 'profil-sertifikasi')
             ->when($search, function ($query) use ($search) {
-                $query->where(function ($query) use ($search) {
+                $query->where(function ($q) use ($search) {
                     foreach ($this->certificateFields as $field) {
-                        $query->orWhere($field, 'like', '%' . $search . '%');
+                        $q->orWhere($field, 'like', '%' . $search . '%');
                     }
                 });
             })
@@ -59,20 +64,16 @@ class CertificationController extends Controller
 
     public function edit($id)
     {
-        $certificate = Certificate::findOrFail($id);
-
+        $certificate = Certificate::query()->where('type', 'profil-sertifikasi')->findOrFail($id);
         return view('admin.certificates.edit', compact('certificate'));
     }
 
     public function update(Request $request, $id)
     {
-        $certificate = Certificate::findOrFail($id);
+        $certificate = Certificate::query()->where('type', 'profil-sertifikasi')->findOrFail($id);
         $data = $request->validate($this->rules());
 
-        $certificate->update($data + [
-            'name' => $certificate->name ?: 'Sertifikasi Perusahaan',
-            'type' => $certificate->type ?: 'profil-sertifikasi',
-        ]);
+        $certificate->update($data);
 
         return redirect()->route('admin.certificates.index')
             ->with('success', 'Data sertifikasi berhasil diperbarui');
@@ -80,31 +81,25 @@ class CertificationController extends Controller
 
     public function destroy($id)
     {
-        $certificate = Certificate::findOrFail($id);
+        $certificate = Certificate::query()->where('type', 'profil-sertifikasi')->findOrFail($id);
         $certificate->delete();
 
         return redirect()->route('admin.certificates.index')
             ->with('success', 'Data sertifikasi berhasil dihapus');
     }
 
+    /**
+     * Aturan validasi untuk semua field yang diizinkan.
+     * Semua field opsional (nullable) dan berupa string.
+     */
     private function rules(): array
     {
         return collect($this->certificateFields)
             ->mapWithKeys(fn ($field) => [$field => 'nullable|string'])
             ->all();
     }
-
-    private function profileCertificateQuery()
-    {
-        return Certificate::where(function ($query) {
-            $query->where('type', 'profil-sertifikasi');
-
-            foreach ($this->certificateFields as $field) {
-                $query->orWhereNotNull($field);
-            }
-        });
-    }
 }
+
 
 // namespace App\Http\Controllers\Admin;
 

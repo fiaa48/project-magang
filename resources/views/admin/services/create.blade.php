@@ -321,8 +321,8 @@
                             <option value="non_construction" {{ old('section') == 'non_construction' ? 'selected' : '' }}>📋 Non-Construction</option>
                             <option value="construction_consultancy" {{ old('section') == 'construction_consultancy' ? 'selected' : '' }}>🏗️ Construction Consultancy</option>
                             <option value="non_construction_consultancy" {{ old('section') == 'non_construction_consultancy' ? 'selected' : '' }}>📊 Non-Construction Consultancy</option>
-                            <option value="architectural" {{ old('section') == 'architectural' ? 'selected' : '' }}>🏛️ Architectural</option>
-                            <option value="engineering" {{ old('section') == 'engineering' ? 'selected' : '' }}>⚙️ Engineering</option>
+                            {{-- <option value="architectural" {{ old('section') == 'architectural' ? 'selected' : '' }}>🏛️ Architectural</option>
+                            <option value="engineering" {{ old('section') == 'engineering' ? 'selected' : '' }}>⚙️ Engineering</option> --}}
                         </select>
                     </div>
                 </div>

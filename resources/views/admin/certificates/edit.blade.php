@@ -54,29 +54,9 @@
                 @csrf
                 @method('PUT')
 
+                {{-- PKP --}}
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group-premium">
-                            <label class="form-label-premium"><i class="fas fa-briefcase"></i> SIUJK</label>
-                            <div class="input-group-premium">
-                                <i class="fas fa-briefcase input-icon"></i>
-                                <input type="text" name="siujk" value="{{ old('siujk', $certificate->siujk) }}" class="form-control-premium" placeholder="Izin Usaha Jasa Konstruksi">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="form-group-premium">
-                            <label class="form-label-premium"><i class="fas fa-store"></i> SIUP</label>
-                            <div class="input-group-premium">
-                                <i class="fas fa-store input-icon"></i>
-                                <input type="text" name="siup" value="{{ old('siup', $certificate->siup) }}" class="form-control-premium" placeholder="Surat Izin Usaha Perdagangan">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group-premium">
                             <label class="form-label-premium"><i class="fas fa-chart-line"></i> PKP</label>
                             <div class="input-group-premium">
@@ -87,8 +67,9 @@
                     </div>
                 </div>
 
+                {{-- SKT Pajak --}}
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                         <div class="form-group-premium">
                             <label class="form-label-premium"><i class="fas fa-file-invoice"></i> SKT Pajak</label>
                             <div class="input-group-premium">
@@ -97,17 +78,9 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <div class="form-group-premium">
-                            <label class="form-label-premium"><i class="fas fa-calendar-check"></i> Bukti SPT Tahunan</label>
-                            <div class="input-group-premium">
-                                <i class="fas fa-calendar-check input-icon"></i>
-                                <input type="text" name="bukti_spt" value="{{ old('bukti_spt', $certificate->bukti_spt) }}" class="form-control-premium" placeholder="Contoh: SPT 1771 Tahun Pajak 2024, nihil">
-                            </div>
-                        </div>
-                    </div>
                 </div>
 
+                {{-- SBU Konstruksi --}}
                 <div class="form-group-premium">
                     <label class="form-label-premium"><i class="fas fa-hard-hat"></i> SBU Konstruksi</label>
                     <div class="input-group-premium">
@@ -117,6 +90,7 @@
                     <small class="text-muted">Pisahkan dengan koma atau baris baru</small>
                 </div>
 
+                {{-- SBU Non-Konstruksi --}}
                 <div class="form-group-premium">
                     <label class="form-label-premium"><i class="fas fa-chalkboard-user"></i> SBU Non-Konstruksi</label>
                     <div class="input-group-premium">
@@ -125,6 +99,7 @@
                     </div>
                 </div>
 
+                {{-- Sertifikat ISO --}}
                 <div class="form-group-premium">
                     <label class="form-label-premium"><i class="fas fa-certificate"></i> Sertifikat ISO</label>
                     <div class="input-group-premium">
@@ -133,6 +108,7 @@
                     </div>
                 </div>
 
+                {{-- Sertifikasi Baru --}}
                 <div class="form-group-premium">
                     <label class="form-label-premium"><i class="fas fa-star-of-life"></i> Sertifikasi Baru (Tambahan)</label>
                     <div class="input-group-premium">
@@ -141,7 +117,7 @@
                     </div>
                 </div>
 
-                <!-- ======== TIGA KOLOM AKTA YANG DITAMBAHKAN ======== -->
+                {{-- Tiga Kolom Akta --}}
                 <div class="row">
                     <div class="col-md-4">
                         <div class="form-group-premium">
@@ -171,7 +147,6 @@
                         </div>
                     </div>
                 </div>
-                <!-- =========================================== -->
 
                 <div class="d-flex flex-wrap justify-content-between gap-3 mt-4 pt-3">
                     <a href="{{ route('admin.certificates.index') }}" class="btn-outline-premium"><i class="fas fa-arrow-left"></i> Batal</a>
