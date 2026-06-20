@@ -37,7 +37,7 @@ use Illuminate\Database\Eloquent\Model;
 class Certificate extends Model
 {
     use HasFactory;
-    protected $table = 'Certificates';
+    protected $table = 'certificates';
     protected $fillable = [
         // Versi 2 (kolom sertifikat terstruktur)
         'jenis_sertifikat',

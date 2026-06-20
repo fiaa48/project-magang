@@ -166,13 +166,15 @@
                             <div class="col-sm-6">
                                 <div class="info-pill">
                                     <span class="label">Domisili</span>
-                                    <span class="data-value">{{ $companyProfile->address_main ?? 'Gedung Graha Mulia Sejahtera, Jl. Terusan Jakarta No. 175A, Antapani-Kulon, Bandung 40291 &' }} {{ $companyProfile->address_branch ?? 'Jl. Tulip VII No. 8, Rancabolang, Kec. Gedebage, Kota Bandung, Jawa Barat 40295' }}</span>
+                                    <span class="data-value">{{ $companyProfile->address_main ?? '-' }}
+                                        @if($companyProfile->address_main && $companyProfile->address_branch)&nbsp;&amp;&nbsp;@endif
+                                        {{ $companyProfile->address_branch ?? '-' }}</span>
                                 </div>
                             </div>
                             <div class="col-sm-6">
                                 <div class="info-pill">
                                     <span class="label">Asosiasi</span>
-                                    <span class="data-value">{{ $companyProfile->association ?? 'Anggota INKINDO & KADIN' }}</span>
+                                    <span class="data-value">{{ $companyProfile->association ?? '-' }}</span>
                                 </div>
                             </div>
                         </div>
@@ -210,11 +212,11 @@
                         <div class="mt-4 d-flex flex-wrap gap-3">
                             <div class="mini-card">
                                 <span class="label">Telepon</span>
-                                <span class="data-value">{{ $companyProfile->telepon_pt ?? '(022) 20502071' }}</span>
+                                <span class="data-value">{{ $companyProfile->telepon_pt ?? '-' }}</span>
                             </div>
                             <div class="mini-card">
                                 <span class="label">Email</span>
-                                <span class="data-value">{{ $companyProfile->email_pt ?? 'mitranusakonsulindo@gmail.com' }}</span>
+                                <span class="data-value">{{ $companyProfile->email_pt ?? '-' }}</span>
                             </div>
                         </div>
                     </div>

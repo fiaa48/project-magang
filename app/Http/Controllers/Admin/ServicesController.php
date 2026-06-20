@@ -21,18 +21,20 @@ class ServicesController extends Controller
                     // Pencarian di dalam JSON 'data' untuk field 'title' (Judul Data) dan 'category' (Kategori Data)
                     if (config('database.default') === 'mysql') {
                         // Untuk struktur array of objects
-                        $q->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$[*].title')) LIKE ?", ["%{$search}%"])
-                          ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$[*].category')) LIKE ?", ["%{$search}%"])
+                        // $q->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$[*].title')) LIKE ?", ["%{$search}%"])
+                        //   ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$[*].category')) LIKE ?", ["%{$search}%"])
                           // Untuk struktur single object
-                          ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$.title')) LIKE ?", ["%{$search}%"])
-                          ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$.category')) LIKE ?", ["%{$search}%"])
+                        //   ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$.title')) LIKE ?", ["%{$search}%"])
+                        //   ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$.category')) LIKE ?", ["%{$search}%"])
                           // (Opsional) Pencarian di deskripsi dan sub_services jika diperlukan
-                          ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$[*].description')) LIKE ?", ["%{$search}%"])
-                          ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$[*].sub_services')) LIKE ?", ["%{$search}%"]);
+                        //   ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$[*].description')) LIKE ?", ["%{$search}%"])
+                        //   ->orWhereRaw("JSON_UNQUOTE(JSON_EXTRACT(data, '$[*].sub_services')) LIKE ?", ["%{$search}%"]);
+                        $q->orWhereRaw("JSON_SEARCH(data, 'all', ?) IS NOT NULL", ["%{$search}%"]);
                     } else {
                         // Fallback untuk database non-MySQL (SQLite, PostgreSQL, dll)
-                        $q->orWhere('data', 'LIKE', '%"title":"%' . $search . '%"%')
-                          ->orWhere('data', 'LIKE', '%"category":"%' . $search . '%"%');
+                        // $q->orWhere('data', 'LIKE', '%"title":"%' . $search . '%"%')
+                        //   ->orWhere('data', 'LIKE', '%"category":"%' . $search . '%"%');
+                        $q->orWhere('data', 'LIKE', '%' . $search . '%');
                     }
                 });
             })

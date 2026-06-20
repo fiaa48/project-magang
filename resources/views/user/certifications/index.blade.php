@@ -52,7 +52,9 @@
                     <div class="legal-list">
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-map-marker-alt text-cream-gold me-2"></i>Domisili</div>
-                            <div class="data-value">{{ $companyProfile->address_main ?? 'Gedung Graha Mulia Sejahtera, Jl. Terusan Jakarta No. 175A, Antapani-Bandung 40291 &' }} {{ $companyProfile->address_branch ?? 'Jl. Tulip VII No. 8, Rancabolang, Kec. Gedebage, Kota Bandung, Jawa Barat 40295' }}</div>
+                            <div class="data-value">{{ $companyProfile->address_main ?? '-' }}
+                                    @if($companyProfile->address_main && $companyProfile->address_branch)&nbsp;&amp;&nbsp;@endif
+                                {{ $companyProfile->address_branch ?? '-' }}</div>
                         </div>
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-file-alt text-cream-gold me-2"></i>Akta Pendirian</div>
@@ -68,11 +70,11 @@
                         </div>
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-id-card text-cream-gold me-2"></i>NPWP</div>
-                            <div class="legal-value">{{ $CompanyProfile->npwp ?? '96.431.796.0-429.000' }}</div>
+                            <div class="legal-value">{{ $companyProfile->npwp ?? '-' }}</div>
                         </div>
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-qrcode text-cream-gold me-2"></i>NIB</div>
-                            <div class="legal-value">{{ $CompanyProfile->nib ?? '0257011100093' }}</div>
+                            <div class="legal-value">{{ $companyProfile->nib ?? '-' }}</div>
                         </div>
                     </div>
                 </div>
@@ -89,7 +91,7 @@
                     </div>
                     <div class="legal-list">
                         @php
-                            $cert = $certificate;
+                            $cert = $certificates;
                         @endphp
                         {{-- <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-briefcase text-cream-gold me-2"></i>SIUJK</div>
@@ -101,11 +103,11 @@
                         </div> --}}
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-chart-line text-cream-gold me-2"></i>PKP</div>
-                            <div class="legal-value">{{ $cert->pkp ?? '-' }}</div>
+                            <div class="legal-value">{{ $certificates->pkp ?? '-' }}</div>
                         </div>
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-file-invoice text-cream-gold me-2"></i>SKT Pajak</div>
-                            <div class="legal-value">{{ $cert->skt_pajak ?? 'Terdaftar DJP sejak 4 November 2020, NPWP 96.431.796.0-429.000' }}</div>
+                            <div class="legal-value">{{ $certificates->skt_pajak ?? 'Terdaftar DJP sejak 4 November 2020, NPWP 96.431.796.0-429.000' }}</div>
                         </div>
                         {{-- <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-calendar-check text-cream-gold me-2"></i>Bukti SPT Tahunan</div>
@@ -114,8 +116,8 @@
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-hard-hat text-cream-gold me-2"></i>SBU Konstruksi</div>
                             <div class="legal-value">
-                                @if($cert->sbu_konstruksi)
-                                    {{ $cert->sbu_konstruksi }}
+                                @if($certificates->sbu_konstruksi)
+                                    {{ $certificates->sbu_konstruksi }}
                                 @else
                                     AL001, AL002, AL003, AL004, AR001, AR002, AR003, RK001, RK002, RK003, RK005
                                 @endif
@@ -124,8 +126,8 @@
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-chalkboard-user text-cream-gold me-2"></i>SBU Non‑Konstruksi</div>
                             <div class="legal-value">
-                                @if($cert->sbu_non_konstruksi)
-                                    {{ $cert->sbu_non_konstruksi }}
+                                @if($certificates->sbu_non_konstruksi)
+                                    {{ $certificates->sbu_non_konstruksi }}
                                 @else
                                     Pertanian, Transportasi, Telematika, Manajemen, Jasa Khusus, Studi/Penelitian, Survey
                                 @endif
@@ -133,17 +135,17 @@
                         </div>
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-certificate text-cream-gold me-2"></i>Sertifikat ISO</div>
-                            <div class="legal-value">{{ $cert->iso ?? 'Dokumen tersedia pada galeri perusahaan.' }}</div>
+                            <div class="legal-value">{{ $certificates->iso ?? 'Dokumen tersedia pada galeri perusahaan.' }}</div>
                         </div>
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-star-of-life text-cream-gold me-2"></i>Sertifikasi Baru</div>
-                            <div class="legal-value">{{ $cert->sertifikasi_baru ?? '-' }}</div>
+                            <div class="legal-value">{{ $certificates->sertifikasi_baru ?? '-' }}</div>
                         </div>
-                        @if($cert->image)
+                        @if($certificates->image)
                         <div class="legal-item">
                             <div class="legal-label"><i class="fas fa-image text-cream-gold me-2"></i>Dokumen Pendukung</div>
                             <div class="legal-value">
-                                <a href="{{ asset($cert->image) }}" target="_blank" class="btn btn-outline-brown-3d btn-sm rounded-pill">
+                                <a href="{{ asset($certificates->image) }}" target="_blank" class="btn btn-outline-brown-3d btn-sm rounded-pill">
                                     <i class="fas fa-external-link-alt"></i> Lihat Sertifikat
                                 </a>
                             </div>

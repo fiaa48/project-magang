@@ -20,7 +20,7 @@ class HomeController extends Controller
 
         $companyProfile = CompanyProfile::latest()->first();
 
-        $sertificates = Certificate::where('jenis_sertifikat', 'Sertifikat Standar')->orderBy('created_at', 'desc')->get();
+        // $sertificates = Certificate::where('jenis_sertifikat', 'Sertifikat Standar')->orderBy('created_at', 'desc')->get();
 
         return view('user.home.index', compact('home', 'sertificates', 'companyProfile'));
     }

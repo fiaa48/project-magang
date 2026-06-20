@@ -4,16 +4,20 @@ namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
 use App\Models\Certificate;
+use App\Models\CompanyProfile;
 
 class CertificationController extends Controller
 {
     public function index()
     {
-        $certificates = $this->profileCertificateQuery()->latest()->get();
-        $certificate = $certificates->first();
-        $certificationRows = $this->certificationRows($certificate);
+        // $certificates = $this->profileCertificateQuery()->latest()->get();
+        // $certificate = $certificates->first();
+        // $certificationRows = $this->certificationRows($certificate);
+        $certificates = Certificate::latest()->first();
+        $companyProfile = CompanyProfile::latest()->first();
 
-        return view('user.certifications.index', compact('certificates', 'certificate', 'certificationRows'));
+        // return view('user.certifications.index', compact('certificates', 'certificate', 'certificationRows'));
+        return view('user.certifications.index', compact('certificates', 'companyProfile'));
     }
 
     public function category()
