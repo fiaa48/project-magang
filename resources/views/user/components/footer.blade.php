@@ -100,14 +100,14 @@
                     <div class="footer-map-grid">
                         <div class="footer-map-card">
                             <div class="footer-map-label">
-                                <span>Gedebage</span>
+                                <span>Antapani</span>
                                 <a href="https://www.google.com/maps/dir/?api=1&destination={{ urlencode($profile->address_main ?? 'Jl. Tulip VII No.8, Rancabolang, Gedebage, Bandung 40295') }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-location-arrow"></i></a>
                             </div>
                             <iframe src="https://www.google.com/maps?q={{ urlencode($profile->address_main ?? 'Jl. Tulip VII No.8, Rancabolang, Gedebage, Bandung 40295') }}&output=embed" title="Peta Kantor Utama" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
                         </div>
                         <div class="footer-map-card">
                             <div class="footer-map-label">
-                                <span>Antapani</span>
+                                <span>Gedebage</span>
                                 <a href="https://www.google.com/maps/dir/?api=1&destination={{ urlencode($profile->address_branch ?? 'Jl. Terusan Jakarta No.175A, Antapani Kulon, Bandung 40291') }}" target="_blank" rel="noopener noreferrer"><i class="fas fa-location-arrow"></i></a>
                             </div>
                             <iframe src="https://www.google.com/maps?q={{ urlencode($profile->address_branch ?? 'Jl. Terusan Jakarta No.175A, Antapani Kulon, Bandung 40291') }}&output=embed" title="Peta Kantor Cabang" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
